@@ -1,0 +1,11 @@
+Basic scraping tools for fetchopia.   
+
+With the exception of the hotwire api tools, these are pretty much as I got them, 
+we should now push updates into this structure (or perhaps create new subfolders
+as required).  
+
+Down in subdirectories there are csv files from earlier scrapings.  
+
+The hotwire scraper "hotwire_api_analysis" is the old one, the version I just hacked up
+is in "hotwire_api".  
+   
