@@ -120,7 +120,7 @@ class hotwire_api_analysis(BaseSpider):
     for i in start_urls : 
         log.msg("start url : %s" % i, level=log.INFO) 
     def parse(self, response):
-        if saving_results : 
+        if saving_results and raw_results : 
             raw_results.write(body_or_str(response) + "\n\n")
             raw_results.flush() # ensure whole xml response is written 
         hxs = XmlXPathSelector(response)
