@@ -30,6 +30,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`Hotels` (
   `Rating` VARCHAR(255) NULL ,
   `HotelsCombinedId` INT NULL ,
   `HotelFileName` VARCHAR(255) NULL ,
+  `URL` VARCHAR(255),   -- hotel website if we know it. 
   PRIMARY KEY (`HotelId`) ,
   INDEX `fk_Hotels_Cities1` (`Cities_CityId` ASC) ,
   CONSTRAINT `fk_Hotels_Cities1`
@@ -192,7 +193,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BftPosts` (
   `TopicNumber` INT NULL ,
   `Replies` INT NULL ,
   `HotelName` VARCHAR(255) NOT NULL ,
-  `CheckInDate` INT NULL ,
+  `CheckInDate` DATE NOT NULL ,
   `Nights` INT NULL ,
   `Price` INT NULL ,
   `Rating` INT NOT NULL ,
@@ -215,7 +216,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BbPricelinePosts` (
   `TopicNumber` INT NULL ,
   `Replies` INT NULL ,
   `HotelName` VARCHAR(255) NOT NULL ,
-  `CheckInDate` INT NULL ,
+  `CheckInDate` DATE NOT NULL ,
   `Nights` INT NULL ,
   `Price` INT NULL ,
   `Rating` INT NOT NULL ,
@@ -238,7 +239,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BbHotwirePosts` (
   `TopicNumber` INT NULL ,
   `Replies` INT NULL ,
   `HotelName` VARCHAR(255) NOT NULL ,
-  `CheckInDate` INT NULL ,
+  `CheckInDate` DATE NOT NULL ,
   `Nights` INT NULL ,
   `Price` INT NULL ,
   `Rating` INT NOT NULL ,
@@ -277,7 +278,8 @@ ENGINE = MyISAM;
 CREATE  TABLE IF NOT EXISTS `acuity`.`PricelineBids` (
   `PricelineBidId` INT NOT NULL AUTO_INCREMENT ,
   `PricelineId_PricelineId` INT NOT NULL ,
-  `CheckIn` INT NOT NULL ,
+  `BidDate` DATETIME NOT NULL, 
+  `CheckIn` DATE NOT NULL ,
   `Nights` INT NOT NULL ,
   `Rooms` INT NOT NULL ,
   `RoomCost` DOUBLE NOT NULL ,
@@ -300,7 +302,8 @@ ENGINE = MyISAM;
 CREATE  TABLE IF NOT EXISTS `acuity`.`HotwireBids` (
   `HotwireBidId` INT NOT NULL AUTO_INCREMENT ,
   `HotwireId_HotwireId` INT NOT NULL ,
-  `CheckIn` INT NOT NULL ,
+  `DateFetched` DATETIME NOT NULL, 
+  `CheckIn` DATE NOT NULL ,
   `Nights` INT NOT NULL ,
   `Rooms` INT NOT NULL ,
   `RoomCost` DOUBLE NOT NULL ,
@@ -322,7 +325,8 @@ ENGINE = MyISAM;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `acuity`.`Amenities` (
   `AmenityId` INT NOT NULL AUTO_INCREMENT ,
-  `AmenityName` VARCHAR(45) NOT NULL ,
+  `AmenityName` VARCHAR(45) NOT NULL , -- long name 
+  `HWAmenityAbbreviation` CHAR(2),     -- hotwire 2 char abbreviation 
   PRIMARY KEY (`AmenityId`) )
 ENGINE = MyISAM;
 
@@ -334,8 +338,8 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotelAmenities` (
   `HotelAmenityId` INT NOT NULL AUTO_INCREMENT ,
   `Hotels_HotelId` INT NOT NULL ,
   `Amenities_AmenityId` INT NOT NULL ,
-  `CreatedAt` INT NOT NULL ,
-  `UpdatedAt` INT NOT NULL ,
+  `CreatedAt` DATETIME NOT NULL ,
+  `UpdatedAt` DATETIME NOT NULL ,
   PRIMARY KEY (`HotelAmenityId`) ,
   INDEX `fk_Amenities_Hotels1` (`Hotels_HotelId` ASC) ,
   INDEX `fk_HotelAmenities_Amenities1` (`Amenities_AmenityId` ASC) ,
