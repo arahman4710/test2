@@ -13,6 +13,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`Cities` (
   `City` VARCHAR(255) NOT NULL ,
   `State` VARCHAR(255) NULL ,
   `Country` VARCHAR(255) NOT NULL ,
+
   PRIMARY KEY (`CityId`) )
 ENGINE = MyISAM;
 
@@ -31,8 +32,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`Hotels` (
   `HotelsCombinedId` INT NULL ,
   `HotelFileName` VARCHAR(255) NULL ,
   `URL` VARCHAR(255),   -- hotel website if we know it. 
+
   PRIMARY KEY (`HotelId`) ,
+
   INDEX `fk_Hotels_Cities1` (`Cities_CityId` ASC) ,
+
   CONSTRAINT `fk_Hotels_Cities1`
     FOREIGN KEY (`Cities_CityId` )
     REFERENCES `acuity`.`Cities` (`CityId` )
@@ -48,8 +52,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`KayakHotels` (
   `KayakId` INT NOT NULL AUTO_INCREMENT ,
   `Hotels_HotelId` INT NOT NULL ,
   `KayakName` VARCHAR(255) NOT NULL ,
+
   PRIMARY KEY (`KayakId`) ,
+
   INDEX `fk_KayakId_Hotels` (`Hotels_HotelId` ASC) ,
+
   CONSTRAINT `fk_KayakId_Hotels`
     FOREIGN KEY (`Hotels_HotelId` )
     REFERENCES `acuity`.`Hotels` (`HotelId` )
@@ -68,8 +75,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelineRegions` (
   `Latitude` DOUBLE NOT NULL ,
   `Longitude` DOUBLE NOT NULL ,
   `Active` INT NOT NULL ,
+
   PRIMARY KEY (`PricelineRegionId`) ,
+
   INDEX `fk_PricelineRegions_Cities1` (`Cities_CityId` ASC) ,
+
   CONSTRAINT `fk_PricelineRegions_Cities1`
     FOREIGN KEY (`Cities_CityId` )
     REFERENCES `acuity`.`Cities` (`CityId` )
@@ -86,9 +96,12 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelineId` (
   `Hotels_HotelId` INT NOT NULL ,
   `PricelineRegions_PricelineRegionId` INT NOT NULL ,
   `Active` INT NOT NULL ,
+
   PRIMARY KEY (`PricelineId`) ,
+
   INDEX `fk_PricelineId_Hotels1` (`Hotels_HotelId` ASC) ,
   INDEX `fk_PricelineId_PricelineRegions1` (`PricelineRegions_PricelineRegionId` ASC) ,
+
   CONSTRAINT `fk_PricelineId_Hotels1`
     FOREIGN KEY (`Hotels_HotelId` )
     REFERENCES `acuity`.`Hotels` (`HotelId` )
@@ -112,8 +125,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwireRegions` (
   `Latitude` DOUBLE NOT NULL ,
   `Longitude` DOUBLE NOT NULL ,
   `Active` INT NOT NULL ,
+
   PRIMARY KEY (`HotwireRegionId`) ,
+
   INDEX `fk_HotwireRegions_Cities1` (`Cities_CityId` ASC) ,
+
   CONSTRAINT `fk_HotwireRegions_Cities1`
     FOREIGN KEY (`Cities_CityId` )
     REFERENCES `acuity`.`Cities` (`CityId` )
@@ -130,9 +146,12 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwireId` (
   `Hotels_HotelId` INT NOT NULL ,
   `HotwireRegions_HotwireRegionId` INT NOT NULL ,
   `Active` INT NOT NULL ,
+
   PRIMARY KEY (`HotwireId`) ,
+
   INDEX `fk_HotwireId_Hotels1` (`Hotels_HotelId` ASC) ,
   INDEX `fk_HotwireId_HotwireRegions1` (`HotwireRegions_HotwireRegionId` ASC) ,
+
   CONSTRAINT `fk_HotwireId_Hotels1`
     FOREIGN KEY (`Hotels_HotelId` )
     REFERENCES `acuity`.`Hotels` (`HotelId` )
@@ -155,8 +174,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelinePoints` (
   `OrderId` INT NOT NULL ,
   `Latitude` DOUBLE NOT NULL ,
   `Longitude` DOUBLE NOT NULL ,
+
   PRIMARY KEY (`PointId`) ,
+
   INDEX `fk_PricelinePoints_PricelineRegions1` (`PricelineRegions_PricelineRegionId` ASC) ,
+
   CONSTRAINT `fk_PricelinePoints_PricelineRegions1`
     FOREIGN KEY (`PricelineRegions_PricelineRegionId` )
     REFERENCES `acuity`.`PricelineRegions` (`PricelineRegionId` )
@@ -174,8 +196,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwirePoints` (
   `OrderId` INT NOT NULL ,
   `Latitude` DOUBLE NOT NULL ,
   `Longitude` DOUBLE NOT NULL ,
+
   PRIMARY KEY (`PointId`) ,
+
   INDEX `fk_HotwirePoints_HotwireRegions1` (`HotwireRegions_HotwireRegionId` ASC) ,
+
   CONSTRAINT `fk_HotwirePoints_HotwireRegions1`
     FOREIGN KEY (`HotwireRegions_HotwireRegionId` )
     REFERENCES `acuity`.`HotwireRegions` (`HotwireRegionId` )
@@ -197,8 +222,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BftPosts` (
   `Nights` INT NULL ,
   `Price` INT NULL ,
   `Rating` INT NOT NULL ,
+
   PRIMARY KEY (`BftPostId`) ,
+
   INDEX `fk_BftPosts_PricelineId1` (`PricelineId_PricelineId` ASC) ,
+
   CONSTRAINT `fk_BftPosts_PricelineId1`
     FOREIGN KEY (`PricelineId_PricelineId` )
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
@@ -220,8 +248,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BbPricelinePosts` (
   `Nights` INT NULL ,
   `Price` INT NULL ,
   `Rating` INT NOT NULL ,
+
   PRIMARY KEY (`BbPricelinePostId`) ,
+
   INDEX `fk_BbPricelinePosts_PricelineId1` (`PricelineId_PricelineId` ASC) ,
+
   CONSTRAINT `fk_BbPricelinePosts_PricelineId1`
     FOREIGN KEY (`PricelineId_PricelineId` )
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
@@ -243,8 +274,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BbHotwirePosts` (
   `Nights` INT NULL ,
   `Price` INT NULL ,
   `Rating` INT NOT NULL ,
+
   PRIMARY KEY (`BbHotwirePostId`) ,
+
   INDEX `fk_BbHotwirePosts_HotwireId1` (`HotwireId_HotwireId` ASC) ,
+
   CONSTRAINT `fk_BbHotwirePosts_HotwireId1`
     FOREIGN KEY (`HotwireId_HotwireId` )
     REFERENCES `acuity`.`HotwireId` (`HotwireId` )
@@ -262,8 +296,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotelNames` (
   `HotelName` VARCHAR(255) NOT NULL ,
   `Rating` INT NOT NULL ,
   `WinRate` INT NOT NULL ,
+
   PRIMARY KEY (`Id`) ,
+
   INDEX `fk_HotelNames_PricelineId1` (`PricelineId_PricelineId` ASC) ,
+
   CONSTRAINT `fk_HotelNames_PricelineId1`
     FOREIGN KEY (`PricelineId_PricelineId` )
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
@@ -286,8 +323,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelineBids` (
   `Subtotal` DOUBLE NOT NULL ,
   `TaxesFees` DOUBLE NOT NULL ,
   `Total` DOUBLE NOT NULL ,
+
   PRIMARY KEY (`PricelineBidId`) ,
+
   INDEX `fk_PricelineBids_PricelineId1` (`PricelineId_PricelineId` ASC) ,
+
   CONSTRAINT `fk_PricelineBids_PricelineId1`
     FOREIGN KEY (`PricelineId_PricelineId` )
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
@@ -310,8 +350,11 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwireBids` (
   `Subtotal` DOUBLE NOT NULL ,
   `TaxesFees` DOUBLE NOT NULL ,
   `Total` DOUBLE NOT NULL ,
+
   PRIMARY KEY (`HotwireBidId`) ,
+
   INDEX `fk_HotwireBids_HotwireId1` (`HotwireId_HotwireId` ASC) ,
+
   CONSTRAINT `fk_HotwireBids_HotwireId1`
     FOREIGN KEY (`HotwireId_HotwireId` )
     REFERENCES `acuity`.`HotwireId` (`HotwireId` )
@@ -327,6 +370,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`Amenities` (
   `AmenityId` INT NOT NULL AUTO_INCREMENT ,
   `AmenityName` VARCHAR(45) NOT NULL , -- long name 
   `HWAmenityAbbreviation` CHAR(2),     -- hotwire 2 char abbreviation 
+
   PRIMARY KEY (`AmenityId`) )
 ENGINE = MyISAM;
 
@@ -340,9 +384,12 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotelAmenities` (
   `Amenities_AmenityId` INT NOT NULL ,
   `CreatedAt` DATETIME NOT NULL ,
   `UpdatedAt` DATETIME NOT NULL ,
+
   PRIMARY KEY (`HotelAmenityId`) ,
+
   INDEX `fk_Amenities_Hotels1` (`Hotels_HotelId` ASC) ,
   INDEX `fk_HotelAmenities_Amenities1` (`Amenities_AmenityId` ASC) ,
+
   CONSTRAINT `fk_Amenities_Hotels1`
     FOREIGN KEY (`Hotels_HotelId` )
     REFERENCES `acuity`.`Hotels` (`HotelId` )
