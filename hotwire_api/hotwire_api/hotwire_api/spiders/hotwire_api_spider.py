@@ -26,6 +26,9 @@ import os
 
 debug_level = 0
 
+connection = None
+cursor = None
+
 saving_results = True  # save raw xml for debugging etc 
 raw_results = None 
 hotel_info_fields = ['StarRating', 'NeighborhoodId', 'DeepLink', 'ResultId',
@@ -36,6 +39,9 @@ hotel_info_fields = ['StarRating', 'NeighborhoodId', 'DeepLink', 'ResultId',
 base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%s&dest=%s&rooms=1&adults=2&children=0&startdate=%s&enddate=%s"
 
 base_data_dir = "data"  # this really needs to be something better, or a database 
+
+amenity_dict = {} 
+region_dict = {} 
 
 def gendate(offset, cursecs) : 
     """
@@ -102,19 +108,6 @@ class hotwire_api_analysis(BaseSpider):
         log.msg("failed to make output directory: " + result_file_dir, level=log.WARNING) 
     result_file_name = os.path.join(base_data_dir, yearday, "hotel_info-%s-%s" % (yearday, hourmin)) 
     result_file = open(result_file_name, "w")  # year + day of year 
-    amenities_filename = os.path.join(base_data_dir, "amenities.json") 
-    regions_filename = os.path.join(base_data_dir, "regions.json") 
-    amenity_dict = {} 
-    region_dict = {} 
-
-    try : 
-        amenity_dict = json.loads(open(amenities_filename, "r").read()) 
-    except Exception,e : 
-        log.msg("amenities_file:%s" % amenities_filename, level=log.WARNING) 
-    try :
-        region_dict = json.loads(open(regions_filename, "r").read()) 
-    except Exception,e :
-        log.msg("regions_file: %s" % e, level=log.WARNING) 
 
     start_urls = [base_query_format % (api_key, city_name, start_date, end_date) for city_name in city_names for (start_date, end_date) in date_list ]
     for i in start_urls : 
@@ -146,10 +139,7 @@ class hotwire_api_analysis(BaseSpider):
                 if not code in self.amenity_dict : 
                     ami_name = str(ami.select(".//Name/text()").extract()[0]).strip().lower()
                     self.amenity_dict[code]=ami_name
-                    # write out amenity code translations.   
-                    # this may occur frequently at first, but eventually
-                    # all the information should be in the dict and this will stop occurring
-                    open(self.amenities_filename, "w").write(json.dumps(self.amenity_dict)) 
+                    cursor.execute('insert into amenities values(NULL, %s, %s)', (code, ami_name)) 
 
         # cope with regions - essentially the same as the amenities 
         if temp_regions:
@@ -158,10 +148,10 @@ class hotwire_api_analysis(BaseSpider):
                 if not region_id in self.region_dict : 
                     region_name=reg.select(".//Name/text()").extract()[0].strip()
                     region_city = reg.select(".//City/text()").extract()[0].strip()
-                    self.region_dict[region_id] = {'name':region_name, 'city':region_city} 
-                    # eventually all the information should be in the dict and this will stop occurring
-                    open(self.regions_filename, "w").write(json.dumps(self.region_dict)) 
-
+                    region_state = reg.select(".//State/text()").extract()[0].strip() 
+                    region_centroid = reg.select("../Centroid/text()").extract()[0].strip() 
+                    region_country =  reg.select("../Country/text()").extract()[0].strip() 
+                    region_description = reg.select("../Description/text()").extract()[0].strip() 
         if hotel_list:
             for hotel in hotel_list:
                 result_dict = {'type':'hotel_info', 'fetch-time':fetch_time } 
@@ -199,8 +189,23 @@ class hotwire_api_analysis(BaseSpider):
             self.result_file.write("\n") 
             self.result_file.flush() 
 
+def load_general_db_info() :
+    try : 
+        cursor.execute('select * from Amenities')
+        for i in cursor.fetchall() :
+            amenity_dict[i[2]] = i[1] 
+    except Exception, e : 
+        print "Failed to read Amenities "
+        print "exception : ", e 
+    # fill in region_dict - used mostly to avoid reloading regions we've seen 
+    cursor.execute('select RegionName, HotwireCityID from HotwireRegions')
+    for i in cursor.fetchall() :
+        region_dict[i[1]] = i[0] 
+    
 def main():
     global debug_level, raw_results 
+    global connection, cursor 
+
     if debug_level > 0 : 
         log.start(logfile="hotwire_api_analysis.log")
     if saving_results : # to save raw results.   
@@ -209,6 +214,9 @@ def main():
             raw_results = open(results_fn, "w") 
         except Exception,e :
             log.msg("unable to open raw data file - won't be saving raw data", level=log.WARNING) 
+    connection = MySQLdb.connect(user='jefu', db='acuity')
+    cursor = connection.cursor()
+    load_general_db_info() 
     settings.overrides['USER_AGENT'] = "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10"
     settings.overrides['SCHEDULER_ORDER'] = 'BFO'
     crawler = CrawlerProcess(settings)
