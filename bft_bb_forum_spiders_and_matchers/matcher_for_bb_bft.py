@@ -1,28 +1,22 @@
-'''
--first get the whole city list from db
--make dictionary of key: foreign_cities and value: array of foreign_hotels in that city
--get foreign_cities to match
--find em out through binary search
--fuzzy needed (should be incorporated in binary search implementation)
--match up all foreign_city with db_cities
--generate sql specific to cities to match hotels for a particular city (so hotel matching will be relatively faster and more accurate)
--then match foreign_hotels with internal hotel list
-'''
-import matcher_for_bb_bft
-
-
-
-
-
 import MySQLdb
 import Levenshtein
 import re
 import time
-import ray_casting
-from collections import namedtuple
-Pt = namedtuple('Pt', 'x, y')    
+
+
+
+class Connection():
+
+        #this class sets up the database connection that is being used throughout the matcher code
+        #to change the database to aquire information from, change the settings below
+
+	database = MySQLdb.connect(user='root', passwd='areek', db='acuity')
+	cursor = database.cursor()
 
 def print_timing(func):
+
+    #A function that gives the runtime of a function
+
     def wrapper(*arg):
         t1 = time.time()
         res = func(*arg)
@@ -31,1200 +25,12 @@ def print_timing(func):
         return res
     return wrapper
 
+def city_region_finder(cityid):
 
-class BinarySearch:
-        NOT_FOUND = -1
-        def binarySearch(self, arr, searchValue, left, right):
-                if (right < left):
-                        return self.NOT_FOUND
-
-                mid = (left + right) / 2
-                if (searchValue > arr[mid]):
-                        return self.binarySearch(arr, searchValue, mid + 1, right)
-                elif (searchValue < arr[mid]):
-                        return self.binarySearch(arr, searchValue, left, mid - 1)
-                else:
-                        return mid
-
-        def search(self, arr, searchValue):
-                left = 0
-                right = len(arr)
-                return self.binarySearch(arr, searchValue, left, right)
-
-class Connection():
-	database = MySQLdb.connect(user='root', passwd='areek', db='acuity')
-	cursor = database.cursor()
-
-def test_area():
-    f = open('area_list.csv').readlines()
-    temp_lst  = []
-    count = 0
-    for line in f:
-        if line.split(',')[0].strip():
-            temp_lst.append(line.split(',')[0].strip())
-    dict = csv_format('hotels-bbpl2','~','#','output/hotels-bbpl2',3,1,2)
-    print len(dict.keys())
-    for one in city_match(dict.keys(),temp_lst):
-        for o in one:
-            if o[2]==-1:
-                count+=1
-    print count
-
-def delete_duplicate(mylist):
-    mylist=sorted(mylist, key=lambda item: item[2])
-    last = mylist[-1][2]
-    for i in range(len(mylist)-2, -1, -1):
-        if last == mylist[i][2]:
-            del mylist[i]
-        else:
-            last = mylist[i][2]
-    return mylist
-
-
-'''
-
--search by city and region
-
-'''
-'''
-def init_region(city_param):
-    Connection.cursor.execute("Select hotelname,latitude,longitude from hotels where cities_cityid = "% city_param)
-    for int_hotel in  Connection.cursor.fetchall():
-'''
-
-def query_db(city):
-    Connection.cursor.execute("SELECT hotelid,hotelname,city,cityid,latitude,longitude FROM hotels JOIN cities ON cities.CityId = hotels.Cities_CityId WHERE cities.city LIKE '%"+re.sub('''(['"])''', r'\\\1',str(city.strip().replace('St ','Saint ').replace('St.','Saint ')))+"%' ")
-    result = Connection.cursor.fetchall()
-    if result:
-        return result
-    city_parts = city.split('-')
-    if len(city_parts)>1:
-        sql ="SELECT hotelid,hotelname,city,cityid,latitude,longitude FROM hotels JOIN cities ON cities.CityId = hotels.Cities_CityId WHERE "
-        for ea in city_parts:
-            sql+= " cities.city LIKE '%"+re.sub('''(['"])''', r'\\\1',str(ea.strip()))+"%' OR"
-                #print sql[:-2]
-        Connection.cursor.execute(sql[:-2])
-        result = Connection.cursor.fetchall()
-        if result:
-            return result
-    city_parts=city.split()
-    if len(city_parts)>1:
-        sql ="SELECT hotelid,hotelname,city,cityid,latitude,longitude FROM hotels JOIN cities ON cities.CityId = hotels.Cities_CityId WHERE "
-        for ea in city_parts:
-            sql+= " cities.city LIKE '%"+re.sub('''(['"])''', r'\\\1',str(ea.strip()))+"%' OR"
-                #print sql[:-2]
-        Connection.cursor.execute(sql[:-2])
-        result = Connection.cursor.fetchall()
-        if result:
-            return result
-        
-       # else:
-            #    print 'not aval for '+ str(city)
-   # else:
-     #   print 'not aval for '+ str(city)
-        
-    return None
-
-def city_match(foreign_list,internal_list):
-    matches = []
-
-    for foreign_list_item in foreign_list:
-        indiv_match =[]
-        temp_name = []
-        temp_name_space = []
-
-        if '-' in foreign_list_item:
-            temp_name = foreign_list_item.split('-')
-        if ' ' in foreign_list_item:
-            temp_name_space = foreign_list_item.split()
-        for list_item in internal_list:
-            temp=Levenshtein.ratio(str(foreign_list_item).lower().strip().replace('/',' ').replace('-',' ').replace('saint ','st ').replace(' area','').replace(' city','').replace('fort ','ft. '),str(list_item).lower().strip().replace(' city','').replace('/',' ').replace('-',' ').replace(' area','').replace('saint ','st ').replace('fort ','ft. '))
-            if temp > 0.90:
-                indiv_match.append([foreign_list_item,list_item,temp])
-                
-
-        if not indiv_match:
-            for list_item in internal_list:
-                if list_item.strip() and foreign_list_item.strip():
-                    if list_item.lower() in foreign_list_item.lower() or foreign_list_item.lower() in list_item.lower():
-                        temp=1.0
-                        indiv_match.append([foreign_list_item,list_item,temp])
-            
-
-        if not indiv_match and temp_name:
-            
-            for list_item in internal_list:
-                is_in = 0
-                for one in temp_name:
-                    if  one != ' 'and one!= '' and  one.lower() != 'south' and one.lower() != 'north' and one.lower() != 'west' and one.lower() != 'east':
-                      temp=Levenshtein.ratio(str(one).lower().strip().replace('/',' ').replace('-',' ').replace(' area','').replace('saint ','st ').replace(' city','').replace('fort ','ft. '),str(list_item).lower().strip().replace(' city','').replace('/',' ').replace('-',' ').replace(' area','').replace('saint ','st ').replace('fort ','ft. '))
-                      if temp > 0.9:
-                          is_in = 1
-                for a in temp_name:
-                    if a in list_item and a != ' 'and a!= '' and a!='-' and a!='/' and a.lower() != 'south'and a.lower() != 'north'and a.lower() != 'west' and a.lower() != 'east':
-                        temp =1.0
-                        is_in = 1
-                        break
-                if is_in:
-                    indiv_match.append([foreign_list_item,list_item,1.0])
-
-        if not indiv_match and temp_name_space:
-            
-            for list_item in internal_list:
-                is_in = 0
-                for one in temp_name_space:
-                    if  one != ' 'and one!= '' and  one.lower() != 'south' and one.lower() != 'north'and one.lower() != 'west' and one.lower() != 'east':
-                        temp=Levenshtein.ratio(str(one).lower().strip().replace('/',' ').replace('-',' ').replace(' area','').replace('saint ','st ').replace(' city','').replace('fort ','ft. '),str(list_item).lower().strip().replace(' city','').replace('/',' ').replace('-',' ').replace(' area','').replace('saint ','st ').replace('fort ','ft. '))
-                        if temp > 0.9:
-                            is_in = 1
-                for a in temp_name_space:
-                    if a in list_item and a != ' 'and a!= '' and a!='-' and a!='/' and a.lower() != 'south'and a.lower() != 'north'and a.lower() != 'west' and a.lower() != 'east':
-                        temp =1.0
-                        is_in = 1
-                        break
-                if is_in:
-                    indiv_match.append([foreign_list_item,list_item,1.0])
-
-        if not indiv_match:
-            matches.append([[foreign_list_item,foreign_list_item,-1.0]])
-        else:
-            matches.append(sorted(indiv_match,key=lambda x:x[2],reverse=True))
-
-    return matches
-
-
-def entity_match(foreign_list,internal_list):      #feed list of foreign cities
-    matches = []
-    #print map(lambda x:str(x),foreign_hotel_list)
-    for foreign_list_item in foreign_list:
-        max = 0.0
-        found = ''
-        ratio=0.0
-        for list_item in internal_list:
-            #.replace('hotel','').replace(str(for_city).lower(),'').replace("&amp;","").replace(" and ","&")
-            temp=Levenshtein.ratio(str(foreign_list_item).lower().strip().replace('/',' ').replace('-',' ').replace('(','').replace(')','').replace('saint ','st ').replace(' city','').replace('fort ','ft. '),str(list_item).lower().strip().replace('(','').replace(')','').replace(' city','').replace('/',' ').replace('-',' ').replace('saint ','st ').replace('fort ','ft. '))
-            if temp>max:
-                max = temp
-                found = list_item
-                ratio = temp
-
-        if ratio < 0.8:
-            for list_item in internal_list:
-                if foreign_list_item.lower().strip().replace('/',' ').replace('-',' ').replace('(','').replace(')','').replace('saint ','st ').replace(' city','').replace('fort ','ft. ') in list_item.lower().strip().replace('/',' ').replace('-',' ').replace('(','').replace(')','').replace('saint ','st ').replace(' city','').replace('fort ','ft. ') and foreign_list_item.strip() != '':
-                    temp =1.0
-                    break
-
-        matches.append([foreign_list_item,found,ratio])
-
-    return matches
-
-
-
-def normalize(name,city,region):
-    city = city.lower()
-    region = region.lower()
-    name = name.lower()
-    temp = ['(',')',',']
-    if '-' in city: temp.extend(city.split('-'))
-    if '-' in region: temp.extend(region.split('-'))
-    temp.extend(city.split())
-    temp.extend(region.split())
-    temp_name = name
-    
-    for all in temp:
-        temp_name=temp_name.replace(all.strip(),'')
-        
-    if not temp_name.strip():
-        temp = ['(',')',',']
-        for all in temp:
-            name=str(name).replace(all.strip(),'')
-    else:
-        name = temp_name
-
-    return name.replace('/','').replace('-','').replace('saint ','st ').replace(' city','').replace('fort ','ft. ').replace('hotel ','').replace(' hotel','').replace(' and ',' & ').lower().strip()
-
-
-
-def hotel_name_match(foreign_list,internal_list,city_name,region_name,state_name):      #feed list of foreign cities
-
-    #check if every word in foreign list is present in any hotel it is a match
-    #break down the city - region name and clean up all the pieces from all hotel names
-    #remove 'at' and 'by' 'and' 'spa'
-    #get rid of state names as well
-    region_name = " ".join(map(lambda x:x.strip(),region_name.split('-')))
-    city_name = " ".join(map(lambda x:x.strip(),city_name.split('-')))
-    city_name += ' '+state_name+ ' at '+' by '+' spa '+' and '+ ' on '+' not yet reported '
-    matches = []
-    #print map(lambda x:str(x),foreign_hotel_list)
-    for foreign_list_item in foreign_list:
-        max = 0.0
-        found = ''
-        ratio=0.0
-        for list_item in internal_list:
-            #.replace('hotel','').replace(str(for_city).lower(),'').replace("&amp;","").replace(" and ","&")
-            temp=Levenshtein.ratio(normalize(foreign_list_item,city_name,region_name),normalize(list_item,city_name,region_name))
-            if temp>max:
-                max = temp
-                found = list_item
-                ratio = temp
-
-        if ratio < 0.83:
-
-            for list_item in internal_list:
-                
-                temp_list_item = normalize(list_item,city_name,region_name)
-                flag = 0
-                foregein_part = normalize(foreign_list_item,city_name,region_name).split()
-                for every_part in foregein_part:
-                    
-                    for internal_hotel_part in temp_list_item.split():
-                        if Levenshtein.ratio(every_part,internal_hotel_part) > 0.87:
-                            flag += 1
-                            break
-                    
-
-                if len(foregein_part) == flag:
-                    found = list_item
-                    ratio = 1.0
-                    break
-
-        matches.append([foreign_list_item,found,ratio])
-
-    return matches
-
-def spacial_cases(city_name,matches):
-    city_name = city_name.strip().lower()
-    if city_name =='strip south':
-        return 'Las Vegas Strip Vicinity South'
-    if city_name == 'airport midway mdw area':
-        return 'Midway Airport North'
-    if city_name == 'airport - south portland':
-        return 'South Portland - Scarborough'
-    if city_name == 'steamboat':
-        return 'Steamboat Springs'
-    if city_name == 'lansing - hammond':
-        matches.append([city_name,'Hammond IN',1.0])
-        return 'Holland - Lansing IL'
-    if city_name == 'suffern - nanuet':
-        return 'Mahwah - Ramsey - Allendale'
-    return ''
-
-
-def name_match(foreign_list,internal_list,city_name,region_name):      #feed list of foreign cities
-    matches = []
-    #print map(lambda x:str(x),foreign_hotel_list)
-    for foreign_list_item in foreign_list:
-        max = 0.0
-        found = ''
-        ratio=0.0
-        temp = 0.0
-
-        special = spacial_cases(foreign_list_item,matches)
-        
-        if special:
-            matches.append([foreign_list_item,special,1.0])
-            continue
-
-        for list_item in internal_list:
-                #.replace('hotel','').replace(str(for_city).lower(),'').replace("&amp;","").replace(" and ","&")
-            temp=Levenshtein.ratio(normalize(foreign_list_item,city_name,region_name),normalize(list_item,city_name,region_name))
-            if temp>max:
-                    max = temp
-                    found = list_item
-                    ratio = temp
-
-        if ratio < 0.7:
-            for list_item in internal_list:
-                #.replace('hotel','').replace(str(for_city).lower(),'').replace("&amp;","").replace(" and ","&")
-                if normalize(foreign_list_item,city_name,region_name) and normalize(list_item,city_name,region_name) and (normalize(foreign_list_item,city_name,region_name) in normalize(list_item,city_name,region_name) or normalize(list_item,city_name,region_name) in normalize(foreign_list_item,city_name,region_name)):
-                        temp=1.0
-                        found = list_item
-                        ratio = temp
-                        break
-                if normalize(foreign_list_item,'',region_name) and normalize(list_item,'',region_name) and (normalize(foreign_list_item,'',region_name) in normalize(list_item,'',region_name) or normalize(list_item,'',region_name) in normalize(foreign_list_item,'',region_name)):
-                        temp=1.0
-                        found = list_item
-                        ratio = temp
-                        break
-
-        if ratio != 1.0:
-            max = 0.0
-            for list_item in internal_list:
-                if 'airport' in normalize(foreign_list_item,city_name,region_name) and 'airport' in normalize(list_item,city_name,region_name):
-                    temp=Levenshtein.ratio(normalize(foreign_list_item,city_name,region_name),normalize(list_item,city_name,region_name))
-                    if temp>max:
-                        max = temp
-                        found = list_item
-                        ratio = 1.0
-
-                    
-        matches.append([foreign_list_item,found,ratio])
-
-    return matches
-
-
-def get_citylist_db():
-    Connection.cursor.execute("Select Cityid, City from cities order by 2")
-    return Connection.cursor.fetchall()
-
-def csv_format_new(name,delemiter_record,delemiter_field,file_name,hotel_index,state_index,city_index,region_index):
-
-    return_dict={}
-    
-    for line in extract_content(file_name).split(delemiter_record):
-        parts = line.split(delemiter_field)
-
-        city = str(re.sub(', [A-Za-z][A-Za-z]', '', parts[city_index].lower().strip()))
-        state = parts[state_index].lower().strip()
-        region = str(re.sub(', [A-Za-z][A-Za-z]', '', parts[region_index].lower().strip()))
-        hotel = parts[hotel_index].lower().strip().replace(' previously','')
-
-
-        if state == 'dc':
-            state = 'district of columbia'
-
-
-        if return_dict.has_key(state) and state:
-            if return_dict[state].has_key(city) and city:
-                if return_dict[state][city].has_key(region.strip()):
-                    return_dict[state][city][region.strip()].append(hotel)
-                else:
-                    return_dict[state][city][region.strip()]= [hotel]
-            else:
-                return_dict[state][city] = {}
-                return_dict[state][city][region.strip()]= [hotel]
-        else:
-            return_dict[state]={}
-            return_dict[state][city] = {}
-            return_dict[state][city][region.strip()]= [hotel]
-    
-    matcher(return_dict)
-
-
-def csv_format_test(name,delemiter_record,delemiter_field,file_name,hotel_index,state_index,city_index,region_index):
-    return_dict={}
-    count = 0
-    for line in extract_content(file_name).split(delemiter_record):
-        parts = line.split(delemiter_field)
-
-        city = str(re.sub(', [A-Za-z][A-Za-z]', '', parts[city_index].lower().strip()))
-        state = parts[state_index].lower().strip()
-        region = str(re.sub(', [A-Za-z][A-Za-z]', '', parts[region_index].lower().strip()))
-        hotel = parts[hotel_index].lower().strip().replace(' previously','')
-
-        
-        if state == 'dc':
-            state = 'district of columbia'
-
-
-        if return_dict.has_key(state) and state:
-            if return_dict[state].has_key(city) and city:
-                if return_dict[state][city].has_key(region.strip()):
-                    return_dict[state][city][region.strip()].append(hotel)
-                    count+=1
-                else:
-                    return_dict[state][city][region.strip()]= [hotel]
-                    count+=1
-            else:
-                return_dict[state][city] = {}
-                return_dict[state][city][region.strip()]= [hotel]
-                count+=1
-        else:
-            return_dict[state]={}
-            return_dict[state][city] = {}
-            return_dict[state][city][region.strip()]= [hotel]
-            count+=1
-    print "Total Hotels to Match::" +str(count)
-    return return_dict
-
-    '''
-    for state in return_dict.keys():
-        print state
-        for city in return_dict[state].keys():
-            print '         '+str(city)
-            for region in return_dict[state][city].keys():
-                print '                 '+str(region)
-              #  print '                         '+str(return_dict[state][city][region])
-   '''
-
-def csv_format(name,delemiter_record,delemiter_field,file_name,hotel_index,city_index,region_index):
-    return_dict={}
-
-    for line in extract_content(file_name).split(delemiter_record):
-        parts = line.split(delemiter_field)
-        if return_dict.has_key(parts[city_index]) and parts[city_index]:
-        
-            if return_dict[parts[city_index]].has_key(parts[region_index]) and parts[city_index]:
-                return_dict[parts[city_index]][parts[region_index]].append(parts[hotel_index].replace(' previously',''))
-            else:
-                return_dict[parts[city_index]][parts[region_index]]= [parts[hotel_index].replace(' previously','')]
-        else:
-            return_dict[parts[city_index]]={}
-            if parts[region_index] not in return_dict[parts[city_index]].keys():
-                
-                return_dict[parts[city_index]][parts[region_index]]= [parts[hotel_index].replace(' previously','')]
-
-    #return dictionary for hotel list with city
-    #return_dict is a dictionary of dictionaries going from [cities][regions] which stores the name of the hotels NOTE: ' ' - gives blank regions, '' - gives blank cities
-    
-    #match_results_new(return_dict,name)
-      
-           # print ' ----->> '+str(regions)
-           # print '                     '+str(return_dict[cities][regions])
-    return return_dict
-   # match_results_new(return_dict,name)
-
-def extract_content(file_name):
-    f = open(file_name)
-    content = f.read()
-    f.close()
-    return content
-
-def get_regions_for_city(cityid,regions_dictionary):
-    
-    Connection.cursor.execute(''' SELECT DISTINCT PricelineRegionId,regionname FROM pricelineregions JOIN regionscitiesmap
-        ON regionscitiesmap.priceline_regionid = pricelineregions.PricelineId
-        WHERE regionscitiesmap.cities_cityid = %s
-        '''% str(cityid))
-    points_keys = Connection.cursor.fetchall()
-    for p_key in points_keys:
-        Connection.cursor.execute(''' SELECT * FROM pricelinepoints
-            WHERE PricelineRegions_PricelineRegionId = %s  ''' % str(p_key[0]))
-            #p_key[1] region name
-        temp_list = delete_duplicate(map(list,Connection.cursor.fetchall()))
-        if p_key[1] not in regions_dictionary.keys():
-            regions_dictionary[p_key[1]] = ray_casting.make_region(p_key[1],map(lambda x:x[-2:], temp_list))
-
-    return regions_dictionary
-
-'''
-get a dictiory of cities-regions-hotels
-get all cityid
-get all region name
-
-'''
-
-def retrive_hotel(hotelid_list):
-    sql = "Select * from hotels where hotelid in "+str(map(str,hotelid_list)).replace('[','(').replace(']',')')
-  #  print sql
-    Connection.cursor.execute(sql)
-    return Connection.cursor.fetchall()
-
-
-def retrive_hotel_by_cityid(city_id):
-    sql = "Select * from hotels where cities_cityid = "+str(city_id)
-  #  print sql
-    Connection.cursor.execute(sql)
-    return Connection.cursor.fetchall()
-
-def match_results_new(city_region_hotel,name):
- #   matched_file = open('output/'+str(name)+'_sucess.csv','w')
- #   unmatched_file = open('output/'+str(name)+'_failed.csv','w')
- #   result = {}
-
-    
-
-    # 1) Getndatabase cursors and setup
-    #
-    regions_dictionary ={}
-    Connection.cursor.execute("Select * from pricelineregions")
-    priceline_regions = Connection.cursor.fetchall()
-    Connection.cursor.execute("Select * from region_hotel")
-    region_hotel_mapper ={} #key region_id with value being hotels id
-
-    # 2) Create map   RegionID -> HotelID
-    #
-    for region_hotel in Connection.cursor.fetchall():
-        if region_hotel[1] in region_hotel_mapper.keys():
-            region_hotel_mapper[region_hotel[1]].append(region_hotel[0])
-        else:
-            region_hotel_mapper[region_hotel[1]]=[region_hotel[0]]
-
-    city_region_mapper={}   #key cities_id lists regionid
-    Connection.cursor.execute("Select * from regionscitiesmap")
-
-    # 3) Create map    CityID -> RegionID
-    #
-    for region_hotel in Connection.cursor.fetchall():
-        if region_hotel[0] in city_region_mapper.keys():
-            city_region_mapper[region_hotel[0]].append(region_hotel[1])
-        else:
-            city_region_mapper[region_hotel[0]]=[region_hotel[1]]
-
-    # incorporate regionmapcities table in the implementation
-
-    # 4) Region map   RegionName -> RegionID
-    #  (original priceline regionname)
-    #
-    region_name_id = {}
-    for regions in priceline_regions:
-        if regions[2] in region_name_id.keys():
-            region_name_id[regions[2]].append(regions[0])
-        else:
-            region_name_id[regions[2]]=[regions[0]]
-
-    # 5) Region details maps   RegionID -> Region record (name,id, long,lat)
-    #
-    for regions in priceline_regions:
-        if regions[1] in regions_dictionary.keys():
-            regions_dictionary[regions[1]].append(regions)
-        else:
-            regions_dictionary[regions[1]]=[]
-            regions_dictionary[regions[1]].append(regions)
-    #print regions_dictionary.keys()
-    #dictioanry of regions by regionid
-    Connection.cursor.execute("Select * from cities")
-    city_list = Connection.cursor.fetchall()
-    city_dictionary ={}
-
-    for city in city_list:
-        if city[1] in city_dictionary.keys():
-            city_dictionary[city[1]].append(city)
-        else:
-            city_dictionary[city[1]]=[city]
-
-   # print city_dictionary
-    matched ={}
-    #dictionary of city
-
-    write_log=open('output/matched_result.csv','w')
-    unmatched_foreign_hotel_list = []
-
-    # 7) For all cities in the input generate a
-    #    match of possible cities
-    #
-    #
-    for possible_matches in city_match(city_region_hotel.keys(),map(lambda x:x[1],city_list)):
-        got_it = 0
-        count = 0
-        print 'GET ONE CITY '
-
-        
-        # 7b) 
-        #
-        for matched_city in possible_matches:
-           print 'Testing City -- '
-           print matched_city[1]
-           needs_matching_region =[]
-           needs_matching_city =[]
-           temp_regions_list=[]
-           print 'No. of regions in input'
-           print len(city_region_hotel[matched_city[0]].keys())
-           print city_region_hotel[matched_city[0]].keys()
-           if matched_city[2] > 0.82 and matched_city[0]:
-                for one in city_dictionary[matched_city[1]]:
-                    if one[0] in city_region_mapper.keys():
-                        for each_region in city_region_mapper[one[0]]:
-                            temp_regions_list.extend( map(lambda x:x[2],regions_dictionary[ each_region  ]))
-                print '     ' + str(temp_regions_list)
-                
-                for matched_regions in entity_match(city_region_hotel[matched_city[0]].keys(),temp_regions_list):
-                    if matched_regions[2] > 0.82 and matched_regions[0]:
-                        print 'MATCHED-->              '+ str(matched_regions)
-                
-                        for one in region_name_id[matched_regions[1]]:
-                            if int(one) in region_hotel_mapper.keys():
-                                hotel_list = map(lambda x:x[1],retrive_hotel(region_hotel_mapper[int(one)]))
-                                if hotel_list:
-                                    got_it =1
-                                    for match_hotel in hotel_name_match(city_region_hotel[matched_city[0]][matched_regions[0]],hotel_list,matched_city[1],matched_regions[1]):
-                                        #print match_hotel
-                                        if match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0] in matched.keys():
-                                            if matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]][0][2] ==1.0:
-                                                continue
-                                            if matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]][-1][2] <= match_hotel[2]:
-                                                if match_hotel not in matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]]:
-                                                    matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]].append(match_hotel)
-                                                        #print match_hotel
-                                        else:
-                                            if match_hotel[2]>0.83:
-                                                if match_hotel in unmatched_foreign_hotel_list:
-                                                    unmatched_foreign_hotel_list.pop(match_hotel)
-                                                matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]] = [match_hotel]
-                                                       # print match_hotel
-                                                           # write_log.write(','+ str(match_hotel).replace('[','').replace(']','')+ '\n')
-                                            else:
-                                                if match_hotel not in unmatched_foreign_hotel_list:
-                                                    unmatched_foreign_hotel_list.append(match_hotel)
-                                                not_matched = 1
-                                else:
-                                    not_matched = 1
-                                            #print 'No hotels!!'
-                                            #print str(matched_regions[0])+'--'+str(matched_city[0])
-                                            #no hotels returned for the matched region
-                            else:
-                                not_matched = 1
-                                        #print 'No Regions!!'
-                                    #print str(matched_city[0])
-                                    #City does not have regions associated with it
-                    else:
-                             # print matched_regions
-                                #region cant be matched, so try with city only
-                                #print 'Regions Not Matched!!'
-                                #print str(matched_regions[0])+'--'+str(matched_city[0])
-                        not_matched = 1
-                       #City does not have regions associated with it
-                if not_matched:
-                    foreign_hotel_list = []
-                     # print city_dictionary[matched_city[1]]
-                       #temp_list = lambda x:city_region_hotel[matched_city[0]][x] ,city_region_hotel[matched_city[0]]
-                    for reg in city_region_hotel[matched_city[0]].keys():
-                        foreign_hotel_list.extend(city_region_hotel[matched_city[0]][reg])
-                           #foreign_hotel_list.extend(temp_list)ched.keys()
-                        for one in city_dictionary[matched_city[1]]:
-                             for s_match in hotel_name_match(foreign_hotel_list,map(lambda x:x[1],retrive_hotel_by_cityid(one[0])),matched_city[1],''):
-                                   if s_match[0]+' , '+matched_city[0] in matched.keys():
-                                        if matched[s_match[0]+' , '+matched_city[0]][0][2] ==1.0:
-                                            continue
-                                        if matched[s_match[0]+' , '+matched_city[0]][-1][2] <= s_match[2]:
-                                            if s_match not in matched[s_match[0]+' , '+matched_city[0]]:
-                                                matched[s_match[0]+' , '+matched_city[0]].append(s_match)
-
-                                   else:
-                                        if s_match[2]>0.83:
-                                            if s_match in unmatched_foreign_hotel_list:
-                                                unmatched_foreign_hotel_list.pop(s_match)
-                                            matched[s_match[0]+' , '+matched_city[0]] = [s_match]
-                                        else:
-                                            if s_match not in unmatched_foreign_hotel_list:
-                                                unmatched_foreign_hotel_list.append(s_match)
-
-
-                        not_matched = 0
-                        needs_matching_city.append(matched_city[0])
-
-
-         #  else:
-                #no matched cities for hotel
-          #      print matched_city[0]
-       #         if matched_city[0]:
-        #            for reg in city_region_hotel[matched_city[0]]:
-        #                unmatched_foreign_hotel_list.append([city_region_hotel[matched_city[0]][reg],matched_city[0],reg])
-
-    ##
-    #    for entries in matched.keys():
-    #        print('\n'+entries+'\n')
-    #        for matching in matched[entries]:
-    #            print matching
-    ##
-     #   if got_it!=1:
-     #       print 'GOT___IT'
-     #       print possible_matches
-
-    for entries in matched.keys():
-        #write_log.write('\n'+entries+'\n')
-        for matching in matched[entries]:
-            write_log.write(',,'+ str(matching).replace('[','').replace(']','')+ '\n')
-
-    write_log.write('\n\n\n\n\n NOT MATCHED \n\n\n\n\n')
-    for not_matched in unmatched_foreign_hotel_list:
-        write_log.write(',,'+ str(not_matched).replace('[','').replace(']','')+ '\n')
-
-    write_log.close()
-            
-        #print 'No. of regions matched'
-        #print count
-
-def match_hotels(region_id,foreign_hotel_list,present_internal_city,present_internal_region,state,log_write_hotels):
-
-    count = 0
-   # log_write_hotels = open('output/hotel_matches.csv','a')
-    hotels_in_all_regions = region_hotel_finder(region_id)
-
-    hotel_match_array = hotel_name_match(foreign_hotel_list,map(lambda x:x[1],hotels_in_all_regions),present_internal_city,present_internal_region,state)
-
-    for hotel_matches in hotel_match_array:
-
-        if hotel_matches[2] > 0.83 and hotel_matches[1]:
-            log_write_hotels.write(',,,'+str(",".join(hotel_matches[:-1]))+'\n')
-        else:
-            print '\t\t\t\t' + str(hotel_matches)
-            count+=1
-
-         #   not_matched_hotel.append(hotel_matches[0])
-   # log_write_hotels.write(',,,'+str(",".join(hotel_matches[:-1]))+'\n')
-    log_write_hotels.write('\n,,,'+str('Hotel Matched : ' + str(len(hotel_match_array) - count)))
-    log_write_hotels.write(','+str('Hotel Not Matched : ' + str(count))+'\n\n')
-    print '\t\t\t\t Hotel Matched : ' + str(len(hotel_match_array) - count)
-    print '\t\t\t\t Hotel Not Matched : ' + str(count)
-    return count
-
-
-    #current hotel
-
-def test_matcher():
-
-    test_log = open('output/hotel_matches.csv','w') #output/test_log222.txt
-
-  #  print_log = open('output/db_city-region_pl.txt','a')
-
-    [area_dictionary,exclude_city_list,state_region] = pl_area()
-
-    [internal_state_city_region,state_region] = state_city(area_dictionary,exclude_city_list,state_region)
-
-
-    '''
-    for state in internal_state_city_region.keys():
-        print_log.write( str(state)+'\n')
-        for city in internal_state_city_region[state].keys():
-            print_log.write( '\t'+str(city)+'\n')
-            for region in internal_state_city_region[state][city].keys():
-                print_log.write('\t\t'+str(region)+'\n')
-            print_log.write('\n')
-        print_log.write('\n')
-
-    '''
-
-    not_matched_regions_list = []
-    not_matched_hotels_list = 0
-
-    input = csv_format_test('hotels-bbpl4','~','#','output/hotels-bbpl3',3,0,1,2)
-
-    # match every state
-
-    for possible_matchs in entity_match(input.keys(),internal_state_city_region.keys()):
-
-        test_log.write(str(possible_matchs[0])+'\n')
-
-        #match cities
-        print possible_matchs
-
-        for possible_cities in city_match(input[possible_matchs[0]].keys(),internal_state_city_region[possible_matchs[1]].keys()):
-            
-            found_city = 0
-
-            print '\t\t' + str(possible_cities)
-
-            for cities in possible_cities:
-
-                if found_city: break
-
-                if cities[2] > 0.8:
-
-                    test_log.write(','+str(cities[0])+'\n')
-
-                    # if no regions match the city with the regions
-
-                    if '' not in input[possible_matchs[0]][cities[0]].keys():
-
-                        #match regions
-
-                        for regions in name_match(input[possible_matchs[0]][cities[0]].keys(),internal_state_city_region[possible_matchs[1]][cities[1]].keys(),cities[1],possible_matchs[1]):
-
-                            if regions[2] < 0.7:
-
-                                if str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]) not in not_matched_regions_list:
-                                    not_matched_regions_list.append(str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]))
-
-                            else:
-                                found_city = 1
-                                if str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]) in not_matched_regions_list:
-                                    not_matched_regions_list.remove(str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]))
-
-                                region_id = internal_state_city_region[possible_matchs[1]][cities[1]][regions[1]]
-                                foreign_hotel_list = input[possible_matchs[0]][cities[0]][regions[0]]
-                                print "\t\t\t" +str(regions)
-                                test_log.write(',,'+str(regions[0])+'\n')
-                                not_matched_hotels_list += match_hotels(region_id,foreign_hotel_list,cities[1],possible_matchs[1],regions[1],test_log)
-                               # not_matched_hotels_list.extend(teemp_not_hotel_list)
-
-                            
-
-                    else:
-
-                        for f_regions in input[possible_matchs[0]][cities[0]].keys():
-
-                            if f_regions:
-
-                                temeeee = 0
-                                if f_regions == 'airport okc':
-                                    temeee = 1
-
-                                for regions in name_match([f_regions],internal_state_city_region[possible_matchs[1]][cities[1]].keys(),cities[1],possible_matchs[1]):
-
-                                    if regions[2] < 0.7:
-
-                                        if str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]) not in not_matched_regions_list:
-                                            not_matched_regions_list.append(str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]))
-
-                                    else:
-                                        found_city = 1
-                                        if str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]) in not_matched_regions_list:
-                                            not_matched_regions_list.remove(str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]))
-
-                                        region_id = internal_state_city_region[possible_matchs[1]][cities[1]][regions[1]]
-                                        foreign_hotel_list = input[possible_matchs[0]][cities[0]][regions[0]]
-                                        print "\t\t\t" +str(regions)
-                                        test_log.write(',,'+str(regions[0])+'\n')
-                                        not_matched_hotels_list += match_hotels(region_id,foreign_hotel_list,cities[1],possible_matchs[1],regions[1],test_log)
-                            else:
-                                #acquare the hotel list
-
-                                foreign_hotel_list = input[possible_matchs[0]][cities[0]][f_regions]
-
-                                # when db has only one region for the specified city match it with it
-                                if len(internal_state_city_region[possible_matchs[1]][cities[1]].keys()) == 1:
-
-                                    temp_internal_region = internal_state_city_region[possible_matchs[1]][cities[1]].keys()[0]
-
-                                    region_id = internal_state_city_region[possible_matchs[1]][cities[1]][temp_internal_region]
-
-                                    match_hotels(region_id,foreign_hotel_list,cities[1],possible_matchs[1],'',test_log)
-
-                                #if many region then match the region closet to the city name and then match the hotel list
-                                else:
-
-                                    for regions in name_match([cities[0]],internal_state_city_region[possible_matchs[1]][cities[1]].keys(),'',possible_matchs[1]):
-
-                                        if regions[2] < 0.7:
-
-                                            if str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]) not in not_matched_regions_list:
-                                                not_matched_regions_list.append(str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]))
-
-                                        else:
-                                            found_city = 1
-                                            if str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]) in not_matched_regions_list:
-                                                not_matched_regions_list.remove(str(regions[0])+' '+str(cities[0])+' '+str(possible_matchs[0]))
-
-                                            region_id = internal_state_city_region[possible_matchs[1]][cities[1]][regions[1]]
-                                            foreign_hotel_list = input[possible_matchs[0]][cities[0]][f_regions]
-                                            print "\t\t\t" +str(regions)
-                                            test_log.write(',,'+str(regions[0])+'\n')
-                                            not_matched_hotels_list += match_hotels(region_id,foreign_hotel_list,cities[1],possible_matchs[1],regions[1],test_log)
-
-
-
-                                #no region for city in the input
-                                #check how many regions are there for the corrosponding matched city in db
-                                #if only one region, match the hotel list with that region
-
-                            
-
-                                
-                else:
-                    #city not matched
-                    for possible_matches in city_match([cities[0]],state_region[possible_matchs[1]].keys()):
-
-                        test_log.write(',,'+str(cities[0])+'\n')
-                        for city_to_state_match in possible_matches:
-
-                            print '\t\t\t' + str(city_to_state_match)
-
-                            if city_to_state_match[2] > 0.7:
-
-                                foreign_hotel_list = []
-
-                                regions_string = ''
-
-                                for all_region in  input[possible_matchs[0]][cities[0]].keys():
-                                    foreign_hotel_list.extend(input[possible_matchs[0]][cities[0]][all_region])
-                                    regions_string+=' '+str(all_region)
-
-                                region_id = state_region[possible_matchs[1]][city_to_state_match[1]]
-                                match_hotels(region_id,foreign_hotel_list,city_to_state_match[1],possible_matchs[1],regions_string,test_log)
-
-
-
-
-
-        test_log.write('\n')
-
-    print not_matched_regions_list
-    print not_matched_hotels_list
-
-
-
-def match_results(city_region_hotel,name):
- #   matched_file = open('output/'+str(name)+'_sucess.csv','w')
- #   unmatched_file = open('output/'+str(name)+'_failed.csv','w')
- #   result = {}
-    regions_dictionary ={}
-    Connection.cursor.execute("Select * from pricelineregions")
-    priceline_regions = Connection.cursor.fetchall()
-    Connection.cursor.execute("Select * from region_hotel")
-    region_hotel_mapper ={} #key region_id with value being hotels id
-
-    for region_hotel in Connection.cursor.fetchall():
-        if region_hotel[1] in region_hotel_mapper.keys():
-            region_hotel_mapper[region_hotel[1]].append(region_hotel[0])
-        else:
-            region_hotel_mapper[region_hotel[1]]=[region_hotel[0]]
-
-    city_region_mapper={}   #key cities_id lists regionid
-    Connection.cursor.execute("Select * from regionscitiesmap")
-
-    for region_hotel in Connection.cursor.fetchall():
-        if region_hotel[0] in city_region_mapper.keys():
-            city_region_mapper[region_hotel[0]].append(region_hotel[1])
-        else:
-            city_region_mapper[region_hotel[0]]=[region_hotel[1]]
-
-    # incorporate regionmapcities table in the implementation
-    region_name_id = {}
-    for regions in priceline_regions:
-        region_name_id[regions[2]]=regions[0]
-
-    for regions in priceline_regions:
-        if regions[1] in regions_dictionary.keys():
-            regions_dictionary[regions[1]].append(regions)
-        else:
-            regions_dictionary[regions[1]]=[]
-            regions_dictionary[regions[1]].append(regions)
-    #print regions_dictionary.keys()
-    #dictioanry of regions by regionid
-    Connection.cursor.execute("Select * from cities")
-    city_list = Connection.cursor.fetchall()
-    city_dictionary ={}
-
-    for city in city_list:
-        city_dictionary[city[1]]=city
-
-    matched ={}
-    #dictionary of city
-
-    write_log=open('output/matched_result.csv','w')
-    unmatched_foreign_hotel_list = []
-    '''
-    for possible_matches in city_match(city_region_hotel.keys(),map(lambda x:x[1],city_list)):
-        if possible_matches:
-           # write_log.write('\n\n'+str(possible_matches[0][0])+'\n')
-            print 'START______'
-            for matched_city in possible_matches:
-        #   if matched_city[2] > 0.82 and matched_city[0]:
-                write_log.write('Matched City::,'+str(matched_city[0])+','+str(matched_city[1])+','+str(matched_city[2])+'\n')
-                temp_regions_list=[]
-                print 'CITY:: '+str(matched_city[1])
-                if city_dictionary[matched_city[1]][0] in city_region_mapper.keys():
-                    for each_region in city_region_mapper[city_dictionary[matched_city[1]][0]]:
-                        temp_regions_list.extend( map(lambda x:x[2],regions_dictionary[ each_region  ]))
-                    print '     REGIONS:: '+str(temp_regions_list)
-                    print city_region_hotel[matched_city[0]].keys()
-                    for matched_regions in entity_match(city_region_hotel[matched_city[0]].keys(),temp_regions_list):
-                        if matched_regions[2] >= 0.83:
-                            print '         Matched Regions:' + str(matched_regions)
-                            write_log.write( '\n REGIONS-->,,'+str(matched_regions[0])+','+str(matched_regions[1])+'\n')
-            print '______END'
-    write_log.close()
-    
-               got_it =1
-               print matched_city
-        if got_it !=1:
-            print 'FAILEDDD'
-            print possible_matches
-        count+=1
-        got_it = 0
-    print count
-    '''
-   # print len(city_region_hotel.keys())
-    
-    for possible_matches in city_match(city_region_hotel.keys(),map(lambda x:x[1],city_list)):
-        got_it = 0
-        count = 0
-      
-        for matched_city in possible_matches:
-           
-           needs_matching_region =[]
-           needs_matching_city =[]
-           temp_regions_list=[]
-           if matched_city[2] > 0.82 and matched_city[0]:
-                if city_dictionary[matched_city[1]][0] in city_region_mapper.keys():
-                    for each_region in city_region_mapper[city_dictionary[matched_city[1]][0]]:
-                        temp_regions_list.extend( map(lambda x:x[2],regions_dictionary[ each_region  ]))
-                    for matched_regions in entity_match(city_region_hotel[matched_city[0]].keys(),temp_regions_list):
-                        if matched_regions[2] > 0.82 and matched_regions[0]:
-                            
-    
-              # write_log.write('\n'+matched_city[1].replace(',','')+'\n')
-               
-                        #write_log.write('\n'+matched_city[1].replace(',','')+','+matched_regions[1].replace(',','')+'\n')
-                       
-                            #print region_name_id[matched_regions[1]]
-                            #print region_hotel_mapper.keys()
-                            if int(region_name_id[matched_regions[1]]) in region_hotel_mapper.keys():
-                                hotel_list = map(lambda x:x[1],retrive_hotel(region_hotel_mapper[int(region_name_id[matched_regions[1]])]))
-                                if hotel_list:
-                                    got_it =1
-                                    for match_hotel in hotel_name_match(city_region_hotel[matched_city[0]][matched_regions[0]],hotel_list,matched_city[1],matched_regions[1]):
-                                        #print match_hotel
-                                        if match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0] in matched.keys():
-                                            if matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]][0][2] ==1.0:
-                                                continue
-                                            if matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]][-1][2] <= match_hotel[2]:
-                                                if match_hotel not in matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]]:
-                                                    matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]].append(match_hotel)
-                                                #print match_hotel
-                                        else:
-                                            if match_hotel[2]>0.83:
-                                                if match_hotel in unmatched_foreign_hotel_list:
-                                                    unmatched_foreign_hotel_list.pop(match_hotel)
-                                                matched[match_hotel[0]+' , '+matched_city[0]+' , '+matched_regions[0]] = [match_hotel]
-                                               # print match_hotel
-                                                   # write_log.write(','+ str(match_hotel).replace('[','').replace(']','')+ '\n')
-                                            else:
-                                                if match_hotel not in unmatched_foreign_hotel_list:
-                                                    unmatched_foreign_hotel_list.append(match_hotel)
-                                                not_matched = 1
-                                else:
-                                    not_matched = 1
-                                    #print 'No hotels!!'
-                                    #print str(matched_regions[0])+'--'+str(matched_city[0])
-                                    #no hotels returned for the matched region
-                            else:
-                                not_matched = 1
-                                #print 'No Regions!!'
-                                #print str(matched_city[0])
-                                #City does not have regions associated with it
-                        else:
-                           # print matched_regions
-                            #region cant be matched, so try with city only
-                            #print 'Regions Not Matched!!'
-                            #print str(matched_regions[0])+'--'+str(matched_city[0])
-                            not_matched = 1
-                   #City does not have regions associated with it
-                if not_matched:
-                   foreign_hotel_list = []
-                  # print city_dictionary[matched_city[1]]
-                   #temp_list = lambda x:city_region_hotel[matched_city[0]][x] ,city_region_hotel[matched_city[0]]
-                   for reg in city_region_hotel[matched_city[0]].keys():    
-                        foreign_hotel_list.extend(city_region_hotel[matched_city[0]][reg])
-                   #foreign_hotel_list.extend(temp_list)ched.keys()
-                   for s_match in hotel_name_match(foreign_hotel_list,map(lambda x:x[1],retrive_hotel_by_cityid(city_dictionary[matched_city[1]][0])),matched_city[1],''):
-                       if s_match[0]+' , '+matched_city[0] in matched.keys():
-                            if matched[s_match[0]+' , '+matched_city[0]][0][2] ==1.0:
-                                continue
-                            if matched[s_match[0]+' , '+matched_city[0]][-1][2] <= s_match[2]:
-                                if s_match not in matched[s_match[0]+' , '+matched_city[0]]:
-                                    matched[s_match[0]+' , '+matched_city[0]].append(s_match)
-                                
-                       else:
-                            if s_match[2]>0.83:
-                                if s_match in unmatched_foreign_hotel_list:
-                                    unmatched_foreign_hotel_list.pop(s_match)
-                                matched[s_match[0]+' , '+matched_city[0]] = [s_match]
-                            else:
-                                if s_match not in unmatched_foreign_hotel_list:
-                                    unmatched_foreign_hotel_list.append(s_match)
-
-                                
-                   not_matched = 0
-                   needs_matching_city.append(matched_city[0])
-         #  else:
-                #no matched cities for hotel
-          #      print matched_city[0]
-       #         if matched_city[0]:
-        #            for reg in city_region_hotel[matched_city[0]]:
-        #                unmatched_foreign_hotel_list.append([city_region_hotel[matched_city[0]][reg],matched_city[0],reg])
-
-    ##
-    #    for entries in matched.keys():
-    #        print('\n'+entries+'\n')
-    #        for matching in matched[entries]:
-    #            print matching
-    ##
-     #   if got_it!=1:
-     #       print 'GOT___IT'
-     #       print possible_matches
-        
-    for entries in matched.keys():
-        #write_log.write('\n'+entries+'\n')
-        for matching in matched[entries]:
-            write_log.write(',,'+ str(matching).replace('[','').replace(']','')+ '\n')
-
-    write_log.write('\n\n\n\n\n NOT MATCHED \n\n\n\n\n')
-    for not_matched in unmatched_foreign_hotel_list:
-        write_log.write(',,'+ str(not_matched).replace('[','').replace(']','')+ '\n')
-
-    write_log.close()
-    
-                      #exernal hotel list
-                #else:
-                 #   print 'FAIILLED'
-           # for matched_regions in entity_match(city_region_hotel[matched_city[0]].keys(),):
-           #     if matched_regions[2] > 0.82:
-           #         print '__________'
-           #         print matched_regions
-           #         print '__________'
-           # count+=1
-           # print matched_city         full+=1
-  #  print full
-  #  print full - count
-   # for cities in city_region_hotel.keys():
-        #if cities:
-           # print entity_match(city_region_hotel[cities].keys(),map(lambda x:x[2],priceline_regions))
-            #for regions in city_region_hotel[cities].keys():
-            #    if regions != ' ':
-
-
-            
-    '''
-
-            out_city_list = query_db(cities)
-            for city_list in out_city_list:
-                regions_dictionary = get_regions_for_city(city_list[3],regions_dictionary)
-            tantative_list = []
-            for external_region in city_region_hotel[cities].keys():
-                for our_region in regions_dictionary.keys():
-                    print our_region
-                    print external_region
-                    if Levenshtein.ratio(our_region.lower(),external_region.lower()) > 0.7:
-                        print '__PASSED__'
-                        for our_list in out_city_list:
-                            #print our_list
-                            #print '________----------_________'
-                            if ray_casting.ispointinside(Pt(x=our_list[4], y=our_list[5]),regions_dictionary[our_region]):
-                                tantative_list.append(our_list)
-                             #   print our_list
-
-              #  print hotel_match(city_region_hotel[cities][external_region],tantative_list,cities)
-
-
-    for city_htl in city_hotel.items():
-        our_city_list = query_db(city_htl[0])
-        if our_city_list:
-            result[city_htl[0]]=hotel_match(city_htl[1],our_city_list,city_htl[0])
-
-    for res_htl_city in result.keys():
-        for lst in result[res_htl_city]:
-            if lst[2] > 0.7:
-                matched_file.write(lst[0].replace(',','')+','+lst[1].replace(',','')+','+str(lst[2])+'\n')
-            else:
-                unmatched_file.write(lst[0].replace(',','')+','+lst[1].replace(',','')+','+str(lst[2])+'\n')
-
-    matched_file.close()
-    unmatched_file.close()
-    '''
-
-def region_hotel_finder(region_id):
-
-    Connection.cursor.execute("Select hotel_id from region_hotel where pl_region_id ="+ str(region_id))
-    hotel_ids = Connection.cursor.fetchall()
-    hotels = []
-
-    hotel = '('
-    for hotel_id in hotel_ids:
-        hotel+=str(hotel_id[0])+','
-    hotel=hotel[:-1]+')'
-    
-
-    if len(hotel)>1:
-        Connection.cursor.execute("Select * from hotels where hotelid in "+str(hotel))
-
-        for one in Connection.cursor.fetchall():
-            hotels.append(one)
-    
-    return hotels
-
-
-def find_state_by_city_id(city_id):
-
-     Connection.cursor.execute("Select state from cities where cityid = "+str(city_id))
-
-     return Connection.cursor.fetchall()[0][0]
-
-
-def city_region_finder(cityid):     # Given a cityid this function returns an array of regions for the provided cityid (helper method for state_city())
+    # Given a cityid this function returns an array of regions for the provided cityid (helper method for state_city())
 
     #1  get the regionids for a city
+
     Connection.cursor.execute("Select priceline_regionid from regionscitiesmap where cities_cityid ="+ str(cityid))
     region_ids = Connection.cursor.fetchall()
     region_hotel = {}
@@ -1238,11 +44,21 @@ def city_region_finder(cityid):     # Given a cityid this function returns an ar
 
         for one in Connection.cursor.fetchall():
             region_hotel[str(re.sub(', [A-Za-z][A-Za-z]', '', one[0]))]=one[1]
-    
+
     return region_hotel
+
+def find_state_by_city_id(city_id):
+
+    #helper function for get_city_regions_from_area function, retrives the state of a given city id
+
+     Connection.cursor.execute("Select state from cities where cityid = "+str(city_id))
+     return Connection.cursor.fetchall()[0][0]
 
 
 def get_city_regions_from_area(area_id):
+
+    #helper function for pl_area function, given an city/area id, it creates and returns a dictionary containing regions for all areas
+    #and two lists of all the areas associated with the area and list of all states the area falls in
 
     #dictionary to store area-region relationship
 
@@ -1287,6 +103,8 @@ def get_city_regions_from_area(area_id):
 
 def pl_area():
 
+    #helper function for test_matcher function, returns
+
     #dictionary to store state-area relationship
 
     state_area_dictionary = {}
@@ -1302,7 +120,7 @@ def pl_area():
     #1  get all the area from db
 
     Connection.cursor.execute("Select * from priceline_area")
-    
+
     #2  iterate through all the area
 
     for area in Connection.cursor.fetchall():
@@ -1337,6 +155,10 @@ def pl_area():
 
 def find_cities_not_in_pl():
 
+    #helper function for state_city function.
+
+    #this function returns a list of city_id that are not relevant to the priceline system
+
     pl_city_list = []
 
     result_list = []
@@ -1344,27 +166,29 @@ def find_cities_not_in_pl():
     Connection.cursor.execute("SELECT DISTINCT cities_cityid FROM regionscitiesmap UNION SELECT DISTINCT city_id FROM priceline_area_city")
 
     for city_id in Connection.cursor.fetchall():
+
         pl_city_list.append(str(city_id[0]))
 
     Connection.cursor.execute("select cityid from cities")
 
     for city_id in Connection.cursor.fetchall():
+
         if str(city_id[0]) not in pl_city_list:
+
             result_list.append(str(city_id[0]))
 
     return result_list
 
 
-@print_timing
-def state_city(area_dictionary,excluded_city_id,state_region):       #0  Function returns two dictionaries in an array one being the state_city dictionary and the other being a dictionary for city ids
+def state_city(area_dictionary,excluded_city_id,state_region):
+
+    #0  Function returns two dictionaries in an array one being the state_city dictionary and the other being a dictionary for city ids
 
     #1  state_city dictionary has states with many cities containing many regions from the internal db
 
     state_city=area_dictionary
 
     #2  city_id dictionary has city id needed for later processing accessable through the key format 'state_name|city_name'
-
-
 
     #3  area_city gives of city name and state info provided a city id
 
@@ -1381,8 +205,11 @@ def state_city(area_dictionary,excluded_city_id,state_region):       #0  Functio
     Connection.cursor.execute("Select * from cities where cityid not in "+ exclude_city_list)
 
     for one in Connection.cursor.fetchall():
-        #3a get all the cities information from db
+
+        #4a get all the cities information from db
+
         if one[2].lower() in state_city.keys():
+
             if one[1].lower() not in state_city[one[2].lower()].keys():
 
                 #b  get all the regions in the value for the state-city dictionary
@@ -1391,7 +218,7 @@ def state_city(area_dictionary,excluded_city_id,state_region):       #0  Functio
 
                 area_city[one[0]] = str(one[2])+'|'+str(one[1])
                 #c  store city id for later processing hashing 'state_name|city_name' key
-                
+
         else:
 
             state_city[one[2].lower()] = {}
@@ -1399,274 +226,764 @@ def state_city(area_dictionary,excluded_city_id,state_region):       #0  Functio
             area_city[one[0]] = str(one[2])+'|'+str(one[1])
 
         if one[2].lower() not in state_region.keys():
+
             state_region[one[2].lower()] = {}
+
         state_region[one[2].lower()].update(state_city[one[2].lower()][one[1].lower()].items())
 
     return [state_city,state_region]
 
 
+def extract_content(file_name):
 
-def matcher(input):     #input is a dictionary of states containing many cities containing many regions containing many hotels
+    # helper function for csv_format_test, opens the file given as perameter and returns the content of the file
 
-
-    log_write = open('output/bb-hotels.csv','a')
-    log_write_hotels = open('output/hotel_match_list','a')
-    #retrieve area-region information in a dictionary format and get a list of cities not to include (as already associated with certain area)
-
-    [area_dictionary,exclude_city_list,state_region] = pl_area()
-
-    [internal_state_city_region,city_ids] = state_city(area_dictionary,exclude_city_list,state_region)
-    
-    count=0
-     #first iterate through the content for a single state
-
-    for one in entity_match(input.keys(),internal_state_city_region.keys()):
-
-        #the 'one' is an array in the format of [foreign_state,internal_state,match_ratio]
-        
-        present_foreign_state = one[0]
-        present_internal_state = one[1]
-
-        #assigning current state dictionaries for the internal and foreign state to local variables
-
-        foreign_city_dictionary = input[present_foreign_state]
-
-        #for the present state, grab cities and regions from the database
-
-        internal_city_dictionary = internal_state_city_region[present_internal_state]
-
-        #match all the cities in the state with the foreign city list in the present state
-
-        for possible_cities in entity_match(foreign_city_dictionary.keys(),internal_city_dictionary.keys()):
-
-            #possible_matches is a list of possible city matches with each foreign city
-            
-            if possible_cities[2]>0.83:
-            #for matched_city in possible_cities:
-                
-                #matched_city is an array of one possible match for a particular foreign city in the format [foreign_city, internal_city, match_ratio], where match_ratio = -1 means no match
-
-                #if any possible matches are found
-
-            #    if matched_city[2] != -1.0:
-
-                    #assigning current city dictionaries for the internal and foreign city to local variables
-                    
-                    present_foreign_city = possible_cities[0]#matched_city[0]
-                    present_internal_city = possible_cities[1]#matched_city[1]
-                    
-                    internal_region_dictionary = internal_city_dictionary[present_internal_city]
-                    foreign_region_dictionary = foreign_city_dictionary[present_foreign_city]
+    f = open(file_name)
+    content = f.read()
+    f.close()
+    return content
 
 
-                    #if matched, try region matching
-                    
-                    for possible_regions in name_match(foreign_region_dictionary.keys(),internal_region_dictionary.keys(),present_internal_city,''):
+def csv_format_test(name,delemiter_record,delemiter_field,file_name,hotel_index,state_index,city_index,region_index):
 
-                        hotels_in_all_regions = []
-                        foreign_hotel_list=[]
+    #helper method for test_matcher function, it organizes the content from the scraped data into dictionaries of dictionaries (State => City/Area => Region => hotels)
 
+    return_dict={}
+    count = 0
+    for line in extract_content(file_name).split(delemiter_record):
 
-                        if possible_regions[2]>0.65 and possible_regions[0]:
-                        #for matched_region in possible_regions:
+        parts = line.split(delemiter_field)
 
-                        #    if matched_region[2] != -1.0:
+        city = str(re.sub(', [A-Za-z][A-Za-z]', '', parts[city_index].lower().strip()))
+        state = parts[state_index].lower().strip()
+        region = str(re.sub(', [A-Za-z][A-Za-z]', '', parts[region_index].lower().strip()))
+        hotel = parts[hotel_index].lower().strip().replace(' previously','')
 
-                                present_foreign_region = possible_regions[0]#matched_region[0]
-                                present_internal_region = possible_regions[1]#matched_region[1]
+        if state == 'dc':
+            state = 'district of columbia'
 
-                                foreign_hotel_list = foreign_region_dictionary[present_foreign_region]
-                                region_id = internal_region_dictionary[present_internal_region]
-                                hotels_in_all_regions.extend(region_hotel_finder(region_id))
+        if return_dict.has_key(state) and state:
 
-                                for hotel_matches in hotel_name_match(foreign_hotel_list,map(lambda x:x[1],hotels_in_all_regions),present_internal_city,present_internal_region):
+            if return_dict[state].has_key(city) and city:
 
-                                    if hotel_matches[2] > 0.83 and hotel_matches[1]:
-                                        log_write_hotels.write(str(hotel_matches)+'\n')
-                                        count+=1
+                if return_dict[state][city].has_key(region.strip()):
 
-                        else:
-                            if not possible_regions[0]:
-                                for possible_regions in name_match([present_foreign_city],internal_region_dictionary.keys(),present_internal_city,''):
-                                    hotels_in_all_regions = []
-                                    foreign_hotel_list=[]
+                    return_dict[state][city][region.strip()].append(hotel)
+                    count+=1
 
+                else:
 
-                                    if possible_regions[2]>0.65 and possible_regions[0]:
-                                    #for matched_region in possible_regions:
+                    return_dict[state][city][region.strip()]= [hotel]
+                    count+=1
 
-                                    #    if matched_region[2] != -1.0:
-
-                                            present_foreign_region = possible_regions[0]#matched_region[0]
-                                            present_internal_region = possible_regions[1]#matched_region[1]
-
-                                            foreign_hotel_list = foreign_region_dictionary['']
-                                            region_id = internal_region_dictionary[present_internal_region]
-                                            hotels_in_all_regions.extend(region_hotel_finder(region_id))
-
-                                            for hotel_matches in hotel_name_match(foreign_hotel_list,map(lambda x:x[1],hotels_in_all_regions),present_internal_city,present_internal_region):
-
-                                                if hotel_matches[2] > 0.83 and hotel_matches[1]:
-                                                    log_write_hotels.write(str(hotel_matches)+'\n')
-                                                    count+=1
-
-                                    else:
-                                        
-                                        log_write.write( 'REGION NOT FOUND:: '+str(possible_regions)+'  in area/city(internal) '+str(present_internal_city)+' in area/city(external) '+str(present_foreign_city)+'\n')
-                                        log_write.write( 'REGION NOT FOUND:: '+str(internal_region_dictionary.keys())+'\n')
-                            else:
-                                log_write.write( 'REGION NOT FOUND:: '+str(possible_regions)+'  in area/city(internal) '+str(present_internal_city)+' in area/city(external) '+str(present_foreign_city)+'\n')
-                                log_write.write( 'REGION NOT FOUND:: '+str(internal_region_dictionary.keys())+'  in state '+str(present_internal_state)+'\n')
-                                #No region matches
-                        
-
-                    
             else:
-                log_write.write('CITY NOT FOUND:: '+str(possible_cities)+'\n')
-                    #No City matches were Found
 
-                        #grab hotels in the region and then match the hotels
+                return_dict[state][city] = {}
+                return_dict[state][city][region.strip()]= [hotel]
+                count+=1
 
-                    #if region matching failed, try matching with all the hotels in the city
+        else:
 
-                    #if unsucessful, move onto next phase
+            return_dict[state]={}
+            return_dict[state][city] = {}
+            return_dict[state][city][region.strip()]= [hotel]
+            count+=1
 
-                #if failed, try matching region name from the input with the cities and regions in db
+    print "Total Hotels to Match::" +str(count)
+    return return_dict
 
-    print count
+def entity_match_normalize(input):
 
-#3348
+    #helper function for entity_match and city_match functions, it strips out words in city/area/state names, before being matched
 
+    return str(input).lower().strip().replace('/',' ').replace('-',' ').replace('(','').replace(')','').replace('saint ','st ').replace(' city','').replace('fort ','ft. ')
+
+def entity_match(foreign_list,internal_list):
+
+    #helper function for test_matcher function. This function is used to match a list of states.
+
+    #this method is straight-forward, for all given foreign list (from scraped forum data) items it tries to find the best match from the internal list (from db)
+
+    #the entry with the highest ratio is inserted into a list that is returned by this method.
+
+    #if the highest ratio is < 0.8, then it is checked whether the whole name resides in the list of internal entity names, if it does then,
+    #it is considered to be a match as well (it is hacked to give a perfect match of 1)
+
+    matches = []
+ 
+    for foreign_list_item in foreign_list:
+
+        max = 0.0
+        found = ''
+        ratio=0.0
+
+        for list_item in internal_list:
+
+            temp=Levenshtein.ratio(entity_match_normalize(foreign_list_item),entity_match_normalize(list_item))
+
+            if temp>max:
+
+                max = temp
+                found = list_item
+                ratio = temp
+
+        if ratio < 0.8:
+
+            for list_item in internal_list:
+
+                if entity_match_normalize(foreign_list_item) in entity_match_normalize(list_item) and foreign_list_item.strip() != '':
+
+                    temp =1.0
+                    found = list_item
+                    break
+
+        matches.append([foreign_list_item,found,ratio])
+
+    return matches
+
+
+def city_match(foreign_list,internal_list):
+
+    matches = []
+
+    #helper function for test_matcher function. This function is used to match a list of city/area. It is to be noted that one city/area in question, could be matched with multiple city/area from the db
+
+    #1  first check if given foreign list matches closely with the db relevant city list (it is considered a match if an item has a match ratio of more then 0.9)
+
+    #2  if no match is found, then check if the foreign list item is a substring of any city in the relevant db city list
+
+    #3  if still no match is found, then split the foreign city name by ' - ' (if any) and try to look for matches for all portion of the foreign city name
+
+    #4  if no match is found even now, then split the foreign city name into individual words and then try to find a match for individual words in the relevant db city list
+
+    #POTENTIAL BUG! :in 3,4 the area names which have common city names will be considered as matched!
+
+    for foreign_list_item in foreign_list:
+
+        #this contains the matches for each foreign city/area names
+
+        indiv_match =[]
+
+        #this contains the all the word(s) separated by '-' in city/area names
+
+        temp_name = []
+
+        #this contains all individual words in city/area names
+
+        temp_name_space = []
+
+        if '-' in foreign_list_item:
+            temp_name = foreign_list_item.split('-')
+
+        if ' ' in foreign_list_item:
+            temp_name_space = foreign_list_item.split()
+
+        #1
+        for list_item in internal_list:
+
+            temp=Levenshtein.ratio(entity_match_normalize(foreign_list_item),entity_match_normalize(list_item))
+
+            if temp > 0.90:
+
+                indiv_match.append([foreign_list_item,list_item,temp])
+
+        #2
+        if not indiv_match:
+
+            for list_item in internal_list:
+
+                if list_item.strip() and foreign_list_item.strip():
+
+                    if list_item.lower() in foreign_list_item.lower() or foreign_list_item.lower() in list_item.lower():
+
+                        temp=1.0
+                        indiv_match.append([foreign_list_item,list_item,temp])
+
+
+        #This is a list of words not considered to help while doing part by part matching of names
+
+        unwanted_word_list_in_names = ['','-','/','south','north','west','east']
+
+        #3
+        if not indiv_match and temp_name:
+
+            for list_item in internal_list:
+
+                is_in = 0
+
+                for one in temp_name:
+
+                    if one.strip() not in unwanted_word_list_in_names:
+
+                      temp=Levenshtein.ratio(entity_match_normalize(one),entity_match_normalize(list_item))
+
+                      if temp > 0.9:
+
+                          is_in = 1
+
+                for a in temp_name:
+
+                    if a in list_item and a not in unwanted_word_list_in_names:
+
+                        temp =1.0
+                        is_in = 1
+                        break
+
+                if is_in:
+
+                    indiv_match.append([foreign_list_item,list_item,1.0])
+
+        #4
+        if not indiv_match and temp_name_space:
+
+            for list_item in internal_list:
+
+                is_in = 0
+
+                for one in temp_name_space:
+
+                    if one not in unwanted_word_list_in_names:
+
+                        temp=Levenshtein.ratio(entity_match_normalize(one),entity_match_normalize(list_item))
+
+                        if temp > 0.9:
+
+                            is_in = 1
+
+                for a in temp_name_space:
+
+                    if a in list_item and a not in unwanted_word_list_in_names:
+
+                        temp =1.0
+                        is_in = 1
+                        break
+
+                if is_in:
+
+                    indiv_match.append([foreign_list_item,list_item,1.0])
+
+        if not indiv_match:
+
+            matches.append([[foreign_list_item,foreign_list_item,-1.0]])
+
+        else:
+
+            matches.append(sorted(indiv_match,key=lambda x:x[2],reverse=True))
+
+    return matches
+
+
+def spacial_cases(city_name,matches):
     
-@print_timing
-def main():
-  #  test_dictionary()
-  # print pl_area()
-   #print get_city_regions_from_area(16)
-   #proceesed_matching()
-    #get_regions_for_city(168)
-   # test_area()
-    #csv_format('bbhw-hotels','~',';','output/bbhw-hotels',2,0)
-    #csv_format('bbpl-hotels','~',';;','output/bbpl-hotels',2,0,1)
-  # print matcher_for_bb_bft.name_match(['yakima','wenatchee'], ['Yakima','Ellensburg','Wenatchee'], 'wenatchee - yakima', 'washington')
-    normalize('hyatt regency boston financial','quincy market - faneuil hall - financial','Boston Massachusetts')
-    test_matcher()
-  #  csv_format_new('hotels-bbpl2','~','#','output/hotels-bbpl2',3,0,1,2)
-    #csv_format('bftpl-hotels','~',';;','output/bbpl-hotels',2,0)
-
-def word_specific_matcher(hotel_to_match,match_list,log_file):
-
-    hotel_name = hotel_to_match[2]
-    hotel_words = hotel_name.lower().split()
-    hotel_words.extend(hotel_to_match[1].lower().replace('&amp;','').split())
-    match_result=[]
-    log_file.write(str(hotel_to_match[2]).replace(',',' ')+' -- '+str(hotel_to_match[1]).replace(',',' ')+'\n')
-    log_file.write('Choices::\n')
-    for match in match_list:
-        words_to_match = match.split(';;')[1].lower().replace('&amp;','').split()
-        region =  match.split(';;')[6]
-        if 'No region match' not in region:
-            words_to_match.extend(region.lower().split())
-        score=0.0
-        for words in hotel_words:
-            max=0.0
-            for match_word in words_to_match:
-                tmp = Levenshtein.ratio(words,match_word)
-                if tmp > max:
-                    max=tmp
-            score+=max
-        match_result.append([match.split(';;')[1],hotel_name,score/len(hotel_words),region])
-        
-        log_file.write(','+str(match.split(';;')[1]).replace(',',' ')+' -- '+str(region).replace(',',' ')+'\n')
+    #this function is a helper function for the region name matcher function. this is a list of names which are forced to match with the input.
     
-    res = sorted(match_result,key=lambda x: x[2],reverse=True)[0]
-    if res[2] > 0.6:
-        log_file.write('Resulting Match: '+str(res[0]).replace(',',' ')+' -- '+ str(res[3]).replace(',',' ')+'\n\n')
+    #this function can be extended in the future to take into accout human input to matching regions
+
+    city_name = city_name.strip().lower()
+
+    if city_name =='strip south':
+        return 'Las Vegas Strip Vicinity South'
+
+    if city_name == 'airport midway mdw area':
+        return 'Midway Airport North'
+
+    if city_name == 'airport - south portland':
+        return 'South Portland - Scarborough'
+
+    if city_name == 'steamboat':
+        return 'Steamboat Springs'
+
+    if city_name == 'lansing - hammond':
+        matches.append([city_name,'Hammond IN',1.0])
+        return 'Holland - Lansing IL'
+
+    if city_name == 'suffern - nanuet':
+        return 'Mahwah - Ramsey - Allendale'
+
+    return ''
+
+
+def normalize(name,city,region):
+
+    #this function is a helper function for region_name_match, this function normalizes the region names, given its city/area and state name
+
+    #first it splits the region city/area and state names into individual words, then strips out each one of those words from the region name
+
+    #if after striping all the relevant words from the region name, the name does not contain any words at all it is restored back to its original state
+    #this occurs when the region name is the same as the name the city/area it is in
+
+    city = city.lower()
+    region = region.lower()
+    name = name.lower()
+
+    temp = ['(',')',',']
+
+    if '-' in city: temp.extend(city.split('-'))
+    temp.extend(city.split())
+
+    if '-' in region: temp.extend(region.split('-'))
+    temp.extend(region.split())
+
+    temp_name = name
+
+    for all in temp:
+        temp_name=temp_name.replace(all.strip(),'')
+
+    if not temp_name.strip():
+        temp = ['(',')',',']
+        for all in temp:
+            name=str(name).replace(all.strip(),'')
     else:
-        log_file.write('??not matching with:  '+str(res[0]).replace(',',' ')+' -- '+ str(res[3]).replace(',',' ')+'\n\n')
-   # print '_____RESULT______'
-   # print hotel_to_match
-    return res
+        name = temp_name
+
+    return name.replace('/','').replace('-','').replace('saint ','st ').replace(' city','').replace('fort ','ft. ').replace('hotel ','').replace(' hotel','').replace(' and ',' & ').strip()
 
 
-def proceesed_matching():
-    content = extract_content('output/hotel_choices')
-    log_file=open('output/refined_matching.csv','w')
-    for every_match in content.split('@'):
-        hotel_info=every_match.split('~')
-        if hotel_info:
-            foreign_hotel = hotel_info[0].split(';;')
-            probable_hotel = hotel_info[1:]
-            if foreign_hotel and probable_hotel:
-               # print '_____TEST___'
-               # print str(foreign_hotel[2]) + ' -- '+str(foreign_hotel[1])
-               # print probable_hotel
-                print word_specific_matcher(foreign_hotel,probable_hotel,log_file)
-              #  print '___END____'
-    log_file.close()
+def region_name_match(foreign_list,internal_list,city_name,state_name):
+
+    #this is a helper function for test_matcher. Given a list of regions, with its city/area and state name, this function returns a list of matched region names
+
+    #1   this method takes into accout for special cases, which forecably matches one entry with a specific region from the db
+
+    #2   At first, each name is normalized to strip out names of city/area or state it belonges to (this ensures more effective string matching). Then it is checked if it matches with any entry in the db region list
+
+    #3   if the maximum match ratio is below 0.7, then probably a correct match was not found
+
+    #4   then it is checked whether a substring of the normalized region name is found in any of the entries from the db list
+
+    #5   the same check is done using parial normalized region name (which does not strip the city/area name of a region), as sometimes a region name can be the same as the name of the city/area it is in
+
+    #6   if the region has 'airport' in its name, then only the region names containing 'airport' from the db is compared to find a match
+
+    matches = []
+
+    for foreign_list_item in foreign_list:
+
+        max = 0.0
+        found = ''
+        ratio=0.0
+        temp = 0.0
+
+        #1
+
+        special = spacial_cases(foreign_list_item,matches)
+
+        if special:
+
+            matches.append([foreign_list_item,special,1.0])
+            continue
+
+        #2
+
+        for list_item in internal_list:
+
+            temp=Levenshtein.ratio(normalize(foreign_list_item,city_name,state_name),normalize(list_item,city_name,state_name))
+
+            if temp > max:
+                    max = temp
+                    found = list_item
+                    ratio = temp
+
+        #3
+
+        if ratio < 0.7:
+
+            for list_item in internal_list:
+
+                normalized_foreign_item = normalize(foreign_list_item,city_name,state_name)
+
+                normalized_internal_item = normalize(list_item,city_name,state_name)
+
+                partial_normalized_foreign_item = normalize(foreign_list_item,'',state_name)
+
+                partial_normalized_internal_item = normalize(list_item,'',state_name)
+
+                #4
+
+                if ( normalized_foreign_item and normalized_internal_item ) and ( normalized_foreign_item in normalized_internal_item or normalized_internal_item in normalized_foreign_item ):
+
+                    temp=1.0
+                    found = list_item
+                    ratio = temp
+                    break
+
+                #5
+
+                if ( partial_normalized_foreign_item and partial_normalized_internal_item ) and ( partial_normalized_foreign_item in partial_normalized_internal_item or partial_normalized_internal_item in partial_normalized_foreign_item):
+
+                    temp=1.0
+                    found = list_item
+                    ratio = temp
+                    break
+
+            #6
+
+            if ratio != 1.0:
+
+                max = 0.0
+
+                for list_item in internal_list:
+
+                    if 'airport' in normalize(foreign_list_item,city_name,state_name) and 'airport' in normalize(list_item,city_name,state_name):
+
+                        temp=Levenshtein.ratio(normalize(foreign_list_item,city_name,state_name),normalize(list_item,city_name,state_name))
+
+                        if temp > max:
+                            
+                            max = temp
+                            found = list_item
+                            ratio = 1.0
 
 
-def test_dictionary():
+        matches.append([foreign_list_item,found,ratio])
 
-    file_write = open('output/city-region','a')
+    return matches
+
+
+def region_hotel_finder(region_id):
+
+    #this is a helper function for the hotel_name_match function.
+
+    #this function returns a list of hotel given a region_id
+
+    Connection.cursor.execute("Select hotel_id from region_hotel where pl_region_id ="+ str(region_id))
+    hotel_ids = Connection.cursor.fetchall()
+    hotels = []
+    hotel = '('
+
+    for hotel_id in hotel_ids:
+
+        hotel+=str(hotel_id[0])+','
+
+    hotel=hotel[:-1]+')'
+
+
+    if len(hotel) > 1:
+
+        Connection.cursor.execute("Select * from hotels where hotelid in "+str(hotel))
+
+        for one in Connection.cursor.fetchall():
+
+            hotels.append(one)
+
+    return hotels
+
+
+def hotel_name_match(foreign_list,internal_list,city_name,region_name,state_name):      #feed list of foreign cities
+
+    #this function is a helper function the match hotels function.
+    
+    #Given a list of hotels and their city,region and state name, the function tries to match the hotels up with the corrosponding list in the db
+
+    #1  First the city/area, region and state name are broken down to individual words and some other misleading words are added so that they are striped out of the hotel name
+
+    #2  at first, every foreign hotel is attemped to be matched with one of the entries in the relevant db hotel list
+
+    #3  if the maximum match ratio is less then 0.83, then it is considered that it was not matched properly
+
+    #4  then, each word of the normalized foreign hotel name is attempted to match each word of every hotel in the relevant db hotel list
+
+    #5  if all the individual words of an entity is matched, then it is considered that the foreign hotel is matched
+
+    #1
+
+    region_name = " ".join(map(lambda x:x.strip(),region_name.split('-')))
+    city_name = " ".join(map(lambda x:x.strip(),city_name.split('-')))
+    city_name += ' '+state_name+ ' at '+' by '+' spa '+' and '+ ' on '+' not yet reported '
+
+    
+    matches = []
+
+    for foreign_list_item in foreign_list:
+
+        max = 0.0
+        found = ''
+        ratio=0.0
+
+        #2
+
+        for list_item in internal_list:
+
+            temp=Levenshtein.ratio(normalize(foreign_list_item,city_name,region_name),normalize(list_item,city_name,region_name))
+
+            if temp>max:
+
+                max = temp
+                found = list_item
+                ratio = temp
+
+        #3
+
+        if ratio < 0.83:
+
+            for list_item in internal_list:
+
+                temp_list_item = normalize(list_item,city_name,region_name)
+                flag = 0
+                foregein_part = normalize(foreign_list_item,city_name,region_name).split()
+
+                #4
+
+                for every_part in foregein_part:
+
+                    for internal_hotel_part in temp_list_item.split():
+
+                        if Levenshtein.ratio(every_part,internal_hotel_part) > 0.87:
+
+                            flag += 1
+                            break
+
+                #5
+
+                if len(foregein_part) == flag:
+
+                    found = list_item
+                    ratio = 1.0
+                    break
+
+        matches.append([foreign_list_item,found,ratio])
+
+    return matches
+
+
+
+
+def match_hotels(region_id,foreign_hotel_list,present_internal_city,present_internal_region,state,log_write_hotels):
+
+    #this function is a helper function for the test_matcher function.
+
+    #this function matches a list of hotels, given their city/area, region and state with the corrosponding db hotel list
+
+    #1  first this function, retrives all the hotels from a given region
+
+    #2  feeds the appropriate list of hotels to generate the matches for all foreign hotels
+
+    #this function can be expanded in the future to write the hotel matches to the db
+
+
+    count = 0
+
+    #1
+
+    hotels_in_all_regions = region_hotel_finder(region_id)
+
+    #2
+
+    hotel_match_array = hotel_name_match(foreign_hotel_list,map(lambda x:x[1],hotels_in_all_regions),present_internal_city,present_internal_region,state)
+
+    for hotel_matches in hotel_match_array:
+
+        if hotel_matches[2] > 0.83 and hotel_matches[1]:
+
+            log_write_hotels.write(',,,'+str(",".join(hotel_matches[:-1]))+'\n')
+
+        else:
+
+            print '\t\t\t\t' + str(hotel_matches)
+
+            count+=1
+
+    log_write_hotels.write('\n,,,'+str('Hotel Matched : ' + str(len(hotel_match_array) - count)))
+    log_write_hotels.write(','+str('Hotel Not Matched : ' + str(count))+'\n\n')
+    print '\t\t\t\t Hotel Matched : ' + str(len(hotel_match_array) - count)
+    print '\t\t\t\t Hotel Not Matched : ' + str(count)
+
+    return count
+
+
+def match_regions(current_input_region_list,current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,same_level = 1):
+
+    #helper function for the test_matcher function
+    
+    #This function attemptes to match regions of the input with that of the respective db regions
+
+    for regions in region_name_match(current_input_region_list,current_internal_region_list,current_internal_city_name,current_internal_state_name):
+
+        current_internal_regions_name = regions[1]
+        current_input_region_name = regions[0]
+
+        if regions[2] < 0.7:
+
+            # if region not matched log it
+
+            if str(current_input_region_name)+' '+str(current_input_city_name)+' '+str(current_input_state_name) not in not_matched_regions_list:
+                not_matched_regions_list.append(str(current_input_region_name)+' '+str(current_input_city_name)+' '+str(current_input_state_name))
+
+        else:
+
+            #if region is matched, proceed to matching relevant hotels
+
+            found_city = 1
+
+            if str(regions[0])+' '+str(current_input_city_name)+' '+str(current_input_state_name) in not_matched_regions_list:
+                not_matched_regions_list.remove(str(regions[0])+' '+str(current_input_city_name)+' '+str(current_input_state_name))
+
+            #get region id for the internal region in question
+
+            region_id = current_internal_city_dict[current_internal_regions_name]
+
+            #get list of relevant foreign hotel names to match, if the matching level is the same (e.g. matching regions with regions instead of regions with city/area)
+
+            if same_level:
+                foreign_hotel_list = current_input_city_dict[current_input_region_name]
+            else:
+                foreign_hotel_list = current_input_city_dict['']
+
+            print "\t\t\t" +str(regions)
+            test_log.write(',,'+str(current_input_region_name)+'\n')
+
+            #  match the relevant hotel names
+
+            not_matched_hotels_list += match_hotels(region_id,foreign_hotel_list,current_internal_city_name,current_internal_state_name,current_internal_regions_name,test_log)
+
+    return [found_city,not_matched_hotels_list,not_matched_regions_list]
+
+
+
+def test_matcher():
+
+    #this is the main matcher function
+
+    test_log = open('output/hotel_matches.csv','w')
+    
+    #process hotel information from db, exclude irelevant cities and make a structured dictionary of (states => city/area => region => hotels)
+
     [area_dictionary,exclude_city_list,state_region] = pl_area()
 
     [internal_state_city_region,state_region] = state_city(area_dictionary,exclude_city_list,state_region)
 
+    not_matched_regions_list = []
+    not_matched_hotels_list = 0
 
-    for states in internal_state_city_region.keys():
-        file_write.write(str(states)+'\n')
-        for cities in internal_state_city_region[states].keys():
-            file_write.write( '     '+str(cities)+'\n')
-            for regions in internal_state_city_region[states][cities].keys():
-                file_write.write('         '+str(regions)+'\n')
+    #process information from scraped data from the forums and construct a structured dictionary similar to that of the previous
+
+    input = csv_format_test('hotels-bbpl4','~','#','output/hotels-bbpl3',3,0,1,2)
+
+    #start the actual matching process
+
+    # match state
+
+    for possible_matchs in entity_match(input.keys(),internal_state_city_region.keys()):
+
+        current_internal_state_name = possible_matchs[1]
+        current_input_state_name = possible_matchs[0]
+        current_input_state_dict = input[possible_matchs[0]]
+        current_internal_state_dict = internal_state_city_region[possible_matchs[1]]
+
+        test_log.write(str(current_input_state_name)+'\n')
+
+        print possible_matchs
+
+        #match cities
+
+        for possible_cities in city_match(current_input_state_dict.keys(),current_internal_state_dict.keys()):
+
+            found_city = 0
+
+            print '\t\t' + str(possible_cities)
+
+            #iterate through every possible cities/area matches
+
+            for cities in possible_cities:
+
+                #if a city/area match is found break (match is determined if there is matching regions as well)
+                
+                if found_city: break
+
+                current_internal_city_name = cities[1]
+                current_input_city_name = cities[0]
+                current_internal_city_dict = current_internal_state_dict[current_internal_city_name]
+                current_input_city_dict = current_input_state_dict[current_input_city_name]
+                current_input_region_list = current_input_city_dict.keys()
+                current_internal_region_list = current_internal_city_dict.keys()
+
+                #check if city/area is relevant in terms of text
+
+                if cities[2] > 0.8:
+
+                    test_log.write(','+str(cities[0])+'\n')
+
+                    # if the city/area in question has all regions named proceed with region matching
+
+                    if '' not in current_input_city_dict.keys():
+
+                        #match regions
+    
+                        [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions(current_input_region_list,current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list)
+
+                    else:
+
+                        # if region name is missing
+
+                        for f_regions in current_input_city_dict.keys():
+
+                            if f_regions:
+
+                                #match regions that are in the input with the internal regions
+
+                                [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions([f_regions],current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list)
+
+                            else:
+
+                                #acquare the hotel list
+
+                                foreign_hotel_list = current_input_city_dict[f_regions]
+
+                                # when db has only one region for the specified city match it with it
+
+                                if len(current_internal_city_dict.keys()) == 1:
+
+                                    temp_internal_region = current_internal_city_dict.keys()[0]
+
+                                    region_id = current_internal_city_dict[temp_internal_region]
+
+                                    match_hotels(region_id,foreign_hotel_list,current_internal_city_name,current_internal_state_name,'',test_log)
+
+                                #if many region then match the region closet to the city name and then match the hotel list
+
+                                else:
+
+                                    [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions([current_input_city_name],current_internal_region_list,'',current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,0)
+
+
+                else:
+
+                    #city not matched
+                    #try matching the city name with region names in the same state
+
+                    for possible_matches in city_match([current_input_city_name],state_region[current_internal_state_name].keys()):
+
+                        test_log.write(',,'+str(current_input_city_name)+'\n')
+                        for city_to_state_match in possible_matches:
+
+                            print '\t\t\t' + str(city_to_state_match)
+
+                            if city_to_state_match[2] > 0.7:
+
+                                foreign_hotel_list = []
+
+                                regions_string = ''
+
+                                for all_region in current_input_city_dict.keys():
+
+                                    foreign_hotel_list.extend(current_input_city_dict[all_region])
+                                    regions_string+=' '+str(all_region)
+
+                                region_id = state_region[current_internal_state_name][city_to_state_match[1]]
+                                match_hotels(region_id,foreign_hotel_list,city_to_state_match[1],current_internal_state_name,regions_string,test_log)
+
+        test_log.write('\n')
+
+    print not_matched_regions_list
+    print not_matched_hotels_list
+
 
 @print_timing
-def old_main():
-    fi = open('output/bbhw-hotels')
-    matched_file = open('sucess.csv','w')
-    unmatched_file = open('failed.csv','w')
-    line = fi.read().split('~')
-    #cities = []
-    city_hotel = {}
-    for l in line:
-        parts = l.split(';')
-        #if parts[0] not in cities:
-         #   cities.append(parts[0])
-        #print parts
-        if parts[2] != 'REVIEW' and parts[2] != 'OR' and parts[2]:
-            if city_hotel.has_key(parts[0]) and parts[0]:
-                city_hotel[parts[0]].append(parts[2].replace(' previously',''))
-            else:
-                if parts[0]:
-                    city_hotel[parts[0]]= [parts[2].replace(' previously','')]
+def main():
 
+    #Main matcher function is called
     
-    result = {}
-    for city_htl in city_hotel.items():
-        our_city_list = query_db(city_htl[0])
-        if our_city_list:
-            #print our_city_list[2]
-            #try:
-           # print city_htl
-            result[city_htl[0]]=hotel_match(city_htl[1],our_city_list,city_htl[0])
-            #except:
-             #  print our_city_list
-    
-    for res_htl_city in result.keys():
-       # print res_htl_city
-        for lst in result[res_htl_city]:
-            if lst[2] > 0.7:
-                matched_file.write(lst[0].replace(',','')+','+lst[1].replace(',','')+','+str(lst[2])+'\n')
-            else:
-                unmatched_file.write(lst[0].replace(',','')+','+lst[1].replace(',','')+','+str(lst[2])+'\n')
-       # print '\n'
-
-    matched_file.close()
-    unmatched_file.close()
-    #print count
-            #print 'not aval for '+ str(city)
-    
+    test_matcher()
 
 
 if __name__ == '__main__':
