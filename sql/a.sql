@@ -15,7 +15,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`Cities` (
   `Country` VARCHAR(255) NOT NULL ,
 
   PRIMARY KEY (`CityId`) )
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -42,7 +42,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`Hotels` (
     REFERENCES `acuity`.`Cities` (`CityId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -62,7 +62,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`KayakHotels` (
     REFERENCES `acuity`.`Hotels` (`HotelId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -85,7 +85,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelineRegions` (
     REFERENCES `acuity`.`Cities` (`CityId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -112,7 +112,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelineId` (
     REFERENCES `acuity`.`PricelineRegions` (`PricelineRegionId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -135,7 +135,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwireRegions` (
     REFERENCES `acuity`.`Cities` (`CityId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -162,7 +162,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwireId` (
     REFERENCES `acuity`.`HotwireRegions` (`HotwireRegionId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -184,7 +184,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelinePoints` (
     REFERENCES `acuity`.`PricelineRegions` (`PricelineRegionId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -206,7 +206,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwirePoints` (
     REFERENCES `acuity`.`HotwireRegions` (`HotwireRegionId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -232,7 +232,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BftPosts` (
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -258,7 +258,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BbPricelinePosts` (
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -284,7 +284,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`BbHotwirePosts` (
     REFERENCES `acuity`.`HotwireId` (`HotwireId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -306,7 +306,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotelNames` (
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -333,7 +333,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`PricelineBids` (
     REFERENCES `acuity`.`PricelineId` (`PricelineId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -360,7 +360,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotwireBids` (
     REFERENCES `acuity`.`HotwireId` (`HotwireId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -372,7 +372,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`Amenities` (
   `HWAmenityAbbreviation` CHAR(2),     -- hotwire 2 char abbreviation 
 
   PRIMARY KEY (`AmenityId`) )
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 -- -----------------------------------------------------
@@ -400,7 +400,7 @@ CREATE  TABLE IF NOT EXISTS `acuity`.`HotelAmenities` (
     REFERENCES `acuity`.`Amenities` (`AmenityId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = MyISAM;
+ENGINE = Innodb ;
 
 
 
