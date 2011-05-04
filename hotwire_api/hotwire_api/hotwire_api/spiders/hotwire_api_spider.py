@@ -66,9 +66,9 @@ class Amenity(Base) :
    # these are going to be reflected in the table built
    # other variables in the class will not 
    uid  = Column(Integer, primary_key=True) 
-   name = Column(String(100))               
-   code = Column(String(2))  
-   description = Column(String(255)) 
+   name = Column(String())               
+   code = Column(String())  
+   description = Column(String()) 
 
    def __init__(self, namesdict) : 
        for i in namesdict : 
@@ -106,10 +106,10 @@ class Neighborhood (Base) :
    
    uid = Column(Integer, Sequence('neighborhood_sequence'), primary_key=True) 
    id = Column(String(10))
-   name = Column(String(100))
-   city = Column(String(100))
-   state = Column(String(4))
-   country = Column(String(4))
+   name = Column(String())
+   city = Column(String())
+   state = Column(String())
+   country = Column(String())
    centroid = Column(Integer, ForeignKey('point.uid'))
    point_list = Column(Integer(), ForeignKey('point_list.uid')) 
 
@@ -124,11 +124,11 @@ class HotWireHotelInfo (Base) :
 
    uid = Column(Integer, Sequence('hotwire_hotel_sequence'), primary_key=True) 
    datetime_fetched = Column(Date(), default=datetime.datetime.now()) 
-   processing_status = Column(String(10))  
-   currency_code = Column(String(5))
-   deep_link = Column(String(255))
-   result_id = Column(String(100))
-   hw_ref_number = Column(String(20))
+   processing_status = Column(String())  
+   currency_code = Column(String())
+   deep_link = Column(String())
+   result_id = Column(String())
+   hw_ref_number = Column(String())
    subtotal = Column(Float()) 
    taxes_and_fees = Column(Float())
    total_price = Column(Float())
@@ -136,8 +136,8 @@ class HotWireHotelInfo (Base) :
    checkin_date = Column(Date())
    checkout_date = Column(Date())
    neighborhood_uid = Column(Integer, ForeignKey('neighborhood.uid')) 
-   neighborhood_id = Column(String(10))
-   lodging_type_code = Column(String(5))
+   neighborhood_id = Column(String())
+   lodging_type_code = Column(String())
    average_price_per_night = Column(Float())
    star_rating = Column(Float())
    rooms = Column(Integer())
@@ -448,5 +448,5 @@ def main() :
             pass 
 
 if __name__ == '__main__':
-    # print "not doing main"
-    main()
+    print "not doing main"
+    # main()
