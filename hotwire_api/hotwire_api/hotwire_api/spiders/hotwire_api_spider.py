@@ -17,7 +17,6 @@ from sqlalchemy.orm import sessionmaker
 import re
 import datetime 
 import time
-import MySQLdb
 import urllib
 import sys
 import os 
