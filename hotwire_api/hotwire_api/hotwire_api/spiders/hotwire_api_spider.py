@@ -30,8 +30,6 @@ base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%s&dest=%s&ro
 
 base_data_dir = "data"  # this really needs to be something better, or a database 
 
-
-
 # debug_level controls amount of debugging information written :
 #  set to 0 to turn debug messages off
 #  I usually use 1-3 for most important messages
@@ -263,5 +261,10 @@ def main() :
             pass 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
    print "not doing main"
    # main()
+=======
+    print "not doing main"
+    # main()
+>>>>>>> e95f37a3a7b47e9423176c8935a1898a06d63deb
