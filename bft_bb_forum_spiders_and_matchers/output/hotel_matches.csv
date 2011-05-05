@@ -26,18 +26,20 @@ delaware
 ,,,Hotel Matched : 5,Hotel Not Matched : 1
 
 ,dover
+,,,holiday inn downtown,Holiday Inn Downtown Dover (Delaware)
 ,,,country inn and suites,Country Inn & Suites Dover (Delaware)
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Dover (Delaware)
 ,,,days inn downtown,Days Inn Downtown Dover (Delaware)
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 4,Hotel Not Matched : 0
 
 
 north dakota
 ,bismarck
+,,,radisson,Radisson Hotel Bismarck
 ,,,fairfield inn south,Fairfield Inn & Suites South Bismarck
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,fargo
 ,,fargo
@@ -77,11 +79,12 @@ washington
 ,,,Hotel Matched : 1,Hotel Not Matched : 2
 
 ,bellingham
+,,,best western lakeway inn,Best Western Lakeway Inn Bellingham
 ,,,holiday inn express,Holiday Inn Express Bellingham
 ,,,days inn,Days Inn Bellingham
 ,,,la quinta inn,La Quinta Inn Bellingham
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 4,Hotel Not Matched : 0
 
 ,spokane
 ,,downtown
@@ -120,11 +123,11 @@ washington
 ,,yakima
 ,,,clarion hotel,Clarion Hotel Yakima
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,,wenatchee
 ,,,coast wenatchee center hotel,Coast Center Hotel Wenatchee
-,,,red lion,Red Lion Hotel Wenatchee
+,,,red lion wenatchee,Red Lion Hotel Wenatchee
 ,,,la quinta,La Quinta Inn & Suites Wenatchee
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 0
@@ -138,10 +141,11 @@ washington
 ,,,hilton vancouver,Hilton Hotel Vancouver (Washington)
 ,,,red lion at the quay,Red Lion Hotel at the Quay Vancouver (Washington)
 ,,,residence inn north portlandvancouver,Residence Inn North Portland Vancouver (Washington)
+,,,staybridge suites vancouverportland,Staybridge Suites Vancouver (Washington)
 ,,,days inn and suites salmon creekvancouver,Days Inn & Suites Salmon Creek Vancouver (Washington)
 ,,,la quinta inn and suites vancouver,La Quinta Inn & Suites Vancouver (Washington)
 
-,,,Hotel Matched : 5,Hotel Not Matched : 3
+,,,Hotel Matched : 6,Hotel Not Matched : 2
 
 ,burlington - mount vernon
 ,,,best western cotton tree inn mount vernon,Best Western Cottontree Inn Mount Vernon (Washington)
@@ -149,8 +153,9 @@ washington
 ,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,burlington - mount vernon
+,,,best western cotton tree inn mount vernon,Best Western Cottontree Inn Mount Vernon (Washington)
 
-,,,Hotel Matched : 0,Hotel Not Matched : 2
+,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,seattle
 ,,lake union
@@ -184,17 +189,18 @@ washington
 ,,,hotel vintage park,Vintage Park Hotel Seattle
 ,,,hyatt at olive,Hyatt Hotel At Olive 8 Seattle
 ,,,renaissance,Renaissance Hotel Seattle
+,,,sorrento hotel,Sorrento Hotel Seattle
 ,,,w hotel seattle,W Hotel Seattle
 ,,,westin,Westin Hotel Seattle
+,,,hotel max,Hotel Max Seattle
 ,,,marriot waterfront,Marriott Waterfront Hotel Seattle
 ,,,silver cloud broadway,Silver Cloud Hotel Broadway Seattle
 ,,,silver cloud stadium,Silver Cloud Hotel Stadium Seattle
 ,,,courtyard pioneer square,Courtyard Hotel Downtown Pioneer Square Seattle
 ,,,crowne plaza,Crowne Plaza Hotel Downtown Seattle
-,,,hotel max,Hotel Max Seattle
 ,,,mayflower park,Mayflower Park Hotel Seattle
 
-,,,Hotel Matched : 16,Hotel Not Matched : 4
+,,,Hotel Matched : 17,Hotel Not Matched : 4
 
 ,,airport sea
 ,,,coast gateway airport hotel,Coast Gateway Hotel SeaTac
@@ -209,6 +215,7 @@ washington
 ,,,Hotel Matched : 8,Hotel Not Matched : 1
 
 ,,center - space needle
+,,,pan pacific,Pan Pacific Hotel Seattle
 ,,,holiday inn,Holiday Inn Seattle
 ,,,marqueen,Marqueen Hotel Seattle
 ,,,best western executive inn,Best Western Executive Inn Seattle
@@ -221,7 +228,7 @@ washington
 ,,,days inn town center,Days Inn Downtown Seattle
 ,,,travelodge space needle,Travelodge Hotel Space Needle Seattle
 
-,,,Hotel Matched : 11,Hotel Not Matched : 0
+,,,Hotel Matched : 12,Hotel Not Matched : 0
 
 ,,north everett
 ,,,holiday inn,Holiday Inn Downtown Everett
@@ -248,11 +255,12 @@ washington
 ,,,hilton garden inn,Hilton Garden Inn Seattle Renton
 ,,,holiday inn kent,Holiday Inn Seattle Renton
 ,,,holiday inn renton,Holiday Inn Seattle Renton
+,,,towneplace suites southcenter,Towneplace Suites Seattle South Renton
 ,,,days inn kent,Days Inn Kent (Washington)
 ,,,extended stay deluxe renton,Extended Stay Deluxe Hotel Seattle Renton
 ,,,homestead southcenter,Homestead Studio Suites Seattle Southcenter Tukwila
 
-,,,Hotel Matched : 7,Hotel Not Matched : 4
+,,,Hotel Matched : 8,Hotel Not Matched : 5
 
 ,,redmond - kirkland
 ,,,heathman kirkland,The Heathman Hotel Kirkland
@@ -321,11 +329,10 @@ washington
 
 
 kansas
-,salina
-,,,fairfield inn,Fairfield Inn Salina
-,,,ramada inn,Ramada Inn Salina
+,emporia
+,,,best western,Best Western Hospitality House Emporia (Kansas)
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,lawrence
 ,,,holiday inn,Holiday Inn Lawrence
@@ -353,11 +360,12 @@ kansas
 
 ,,,Hotel Matched : 2,Hotel Not Matched : 1
 
-,,park city - northeast
-,,,candlewood suites,Candlewood Suites Northeast Wichita
+,,northeast
+,,,holiday inn express,Holiday Inn Express Wichita
 ,,,towneplace suites,Towneplace Suites East Wichita
+,,,candlewood suites,Candlewood Suites Northeast Wichita
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,kansas city
 ,,olathe
@@ -384,6 +392,12 @@ kansas
 
 ,,,Hotel Matched : 0,Hotel Not Matched : 1
 
+,salina
+,,,fairfield inn,Fairfield Inn Salina
+,,,ramada inn,Ramada Inn Salina
+
+,,,Hotel Matched : 2,Hotel Not Matched : 0
+
 ,,joplin
 ,manhattan
 ,,,holiday inn manhattan,Holiday Inn Campus Manhattan
@@ -406,10 +420,11 @@ rhode island
 ,,,Hotel Matched : 7,Hotel Not Matched : 0
 
 ,,coventry - west warwick
+,,,residence inn coventry,Residence Inn Providence Coventry West Greenwich
 ,,,fairfield inn,Fairfield Inn & Suites Coventry (Rhode Island)
 ,,,springhill suites,SpringHill Suites Providence West Warwick
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,,east providence - seekonk
 ,,,best western,Best Western Providence Inn Seekonk
@@ -431,12 +446,13 @@ rhode island
 
 ,newport
 ,,goat island
+,,,hotel viking,Hotel Viking Newport
 ,,,hyatt regency,Hyatt Regency Hotel Newport
 ,,,newport beach hotel and suites,Quality Inn & Suites Atlantic Beach Middletown (Rhode Island)
 ,,,newport marriott,Marriott Hotel Newport
 ,,,newport harbor hotel and marina,Newport Harbor Hotel & Marina
 
-,,,Hotel Matched : 4,Hotel Not Matched : 0
+,,,Hotel Matched : 5,Hotel Not Matched : 0
 
 ,,south kingstown
 
@@ -470,10 +486,11 @@ tennessee
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,airport cha
+,,,staybridge suites,Staybridge Suites Hamilton Place Chattanooga
 ,,,la quinta,La Quinta Inn Shallowford Chattanooga
 ,,,extended stayamerica,Extended Stay America Hotel Chattanooga
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,,south
 ,,,fairfield inn and suites,Fairfield Inn and Suites East Ridge
@@ -565,6 +582,12 @@ tennessee
 ,,,ramada limited,Ramada Limited Hotel Johnson City (Tennessee)
 
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
+
+,lebanon
+,,lebanon
+,,,country inn and suites,Country Inn & Suites Lebanon (Tennessee)
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,knoxville
 ,,north
@@ -686,8 +709,9 @@ tennessee
 ,,,courtyard,Courtyard Hotel Airport Memphis (Tennessee)
 ,,,radisson hotel memphis airport,Radisson Hotel Airport Memphis (Tennessee)
 ,,,holiday inn select airport,Holiday Inn Select International Airport Memphis (Tennessee)
+,,,super,Super 7 Inn Graceland Memphis (Tennessee)
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 4,Hotel Not Matched : 0
 
 ,,east
 ,,,courtyard eastpark ave,Courtyard Hotel East Park Avenue Memphis (Tennessee)
@@ -698,7 +722,7 @@ tennessee
 ,,,park place,Park Place Hotel Memphis (Tennessee)
 ,,,holiday inn sycamore view,Days Inn Sycamore View Memphis
 
-,,,Hotel Matched : 7,Hotel Not Matched : 4
+,,,Hotel Matched : 7,Hotel Not Matched : 5
 
 
 iowa
@@ -713,11 +737,12 @@ iowa
 ,,,Hotel Matched : 6,Hotel Not Matched : 1
 
 ,dubuque
+,,,holiday inn express,Holiday Inn Express Hotel & Suites West Dubuque
 ,,,comfort inn,Comfort Inn Dubuque
 ,,,fairfield inn,Fairfield Inn Dubuque
 ,,,holiday inn,Holiday Inn Express Hotel & Suites West Dubuque
 
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 4,Hotel Not Matched : 1
 
 ,cedar rapids
 ,,,crowne plaza five seasons,Crowne Plaza Hotel Five Seasons Cedar Rapids
@@ -812,9 +837,10 @@ nevada
 ,,summerlin
 ,,,resort  jw marriott,JW Marriott Resort Las Vegas
 ,,,suncoast hotel,Suncoast Hotel Las Vegas
+,,,hampton inn,Hampton Inn Summerlin Las Vegas
 ,,,la quinta summerlin tech,La Quinta Inn & Suites Summerlin Tech Las Vegas
 
-,,,Hotel Matched : 3,Hotel Not Matched : 2
+,,,Hotel Matched : 4,Hotel Not Matched : 2
 
 ,,near strip west
 ,,,rio suites,Rio All Suite Hotel Las Vegas
@@ -853,7 +879,7 @@ nevada
 ,,,excalibur,Excalibur Hotel Las Vegas
 ,,,hooters casino hotel,Hooters Casino Hotel Las Vegas
 
-,,,Hotel Matched : 12,Hotel Not Matched : 7
+,,,Hotel Matched : 12,Hotel Not Matched : 8
 
 ,,strip north vicinity - condo
 ,,,trump international,Trump International Hotel Las Vegas
@@ -879,7 +905,7 @@ nevada
 ,,,doubletree club,Doubletree Club Hotel Airport Las Vegas
 ,,,silverton,Silverton Lodge Las Vegas
 
-,,,Hotel Matched : 3,Hotel Not Matched : 3
+,,,Hotel Matched : 3,Hotel Not Matched : 4
 
 ,,near strip east
 ,,,hard rock,Hard Rock Hotel Las Vegas
@@ -929,6 +955,10 @@ nevada
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 1
 
+,elko
+
+,,,Hotel Matched : 0,Hotel Not Matched : 1
+
 ,reno
 ,,reno
 ,,,ramada hotel and casino,Ramada Hotel And Casino Reno
@@ -944,10 +974,12 @@ nevada
 ,,,peppermill hotel and casino,Peppermill Resort & Spa Casino Reno
 ,,,the summit at grand sierra,The Summit Hotel Grand Sierra Reno
 ,,,grand sierra,Grand Sierra Resort Reno
+,,,courtyard,Courtyard Hotel Reno
 ,,,hyatt plalce reno tahoe airport,Hyatt Place Hotel Tahoe Airport Reno
+,,,residence inn,Residence Inn Reno
 ,,,la quinta inn reno,La Quinta Inn Reno
 
-,,,Hotel Matched : 6,Hotel Not Matched : 1
+,,,Hotel Matched : 8,Hotel Not Matched : 1
 
 
 maine
@@ -992,11 +1024,12 @@ maine
 
 ,bangor - bar harbor
 ,,bangor - orono
+,,,courtyard,Courtyard Hotel Bangor (Maine)
 ,,,four points,Four Points Hotel Airport Bangor (Maine)
 ,,,fairfield inn,Fairfield Inn Bangor (Maine)
 ,,,ramada inn,Ramada Inn Bangor (Maine)
 
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 4,Hotel Not Matched : 1
 
 ,,ellsworth
 ,,,comfort inn ellsworth,Comfort Inn Ellsworth
@@ -1064,13 +1097,14 @@ colorado
 ,,,la quinta silverthorne,La Quinta Inn & Suites Silverthorne
 ,,,holiday inn frisco,Holiday Inn Summit Frisco (Colorado)
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 1
 
 ,aspen
 ,,aspen
+,,,hotel jerome,Hotel Jerome Aspen
 ,,,st regis resort,St Regis Resort Aspen
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,glenwood springs
 ,,,courtyard,Courtyard Hotel Glenwood Springs
@@ -1289,11 +1323,11 @@ mississippi
 ,,,country inn and suites,Country Inn & Suites Ocean Springs
 ,,,ramada ocean springs,Ramada Limited Hotel Ocean Springs
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 2,Hotel Not Matched : 2
 
 ,,coast
 
-,,,Hotel Matched : 0,Hotel Not Matched : 1
+,,,Hotel Matched : 0,Hotel Not Matched : 2
 
 ,vicksburg
 ,,vicksburg
@@ -1354,6 +1388,11 @@ south dakota
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 0
 
+,,custer
+,,,days inn,Days Inn Custer
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 
 hawaii
 ,maui
@@ -1386,7 +1425,7 @@ hawaii
 ,,,hotel wailea,Hotel Wailea Maui
 ,,,makena beach and golf resort,Makena Beach & Golf Resort Wailea Makena
 
-,,,Hotel Matched : 3,Hotel Not Matched : 3
+,,,Hotel Matched : 3,Hotel Not Matched : 4
 
 ,hawaii
 ,,kona
@@ -1396,6 +1435,11 @@ hawaii
 ,,,kona seaside,Kona Seaside Hotel Kailua Kona
 
 ,,,Hotel Matched : 4,Hotel Not Matched : 3
+
+,,hilo
+,,,hilo seaside hotel,Seaside Hotel Hilo
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,waikoloa-kohala coast
 ,,,resort hilton waikoloa,Hilton Grand Vacations Club Resort Waikoloa
@@ -1415,7 +1459,7 @@ hawaii
 
 ,,kapaa - lihue
 
-,,,Hotel Matched : 0,Hotel Not Matched : 7
+,,,Hotel Matched : 0,Hotel Not Matched : 6
 
 ,oahu
 ,,north shore
@@ -1564,7 +1608,7 @@ new jersey
 ,,,fairfield inn north,Fairfield Inn Atlantic City North Absecon
 ,,,travelodge absecon,Travelodge Hotel Atlantic City Galloway
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,,basking ridge
 ,,,hotel indigo,Hotel Indigo Basking Ridge
@@ -1733,8 +1777,8 @@ new jersey
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,east brunswick - edison
-,,,hyatt regency,Hyatt Regency Hotel New Brunswick
 ,,,hilton east brunswick,Hilton Hotel East Brunswick
+,,,hyatt regency,Hyatt Regency Hotel New Brunswick
 ,,,crowne plaza edison not yet reported,Crowne Plaza Hotel Edison
 ,,,howard johnson,Howard Johnson Express Inn New Brunswick
 
@@ -1773,6 +1817,57 @@ new jersey
 
 
 oklahoma
+,norman
+,,,residence inn,Residence Inn Norman
+,,,holiday inn,Holiday Inn Norman
+,,,la quinta inn,La Quinta Inn and Suites Norman
+
+,,,Hotel Matched : 3,Hotel Not Matched : 0
+
+,tulsa
+,,downtown
+,,,crowne plaza,Crowne Plaza Hotel Tulsa
+,,,doubletree downtown,Doubletree Hotel Downtown Tulsa
+
+,,,Hotel Matched : 2,Hotel Not Matched : 1
+
+,,midtown - expo center
+,,,courtyard tulsa,Courtyard Hotel Tulsa
+,,,baymont inn,Baymont Inn & Suites Tulsa
+
+,,,Hotel Matched : 2,Hotel Not Matched : 2
+
+,,southern hills - warren park
+,,,doubletree warren place,Doubletree Hotel Warren Place Tulsa
+,,,hilton,Hilton Hotel Southern Hills Tulsa
+,,,marriott tulsa southern hills,Marriott Hotel Southern Hills Tulsa
+
+,,,Hotel Matched : 3,Hotel Not Matched : 0
+
+,,southeast - broken arrow
+,,,renaissance,Renaissance Hotel Tulsa
+,,,holiday inn hotel and suites,Holiday Inn Hotel & Suites South Tulsa
+,,,radisson,Radisson Hotel Tulsa
+,,,springhill suites,SpringHill Suites Tulsa
+,,,fairfield inn woodland hills mall,Fairfield Inn Woodland Hills Tulsa
+,,,la quinta inn,La Quinta Inn East Tulsa
+,,,la quinta south,La Quinta Inn South Tulsa
+,,,towneplace suites,TownePlace Suites Broken Arrow
+
+,,,Hotel Matched : 8,Hotel Not Matched : 0
+
+,,airport tul
+,,,park inn tulsa airport,Park Inn Airport Tulsa
+,,,best western airport,Best Western Hotel Airport Tulsa
+
+,,,Hotel Matched : 2,Hotel Not Matched : 2
+
+,bartlesville
+,,bartlesville
+,,,la quinta,La Quinta Inn Bartlesville
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,oklahoma city
 ,,oklahoma city
 ,,,renaissance,Renaissance Hotel Oklahoma City
@@ -1821,55 +1916,10 @@ oklahoma
 
 ,,,Hotel Matched : 10,Hotel Not Matched : 1
 
-,bartlesville
-,,bartlesville
-,,,la quinta,La Quinta Inn Bartlesville
+,ardmore
+,,,springhill suites,SpringHill Suites Ardmore
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
-
-,tulsa
-,,downtown
-,,,crowne plaza,Crowne Plaza Hotel Tulsa
-,,,doubletree,Doubletree Hotel Downtown Tulsa
-
-,,,Hotel Matched : 2,Hotel Not Matched : 0
-
-,,midtown - expo center
-,,,courtyard tulsa,Courtyard Hotel Tulsa
-,,,baymont inn,Baymont Inn & Suites Tulsa
-
-,,,Hotel Matched : 2,Hotel Not Matched : 2
-
-,,southern hills - warren park
-,,,doubletree warren place,Doubletree Hotel Warren Place Tulsa
-,,,hilton,Hilton Hotel Southern Hills Tulsa
-,,,marriott tulsa southern hills,Marriott Hotel Southern Hills Tulsa
-
-,,,Hotel Matched : 3,Hotel Not Matched : 0
-
-,,southeast - broken arrow
-,,,renaissance,Renaissance Hotel Tulsa
-,,,holiday inn hotel and suites,Holiday Inn Hotel & Suites South Tulsa
-,,,radisson,Radisson Hotel Tulsa
-,,,fairfield inn woodland hills mall,Fairfield Inn Woodland Hills Tulsa
-,,,la quinta inn,La Quinta Inn East Tulsa
-,,,la quinta south,La Quinta Inn South Tulsa
-,,,towneplace suites,TownePlace Suites Broken Arrow
-
-,,,Hotel Matched : 7,Hotel Not Matched : 0
-
-,,airport tul
-,,,park inn tulsa airport,Park Inn Airport Tulsa
-,,,best western airport,Best Western Hotel Airport Tulsa
-
-,,,Hotel Matched : 2,Hotel Not Matched : 2
-
-,norman
-,,,residence inn,Residence Inn Norman
-,,,holiday inn,Holiday Inn Norman
-,,,la quinta inn,La Quinta Inn and Suites Norman
-
-,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 
 wyoming
@@ -1944,11 +1994,12 @@ minnesota
 ,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,,roseville
+,,,courtyard,Courtyard Hotel Saint Paul Roseville (Minnesota)
 ,,,radisson,Radisson Hotel Roseville (Minnesota)
 ,,,residence inn roseville,Residence Inn Minneapolis Roseville (Minnesota)
 ,,,fairfield inn,Fairfield Inn & Suites Minneapolis Roseville (Minnesota)
 
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 4,Hotel Not Matched : 1
 
 ,,northwest
 ,,,northland inn,Northland Inn Minneapolis
@@ -1976,7 +2027,7 @@ minnesota
 ,,,ramada,Ramada Inn Downtown Minneapolis
 ,,,townplace suites,Towneplace Suites Downtown Minneapolis
 
-,,,Hotel Matched : 15,Hotel Not Matched : 5
+,,,Hotel Matched : 15,Hotel Not Matched : 6
 
 ,,eagan
 ,,,hilton garden inn,Hilton Garden Inn Minneapolis Eagan
@@ -2024,11 +2075,17 @@ minnesota
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,st. cloud
+,,,st cloud holiday inn and suites,Holiday Inn Hotel & Suites Saint Cloud
 ,,,country inn and suites east,Country Inn & Suites East Saint Cloud
 ,,,best western,Best Western Americanna Inn Saint Cloud
 ,,,fairfield inn,Fairfield Inn Saint Cloud
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 4,Hotel Not Matched : 0
+
+,chanhassen
+,,,best western chaska river inn and suites,Best Western River Inn & Suites Chaska
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,owatonna
 ,,,country inn and suites,Country Inn & Suites Owatonna
@@ -2177,6 +2234,11 @@ north carolina
 ,,,Hotel Matched : 0,Hotel Not Matched : 1
 
 ,,cherokee
+,new bern
+,,,springhill suites,SpringHill Suites New Bern
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,winston salem
 ,,west
 ,,,courtyard hanes mall,Courtyard Hotel Hanes Mall Winston Salem
@@ -2220,8 +2282,9 @@ north carolina
 
 ,raleigh-durham
 ,,cary
+,,,wingate state arena zone cary north  raleigh south,Wingate State Arena Raleigh
 
-,,,Hotel Matched : 0,Hotel Not Matched : 4
+,,,Hotel Matched : 1,Hotel Not Matched : 5
 
 ,,airport rdu
 ,,,courtyard airport,Courtyard Hotel Morrisville
@@ -2259,9 +2322,10 @@ north carolina
 ,,,durham hilton near duke university,Hilton Hotel Duke University Durham (North Carolina)
 ,,,marriott convention center,Marriott Hotel Convention Center Durham (North Carolina)
 ,,,millennium hotel durham,Millennium Hotel Durham (North Carolina)
+,,,comfort inn medical park,Comfort Inn Medical Park Durham (North Carolina)
 ,,,quality inn and suites durham,Quality Inn & Suites Durham (North Carolina)
 
-,,,Hotel Matched : 4,Hotel Not Matched : 3
+,,,Hotel Matched : 5,Hotel Not Matched : 3
 
 ,,raleigh
 ,,,renaissance at north hills,Renaissance Hotel North Hills Raleigh
@@ -2291,7 +2355,7 @@ north carolina
 ,,,clarion not yet reported,Clarion Inn Airport Fletcher
 ,,,fairfield inn,Fairfield Inn Asheville Airport Fletcher
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 1
 
 ,,west
 
@@ -2351,7 +2415,7 @@ north carolina
 ,,,baymont inn wilmington not yet reported,Baymont Inn & Suites Wilmington (North Carolina)
 ,,,fairfield inn and suites,Fairfield Inn & Suites Wilmington (North Carolina)
 
-,,,Hotel Matched : 5,Hotel Not Matched : 3
+,,,Hotel Matched : 5,Hotel Not Matched : 4
 
 ,,wrightsville beach
 ,,,holiday inn,Holiday Inn Resort Wrightsville Beach
@@ -2442,8 +2506,9 @@ illinois
 ,,joliet
 ,,,holiday inn,Holiday Inn Joliet
 ,,,wingate inn,Wingate Inn Joliet
+,,,joliet fairfield inn,Fairfield Inn North Joliet
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,chicago
 ,,north michigan ave - river north
@@ -2531,10 +2596,11 @@ illinois
 
 ,champaign
 ,,,holiday inn champaign urbana,Holiday Inn Champaign Urbana (Illinois)
+,,,hampton inn,Hampton Inn Urbana (Illinois)
 ,,,la quinta inn,La Quinta Inn Champaign
 ,,,extended stayamerica,Extended Stay America Hotel Urbana Champaign
 
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 4,Hotel Not Matched : 1
 
 ,peoria
 ,,west
@@ -2621,7 +2687,7 @@ illinois
 ,,,doubletree wood dale itasca,Doubletree Hotel Itasca Wood Dale
 ,,,hyatt place itasca,Hyatt Place Hotel Itasca
 
-,,,Hotel Matched : 5,Hotel Not Matched : 3
+,,,Hotel Matched : 5,Hotel Not Matched : 4
 
 ,,lisle - naperville
 ,,,hilton,Hilton Hotel Naperville Lisle
@@ -2715,9 +2781,10 @@ illinois
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,merrillville in
+,,,country inn and suites,Country Inn & Suites Merrillville
 ,,,fairfield inn,Fairfield Inn & Suites Merrillville
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,tinley park
 ,,,fairfield inn,Fairfield Inn Chicago Tinley Park
@@ -2743,8 +2810,8 @@ illinois
 ,,,Hotel Matched : 4,Hotel Not Matched : 0
 
 ,,deerfield
-,,,hyatt,Hyatt Hotel Deerfield (Illinois)
 ,,,embassy suites,Embassy Suites North Shore Deerfield (Illinois)
+,,,hyatt,Hyatt Hotel Deerfield (Illinois)
 ,,,marriott,Marriott Suites Chicago Deerfield (Illinois)
 ,,,courtyard deerfield,Courtyard Hotel Chicago Deerfield (Illinois)
 ,,,courtyard highland parknorthfield,Courtyard Hotel Chicago Highland Park
@@ -2772,13 +2839,14 @@ illinois
 ,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,bloomington
+,,,holiday inn bloomington airport,Holiday Inn Hotel & Suites Airport Bloomington (Illinois)
 ,,,baymont inn and suites bloomingtonnormal,Baymont Inn And Suites Normal Bloomington (Illinois)
 ,,,country inn and suites bloomingtonnormal airport,Country Inn & Suites Normal Airport Bloomington (Illinois)
 ,,,country inn and suites bloomingtonnormal airport west,Country Inn & Suites Normal Airport Bloomington (Illinois)
 ,,,hawthorn suites,Hawthorn Suites Bloomington (Illinois)
 ,,,extended stayamerica,Extended Stay America Hotel Normal Bloomington (Illinois)
 
-,,,Hotel Matched : 5,Hotel Not Matched : 0
+,,,Hotel Matched : 6,Hotel Not Matched : 0
 
 ,bourbonnais - mateno
 ,,,country inn and suites manteno,Country Inn & Suites Manteno (Illinois)
@@ -2833,28 +2901,6 @@ new york
 ,,,Hotel Matched : 5,Hotel Not Matched : 2
 
 ,new york city airports
-,,jfk
-,,,jfk plaza hotel,JFK Plaza Hotel Jamaica New York City
-,,,doubletree,Doubletree Hotel JFK Airport Jamaica New York City
-,,,hilton garden inn,Hilton Garden Inn JFK Airport Jamaica New York City
-,,,sheraton,Sheraton Hotel JFK Airport New York City
-,,,fairfield inn not yet reported,Fairfield Inn JFK Airport New York City
-,,,best western,Best Western Hotel Kennedy Airport New York City
-,,,days inn airport,Days Inn Jamaica JFK Airport New York City
-,,,holiday inn express,Holiday Inn Express Kennedy Airport Jamaica New York City
-
-,,,Hotel Matched : 8,Hotel Not Matched : 6
-
-,,lga
-,,,crowne plaza,Crowne Plaza Hotel LaGuardia Airport New York City
-,,,marriott,Marriott Hotel LaGuardia Airport New York City
-,,,holiday inn lga,Holiday Inn LaGuardia Airport New York City
-,,,clarion la guardia airport,Clarion Hotel La Guardia Airport New York City
-,,,la guardia airport hotel,LaGuardia Airport Hotel New York City
-,,,fairfield inn,Fairfield Inn Laguardia Airport Astoria New York City
-
-,,,Hotel Matched : 6,Hotel Not Matched : 1
-
 ,lake george - saratoga springs
 ,,lake george - glens falls
 ,,,holiday inn lake george,Holiday Inn Resort Turf Lake George
@@ -2894,6 +2940,7 @@ new york
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,airport alb
+,,,holiday inn wolf road,Holiday Inn Wolf Road Albany (New York)
 ,,,hotel indigo albanylatham,Hotel Indigo Albany Latham
 ,,,marriott,Marriott Hotel Albany (New York)
 ,,,residence inn,Residence Inn Albany Airport Latham
@@ -2901,7 +2948,7 @@ new york
 ,,,best western,Best Western Inn Airport Albany (New York)
 ,,,hampton inn wolf road,Hampton Inn Wolf Road Airport Albany (New York)
 
-,,,Hotel Matched : 6,Hotel Not Matched : 1
+,,,Hotel Matched : 7,Hotel Not Matched : 1
 
 ,,suny albany - thruway area
 ,,,best western sovereign hotel,Best Western Sovereign Hotel Albany (New York)
@@ -2985,10 +3032,10 @@ new york
 ,,,crowne plaza times square,Crowne Plaza Hotel Times Square Manhattan New York City
 ,,,hilton times square,Hilton Hotel Times Square New York City
 ,,,intercontinental times square,Intercontinental New York Times Square Hotel New York City
+,,,marriott marquis,Marriott Hotel Marquis New York City
 ,,,the muse,The Muse Hotel New York City
 ,,,renaissance,Renaissance Hotel Times Square New York City
 ,,,doubletree guest suites,Doubletree Guest Suites Times Square New York City
-,,,marriott marquis,Marriott Hotel Marquis New York City
 ,,,millennium broadway,Millennium Broadway Hotel New York City
 ,,,hotel mela,Hotel Mela New York City
 ,,,paramount,Paramount Hotel New York City
@@ -2997,7 +3044,7 @@ new york
 ,,,fairfield inn,Fairfield Inn Nanuet Spring Valley
 ,,,milford plaza,Milford Plaza Hotel New York City
 
-,,,Hotel Matched : 14,Hotel Not Matched : 5
+,,,Hotel Matched : 14,Hotel Not Matched : 6
 
 ,,upper east side
 ,,,courtyard upper east side,Courtyard Hotel Upper East Side New York City
@@ -3008,6 +3055,7 @@ new york
 ,,,thompson,60 Thompson Hotel New York City
 ,,,andaz wall street,Andaz Hotel Wall Street New York City
 ,,,gild hall,Gild Hall Hotel Wall Street New York City
+,,,james soho,The James Hotel New York City
 ,,,millenium hilton,Millenium Hilton Hotel New York City
 ,,,soho grand,Soho Grand Hotel New York City
 ,,,tribeca grand,Tribeca Grand Hotel New York City
@@ -3028,7 +3076,7 @@ new york
 ,,,hampton inn seaport,Hampton Inn Manhattan Seaport New York City
 ,,,best western seaport inn,Best Western Seaport Inn Downtown New York City
 
-,,,Hotel Matched : 22,Hotel Not Matched : 3
+,,,Hotel Matched : 23,Hotel Not Matched : 3
 
 ,,central park south
 ,,,jumeirah essex house,Jumeirah Essex House New York City
@@ -3111,7 +3159,6 @@ new york
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,chelsea
-,,,fashion,Fashion 26 Hotel New York City
 ,,,doubletree chelsea,Doubletree Hotel Chelsea New York City
 ,,,holiday inn sixth avenue,Holiday Inn Manhattan Sixth Avenue New York City
 ,,,hotel indigo,Hotel Indigo Chelsea New York City
@@ -3120,7 +3167,7 @@ new york
 ,,,desmond tutu center,Desmond Tutu Center Hotel New York City
 ,,,gem hotel,The Gem Hotel Chelsea New York City
 
-,,,Hotel Matched : 8,Hotel Not Matched : 4
+,,,Hotel Matched : 7,Hotel Not Matched : 5
 
 ,,long island city
 ,,,fairfield inn,Fairfield Inn Long Island City New York City
@@ -3160,9 +3207,8 @@ new york
 ,,,Hotel Matched : 4,Hotel Not Matched : 0
 
 ,,niagara falls
-,,,crowne plaza,Crowne Plaza Hotel Niagara Falls (New York)
 
-,,,Hotel Matched : 1,Hotel Not Matched : 2
+,,,Hotel Matched : 0,Hotel Not Matched : 3
 
 ,,airport buf
 ,,,holiday inn,Holiday Inn Buffalo Airport Cheektowaga
@@ -3215,9 +3261,10 @@ new york
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,middletown - chester
+,,,holiday inn middletown,Holiday Inn Goshen Middletown (New York)
 ,,,howard johnson,Howard Johnson Hotel Middletown (New York)
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,newburgh airport vicinity
 ,,,ramada newburghwest point,Ramada Inn West Point Newburgh
@@ -3367,14 +3414,14 @@ arkansas
 ,,north
 ,,,country inn and suites,Country Inn & Suites North Little Rock
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,,west
 ,,,courtyard west,Courtyard Hotel West Little Rock
 ,,,crowne plaza,Crowne Plaza Hotel Little Rock
 ,,,hilton little rock metro center,Hilton Hotel Metro Center Little Rock
-,,,residence inn,Residence Inn Little Rock
 ,,,jameson suites,Jameson Suites Little Rock
+,,,residence inn,Residence Inn Little Rock
 ,,,studioplus,StudioPlus Hotel West Little Rock
 
 ,,,Hotel Matched : 6,Hotel Not Matched : 0
@@ -3453,9 +3500,10 @@ indiana
 ,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,,south
+,,,la quinta inn and suites,La Quinta Inn & Suites South Indianapolis
 ,,,jameson inn indy south,Jameson Inn Indy South Indianapolis
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,kendalville
 ,,kendalville
@@ -3578,11 +3626,12 @@ maryland
 
 ,annapolis
 ,,annapolis
+,,,sheraton,Sheraton Hotel Annapolis
 ,,,doubletree,Doubletree Hotel Annapolis
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Annapolis
 ,,,springhill suites,SpringHill Suites Annapolis
 
-,,,Hotel Matched : 3,Hotel Not Matched : 3
+,,,Hotel Matched : 4,Hotel Not Matched : 3
 
 ,,downtown
 ,,,loews,Loews Hotel Annapolis
@@ -3756,6 +3805,12 @@ louisiana
 
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
+,alexandria
+,,alexandria
+,,,days inn,Days Inn Alexandria (Louisiana)
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,baton rouge
 ,,baton rouge
 ,,,belle of baton rouge hotel,Belle Of Baton Rouge Hotel
@@ -3812,16 +3867,17 @@ louisiana
 ,,,hilton garden inn,Hilton Garden Inn Airport Kenner
 ,,,holiday inn select,Holiday Inn Select Airport Kenner
 ,,,fairfield inn airport kenner,Fairfield Inn Airport Kenner
+,,,days inn,Days Inn New Orleans Airport Kenner
 
-,,,Hotel Matched : 5,Hotel Not Matched : 2
+,,,Hotel Matched : 6,Hotel Not Matched : 2
 
 ,,downtown - convention center
 ,,,intercontinental downtown zone,Intercontinental Hotel New Orleans
 ,,,jw marriott downtown zone,JW Marriott Hotel New Orleans
+,,,omni royal crescent,Omni Royal Crescent Hotel New Orleans
 ,,,renaissance pere marquette,Renaissance Pere Marquette Hotel New Orleans
 ,,,sheraton,Sheraton Hotel New Orleans
 ,,,doubletree new orleans,Doubletree Hotel New Orleans
-,,,omni royal crescent,Omni Royal Crescent Hotel New Orleans
 ,,,courtyard downtown,Courtyard Hotel Downtown New Orleans
 ,,,holiday inn downtownsuperdome,Holiday Inn Downtown Superdome New Orleans
 
@@ -3868,25 +3924,18 @@ texas
 ,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,houston
-,,northwest - willowbrook
+,,katy
+,,,candlewood suites park row,Candlewood Suites Houston Park Row Katy
 
-,,,Hotel Matched : 0,Hotel Not Matched : 6
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,southwest - sugar land
 
-,,,Hotel Matched : 0,Hotel Not Matched : 5
+,,,Hotel Matched : 0,Hotel Not Matched : 8
 
-,,westchase - southwest
-,,,hilton southwest,Hilton Hotel Southwest Houston
-,,,hilton westchase,Hilton Hotel Southwest Houston
-,,,marriott westchase,Marriott Hotel Westchase Houston
-,,,courtyard westchase,Courtyard Hotel Westchase Houston
-,,,extended stayamerica,Extended Stay America Hotel Westchase Houston
-,,,extended stayamerica deluxe,Extended Stay America Hotel Westchase Houston
-,,,studioplus,StudioPlus Hotel Westchase Houston
-,,,sun suites houston westchase,Sun Suites Westchase Houston
+,,northwest - willowbrook
 
-,,,Hotel Matched : 8,Hotel Not Matched : 0
+,,,Hotel Matched : 0,Hotel Not Matched : 6
 
 ,,west
 ,,,marriott energy corridor,Marriott Hotel Energy Corridor Houston
@@ -3977,6 +4026,18 @@ texas
 
 ,,,Hotel Matched : 8,Hotel Not Matched : 3
 
+,,westchase - southwest
+,,,hilton southwest,Hilton Hotel Southwest Houston
+,,,hilton westchase,Hilton Hotel Southwest Houston
+,,,marriott westchase,Marriott Hotel Westchase Houston
+,,,courtyard westchase,Courtyard Hotel Westchase Houston
+,,,extended stayamerica,Extended Stay America Hotel Westchase Houston
+,,,extended stayamerica deluxe,Extended Stay America Hotel Westchase Houston
+,,,studioplus,StudioPlus Hotel Westchase Houston
+,,,sun suites houston westchase,Sun Suites Westchase Houston
+
+,,,Hotel Matched : 8,Hotel Not Matched : 0
+
 ,,reliant stadium - med center
 ,,,crowne plaza river oaks,Crowne Plaza Hotel River Oaks Houston
 ,,,marriott medical center,Marriott Hotel Texas Medical Center Houston
@@ -4049,6 +4110,12 @@ texas
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 1
 
+,corsicana
+,,corsicana
+,,,best western executive inn,Best Western Executive Inn Corsicana
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,longview
 ,,longview
 ,,,la quinta,La Quinta Inn & Suites Longview
@@ -4062,13 +4129,13 @@ texas
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,college station
+,,,hilton,Hilton Hotel College Station
 ,,,hyatt place,Hyatt Place Hotel College Station
 ,,,residence inn,Residence Inn Waco
-,,,hilton,Hilton Hotel College Station
 ,,,la quinta inn college station,La Quinta Inn College Station
 ,,,towneplace suites,TownePlace Suites Bryan College Station
 
-,,,Hotel Matched : 5,Hotel Not Matched : 0
+,,,Hotel Matched : 5,Hotel Not Matched : 1
 
 ,midland
 ,,midland
@@ -4105,6 +4172,12 @@ texas
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 1
 
+,palestine
+,,palestine
+,,,holiday inn express,Holiday Inn Express Palestine
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,corpus christi
 ,,downtown
 ,,,radisson,Radisson Hotel Corpus Christi
@@ -4126,6 +4199,13 @@ texas
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,san antonio
+,,market square
+,,,doubletree market square,Doubletree Hotel Downtown San Antonio
+,,,holiday inn market square,Holiday Inn Downtown Market Square San Antonio
+,,,la quinta inn market square,La Quinta Inn Market Square San Antonio
+
+,,,Hotel Matched : 3,Hotel Not Matched : 1
+
 ,,boerne
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Clinton (Iowa)
 ,,,la quinta inn and suites,La Quinta Inn Suites Boerne
@@ -4146,6 +4226,12 @@ texas
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
+,,downtown east
+,,,staybridge suites sunset station preivously,Staybridge Suites Sunset Station San Antonio
+,,,red roof inn downtown,Red Roof Inn Downtown San Antonio
+
+,,,Hotel Matched : 2,Hotel Not Matched : 0
+
 ,,west - sea world
 ,,,resort hyatt regency hill country resort and spa,Hyatt Regency Hill Country Resort San Antonio
 ,,,courtyard seaworldwestover hills,Courtyard Hotel Westover Hills San Antonio
@@ -4160,13 +4246,32 @@ texas
 ,,,staybridge suites nwcolonnade,Staybridge Suites Colonnade San Antonio
 ,,,extended stay deluxe,Extended Stay Deluxe Hotel San Antonio
 
-,,,Hotel Matched : 6,Hotel Not Matched : 2
+,,,Hotel Matched : 6,Hotel Not Matched : 3
 
 ,,north - stone oak
+,,,holiday inn northhill country,Holiday Inn North Hill Country San Antonio
 ,,,hyatt place,Hyatt Place North Stone Oak San Antonio
 ,,,holiday inn express airport north,Holiday Inn Express Hotel & Suites Airport North San Antonio
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 1
+
+,,riverwalk
+,,,emily morgan hotel zone riverwalk,Emily Morgan Hotel San Antonio
+,,,grand hyatt,Grand Hyatt Hotel San Antonio
+,,,hyatt regency zone riverwalk,Hyatt Regency Hotel San Antonio
+,,,marriott plaza zone riverwalk,Marriott Plaza Hotel San Antonio
+,,,marriott rivercenter,Marriott Hotel Rivercenter San Antonio
+,,,marriott riverwalk,Marriott Riverwalk Hotel San Antonio
+,,,omni la mansion del rio,Omni La Mansion Del Rio Hotel San Antonio
+,,,crowne plaza,Crowne Plaza Hotel Riverwalk San Antonio
+,,,sheraton gunter,Sheraton Gunter Hotel San Antonio
+,,,wyndham st anthony,Wyndham St. Anthony Hotel San Antonio
+,,,holiday inn el tropicano,Holiday Inn El Tropicano Riverwalk San Antonio
+,,,holiday inn riverwalk,Holiday Inn El Tropicano Riverwalk San Antonio
+,,,hotel indigo,Hotel Indigo Riverwalk San Antonio
+,,,riverwalk plaza hotel,Riverwalk Plaza Hotel San Antonio
+
+,,,Hotel Matched : 14,Hotel Not Matched : 4
 
 ,,south
 ,,,la quinta san antonio south,La Quinta Inn AlamoDome South San Antonio
@@ -4296,18 +4401,6 @@ texas
 
 ,,,Hotel Matched : 2,Hotel Not Matched : 1
 
-,,northwest - arboretum
-,,,renaissance austin zone arboretum,Renaissance Hotel Austin
-,,,courtyard,Courtyard Hotel Northwest Austin
-,,,hilton garden inn,Hilton Garden Inn Arboretum Northwest Austin
-,,,hyatt place,Hyatt Place Hotel Austin
-,,,summerfield suites,Hyatt Summerfield Suites Austin
-,,,springhill suites,SpringHill Suites Northwest Austin
-,,,candlewood suites,Candlewood Suites Arboretum Northwest Austin
-,,,extended stayamerica arboretum,Extended Stay America Hotel Arboretum Austin
-
-,,,Hotel Matched : 8,Hotel Not Matched : 6
-
 ,,downtown
 ,,,driskill,The Driskill Hotel Austin
 ,,,hilton,Hilton Hotel Austin
@@ -4332,6 +4425,25 @@ texas
 ,,,wingate inn,Wingate Inn Round Rock
 
 ,,,Hotel Matched : 6,Hotel Not Matched : 1
+
+,,northwest
+,,,staybridge suites northwest,Staybridge Suites Northwest Austin
+
+,,,Hotel Matched : 1,Hotel Not Matched : 3
+
+,,arboretum
+,,,renaissance austin,Renaissance Hotel Austin
+,,,westin in the domain,The Westin at The Domain Austin
+,,,courtyard,Courtyard Hotel Northwest Austin
+,,,hilton garden inn,Hilton Garden Inn Arboretum Northwest Austin
+,,,holiday inn northwest plaza,Holiday Inn Northwest Austin
+,,,hyatt place,Hyatt Place Hotel Austin
+,,,summerfield suites,Hyatt Summerfield Suites Austin
+,,,springhill suites,SpringHill Suites Northwest Austin
+,,,candlewood suites,Candlewood Suites Arboretum Northwest Austin
+,,,extended stayamerica arboretum,Extended Stay America Hotel Arboretum Austin
+
+,,,Hotel Matched : 10,Hotel Not Matched : 0
 
 ,,south - airport
 ,,,hilton airport,Hilton Hotel Airport Austin
@@ -4361,12 +4473,13 @@ texas
 ,,,grand hyatt,Grand Hyatt Hotel DFW Grapevine
 ,,,marriott dfw airport,Marriott Hotel Fort Worth Airport Irving
 ,,,westin,Westin Hotel Dallas Fort Worth Airport Irving
+,,,sheraton,Sheraton Grand Hotel DFW Airport Irving
 ,,,courtyard dfw north,Courtyard Hotel Airport North Irving
 ,,,wyndham airport north,Wyndham Hotel DFW Airport North Irving
 ,,,days inn dfw north,Days Inn Port Angeles
 ,,,homestead studio suites,Homestead Studio Suites Irving
 
-,,,Hotel Matched : 7,Hotel Not Matched : 3
+,,,Hotel Matched : 8,Hotel Not Matched : 3
 
 ,,knox - northpark
 ,,,doubletree campbell centre,Doubletree Hotel Campbell Centre Dallas
@@ -4408,8 +4521,9 @@ texas
 ,,,aloft downtown,Aloft Hotel Downtown Dallas
 ,,,crowne plaza,Crowne Plaza Hotel Downtown Dallas
 ,,,stoneleigh hotel,Stoneleigh Hotel Dallas
+,,,hotel lawrence,Hotel Lawrence Dallas
 
-,,,Hotel Matched : 6,Hotel Not Matched : 1
+,,,Hotel Matched : 7,Hotel Not Matched : 1
 
 ,,frisco - plano north
 ,,,westin stonebriar resort,Westin Stonebriar Resort Frisco (Texas)
@@ -4419,7 +4533,7 @@ texas
 ,,,hyatt place plano,Hyatt Place Hotel Plano
 ,,,extended stay deluxe plano not yet reported,Extended Stay Deluxe Hotel Dallas Plano
 
-,,,Hotel Matched : 6,Hotel Not Matched : 2
+,,,Hotel Matched : 6,Hotel Not Matched : 3
 
 ,,richardson
 ,,,hyatt regency north dallas,Hyatt Regency Hotel North Dallas Richardson
@@ -4462,10 +4576,11 @@ texas
 ,,,embassy suites,Embassy Suites Galleria Dallas
 ,,,holiday inn northaddison,Holiday Inn Dallas North Addison (Texas)
 ,,,hyatt place dallas north,Hyatt Place Hotel Galleria North Dallas
+,,,staybridge suites addison,Staybridge Suites Addison Dallas
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Dallas Addison (Texas)
 ,,,fairfield inn dallas north,Fairfield Inn & Suites Dallas North Farmers Branch
 
-,,,Hotel Matched : 13,Hotel Not Matched : 5
+,,,Hotel Matched : 14,Hotel Not Matched : 5
 
 ,,airport dfw south
 ,,,park inn dfw south,Park Inn Airport South Irving
@@ -4550,7 +4665,7 @@ district of columbia
 ,,,holiday inn arlington at ballston,Holiday Inn Ballston Arlington (Virginia)
 ,,,residence inn,Residence Inn Atlanta Perimeter Chamblee
 
-,,,Hotel Matched : 9,Hotel Not Matched : 26
+,,,Hotel Matched : 9,Hotel Not Matched : 29
 
 ,,georgetown - foggy bottom
 ,,,park hyatt,Park Hyatt Hotel Washington D.C.
@@ -4761,7 +4876,7 @@ arizona
 ,,,residence inn,Residence Inn Tempe
 ,,,towneplace suites tempe,TownePlace Suites Tempe
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 2,Hotel Not Matched : 2
 
 ,,east mesa
 ,,,arizona golf resort hotel,Arizona Golf Resort Mesa
@@ -4784,9 +4899,10 @@ arizona
 ,prescott - camp verde
 ,,prescott - prescott valley
 ,,,hassayampa inn,Hassayampa Inn Prescott (Arizona)
+,,,wyndham garden,Wyndham Garden Hotel Prescott (Arizona)
 ,,,days inn prescott valley,Days Inn Prescott Valley
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,holbrook
 ,,,days inn holbrook,Days Inn Holbrook
@@ -4866,11 +4982,12 @@ arizona
 ,,,Hotel Matched : 14,Hotel Not Matched : 2
 
 ,,sedona
-,,,hilton sedona resort resort,Hilton Resort Sedona
+,,,hilton sedona resort,Hilton Resort Sedona
 ,,,poco diablo resort resort,Poco Diablo Resort Sedona
+,,,days inn sedona,Days Inn Sedona
 ,,,ridge on sedona golf resort,Ridge on Sedona Golf Resort
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 4,Hotel Not Matched : 0
 
 ,lake havasu
 ,,lake havasu city
@@ -4973,15 +5090,6 @@ wisconsin
 ,,,super,Super 8 Motel Wisconsin Dells
 
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
-
-,la crosse
-,,,courtyard,Courtyard Hotel La Crosse (Wisconsin)
-,,,radisson hotel la crosse,Radisson Hotel La Crosse (Wisconsin)
-,,,best western midway hotel,Best Western Midway Hotel Riverfront La Crosse (Wisconsin)
-,,,comfort inn onalaska,Comfort Inn Onalaska
-,,,stoney creek onalaska,Stoney Creek Inn Onalaska
-
-,,,Hotel Matched : 5,Hotel Not Matched : 0
 
 ,la crosse
 ,,,courtyard,Courtyard Hotel La Crosse (Wisconsin)
@@ -5220,16 +5328,18 @@ michigan
 ,,lansing
 ,,,causeway bay hotel,Causeway Bay Hotel Lansing (Michigan)
 ,,,radisson,Radisson Hotel Lansing (Michigan)
+,,,residence inn west,Residence Inn West Lansing (Michigan)
 ,,,country inn and suites,Country Inn & Suites Lansing (Michigan)
+,,,springhill suites,SpringHill Suites Lansing (Michigan)
 
-,,,Hotel Matched : 3,Hotel Not Matched : 4
+,,,Hotel Matched : 5,Hotel Not Matched : 4
 
 ,,east lansing - okemos
 ,,,marriott university place,Marriott Hotel University Place East Lansing
 ,,,staybridge suites okemos,Staybridge Suites Lansing Okemos
 ,,,holiday inn okemos,Holiday Inn Express Okemos
-,,,comfort inn okemos,Comfort Inn Okemos
 ,,,fairfield inn,Fairfield Inn East Lansing Okemos
+,,,comfort inn okemos,Comfort Inn Okemos
 ,,,gatehouse suites,Gatehouse Suites East Lansing
 ,,,towneplace suites,Towneplace Suites East Lansing
 
@@ -5254,10 +5364,9 @@ michigan
 
 ,traverse city
 ,,traverse city
-,,,fairfield inn,Fairfield Inn Traverse City
-,,,holiday inn express,Holiday Inn Express Hotel & Suites Detroit Novi
+,,,fairfield inn zone west,Fairfield Inn Traverse City
 
-,,,Hotel Matched : 2,Hotel Not Matched : 3
+,,,Hotel Matched : 1,Hotel Not Matched : 4
 
 ,mount pleasant
 ,,,best western inn,Best Western Inn Mount Pleasant (Michigan)
@@ -5268,6 +5377,11 @@ michigan
 
 ,cadillac
 ,,,days inn,Days Inn Cadillac
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
+,alpena
+,,,days inn alpena,Days Inn Alpena
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
@@ -5314,7 +5428,7 @@ michigan
 ,,,marriott,Marriott Hotel Detroit Southfield
 ,,,embassy suites,Embassy Suites Detroit Southfield
 ,,,hilton garden inn southfield,Hilton Garden Inn Detroit Southfield
-,,,hawthorn suites not yet reported,Hawthorn Suites Detroit Southfield
+,,,hawthorn suites,Hawthorn Suites Detroit Southfield
 ,,,extended stayamerica,Extended Stay America Hotel Southfield
 
 ,,,Hotel Matched : 6,Hotel Not Matched : 1
@@ -5385,7 +5499,7 @@ michigan
 ,,,hyatt place,Hyatt Place Hotel Livonia (Michigan)
 ,,,residence inn,Residence Inn Livonia (Michigan)
 
-,,,Hotel Matched : 4,Hotel Not Matched : 1
+,,,Hotel Matched : 4,Hotel Not Matched : 2
 
 ,,novi
 ,,,sheraton novi,Sheraton Hotel Detroit Novi
@@ -5576,14 +5690,20 @@ missouri
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,branson
-,,west
-,,,howard johnson,Howard Johnson Hotel Branson
+,,east
+
+,,,Hotel Matched : 0,Hotel Not Matched : 4
+
+,,northwest
+,,,days inn,Days Inn Branson
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
-,,east
+,,southwest
+,,,fairfield inn,Fairfield Inn Branson
+,,,howard johnson,Howard Johnson Hotel Branson
 
-,,,Hotel Matched : 0,Hotel Not Matched : 3
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,springfield
 ,,airport area
@@ -5750,6 +5870,10 @@ utah
 
 ,,,Hotel Matched : 4,Hotel Not Matched : 0
 
+,bryce canyon
+
+,,,Hotel Matched : 0,Hotel Not Matched : 1
+
 
 virginia
 ,roanoke
@@ -5791,21 +5915,24 @@ virginia
 ,,,Hotel Matched : 0,Hotel Not Matched : 6
 
 ,blacksburg - christiansburg
+,,,hilton garden inn,Hilton Garden Inn Blacksburg
 ,,,fairfield inn,Fairfield Inn & Suites Christiansburg
 ,,,microtel inns and suites,Microtel Inn and Suites Christiansburg
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,blacksburg - christiansburg
+,,,hilton garden inn,Hilton Garden Inn Blacksburg
 ,,,fairfield inn,Fairfield Inn & Suites Christiansburg
 
-,,,Hotel Matched : 1,Hotel Not Matched : 2
+,,,Hotel Matched : 2,Hotel Not Matched : 2
 
 ,bristol
+,,,courtyard,Courtyard Hotel Bristol (Virginia)
 ,,,la quinta,La Quinta Inn Bristol (Virginia)
 ,,,microtel bristol,Microtel Inn & Suites Bristol (Virginia)
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,staunton
 ,,,holiday inn and conference center,Holiday Inn Golf & Conference Center Staunton
@@ -5849,14 +5976,15 @@ virginia
 
 ,northern virginia
 ,,sterling - ashburn
+,,,aloft dulles north,Aloft Hotel Airport North Dulles
 ,,,courtyard dulles town center,Courtyard Hotel Town Center Dulles
 ,,,doubletree airport sterling,Doubletree Hotel Dulles Airport Sterling (Virginia)
 ,,,hyatt place dulles north,Hyatt Place Hotel Dulles Airport Sterling (Virginia)
+,,,hampton inn dullescascades,Hampton Inn Dulles Cascades Sterling (Virginia)
 ,,,candlewood suites,Candlewood Suites Sterling (Virginia)
 ,,,extended stayamerica,Extended Stay America Hotel Sterling (Virginia)
-,,,hampton inn dullescascades,Hampton Inn Dulles Cascades Sterling (Virginia)
 
-,,,Hotel Matched : 6,Hotel Not Matched : 0
+,,,Hotel Matched : 7,Hotel Not Matched : 0
 
 ,,leesburg -ashburn west
 ,,,holiday inn leesburg,Holiday Inn Carradoc Hall Leesburg (Virginia)
@@ -5873,10 +6001,11 @@ virginia
 ,,,westin,The Westin Hotel Tysons Corner Falls Church
 ,,,courtyard tysons corner,Courtyard Hotel Dunn Loring Fairfax Vienna (Virginia)
 ,,,courtyard dunn loring,Courtyard Hotel Dunn Loring Fairfax Vienna (Virginia)
+,,,hilton garden inn tysons corner,Hilton Garden Inn Tysons Corner Vienna (Virginia)
 ,,,residence inn fairfax merrifield,Residence Inn Fairfax Merrifield Falls Church
 ,,,homestead suites,Homestead Studio Suites Vienna (Virginia)
 
-,,,Hotel Matched : 11,Hotel Not Matched : 1
+,,,Hotel Matched : 12,Hotel Not Matched : 1
 
 ,,manassas
 ,,,courtyard,Courtyard Hotel Battlefield Park Manassas
@@ -5983,9 +6112,10 @@ virginia
 ,,,Hotel Matched : 8,Hotel Not Matched : 1
 
 ,harrisonburg
+,,,fairfield inn and suites,Fairfield Inn & Suites Harrisonburg
 ,,,jameson inn,Jameson Inn Harrisonburg
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,front royal
 ,,front royal
@@ -6031,8 +6161,9 @@ virginia
 ,,,holliday inn executive center,Holiday Inn Executive Center Virginia Beach
 ,,,residence inn,Residence Inn Airport Norfolk (Virginia)
 ,,,la quinta inn,La Quinta Inn Norfolk Virginia Beach
+,,,best western,Best Western Inn Virginia Beach
 
-,,,Hotel Matched : 4,Hotel Not Matched : 1
+,,,Hotel Matched : 5,Hotel Not Matched : 1
 
 ,,virginia beach - pembroke
 ,,,westin town center,Westin Town Center Hotel Virginia Beach
@@ -6092,9 +6223,9 @@ oregon
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
-,wilsonville
-,,wilsonville
-,,,holiday inn,Holiday Inn Portland Wilsonville
+,mcminnville
+,,mcminnville
+,,,red lion,Red Lion Inn & Suites McMinnville (Oregon)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
@@ -6144,6 +6275,12 @@ oregon
 ,,,shiloh inn,Shilo Inn Medford (Oregon)
 
 ,,,Hotel Matched : 5,Hotel Not Matched : 0
+
+,wilsonville
+,,wilsonville
+,,,holiday inn,Holiday Inn Portland Wilsonville
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,portland
 ,,south waterfront
@@ -6353,10 +6490,9 @@ connecticut
 ,,,Hotel Matched : 2,Hotel Not Matched : 1
 
 ,,east hartford
-,,,sheraton,Sheraton Hotel East Hartford
 ,,,holiday inn,Holiday Inn East Hartford
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,,avon - west hartford
 ,,,avon old farms hotel,Avon Old Farms Hotel (Connecticut)
@@ -6368,16 +6504,17 @@ connecticut
 ,,,doubletree hotel,Doubletree Hotel Airport Windsor Locks
 ,,,hilton garden inn,Hilton Garden Inn Hartford North Windsor (Connecticut)
 ,,,residence inn,Residence Inn Hartford Hotel Windsor (Connecticut)
-,,,days inn,Days Inn Bradley International Airport Windsor Locks
 ,,,fairfield inn windsor locks bdl airport,Fairfield Inn Hartford Airport Windsor Locks
+,,,days inn,Days Inn Bradley International Airport Windsor Locks
 
 ,,,Hotel Matched : 6,Hotel Not Matched : 1
 
 ,,farmington - new britain
+,,,courtyard,Courtyard Hotel Hartford Farmington (Connecticut)
 ,,,marriott farmington,Marriott Hotel Hartford Farmington (Connecticut)
 ,,,fairfield inn and suites plainville,Fairfield Inn & Suites Plainville
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,,downtown
 ,,,marriott,Marriott Hotel Downtown Hartford
@@ -6441,10 +6578,11 @@ connecticut
 ,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,,danbury
+,,,ethan allen hotel,Ethan Allen Hotel Danbury
 ,,,residence inn,Residence Inn Danbury
 ,,,holiday inn,Holiday Inn Danbury
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 
 montana
@@ -6488,10 +6626,11 @@ montana
 ,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,billings
+,,,crowne plaza,Crowne Plaza Hotel Billings
 ,,,holiday inn grand montana,Holiday Inn Grand Montana Billings
 ,,,best western clocktower inn,Best Western Clock Tower Inn Billings
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 
 california
@@ -6590,18 +6729,18 @@ california
 ,,berkeley - emeryville
 ,,,doubletree marina,Doubletree Hotel Marina Berkeley
 ,,,hilton garden inn oakland bay bridge,Hilton Garden Inn Oakland Bay Bridge Emeryville
+,,,hotel durant,Hotel Durant Berkeley
 ,,,extended stayamerica emeryville,Extended Stay America Hotel Oakland (California)
 
-,,,Hotel Matched : 3,Hotel Not Matched : 3
+,,,Hotel Matched : 4,Hotel Not Matched : 3
 
 ,salinas
 ,,salinas
 ,,,courtyard,Courtyard Hotel Monterey Salinas
-,,,residence inn salinas monterey,Residence Inn Salinas
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Salinas
 ,,,best western salinasmonterey,Best Western Monterey Hotel Salinas
 
-,,,Hotel Matched : 4,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,santa barbara
 ,,santa barbara
@@ -6674,13 +6813,14 @@ california
 ,,,taj campton place,Campton Place Hotel San Francisco
 ,,,galleria park,Galleria Park Hotel San Francisco
 ,,,marriott union square,Marriott Hotel Union Square San Francisco
+,,,orchard garden hotel,Orchard Garden Hotel San Francisco
 ,,,sir francis drake,Sir Francis Drake Hotel San Francisco
 ,,,chancellor hotel,Chancellor Hotel San Francisco
 ,,,executive hotel vintage court,Executive Hotel Vintage Court San Francisco
 ,,,hotel triton,Hotel Triton San Francisco
 ,,,orchard hotel,Orchard Hotel San Francisco
 
-,,,Hotel Matched : 10,Hotel Not Matched : 3
+,,,Hotel Matched : 11,Hotel Not Matched : 3
 
 ,,financial district-embarcadero
 ,,,hyatt regency,Hyatt Regency Hotel San Francisco
@@ -6796,15 +6936,21 @@ california
 
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
-,temecula
-,,,la quinta inn and suites,La Quinta Inn & Suites Temecula
-,,,ramada inn,Ramada Inn Old Town Temecula
+,sutter creek
+,,sutter creek
+,,,days inn,Days Inn Sutter Creek
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,turlock
 ,,turlock
 ,,,fairfield inn and suites,Fairfield Inn & Suites Turlock
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
+,jackson
+,,jackson
+,,,best western amador inn,Best Western Amador Inn Jackson (California)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
@@ -6815,9 +6961,10 @@ california
 
 ,barstow
 ,,barstow
+,,,holiday inn express hotel and suites,Holiday Inn Express Hotel & Suites Barstow
 ,,,ramada inn barstow,Ramada Inn Barstow
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,yreka
 ,,,baymont inn,Baymont Inn & Suites Yreka
@@ -6843,14 +6990,6 @@ california
 
 ,,,Hotel Matched : 8,Hotel Not Matched : 1
 
-,,mission valley
-,,,hilton,Hilton Hotel Torrey Pines La Jolla San Diego
-,,,marriott mission valley,Marriott La Jolla Hotel San Diego
-,,,courtyard mission valley,Courtyard Hotel Central San Diego
-,,,sheraton mission valley,Sheraton Hotel La Jolla San Diego
-
-,,,Hotel Matched : 4,Hotel Not Matched : 13
-
 ,,escondido - vista
 ,,,residence inn,Residence Inn North San Marcos (California)
 ,,,la quinta inn,La Quinta Inn San Diego Vista
@@ -6866,6 +7005,15 @@ california
 ,,,morgan run club and resort,Morgan Run Club & Resort Rancho Santa Fe
 
 ,,,Hotel Matched : 5,Hotel Not Matched : 0
+
+,,sorrento mesa
+,,,country inn and suites,Country Inn & Suites North San Diego
+,,,courtyard,Courtyard Hotel Sorrento Mesa San Diego
+,,,staybridge suites,Staybridge Suites Sorrento Mesa San Diego
+,,,woodfin hotel,Woodfin Hotel San Diego
+,,,holiday inn express sorrento valley,Holiday Inn Express Hotel & Suites Sorrento Valley San Diego
+
+,,,Hotel Matched : 5,Hotel Not Matched : 1
 
 ,,la mesa
 ,,,holiday inn la mesa,Holiday Inn La Mesa
@@ -6904,13 +7052,23 @@ california
 
 ,,,Hotel Matched : 21,Hotel Not Matched : 6
 
-,,rancho bernardo
-,,,doubletree golf resort,Doubletree Golf Resort San Diego
-,,,rancho bernardo inn,Rancho Bernardo Inn San Diego
-,,,holiday inn,Holiday Inn Rancho Bernardo San Diego
-,,,courtyard rancho bernardo,Courtyard Hotel Rancho Bernardo San Diego
+,,hotel circle - mission valley west
+,,,doubletree mission valley,Doubletree Hotel Mission Valley San Diego
+,,,hilton,Hilton Hotel Mission Valley San Diego
+,,,marriott mission valley,Marriott Hotel Mission Valley San Diego
+,,,courtyard mission valley,Courtyard Hotel Mission Valley San Diego
+,,,crowne plaza mission valley,Crowne Plaza Hotel Mission Valley San Diego
+,,,doubletree club,Doubletree Club Hotel San Diego
+,,,handlery hotel,Handlery Hotel and Resort San Diego
+,,,sheraton mission valley,Sheraton Hotel Mission Valley San Diego
+,,,town and country resort,Town and Country Resort San Diego
+,,,la quinta,La Quinta Inn Mission Valley San Diego
+,,,comfort inn and suites zoosea world,Comfort Inn and Suites Zoo Sea World San Diego
+,,,kings inn,Kings Inn San Diego
+,,,ramada plaza,Ramada Plaza Hotel Circle South San Diego
+,,,super,Super 8 Motel Sea World Zoo San Diego
 
-,,,Hotel Matched : 4,Hotel Not Matched : 2
+,,,Hotel Matched : 14,Hotel Not Matched : 3
 
 ,,coastal
 ,,,hilton san diego resort,Hilton Resort San Diego
@@ -6933,22 +7091,25 @@ california
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 4
 
-,,sorrento mesa
-,,,country inn and suites,Country Inn & Suites North San Diego
-,,,courtyard,Courtyard Hotel Sorrento Mesa San Diego
-,,,staybridge suites,Staybridge Suites Sorrento Mesa San Diego
-,,,woodfin hotel,Woodfin Hotel San Diego
-,,,holiday inn express sorrento valley,Holiday Inn Express Hotel & Suites Sorrento Valley San Diego
+,,mission valley east - central san diego
+,,,holiday inn mission valley,Holiday Inn Mission Valley San Diego
+,,,extended stayamerica mission valley,Extended Stay America Hotel Mission Valley San Diego
 
-,,,Hotel Matched : 5,Hotel Not Matched : 1
+,,,Hotel Matched : 2,Hotel Not Matched : 2
 
-,santa maria
-,,santa maria
-,,,historic santa maria inn,Historic Santa Maria Inn
-,,,holiday inn,Holiday Inn Hotel & Suites Santa Maria
-,,,best western big america,Best Western Big America Hotel Santa Maria
+,,rancho bernardo
+,,,doubletree golf resort,Doubletree Golf Resort San Diego
+,,,rancho bernardo inn,Rancho Bernardo Inn San Diego
+,,,holiday inn,Holiday Inn Rancho Bernardo San Diego
+,,,courtyard rancho bernardo,Courtyard Hotel Rancho Bernardo San Diego
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 4,Hotel Not Matched : 2
+
+,pacifica
+,,pacifica
+,,,holiday inn express,Holiday Inn Express Hotel & Suites Pacifica
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,hacienda heights
 ,los angeles - san gabriel valley
@@ -6994,9 +7155,9 @@ california
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 1
 
-,pacifica
-,,pacifica
-,,,holiday inn express,Holiday Inn Express Hotel & Suites Pacifica
+,anderson
+,,anderson
+,,,gaia hotel,Gaia Shasta Hotel Anderson
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
@@ -7023,7 +7184,7 @@ california
 ,,,travelodge international inn,Travelodge International Inn Anaheim
 ,,,econolodge maingate,Econo Lodge Maingate Anaheim
 
-,,,Hotel Matched : 8,Hotel Not Matched : 7
+,,,Hotel Matched : 8,Hotel Not Matched : 8
 
 ,,laguna hills - mission viejo
 ,,,ayres hotel and spa mission viejo,Ayres Hotel Mission Viejo
@@ -7262,6 +7423,7 @@ california
 
 ,san jose
 ,,san jose
+,,,doubletree,Doubletree Hotel San Jose (California)
 ,,,fairmont san jose,Fairmont Hotel San Jose (California)
 ,,,hotel de anza,Hotel De Anza San Jose (California)
 ,,,marriott,Marriott Hotel San Jose (California)
@@ -7270,7 +7432,7 @@ california
 ,,,candlewood suites,Candlewood Suites Silicon Valley Santa Clara
 ,,,holiday inn,Holiday Inn Express Benicia
 
-,,,Hotel Matched : 7,Hotel Not Matched : 4
+,,,Hotel Matched : 8,Hotel Not Matched : 4
 
 ,,milpitas
 ,,,beverly heritage,Beverly Heritage Hotel Milpitas
@@ -7353,6 +7515,12 @@ california
 
 ,,,Hotel Matched : 5,Hotel Not Matched : 0
 
+,temecula
+,,,la quinta inn and suites,La Quinta Inn & Suites Temecula
+,,,ramada inn,Ramada Inn Old Town Temecula
+
+,,,Hotel Matched : 2,Hotel Not Matched : 0
+
 ,long beach
 ,,long beach
 ,,,hilton,Hilton Hotel Long Beach
@@ -7390,9 +7558,10 @@ california
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,carpinteria
+,,,best western carpinteria inn,Best Western Inn Carpinteria
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Carpinteria
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,san pablo
 
@@ -7424,7 +7593,7 @@ california
 ,,,hawthorne inn and suites,Hawthorn Suites Napa
 ,,,travelodge,Travelodge Hotel Napa
 
-,,,Hotel Matched : 7,Hotel Not Matched : 0
+,,,Hotel Matched : 7,Hotel Not Matched : 1
 
 ,,fairfield
 ,,,courtyard fairfield napa valley,Courtyard Hotel Napa Valley Fairfield (California)
@@ -7491,11 +7660,12 @@ california
 ,,burbank - universal city - glendale
 ,,,hilton glendale and executive meeting center,Hilton Hotel & Executive Meeting Center Glendale (California)
 ,,,hotel amarano,Hotel Amarano Burbank (California)
+,,,sheraton universal,Sheraton Universal Hotel Los Angeles
 ,,,holiday inn burbankmedia center,Holiday Inn Media Center Burbank (California)
 ,,,homestead studio suites glendale,Homestead Studio Suites Glendale (California)
 ,,,ramada inn,Ramada Inn Airport Burbank (California)
 
-,,,Hotel Matched : 5,Hotel Not Matched : 3
+,,,Hotel Matched : 6,Hotel Not Matched : 3
 
 ,,van nuys - mission hills
 
@@ -7503,8 +7673,9 @@ california
 
 ,,simi valley
 ,,,grand vista,Grand Vista Hotel Simi Valley
+,,,holiday inn express simi valley,Holiday Inn Express Simi Valley
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,studio city
 
@@ -7550,8 +7721,8 @@ california
 ,,ontario east - rancho cucamonga
 ,,,hilton,Hilton Garden Inn Ontario Rancho Cucamonga
 ,,,aloft,Aloft Hotel Ontario Rancho Cucamonga
+,,,best western inn and suites shelby st,Best Western Inn & Suites Ontario
 ,,,hiilton garden inn,Hilton Garden Inn Ontario Rancho Cucamonga
-,,,best western inn and suites zone eastrancho cucamonga,Best Western Inn & Suites Ontario
 ,,,la quinta,La Quinta Inn & Suites Airport Ontario (California)
 
 ,,,Hotel Matched : 5,Hotel Not Matched : 1
@@ -7579,9 +7750,10 @@ california
 ,,,Hotel Matched : 5,Hotel Not Matched : 2
 
 ,bishop
+,,,best western holiday spa,Best Western Holiday Lodge Bishop (California)
 ,,,la quinta inn,La Quinta Inn Bishop (California)
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,oakland - eastbay
 ,,oakland - alameda
@@ -7618,7 +7790,7 @@ california
 ,,,marriott ventura beach,Marriott Beach Hotel Ventura
 ,,,country inn and suites,Country Inn & Suites Ventura
 
-,,,Hotel Matched : 4,Hotel Not Matched : 0
+,,,Hotel Matched : 4,Hotel Not Matched : 1
 
 ,,port heunene - oxnard
 ,,,courtyard oxnard ventura,Courtyard Hotel Ventura Oxnard
@@ -7651,9 +7823,10 @@ california
 ,,san luis obispo
 ,,,apple farm inn,Apple Farm Inn San Luis Obispo
 ,,,courtyard,Courtyard Hotel San Luis Obispo
+,,,super,Super 8 Motel San Luis Obispo
 ,,,vagabond inn,Vagabond Inn San Luis Obispo
 
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 4,Hotel Not Matched : 1
 
 ,,morro bay
 ,,,days inn,Days Inn Morro Bay
@@ -7662,7 +7835,6 @@ california
 
 ,los angeles
 ,,beverly hills - west hollywood
-,,,avalon,Avalon Hotel Beverly Hills
 ,,,beverly hilton,Beverly Hilton Hotel Beverly Hills
 ,,,hyatt century plaza,Hyatt Regency Century Plaza Hotel Los Angeles
 ,,,intercontinental century city,Intercontinental Hotel Century City Los Angeles
@@ -7670,6 +7842,7 @@ california
 ,,,thompson beverly hills,Thompson Hotel Beverly Hills
 ,,,crowne plaza,Crowne Plaza Hotel Beverly Hills Los Angeles
 ,,,tower beverly hills,The Tower Beverly Hills Hotel Los Angeles
+,,,avalon,Avalon Hotel Beverly Hills
 ,,,courtyard century city,Courtyard Hotel Century City Los Angeles
 ,,,residence inn,Residence Inn Beverly Hills Los Angeles
 ,,,best western carlyle inn,Best Western Carlyle Inn Los Angeles
@@ -7684,10 +7857,10 @@ california
 ,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,,airport lax
+,,,hilton,Hilton Hotel Airport Los Angeles
 ,,,sheraton gateway los angeles,Sheraton Hotel Gateway Los Angeles
 ,,,westin,Westin Hotel LAX Los Angeles
 ,,,crowne plaza,Crowne Plaza Hotel LAX Los Angeles
-,,,hilton,Hilton Hotel Airport Los Angeles
 ,,,marriott,Marriott Hotel Airport Los Angeles
 ,,,radisson,Radisson Hotel Airport Los Angeles
 ,,,courtyard el segundo,Courtyard Hotel LAX El Segundo
@@ -7744,7 +7917,7 @@ california
 ,,,super,Super 8 Motel Downtown Los Angeles
 ,,,comfort inn hollywood,Comfort Inn Los Angeles
 
-,,,Hotel Matched : 6,Hotel Not Matched : 2
+,,,Hotel Matched : 6,Hotel Not Matched : 3
 
 ,,redondo - manhattan beaches
 ,,,belamar,The Belamar Hotel Manhattan Beach
@@ -7769,17 +7942,26 @@ california
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,redding
+,,,hilton garden inn,Hilton Garden Inn Redding
 ,,,red lion,Red Lion Hotel Redding
 ,,,americas best value inn,Americas Best Value Inn Redding
 ,,,super,Super 8 Motel Redding
 
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 4,Hotel Not Matched : 1
 
 ,chico
 ,,chico
 ,,,courtyard,Courtyard Hotel Chico
 ,,,holiday inn,Holiday Inn Chico
 ,,,residence inn,Residence Inn Chico
+
+,,,Hotel Matched : 3,Hotel Not Matched : 0
+
+,santa maria
+,,santa maria
+,,,historic santa maria inn,Historic Santa Maria Inn
+,,,holiday inn,Holiday Inn Hotel & Suites Santa Maria
+,,,best western big america,Best Western Big America Hotel Santa Maria
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 0
 
@@ -7930,9 +8112,8 @@ vermont
 
 
 georgia
-,commerce
-,,commerce
-,,,fairfield inn and suites,Fairfield Inn & Suites Commerce (Georgia)
+,albany
+,,,fairfield inn and suites,Fairfield Inn & Suites Albany (Georgia)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
@@ -7964,6 +8145,12 @@ georgia
 ,,lake lanier
 
 ,,,Hotel Matched : 0,Hotel Not Matched : 1
+
+,commerce
+,,commerce
+,,,fairfield inn and suites,Fairfield Inn & Suites Commerce (Georgia)
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,savannah
 ,,north
@@ -8016,7 +8203,7 @@ georgia
 ,,gateway
 ,,,la quinta inn i,La Quinta Inn Savannah (Georgia)
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,cartersville
 ,,cartersville
@@ -8050,8 +8237,9 @@ georgia
 
 ,valdosta
 ,,,holiday inn,Holiday Inn Valdosta
+,,,la quinta inn and suites,La Quinta Inn & Suites Valdosta
 
-,,,Hotel Matched : 1,Hotel Not Matched : 2
+,,,Hotel Matched : 2,Hotel Not Matched : 2
 
 ,dalton
 ,,dalton
@@ -8093,7 +8281,6 @@ georgia
 ,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,,midtown
-,,,hotel palomar,Hotel Palomar Midtown Atlanta (Georgia)
 ,,,loews atlanta,Loews Hotel Atlanta
 ,,,w hotel atlanta midtown,W Hotel Midtown Atlanta (Georgia)
 ,,,georgian terrace hotel,Georgian Terrace Hotel Atlanta
@@ -8102,7 +8289,7 @@ georgia
 ,,,hotel midtown,Hotel Midtown Atlanta (Georgia)
 ,,,residence inn midtown,Residence Inn Midtown Atlanta (Georgia)
 
-,,,Hotel Matched : 8,Hotel Not Matched : 4
+,,,Hotel Matched : 7,Hotel Not Matched : 5
 
 ,,buckhead area
 ,,,grand hyatt,Grand Hyatt Hotel Buckhead Atlanta
@@ -8210,7 +8397,7 @@ pennsylvania
 ,,tannersville - bartonsville
 ,,,knights inn,Knights Inn Poconos Bartonsville
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 1,Hotel Not Matched : 1
 
 ,,wilkes barre
 ,,,best western east mountain,Best Western East Mountain Inn & Suites Wilkes Barre
@@ -8230,6 +8417,11 @@ pennsylvania
 ,,,shawnee inn,Shawnee Inn on Delaware
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
+
+,lebanon
+,,lebanon
+
+,,,Hotel Matched : 0,Hotel Not Matched : 1
 
 ,new stanton
 ,,new stanton
@@ -8364,14 +8556,19 @@ pennsylvania
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,allentown
+,,allentown
+,,,holiday inn city center,Holiday Inn Center City Allentown
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,,allentown - lehigh valley
 
 ,,,Hotel Matched : 0,Hotel Not Matched : 1
 
 ,,east allentown - bethlehem
 ,,,hotel bethlehem,Best Western Lehigh Valley Hotel Bethlehem (Pennsylvania)
-,,,courtyard bethlehem,Courtyard Hotel Bethlehem (Pennsylvania)
 ,,,best western lehigh valley,Best Western Lehigh Valley Hotel Bethlehem (Pennsylvania)
+,,,courtyard bethlehem,Courtyard Hotel Bethlehem (Pennsylvania)
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 5
 
@@ -8386,8 +8583,9 @@ pennsylvania
 ,,lancaster west
 ,,,best western eden resort and suites,Best Western Eden Resort & Suites Lancaster (Pennsylvania)
 ,,,marriott at penn square,Marriott at Penn Square Hotel Lancaster (Pennsylvania)
+,,,holiday inn express lititz,Holiday Inn Express Hotel & Suites Lititz
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,,reading
 ,,,crowne plaza,Crowne Plaza Hotel Five Seasons Cedar Rapids
@@ -8401,7 +8599,7 @@ pennsylvania
 ,,,days inn,Days Inn Gettysburg
 ,,,eisenhower hotel,Eisenhower Hotel Gettysburg
 
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 2
 
 ,clarion
 
@@ -8419,18 +8617,20 @@ pennsylvania
 ,,mt. laurel
 ,,,westin mount laurel,Westin Hotel Mount Laurel
 ,,,courtyard,Courtyard Hotel Mount Laurel
+,,,doubletree guest suites,Doubletree Guest Suites Mount Laurel
 ,,,hyatt place,Hyatt Place Hotel Mount Laurel
 ,,,marriott,Marriott Hotel Mount Laurel
 ,,,summerfield suites mt laurel,Hyatt Summerfield Suites Mount Laurel
 ,,,candlewood suites,Candlewood Suites Mount Laurel
 ,,,extended stay deluxe mt laurel,Extended Stay Deluxe Hotel Mount Laurel
 
-,,,Hotel Matched : 7,Hotel Not Matched : 4
+,,,Hotel Matched : 8,Hotel Not Matched : 4
 
 ,,airport phl
 ,,,renaissance,Renaissance Airport Hotel Philadelphia
 ,,,hilton airport,Hilton Hotel Airport Philadelphia
 ,,,marriott,Marriott Hotel Airport Philadelphia
+,,,aloft airport,Aloft Hotel Airport Philadelphia
 ,,,embassy suites,Embassy Suites Airport Philadelphia
 ,,,four points,Four Points Hotel Airport Philadelphia
 ,,,holiday inn stadium,Holiday Inn Stadium Philadelphia
@@ -8441,7 +8641,7 @@ pennsylvania
 ,,,extended stayamerica,Extended Stay America Hotel Airport Philadelphia
 ,,,extended stay deluxe,Extended Stay Deluxe Hotel Airport Philadelphia
 
-,,,Hotel Matched : 12,Hotel Not Matched : 1
+,,,Hotel Matched : 13,Hotel Not Matched : 1
 
 ,,university area
 ,,,sheraton university,Sheraton University City Hotel Philadelphia
@@ -8599,6 +8799,7 @@ pennsylvania
 
 
 florida
+,,
 ,tallahassee
 ,,east
 ,,,staybridge suites,Staybridge Suites East Tallahassee
@@ -8636,6 +8837,7 @@ florida
 
 ,boca raton - deerfield beach
 ,,boca raton - north deerfield beach
+,,,renaissance,Renaissance Hotel Boca Raton
 ,,,hilton deerfield beach,Hilton Hotel Boca Raton Deerfield Beach
 ,,,marriott boca raton,Marriott Hotel Center Boca Raton
 ,,,boca raton bridge hotel,Bridge Hotel Boca Raton
@@ -8646,7 +8848,7 @@ florida
 ,,,plaza hotel and suites,Plaza Hotel & Suites Boca Raton
 ,,,homestead studio suites,Homestead Studio Suites Commerce Boca Raton
 
-,,,Hotel Matched : 9,Hotel Not Matched : 2
+,,,Hotel Matched : 10,Hotel Not Matched : 2
 
 ,destin
 ,,,courtyard sandestin at grand boulevard,Courtyard Hotel Sandestin Grand Boulevard Destin
@@ -8783,6 +8985,11 @@ florida
 
 ,,,Hotel Matched : 10,Hotel Not Matched : 5
 
+,,pompano beach
+,,,beachcomber resort,Beachcomber Resort & Villas Pompano Beach
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,,miramar
 ,,,courtyard miramar,Courtyard Hotel Fort Lauderdale Miramar
 ,,,residence inn,Residence Inn Fort Lauderdale Miramar
@@ -8811,6 +9018,7 @@ florida
 
 ,,beach
 ,,,b ocean,B Ocean Fort Lauderdale Hotel
+,,,sunrise beach inn,Sunrise Beach Inn Fort Lauderdale
 ,,,hyatt pier,Hyatt Regency Pier Sixty-Six Resort Fort Lauderdale
 ,,,il lugano suites,Il Lugano Suite Hotel Fort Lauderdale
 ,,,marriott harbor beach resort resort,Harbor Beach Marriot Resort Fort Lauderdale
@@ -8819,7 +9027,6 @@ florida
 ,,,bahia mar beach resort,Bahia Mar Beach Resort Fort Lauderdale
 ,,,sheraton fort lauderdale beach,Sheraton Beach Hotel Fort Lauderdale
 ,,,ocean sky hotel and resort,Ocean Sky Resort Fort Lauderdale
-,,,sunrise beach inn,Sunrise Beach Inn Fort Lauderdale
 ,,,avalon waterfront inn,Avalon Waterfront Inns Fort Lauderdale
 ,,,fort lauderdale beach resort,Fort Lauderdale Beach Resort
 
@@ -8863,12 +9070,19 @@ florida
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,gainesville
-,,gainesville
+,,west
 ,,,best western gateway grand,Best Western Gateway Grand Hotel Gainesville
 ,,,la quinta,La Quinta Inn & Suites Fort Pierce
 ,,,fairfield inn,Fairfield Inn Gainesville
 
-,,,Hotel Matched : 3,Hotel Not Matched : 4
+,,,Hotel Matched : 3,Hotel Not Matched : 0
+
+,,university
+,,,courtyard,Courtyard Hotel Gainesville
+,,,springhill suites,Springhill Suites Gainesville
+,,,extended stayamerica i,Extended Stay America Hotel Gainesville
+
+,,,Hotel Matched : 3,Hotel Not Matched : 2
 
 ,daytona beach
 ,,south ormond beach - speedway north
@@ -8943,11 +9157,18 @@ florida
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
+,jensen beach
+,,jensen beach
+,,,courtyard,Courtyard Hotel Jensen Beach South Hutchinson Island
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,lake city - jasper
 ,,lake city
 ,,,holiday inn,Holiday Inn Hotel & Suites Lake City
+,,,days inn,Days Inn Lake City
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,brooksville
 ,,brooksville
@@ -8965,6 +9186,11 @@ florida
 ,,,springhill suites,Springhill Suites Sarasota
 
 ,,,Hotel Matched : 6,Hotel Not Matched : 0
+
+,,east
+,,,americinn,AmericInn Hotel & Suites Sarasota
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,,venice
 ,,,fairfield inn and suites,Fairfield Inn & Suites Venice (Florida)
@@ -9131,9 +9357,10 @@ florida
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,amelia island - fernandina beach
+,,,amelia hotel,Amelia Hotel Amelia Island
 ,,,residence inn,Residence Inn Amelia Island
 
-,,,Hotel Matched : 1,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,,southeast - baymeadows
 ,,,embassy suites baymeadows,Embassy Suites Baymeadows Jacksonville (Florida)
@@ -9329,7 +9556,7 @@ florida
 ,,,century hotel,Century Hotel South Miami Beach
 ,,,wave hotel,The Wave Hotel Miami Beach
 
-,,,Hotel Matched : 3,Hotel Not Matched : 5
+,,,Hotel Matched : 3,Hotel Not Matched : 6
 
 ,,south beach - central
 ,,,wyndham garden,Wyndham Garden Hotel South Miami Beach
@@ -9429,6 +9656,7 @@ florida
 ,,,peabody,The Peabody Hotel Orlando
 ,,,rosen shingle creek,Rosen Shingle Creek Hotel Orlando
 ,,,westin imagine,The Westin Imagine Hotel Orlando
+,,,embassy suites,Embassy Suites International Drive South Orlando
 ,,,rosen centre,Rosen Centre Hotel Orlando
 ,,,rosen plaza,Rosen Plaza Hotel Orlando
 ,,,courtyard,Courtyard Hotel International Drive Orlando
@@ -9443,7 +9671,7 @@ florida
 ,,,extended stayamerica convention center westwood blvd,Extended Stay America Hotel Westwood Orlando
 ,,,orlando metropolitan resort,Metropolitan Resort Orlando
 
-,,,Hotel Matched : 16,Hotel Not Matched : 9
+,,,Hotel Matched : 17,Hotel Not Matched : 9
 
 ,,airport mco west - fl mall area
 
@@ -9467,7 +9695,7 @@ florida
 ,,,radisson lake buena vista,Radisson Hotel Orlando Lake Buena Vista
 ,,,best western lake buena vista,Best Western Resort Hotel Lake Buena Vista
 ,,,courtyard by marriott lake buena vista,Courtyard Hotel Marriott Village Orlando
-,,,holiday inn sunspree,Holiday Inn SunSpree Resort Lake Buena Vista Orlando
+,,,holiday inn resort lake buena vista,Holiday Inn SunSpree Resort Lake Buena Vista Orlando
 ,,,residence inn lake buena vista,Residence Inn Orlando Lake Buena Vista
 ,,,sheraton safari,Sheraton Safari Hotel and Suites Orlando Lake Buena Vista
 ,,,staybridge suites lbv,Staybridge Suites Orlando Lake Buena Vista
@@ -9538,7 +9766,7 @@ florida
 
 ,stuart
 ,,stuart
-,,,courtyard,Courtyard Hotel Stuart (Florida)
+,,,courtyard stuart,Courtyard Hotel Stuart (Florida)
 ,,,marriott hutchinson island resort,Marriott Beach Resort & Marina Hutchinson Island Stuart (Florida)
 ,,,best western stuart,Best Western Downtown Hotel Stuart (Florida)
 
@@ -9604,10 +9832,11 @@ kentucky
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,bowling green
+,,,courtyard,Courtyard Hotel Bowling Green (Kentucky)
 ,,,holiday inn university plaza,Holiday Inn University Plaza Bowling Green (Kentucky)
 ,,,la quinta,La Quinta Inn & Suites Bowling Green (Kentucky)
 
-,,,Hotel Matched : 2,Hotel Not Matched : 1
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,lexington
 ,,lexington - south
@@ -9855,7 +10084,7 @@ idaho
 ,,,doubletree club,Doubletree Club Hotel Boise
 ,,,doubletree riverside,Doubletree Hotel Riverside Boise
 
-,,,Hotel Matched : 3,Hotel Not Matched : 2
+,,,Hotel Matched : 3,Hotel Not Matched : 3
 
 ,,west
 ,,,hyatt place towne square,Hyatt Place Hotel Towne Square Boise
@@ -9890,11 +10119,22 @@ idaho
 
 
 west virginia
+,summersville
+,,summersville
+,,,best western lake motor lodge,Best Western Lake Motor Lodge Summersville
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,bridgeport
 ,,bridgeport
 ,,,holiday inn,Holiday Inn Clarksburg Bridgeport (West Virginia)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 1
+
+,beckley
+,,,quality inn,Quality Inn Beckley
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,charleston
 ,,,embassy suites,Embassy Suites Charleston (West Virginia)
@@ -9907,12 +10147,6 @@ west virginia
 
 ,huntington
 ,,,days inn,Days Inn Huntington (West Virginia)
-
-,,,Hotel Matched : 1,Hotel Not Matched : 0
-
-,summersville
-,,summersville
-,,,best western lake motor lodge,Best Western Lake Motor Lodge Summersville
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
@@ -10017,26 +10251,30 @@ south carolina
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
 ,hilton head island
+,,hilton head island
+,,,resort crowne plaza,Crowne Plaza Resort Hilton Head Island
+,,,resort hilton oceanfront,Hilton Oceanfront Resort Hilton Head Island
+,,,resort westin hilton head,Westin Resort Hilton Head Island
+,,,quality inn and suites,Quality Inn & Suites Hilton Head Island
+
+,,,Hotel Matched : 4,Hotel Not Matched : 4
+
 ,,bluffton
 ,,,comfort suites,Comfort Suites Bluffton (South Carolina)
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Bluffton (South Carolina)
 
 ,,,Hotel Matched : 2,Hotel Not Matched : 0
 
+,anderson
+,,,holiday inn express,Holiday Inn Express Anderson (South Carolina)
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,camden
 ,,camden
 ,,,holiday inn express,Holiday Inn Express Hotel & Suites Camden (South Carolina)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
-
-,greenwood[u]<br>2* holiday inn express<br><br>[u]hilton head island
-,,greenwood[u]<br>2* holiday inn express<br><br>[u]hilton head island
-,,,resort crowne plaza,Crowne Plaza Resort Hilton Head Island
-,,,resort hilton oceanfront,Hilton Oceanfront Resort Hilton Head Island
-,,,resort westin hilton head,Westin Resort Hilton Head Island
-,,,quality inn and suites,Quality Inn & Suites Hilton Head Island
-
-,,,Hotel Matched : 4,Hotel Not Matched : 5
 
 ,charleston
 ,,north charleston - northwoods mall - wannamker park
@@ -10063,7 +10301,7 @@ south carolina
 ,,,andrew pinckney inn,Andrew Pinckney Inn Charleston
 ,,,best western king charles inn,Best Western King Charles Inn Charleston
 
-,,,Hotel Matched : 9,Hotel Not Matched : 0
+,,,Hotel Matched : 9,Hotel Not Matched : 1
 
 ,,mt pleasant - isle of palms
 ,,,wild dunes resort,Isle of Palms and Wild Dunes Resort
@@ -10090,19 +10328,33 @@ south carolina
 ,,,Hotel Matched : 0,Hotel Not Matched : 1
 
 ,,north charleston - airport - coliseum
+,,,crowne plaza,Crowne Plaza North Charleston
 ,,,sheraton,Sheraton Hotel Airport North Charleston
+,,,aloft,Aloft Hotel North Charleston
 ,,,courtyard,Courtyard Hotel North Charleston
+,,,embassy suites,Embassy Suites Airport North Charleston
 ,,,residence inn,Residence Inn Airport North Charleston
 ,,,radisson airport,Radisson Hotel North Charleston
 ,,,hampton inn airportcoliseum,Hampton Inn Airport North Charleston
 
-,,,Hotel Matched : 5,Hotel Not Matched : 1
+,,,Hotel Matched : 8,Hotel Not Matched : 1
 
 ,florence
 ,,florence
 ,,,econolodge florence,Econo Lodge Florence (South Carolina)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 2
+
+,beaufort
+,,beaufort
+,,,country inn and suites,Country Inn & Suites West Beaufort
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
+,greenwood
+,,,holiday inn express,Holiday Inn Express Hotel & Suites Greenwood (South Carolina)
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 
 ohio
@@ -10201,9 +10453,9 @@ ohio
 ,,,Hotel Matched : 5,Hotel Not Matched : 1
 
 ,,airport cvg - florence
+,,,hilton airport,Hilton Hotel Cincinnati Airport Florence (Kentucky)
 ,,,courtyard,Courtyard Hotel Cincinnati Airport Erlanger
 ,,,holiday inn airport,Holiday Inn Cincinnati Airport Erlanger
-,,,hilton airport,Hilton Hotel Cincinnati Airport Florence (Kentucky)
 ,,,hyatt place,Hyatt Place Hotel Cincinnati Airport Florence (Kentucky)
 ,,,residence inn,Residence Inn Cincinnati Airport Erlanger
 ,,,days inn,Days Inn Florence (Kentucky)
@@ -10227,6 +10479,11 @@ ohio
 ,,,days inn,Days Inn Sidney (Ohio)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
+
+,new paris
+,,new paris
+
+,,,Hotel Matched : 0,Hotel Not Matched : 1
 
 ,dayton
 ,,fairborn - patterson
@@ -10412,7 +10669,7 @@ ohio
 ,,,residence inn beachwood beachwood,Residence Inn Cleveland Beachwood
 ,,,homestead studio suites zone beachwood,Homestead Studio Suites Beachwood
 
-,,,Hotel Matched : 5,Hotel Not Matched : 7
+,,,Hotel Matched : 5,Hotel Not Matched : 8
 
 ,marietta - parkersburg
 ,,marietta - williamstown
@@ -10449,7 +10706,7 @@ ohio
 ,,,fairfield inn,Fairfield Inn & Suites Cleveland Streetsboro
 ,,,wingate inn,Wingate Inn Streetsboro
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 2,Hotel Not Matched : 1
 
 ,,macedonia - twinsburg - stow
 ,,,courtyard,Courtyard Hotel Akron Stow
@@ -10457,6 +10714,10 @@ ohio
 ,,,la quinta macedonia,La Quinta Inn & Suites Cleveland Macedonia
 
 ,,,Hotel Matched : 3,Hotel Not Matched : 0
+
+,,akron - cuyahoga falls
+
+,,,Hotel Matched : 0,Hotel Not Matched : 1
 
 ,,canton
 
@@ -10503,6 +10764,11 @@ alabama
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,auburn
+,,auburn
+,,,jameson inn,Jameson Inn Auburn (Alabama)
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,,opelika
 ,,,best western opelika,Best Western Inn Opelika
 
@@ -10637,6 +10903,11 @@ massachusetts
 
 ,,,Hotel Matched : 7,Hotel Not Matched : 3
 
+,,north cambridge - arlington
+,,,best western tria,Best Western Hotel Tria Cambridge (Massachusetts)
+
+,,,Hotel Matched : 1,Hotel Not Matched : 0
+
 ,,medford - somerville
 ,,,holiday inn somerville,Holiday Inn Boston Somerville
 ,,,hyatt place not yet reported,Hyatt Place Hotel Medford (Massachusetts)
@@ -10701,9 +10972,10 @@ massachusetts
 ,massachusetts southeast suburbs
 ,,fall river - new bedford
 ,,,residence inn,Residence Inn New Bedford North Dartmouth
+,,,fairfield inn,Fairfield Inn & Suites New Bedford
 ,,,comfort inn north dartmouth,Comfort Inn North Dartmouth
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 0
 
 ,westborough - marlborough
 ,,marlborough - hudson
@@ -10717,7 +10989,7 @@ massachusetts
 ,,,doubletree,Doubletree Hotel Boston Westborough
 ,,,extended stayamerica,Extended Stay America Hotel Boston Westborough
 
-,,,Hotel Matched : 3,Hotel Not Matched : 0
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,boston metro - south
 ,,randolph - braintree - quincy
@@ -10732,6 +11004,28 @@ massachusetts
 ,,,holiday inn rockland,Holiday Inn Rockland
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
+
+,springfield
+,,holyoke
+,,,holiday inn holyoke,Holiday Inn Holyoke
+,,,country inn and suites holyoke,Country Inn & Suites Holyoke
+
+,,,Hotel Matched : 2,Hotel Not Matched : 0
+
+,,northampton - hadley - amherst
+,,,courtyard amherst,Courtyard Hotel Amherst Hadley
+,,,clarion northampton,Clarion Hotel Northampton (Massachusetts)
+,,,holiday inn express and suites hadley,Holiday Inn Express Hotel & Suites Amherst Hadley
+,,,autumn inn,Autumn Inn Northampton (Massachusetts)
+
+,,,Hotel Matched : 4,Hotel Not Matched : 0
+
+,,springfield - west
+,,,marriott,Marriott Hotel Springfield (Massachusetts)
+,,,sheraton monarch place,Sheraton Monarch Place Hotel Springfield (Massachusetts)
+,,,city place inn and suites not yet reported,City Place Inn & Suites Springfield (Massachusetts)
+
+,,,Hotel Matched : 3,Hotel Not Matched : 1
 
 ,boston north shore
 ,,saugus
@@ -10768,6 +11062,10 @@ massachusetts
 ,,,la quinta inn,La Quinta Inn Worcester Auburn (Massachusetts)
 
 ,,,Hotel Matched : 1,Hotel Not Matched : 0
+
+,leominster - boxborough
+
+,,,Hotel Matched : 0,Hotel Not Matched : 1
 
 ,boston metro-south
 ,,needham - dedham
@@ -10880,27 +11178,11 @@ massachusetts
 ,,,Hotel Matched : 7,Hotel Not Matched : 2
 
 ,boston southeast suburbs
-,springfield
-,,holyoke
-,,,holiday inn holyoke,Holiday Inn Holyoke
-,,,country inn and suites holyoke,Country Inn & Suites Holyoke
+,amesbury
+,,amesbury
+,,,fairfield inn,Fairfield Inn Amesbury
 
-,,,Hotel Matched : 2,Hotel Not Matched : 0
-
-,,northampton - hadley - amherst
-,,,courtyard amherst,Courtyard Hotel Amherst Hadley
-,,,clarion northampton,Clarion Hotel Northampton (Massachusetts)
-,,,holiday inn express and suites hadley,Holiday Inn Express Hotel & Suites Amherst Hadley
-,,,autumn inn,Autumn Inn Northampton (Massachusetts)
-
-,,,Hotel Matched : 4,Hotel Not Matched : 0
-
-,,springfield - west
-,,,marriott,Marriott Hotel Springfield (Massachusetts)
-,,,sheraton monarch place,Sheraton Monarch Place Hotel Springfield (Massachusetts)
-,,,city place inn and suites not yet reported,City Place Inn & Suites Springfield (Massachusetts)
-
-,,,Hotel Matched : 3,Hotel Not Matched : 1
+,,,Hotel Matched : 1,Hotel Not Matched : 0
 
 ,southeast suburbs
 ,,raynham - middleboro

@@ -242,7 +242,7 @@ class BBPricelinePostSpider(BaseSpider):
                                                         #..add current state in every hotel record
 
 
-							output += [CSV.pack(CSV(), [state,city, rgn, name, star], "#")]
+							output += [CSV.pack(CSV(), [state,city, rgn, name, star,response.url], "#")]
                                                      #   print '_____OUTPUT________'
                                                      #   try:
                                                      #       print [CSV.pack(CSV(), [state,city, rgn, name, star], "#")]
