@@ -3,7 +3,6 @@ import datetime
 from sqlalchemy import * 
 from sqlalchemy.orm import sessionmaker
 
-
 # the declarative stuff lets you use objects with defined columns
 # instead of creating the tables using DDL or the like
 

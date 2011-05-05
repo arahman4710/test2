@@ -160,7 +160,6 @@ class hotwire_api_analysis(BaseSpider):
     Grabs information from the returned xml and saves it all to a file named "year-day.result"
     where day is the day number in the year (this avoids month ending problems and the like)
 
-
     Each hotel_info query returns a 'HWRefNumber' which is then linked into the hotel_page query results. 
 
     Each query result also includes a fetch_time which is in seconds past the epoch.   Informational, but
