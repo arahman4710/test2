@@ -14,12 +14,15 @@ from scrapy.utils.response import body_or_str
 from sqlalchemy import * 
 from sqlalchemy.sql import and_
 from sqlalchemy.orm import sessionmaker
+
 import re
 import datetime 
 import time
 import urllib
 import sys
 import os 
+import sys
+import argparse 
 
 from hotwire_tables import * 
 
@@ -38,7 +41,7 @@ base_data_dir = "data"  # this really needs to be something better, or a databas
 #                10  for debugging stuff that nobody wants to see, but is sometimes useful
 
 debug_level = 1
-
+all_cities = False    # set by arg parsing 
         
 def simple_extract(name, ctxt) : 
     if debug_level > 8 : 
@@ -175,9 +178,13 @@ class hotwire_api_analysis(BaseSpider):
     #List of names of cities to query - this and the offset list should ideally be read
     # from a file or database.
     
-    # city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']
+    # 
     # city_names = ['Anchorage, AK'] 
-    city_names = ['Boston, MA'] 
+    if all_cities : 
+        city_names = ['Boston, MA'] 
+    else : 
+        city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
+
     # date_offsets = [0, 7, 14]  # offsets in days from today 
     date_offsets = [0] 
     api_key='eupzwn43dwtmgxhmkw5pbta7'
@@ -228,7 +235,21 @@ class hotwire_api_analysis(BaseSpider):
         return (amenities_dict, neighborhoods_dict, hotels_list) 
     
 def main() :     
-    global debug_level, raw_results 
+    global debug_level, raw_results, all_cities
+
+    parser = argparse.ArgumentParser(description='Run spider')
+    parser.add_argument('--do-all-cities', help="do all cities or just test with one (default=one)", dest='all_cities',  action='store_true') 
+    parser.add_argument('--do-spider', help='run spider if true (default=false)', dest='do_spider', action='store_true')
+    parser.add_argument('--debug-level', nargs='?', help='debug level (0-10) default=0') 
+    parser.add_argument('--foo-bar-baz') 
+    arg_result = parser.parse_args()
+
+    if not arg_result.debug_level : 
+        debug_level = 0 
+    else :
+        debug_level = arg_result.debug_level
+
+    all_cities = arg_result.all_cities 
 
     if debug_level > 0 : 
         log.start(logfile="hotwire_api_analysis.log")
@@ -244,7 +265,12 @@ def main() :
             raw_results = open(results_fn, "w") 
         except Exception,e :
             log.msg("unable to open raw data file - won't be saving raw data", level=log.WARNING) 
+    if arg_result.do_spider : 
+        do_spider() 
+    else :
+        print 'not running spider\nto run spider with python -i use "do_spider()"'
 
+def do_spider() :     
     settings.overrides['USER_AGENT'] = "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10"
     settings.overrides['SCHEDULER_ORDER'] = 'BFO'
     crawler = CrawlerProcess(settings)
@@ -260,10 +286,5 @@ def main() :
             pass 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
-   print "not doing main"
-   # main()
-=======
-    print "not doing main"
-    # main()
->>>>>>> e95f37a3a7b47e9423176c8935a1898a06d63deb
+    main()
+
