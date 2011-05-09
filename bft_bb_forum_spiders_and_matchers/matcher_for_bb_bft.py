@@ -263,12 +263,6 @@ def get_scraped_data_from_db():
 
     for line in retrive_raw_scraped_from_db():
 
-#        hotel = str(line[0])
-#        city = str(line[1])
-#        state = str(line[3])
-#        region = str(line[2])
-#        url = str(line[3])
-
         (hotel,city,region,state,url) = map(lambda x:str(x).strip(),line)
 
         hotel = hotel.replace(' previously','')
@@ -769,6 +763,40 @@ def hotel_name_match(foreign_list,internal_list,city_name,region_name,state_name
     return matches
 
 
+def create_dbtable_for_unmatched_entries():
+
+    #   creates db tables to store unmatched hotel entries for human input
+
+    db = Connection.database
+    c = Connection.cursor
+
+    c.execute('''CREATE TABLE IF NOT EXISTS `unmatched_hotel_table` ( \
+    `unmatched_entry_id` int(11) NOT NULL AUTO_INCREMENT,   \
+    `hotel_name` text,  \
+    `city` int(11) DEFAULT NULL,    \
+    `area` int(11) DEFAULT NULL,    \
+    `region` int(11) DEFAULT NULL,  \
+    `source_forum` text,  \
+    `target_site` text,  \
+    `matched` int(11) DEFAULT NULL, \
+    PRIMARY KEY (`unmatched_entry_id`)  \
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8  ''')
+
+    db.commit()
+
+    c.execute('''CREATE TABLE IF NOT EXISTS `possible_match_table` (  \
+    `possible_match_id` int(11) NOT NULL AUTO_INCREMENT,    \
+    `unmatched_entry_id` int(11) DEFAULT NULL,  \
+    `hotel_id` int(11) DEFAULT NULL,    \
+    `percentage_match` decimal(11,0) DEFAULT NULL,  \
+    PRIMARY KEY (`possible_match_id`),  \
+    KEY `FK_possible_match_table` (`unmatched_entry_id`),   \
+    CONSTRAINT `FK_possible_match_table` FOREIGN KEY (`unmatched_entry_id`) REFERENCES `unmatched_hotel_table` (`unmatched_entry_id`)   \
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ''')
+
+    db.commit()
+
+
 
 
 def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,present_internal_region,log_write_hotels,current_input_state_name,current_input_city_name,current_input_region_name):
@@ -782,8 +810,7 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
     #2  feeds the appropriate list of hotels to generate the matches for all foreign hotels
 
     #this function can be expanded in the future to write the hotel matches to the db
-
-
+    
     count = 0
 
     #1
@@ -794,11 +821,13 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
     
     f_hotel_list = map(lambda x:x[0],foreign_hotel_list)
 
-    hotel_url_dict = {}
+    hotel_url_dict = {} #dictionary to store hotel and their urls (for input hotels)
 
-    for htl,url in foreign_hotel_list:
-        hotel_url_dict[htl] = url
+    hotel_id_dict = {}  #dictionary to store hotel and their ids  (for internal hotels)
 
+    for htl,url in foreign_hotel_list: hotel_url_dict[htl] = url
+
+    for internal_hotel in hotels_in_all_regions: hotel_id_dict[internal_hotel[1]] = internal_hotel[0]
 
     hotel_match_array = hotel_name_match(f_hotel_list,map(lambda x:x[1],hotels_in_all_regions),present_internal_city,state,present_internal_region)
 
@@ -811,6 +840,8 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
         else:
 
             input_hotel_name = hotel_matches[0]
+            internal_hotel_name = hotel_matches[1]
+          #  internal_hotel_id = hotel_id_dict[internal_hotel_name]
             url = hotel_url_dict[input_hotel_name]
             print '\t\t\t\t' + str(hotel_matches)
             print '\t\t\t\t\t\t Internal State: ' + str(state) +'\t\t Input State: ' + str(current_input_state_name)
