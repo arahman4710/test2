@@ -762,6 +762,21 @@ def hotel_name_match(foreign_list,internal_list,city_name,region_name,state_name
 
     return matches
 
+def check_entry_listed_as_unmatched(db_record):
+
+    #   checks if a hotel entry was marked as unmatched before
+
+    #   returns true if entry exists or  false otherwise
+
+    #   param is a tuple => (hotel_name,city,area,source_forum,target_site)
+
+    c = Connection.cursor
+
+    query = c.execute('''Select * from unmatched_hotel_table where hotel_name = '%s' and city = '%s' and area = '%s' and source_forum = '%s' and target_site = '%s'  \
+    ''' % db_record)
+
+    return (query!=0)
+
 
 def create_dbtable_for_unmatched_entries():
 
