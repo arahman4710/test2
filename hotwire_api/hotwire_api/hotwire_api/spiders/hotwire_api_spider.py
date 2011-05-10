@@ -180,6 +180,7 @@ class hotwire_api_analysis(BaseSpider):
     
     # 
     # city_names = ['Anchorage, AK'] 
+    city_names = [] 
     if all_cities : 
         city_names = ['Boston, MA'] 
     else : 
