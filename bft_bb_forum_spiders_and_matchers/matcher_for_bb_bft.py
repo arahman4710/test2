@@ -819,6 +819,7 @@ def create_dbtable_for_unmatched_entries():
     `region` int(11) DEFAULT NULL,  \
     `source_forum` text,  \
     `target_site` text,  \
+    `source_url` text,  \
     `matched` int(11) DEFAULT NULL, \
     PRIMARY KEY (`unmatched_entry_id`)  \
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8  ''')
