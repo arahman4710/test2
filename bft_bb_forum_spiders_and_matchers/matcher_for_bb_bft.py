@@ -762,20 +762,46 @@ def hotel_name_match(foreign_list,internal_list,city_name,region_name,state_name
 
     return matches
 
+
 def check_entry_listed_as_unmatched(db_record):
 
     #   checks if a hotel entry was marked as unmatched before
 
-    #   returns true if entry exists or  false otherwise
+    #   returns true if entry exists or false otherwise
 
     #   param is a tuple => (hotel_name,city,area,source_forum,target_site)
 
     c = Connection.cursor
 
-    query = c.execute('''Select * from unmatched_hotel_table where hotel_name = '%s' and city = '%s' and area = '%s' and source_forum = '%s' and target_site = '%s'  \
+    query = c.execute('''Select unmatched_entry_id from unmatched_hotel_table where hotel_name = '%s' and city = '%s' and area = '%s' and source_forum = '%s' and target_site = '%s'  \
     ''' % db_record)
 
     return (query!=0)
+
+
+def fetch_unmatched_entry_list_id(db_record):
+
+    #   fetches the key id for the unmatched entry in question
+
+    #   param is a tuple => (hotel_name,city,area,source_forum,target_site)
+
+    c = Connection.cursor
+
+    c.execute('''Select unmatched_entry_id from unmatched_hotel_table where \
+    hotel_name = '%s' and city = '%s' and area = '%s' and source_forum = '%s' and target_site = '%s'  ''' % db_record)
+
+    return c.fetchone()[0]
+
+
+
+def delete_entry_listed_as_unmatched(unmatched_entry_id):
+
+    #   delete if a hotel entry was marked as unmatched before
+
+    c = Connection.cursor
+
+    c.execute('''delete from unmatched_hotel_table where unmatched_entry_id = '%s' ''' % unmatched_entry_id)
+
 
 
 def create_dbtable_for_unmatched_entries():
@@ -812,9 +838,85 @@ def create_dbtable_for_unmatched_entries():
     db.commit()
 
 
+def insert_unmatched_entry_to_db(db_record):
+
+    #   inserts an entry to the unmatched hotel table and returns the row_id for the inserted entry
+
+    #   param format (`hotel_name`, `city`, `area`, `region`, `source_forum`, `target_site`, `matched`)
+
+    db = Connection.database
+    c = Connection.cursor
+
+    c.execute('''INSERT INTO `acuity`.`unmatched_hotel_table` \
+	(`hotel_name`, `city`, `area`, `region`, `source_forum`, `target_site`, `matched`) VALUES %s ;''' % db_record)
+
+    db.commit()
 
 
-def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,present_internal_region,log_write_hotels,current_input_state_name,current_input_city_name,current_input_region_name):
+
+def insert_possible_matches_for_unmatched_entries(db_record):
+
+    #   inserts possible matches entry for an unmatched entry
+
+    #   param format (unmatched_entry_id,hotel_id,percentage_match)
+
+    db = Connection.database
+    c = Connection.cursor
+
+    c.execute('''INSERT INTO `acuity`.`possible_match_table`
+	(`unmatched_entry_id`, `hotel_id`, `percentage_match` ) VALUES''' % db_record)
+
+    db.commit()
+
+def get_area_dict(target_site):
+
+    #returns a dictionary for areas with respect to a target_site (e.g. priceline, hotwire...)
+
+    c = Connection.cursor
+
+    area_dict = {}
+
+    c.execute('''SELECT `Priceline_area_id`, `Name` FROM `acuity`.`%s_area` ''' % target_site)
+
+    for id,area_name in c.fetchall():
+        area_name = re.sub(', [A-Za-z][A-Za-z]', '', area_name)
+        area_dict[area_name] = id
+
+    return area_dict
+
+def get_city_dict(target_site):
+
+    #   returns a dictionary of cityids organized in state => city => cityid
+
+    #   param is included to differentiate between priceline, hotwire systems
+
+    # !!note: has to be changed to account for handling hotwire entries too!
+
+    c = Connection.cursor
+
+    exclude_list = str(tuple(find_cities_not_in_pl()))
+
+    c.execute("Select cityid,city,state from cities where cityid not in "+exclude_list+" ;")
+
+    state_city_dict = {}
+
+    for cityid,city,state in c.fetchall():
+
+        state = state.lower().strip()
+        city = city.lower().strip()
+
+        if state not in state_city_dict.keys():
+            state_city_dict[state] = {}
+
+        state_city_dict[state][city] = cityid
+
+
+    return state_city_dict
+
+
+
+
+def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,present_internal_region,log_write_hotels,current_input_state_name,current_input_city_name,current_input_region_name,area_city_dict):
 
     #this function is a helper function for the test_matcher function.
 
@@ -836,6 +938,8 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
     
     f_hotel_list = map(lambda x:x[0],foreign_hotel_list)
 
+    (area_dict,city_dict) = area_city_dict
+
     hotel_url_dict = {} #dictionary to store hotel and their urls (for input hotels)
 
     hotel_id_dict = {}  #dictionary to store hotel and their ids  (for internal hotels)
@@ -856,6 +960,23 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
             input_hotel_name = hotel_matches[0]
             internal_hotel_name = hotel_matches[1]
+
+            if present_internal_city.lower() in area_dict.keys():
+                print 'its an area!!'
+            else:
+                print state,
+                print present_internal_city
+                if present_internal_city.strip()=='':
+                    if current_input_region_name in city_dict.keys():
+                        print city_dict[current_input_state_name][current_input_region_name]
+                    else:
+                        print 'SKIPPPPED!'
+                else:
+               #     pass
+                 #   print "state: "+str(state)
+                 #   print present_internal_city
+                    print city_dict[current_input_state_name][present_internal_city]
+                
           #  internal_hotel_id = hotel_id_dict[internal_hotel_name]
             url = hotel_url_dict[input_hotel_name]
             print '\t\t\t\t' + str(hotel_matches)
@@ -876,7 +997,7 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
     return count
 
 
-def match_regions(current_input_region_list,current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,same_level = 1):
+def match_regions(current_input_region_list,current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,area_city_dict,same_level = 1):
 
     #helper function for the test_matcher function
     
@@ -919,7 +1040,7 @@ def match_regions(current_input_region_list,current_internal_region_list,current
 
             #  match the relevant hotel names
 
-            not_matched_hotels_list += match_hotels(region_id,foreign_hotel_list,current_internal_city_name,current_internal_state_name,current_internal_regions_name,test_log,current_input_state_name,current_input_city_name,current_input_region_name)
+            not_matched_hotels_list += match_hotels(region_id,foreign_hotel_list,current_internal_city_name,current_internal_state_name,current_internal_regions_name,test_log,current_input_state_name,current_input_city_name,current_input_region_name,area_city_dict)
 
     return [found_city,not_matched_hotels_list,not_matched_regions_list]
 
@@ -939,6 +1060,8 @@ def test_matcher():
 
     not_matched_regions_list = []
     not_matched_hotels_list = 0
+
+    area_city_dict = (get_area_dict('priceline'),get_city_dict('priceline'))
 
     #process information from scraped data from the forums and construct a structured dictionary similar to that of the previous
 
@@ -994,7 +1117,7 @@ def test_matcher():
 
                         #match regions
     
-                        [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions(current_input_region_list,current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list)
+                        [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions(current_input_region_list,current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,area_city_dict)
 
                     else:
 
@@ -1006,7 +1129,7 @@ def test_matcher():
 
                                 #match regions that are in the input with the internal regions
 
-                                [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions([f_regions],current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list)
+                                [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions([f_regions],current_internal_region_list,current_internal_city_name,current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,area_city_dict)
 
                             else:
 
@@ -1022,13 +1145,13 @@ def test_matcher():
 
                                     region_id = current_internal_city_dict[temp_internal_region]
 
-                                    match_hotels(region_id,foreign_hotel_list,current_internal_city_name,'',current_internal_state_name,test_log,current_input_state_name,current_input_city_name,'')
+                                    match_hotels(region_id,foreign_hotel_list,current_internal_city_name,'',current_internal_state_name,test_log,current_input_state_name,current_input_city_name,'',area_city_dict)
 
                                 #if many region then match the region closet to the city name and then match the hotel list
 
                                 else:
 
-                                    [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions([current_input_city_name],current_internal_region_list,'',current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,0)
+                                    [found_city,not_matched_hotels_list,not_matched_regions_list] = match_regions([current_input_city_name],current_internal_region_list,'',current_internal_state_name,current_input_city_name,current_internal_city_dict,current_input_city_dict,current_input_state_name,test_log,not_matched_hotels_list,found_city,not_matched_regions_list,area_city_dict,0)
 
 
                 else:
@@ -1058,7 +1181,7 @@ def test_matcher():
                                     regions_string+=' '+str(all_region)
 
                                 region_id = state_region[current_internal_state_name][city_to_state_match[1]]
-                                match_hotels(region_id,foreign_hotel_list,city_to_state_match[1],regions_string,current_internal_state_name,test_log,current_input_state_name,current_input_city_name,'')
+                                match_hotels(region_id,foreign_hotel_list,city_to_state_match[1],regions_string,current_internal_state_name,test_log,current_input_state_name,current_input_city_name,'',area_city_dict)
 
         test_log.write('\n')
 
