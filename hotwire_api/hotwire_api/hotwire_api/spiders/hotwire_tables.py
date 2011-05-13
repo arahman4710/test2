@@ -108,8 +108,13 @@ class HotWireHotelInfo (Base) :
    average_price_per_night = Column(Float())
    star_rating = Column(Float())
    rooms = Column(Integer())
+   adults = Column(Integer())
+   children = Column(Integer())
+   nights = Column(Integer()) 
+   date_offset = Column(Integer()) 
+   city = Column(String()) 
 
-   def __init__(self, namesdict) : 
+   def __init__(self, namesdict, meta_dict) : 
        for i in namesdict :   # simple attribute setting 
            if debug_level > 5 :
                print i, namesdict[i] 
@@ -124,6 +129,9 @@ class HotWireHotelInfo (Base) :
        self.processing_status = 'unprocessed' 
        if debug_level > 5 : 
            print "neighborhood_uid = ", self.neighborhood_uid 
+
+       for i in meta_dict.items() : 
+          self.__setattr__(i[0], i[1]) 
 
        session.add(self)
        session.commit()
