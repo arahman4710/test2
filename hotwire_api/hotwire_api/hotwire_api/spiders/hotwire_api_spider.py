@@ -194,16 +194,6 @@ class hotwire_api_analysis(BaseSpider):
 
     nowsecs = time.time() 
 
-    yearday = time.strftime("%Y-%j", time.localtime())  # year and day of year - used both in directory and filename
-    hourmin = time.strftime("%H-%M", time.localtime())  # hour and minute - used in filename to avoid overwriting
-    result_file_dir =  os.path.join(base_data_dir, yearday) 
-    try : 
-        os.makedirs(result_file_dir) 
-    except : 
-        log.msg("failed to make output directory: " + result_file_dir, level=log.WARNING) 
-    result_file_name = os.path.join(base_data_dir, yearday, "hotel_info-%s-%s" % (yearday, hourmin)) 
-    result_file = open(result_file_name, "w")  # year + day of year 
-
     def start_requests(self) :
         def gen_request() : 
             i = 0 
@@ -278,18 +268,29 @@ def main() :
             log.msg("command line var %s -> %s" % i, level=log.INFO)  
 
     if saving_results : # to save raw results.   
-        try : 
-            try :
-                os.mkdirs(os.path.join(base_data_dir, "raw")) 
-            except :
-                pass 
-            results_fn = os.path.join(base_data_dir, "raw", "%d" % int(time.time())) # crude, dirs must exist 
-            if debug_level > 8 : 
-                log.msg( "results_fn= %s" % results_fn , level=log.DEBUG) 
-            raw_results = open(results_fn, "w") 
-        except Exception,e :
-            log.msg("unable to open raw data file - won't be saving raw data", level=log.WARNING) 
+        yearday = time.strftime("%Y-%j", time.localtime())  # year and day of year - used both in directory and filename
+        hourmin = time.strftime("%H-%M", time.localtime())  # hour and minute - used in filename to avoid overwriting
 
+        raw_data_dir = None 
+
+        try :
+            raw_data_dir = os.path.join(base_data_dir, "raw", yearday) 
+            os.makedirs(raw_data_dir) 
+        except Exception, e:
+            log.msg("unable to make data directory %s" % raw_data_dir) 
+            log.msg("error_was %s" % e) 
+            raw_data_dir = None 
+
+        if raw_data_dir  : 
+            try : 
+                result_file_name = os.path.join(raw_data_dir, "raw-request-results-%s-%s" % (yearday, hourmin)) 
+                raw_results = open(result_file_name, "w")  # year + day of year 
+                if debug_level > 8 : 
+                    log.msg( "results_fn= %s" % result_file_name , level=log.DEBUG) 
+            except Exception, e : 
+                log.msg("unable to open raw data file - won't be saving raw data", level=log.WARNING) 
+                log.msg("error was %s" % e) 
+                raw_results = None 
 
     request_generator_settings = vars(arg_result) 
     if arg_result.all_cities :
