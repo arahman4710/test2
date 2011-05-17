@@ -16,7 +16,7 @@ debug_level = 0
 Base = declarative_base() 
 
 # if echo=True it gives verbose info on the sql 
-engine = create_engine('postgresql:///testing', echo=True)
+engine = create_engine('postgresql:///testing', echo=False)
 # engine = create_engine('mysql://jefu:@localhost/testing', echo=True)
 
 # factory to build the proper Session class 

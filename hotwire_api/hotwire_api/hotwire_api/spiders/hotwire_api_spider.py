@@ -99,7 +99,8 @@ def do_neighborhoods(neighborhoods) :
     return [do_one_neighborhood(i) for i in neighborhoods] 
 
 def do_one_neighborhood(nb) : 
-    log.msg("do one neighborhood", log.INFO) 
+    if debug_level > 9 : 
+        log.msg("do one neighborhood", log.INFO) 
     result_dict = dict_extract(neighborhood_element_dict, nb)  
     nresult = session.query(Neighborhood).filter_by(id=result_dict['id']).all() 
     if nresult :   # we have it already 
@@ -129,14 +130,14 @@ def do_hotels(hotel_list, meta_info) :
 
 def do_hotel(hotel, meta_info) :
     if debug_level > 7 :     
-        log.msg( hotel,level=log.DEBUG) 
+        log.msg("doing hotel %s" % hotel,level=log.DEBUG) 
     dict = dict_extract(hotel_element_dict, hotel) 
     amenity_codes_raw = hotel.select(".//AmenityCodes/Code/text()") 
-    if debug_level > 8 : 
-        log.msg( amenity_codes_raw ,level=log.DEBUG) 
+    if debug_level > 9 : 
+        log.msg("raw amenity codes: %s" % amenity_codes_raw ,level=log.DEBUG) 
     amenity_codes = [i.extract() for i in amenity_codes_raw]
-    if debug_level > 8 : 
-        log.msg( amenity_codes ,level=log.DEBUG) 
+    if debug_level > 9 : 
+        log.msg( "amenity codes=%s" % amenity_codes ,level=log.DEBUG) 
     dict['amenity_codes'] = amenity_codes 
     x = HotWireHotelInfo(dict, meta_info)
     session.add(x) 
@@ -197,8 +198,19 @@ class hotwire_api_analysis(BaseSpider):
     def start_requests(self) :
         def gen_request() : 
             i = 0 
-            for r in ( self.make_request(city=city, date_offset=date_offset, nights=nts, rooms=rms, adults=ads, children=cs) for city in request_generator_settings["city_names"] for date_offset in request_generator_settings["offsets"] for nts in request_generator_settings["nights"] for rms in request_generator_settings["room_count"] for ads in request_generator_settings["adults"] for cs in request_generator_settings["child_range"] ) :  
+            for r in ( self.make_request(city=city, date_offset=date_offset,
+                                         nights=nts, rooms=rms,
+                                         adults=ads, children=cs )
+                       for date_offset in request_generator_settings["offsets"]
+                       for city        in request_generator_settings["city_names"]
+                       for rms         in request_generator_settings["room_count"]
+                       for ads         in request_generator_settings["adults"]
+                       for cs          in request_generator_settings["child_range"]
+                       for nts         in request_generator_settings["nights"]
+                     ) :  
                 yield r 
+                if debug_level > 5 :
+                    log.msg("query number %d" % i, log.DEBUG) 
                 i += 1
                 if i > request_generator_settings["result_count"] :
                     return
@@ -210,7 +222,7 @@ class hotwire_api_analysis(BaseSpider):
         kwargs["end_date"]=end_date 
         kwargs["api_key"] = self.api_key 
         query = base_query_format % kwargs
-        log.msg("query = <<%s>>" % query) 
+        log.msg("query = <<%s>>" % query, level=log.INFO) 
         return Request(query, callback=self.parse, meta=kwargs) 
 
     def parse(self, response):
@@ -242,20 +254,41 @@ def main() :
     global debug_level, raw_results, request_generator_settings 
 
     parser = argparse.ArgumentParser(description='Run spider')
-    parser.add_argument('--do-all-cities', help="do all cities or just test with one (default=one)", dest='all_cities',  action='store_true') 
-    parser.add_argument('--do-spider', help='run spider if true (default=false)', dest='do_spider', action='store_true')
-    parser.add_argument('--debug-level', nargs='?', type=int, default=0, help='debug level (0-10) default=0') 
-    parser.add_argument('--adults', default="1,2", 
+
+    parser.add_argument('--do-all-cities',
+                        help="do all cities or just test with one (default=one)",
+                        dest='all_cities',
+                        action='store_true') 
+
+    parser.add_argument('--do-spider',
+                        help='run spider if true (default=false)',
+                        dest='do_spider',
+                        action='store_true')
+
+    parser.add_argument('--debug-level', nargs='?', type=int,
+                        default=0,
+                        help='debug level (0-10) default=0') 
+
+    parser.add_argument('--adults',
+                        default="1,2", 
                         help='number of adults, if comma separated use values from list') 
-    parser.add_argument('--child_range', default="0", 
+    parser.add_argument('--child_range',
+                        default="0", 
                         help='number of children, if comma separated use values from list')
-    parser.add_argument('--nights', default="1", 
+    parser.add_argument('--nights',
+                        default="1", 
                         help='number of nights, if comma separated use values from list')
+
     parser.add_argument('--result-count', type=int, 
-                        help='total number of results to fetch', default=10) 
-    parser.add_argument('--offsets', default="0,7,14", 
+                        help='total number of results to fetch',
+                        default=10) 
+
+    parser.add_argument('--offsets',
+                        default="0,7,14", 
                         help='number of nights in the future to look (0=today), if comma separated use values from list') 
-    parser.add_argument('--room-count', default="1",
+
+    parser.add_argument('--room-count',
+                        default="1",
                         help='number of rooms, if comma separated use values from list') 
 
     arg_result = parser.parse_args()
