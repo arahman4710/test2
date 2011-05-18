@@ -1,3 +1,21 @@
+import datetime
+
+from sqlalchemy import *
+from sqlalchemy.orm import sessionmaker
+
+from sqlalchemy.ext.declarative import declarative_base
+
+debug_level = 0
+
+Base = declarative_base()
+
+# if echo=True it gives verbose info on the sql
+engine = create_engine('postgresql:///acuity', echo=False)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+Base.metadata.bind = engine
+
 class cities(Base) :
 
     __tablename__ = 'cities'
@@ -177,6 +195,8 @@ class hotel_names(Base) :
     win_rate = Column(Integer())
     id = Column(Integer(),primary_key=True)
     hotel_name = Column(String(255))
+
+
     def __init__(self) :
         pass
 
@@ -220,8 +240,7 @@ class hotwire_bids(Base) :
 class amenities(Base) :
 
     __tablename__ = 'amenities'
-
-    h_w_amenity_abbreviation = Column(Char())
+    h_w_amenity_abbreviation = Column(String(2))
     amenity_id = Column(Integer(),primary_key=True)
     amenity_name = Column(String(45))
     def __init__(self) :
@@ -240,4 +259,4 @@ class hotel_amenities(Base) :
     def __init__(self) :
         pass
 
-
+Base.metadata.create_all(engine)
