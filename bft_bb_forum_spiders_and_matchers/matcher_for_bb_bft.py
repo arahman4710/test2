@@ -4,6 +4,8 @@ import re
 import time
 
 
+INTERNAL_STATE_CITY_REGION_DICT = {}
+
 
 class Connection():
 
@@ -654,6 +656,7 @@ def region_hotel_finder(region_id):
     Connection.cursor.execute("Select hotel_id from region_hotel where pl_region_id ="+ str(region_id))
     hotel_ids = Connection.cursor.fetchall()
     hotels = []
+    region_name = ''
     hotel = '('
 
     for hotel_id in hotel_ids:
@@ -662,7 +665,12 @@ def region_hotel_finder(region_id):
 
     hotel=hotel[:-1]+')'
 
+    
+    Connection.cursor.execute("SELECT	`RegionName` FROM `pricelineregions` WHERE PricelineRegionId = "+str(region_id))
 
+        
+    region_name = Connection.cursor.fetchall()[0][0]
+    
     if len(hotel) > 1:
 
         Connection.cursor.execute("Select * from hotels where hotelid in "+str(hotel))
@@ -671,7 +679,7 @@ def region_hotel_finder(region_id):
 
             hotels.append(one)
 
-    return hotels
+    return (hotels,region_name)
 
 
 def hotel_name_match(foreign_list,internal_list,city_name,region_name,state_name):      #feed list of foreign cities
@@ -843,13 +851,13 @@ def insert_unmatched_entry_to_db(db_record):
 
     #   inserts an entry to the unmatched hotel table and returns the row_id for the inserted entry
 
-    #   param format (`hotel_name`, `city`, `area`, `region`, `source_forum`, `target_site`, `matched`)
+    #   param format (`hotel_name`, `city`, `area`, `region`, `source_forum`, `target_site`,`source_url`, `matched`)
 
     db = Connection.database
     c = Connection.cursor
 
     c.execute('''INSERT INTO `acuity`.`unmatched_hotel_table` \
-	(`hotel_name`, `city`, `area`, `region`, `source_forum`, `target_site`, `matched`) VALUES %s ;''' % db_record)
+	(`hotel_name`, `city`, `area`, `region`, `source_forum`, `target_site`,`source_url`, `matched`) VALUES %s ;''' % str(db_record))
 
     db.commit()
 
@@ -864,8 +872,8 @@ def insert_possible_matches_for_unmatched_entries(db_record):
     db = Connection.database
     c = Connection.cursor
 
-    c.execute('''INSERT INTO `acuity`.`possible_match_table`
-	(`unmatched_entry_id`, `hotel_id`, `percentage_match` ) VALUES''' % db_record)
+    c.execute('''INSERT INTO `acuity`.`possible_match_table`    \
+	(`unmatched_entry_id`, `hotel_id`, `percentage_match` ) VALUES %s ;''' % str(db_record))
 
     db.commit()
 
@@ -880,7 +888,7 @@ def get_area_dict(target_site):
     c.execute('''SELECT `Priceline_area_id`, `Name` FROM `acuity`.`%s_area` ''' % target_site)
 
     for id,area_name in c.fetchall():
-        area_name = re.sub(', [A-Za-z][A-Za-z]', '', area_name)
+        area_name = re.sub(', [A-Za-z][A-Za-z]', '', area_name.lower())
         area_dict[area_name] = id
 
     return area_dict
@@ -911,7 +919,6 @@ def get_city_dict(target_site):
 
         state_city_dict[state][city] = cityid
 
-
     return state_city_dict
 
 
@@ -929,11 +936,18 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
     #this function can be expanded in the future to write the hotel matches to the db
     
+
+    #   lookup internal city,region and state from 
+
+    global INTERNAL_STATE_CITY_REGION_DICT
+
+    intrnl_hotel_index = INTERNAL_STATE_CITY_REGION_DICT
+
     count = 0
 
     #1
 
-    hotels_in_all_regions = region_hotel_finder(region_id)
+    (hotels_in_all_regions,region_name) = region_hotel_finder(region_id)
 
     #2
     
@@ -961,7 +975,56 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
             input_hotel_name = hotel_matches[0]
             internal_hotel_name = hotel_matches[1]
+            print present_internal_city.lower()
+            if not internal_hotel_name: continue
+            internal_htl_id = hotel_id_dict[internal_hotel_name] 
+            (states,city_area,region_name) = intrnl_hotel_index[internal_htl_id]
 
+            area_id = 0
+            city_id = 0
+            
+            if city_area in area_dict.keys():
+                area_id = area_dict[city_area]
+            elif city_area in city_dict[states].keys():
+                city_id = city_dict[city_area]
+
+            source_forum = 'bb'
+            target_site = 'priceline'
+            db_record = (input_hotel_name,str(city_id),str(area_id),str(region_id),source_forum,target_site,url,str('0'))
+            db_rec_to_ck = (input_hotel_name,str(city_id),str(area_id),source_forum,target_site)
+
+            if not check_entry_listed_as_unmatched(db_rec_to_ck):
+
+                insert_unmatched_entry_to_db(db_record)
+                unmatched_entry_id = fetch_unmatched_entry_list_id(db_rec_to_ck)
+
+                for foreign_htls,irnl_htls,ratio in hotel_matches[3]:
+
+                    db_rec = (str(unmatched_entry_id),str(hotel_id_dict[irnl_htls]),str(ratio))
+                    insert_possible_matches_for_unmatched_entries(db_rec)
+
+            '''
+
+            if city_area in area_dict.keys():
+                print 'In area'
+            elif city_area in city_dict[states].keys():
+                print 'In City'
+            else:
+                print 'NOOOOOOOOOOOOOOOONEE'
+
+            print city_area,
+            print states,
+            print region_name
+            
+            
+            
+            if current_input_state_name.lower() in area_dict.keys():
+                if present_internal_city.lower() in area_dict[current_input_state_name.lower()].keys():
+                    print 'IN AREA'
+            elif present_internal_city.lower() in city_dict.keys():    
+                print 'IN CITY'
+            else: print 'NONEEE!'
+            
             if present_internal_city.lower() in area_dict.keys():
                 print 'its an area!!'
             else:
@@ -974,10 +1037,10 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
                         print 'SKIPPPPED!'
                 else:
                #     pass
-                 #   print "state: "+str(state)
-                 #   print present_internal_city
+                    print "state: "+str(current_input_state_name)
+                    print present_internal_city
                     print city_dict[current_input_state_name][present_internal_city]
-                
+            '''
           #  internal_hotel_id = hotel_id_dict[internal_hotel_name]
             url = hotel_url_dict[input_hotel_name]
             print '\t\t\t\t' + str(hotel_matches)
@@ -1058,6 +1121,25 @@ def test_matcher():
     [area_dictionary,exclude_city_list,state_region] = pl_area()
 
     [internal_state_city_region,state_region] = state_city(area_dictionary,exclude_city_list,state_region)
+    
+
+    intrnl_hotel_index = {}
+
+    for states in internal_state_city_region.keys():
+
+        for city_area in internal_state_city_region[states].keys():
+
+            for regions in internal_state_city_region[states][city_area]:
+
+                (hotel_list,region_name) = region_hotel_finder(internal_state_city_region[states][city_area][regions])
+
+                for hotels in hotel_list:
+
+                    intrnl_hotel_index[hotels[0]]=(states,city_area,region_name)     
+
+    global  INTERNAL_STATE_CITY_REGION_DICT
+
+    INTERNAL_STATE_CITY_REGION_DICT = intrnl_hotel_index
 
     not_matched_regions_list = []
     not_matched_hotels_list = 0
