@@ -28,9 +28,15 @@ from hotwire_tables import *
 
 saving_results = True  # save raw xml for debugging etc 
 raw_results = None 
+request_generator_settings = None 
 
-base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%s&dest=%s&rooms=1&adults=2&children=0&startdate=%s&enddate=%s"
+one_city_name = ['Boston, MA'] 
+all_city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
 
+
+base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%(api_key)s&dest=%(city)s&rooms=%(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
+# base_query_format = "http://localhost/raw_data_hotwire"
+# base_query_format = "http://localhost/raw_data_hotwire?apikey=%s&dest=%(city)s&rooms=$(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
 base_data_dir = "data"  # this really needs to be something better, or a database 
 
 # debug_level controls amount of debugging information written :
@@ -41,7 +47,6 @@ base_data_dir = "data"  # this really needs to be something better, or a databas
 #                10  for debugging stuff that nobody wants to see, but is sometimes useful
 
 debug_level = 1
-all_cities = False    # set by arg parsing 
         
 def simple_extract(name, ctxt) : 
     if debug_level > 8 : 
@@ -80,10 +85,10 @@ def do_amenities(amenities) :
 
 def do_amenity(amenity) : 
     if debug_level > 5 : 
-        print "do_amenity :", amenity 
+        log.msg( "do_amenity :%s" % amenity,level=log.DEBUG ) 
     info = dict_extract(amenities_element_dict, amenity) 
     if debug_level > 5 : 
-        print "amenity info :", info 
+        log.msg("amenity info : %s" % info, level=log.DEBUG) 
     am = session.query(Amenity).filter_by(code=info['code']).all() 
     if am :
         return am[0].uid 
@@ -94,7 +99,8 @@ def do_neighborhoods(neighborhoods) :
     return [do_one_neighborhood(i) for i in neighborhoods] 
 
 def do_one_neighborhood(nb) : 
-    print "do one neighborhood" 
+    if debug_level > 9 : 
+        log.msg("do one neighborhood", log.INFO) 
     result_dict = dict_extract(neighborhood_element_dict, nb)  
     nresult = session.query(Neighborhood).filter_by(id=result_dict['id']).all() 
     if nresult :   # we have it already 
@@ -104,43 +110,43 @@ def do_one_neighborhood(nb) :
     result_dict['centroid'] = find_point(clat, clong).uid 
     
     if debug_level > 8 : 
-        print "About to do points" 
+        log.msg("About to do points", level=log.DEBUG) 
     points = nb.select(".//Shape/LatLong/text()")
     if debug_level > 8 : 
-        print "points : ", points 
+        log.msg( "points : %s"% points, level=log.DEBUG) 
     point_list = [] 
     for i in enumerate(points) :
         if debug_level > 8 : 
-            print "doing a point :", i 
-            print "i[1]=", i[1] 
-            print "i[1].extract()=", i[1].extract() 
+            log.msg( "doing a point : %s" % str(i) ,level=log.DEBUG) 
+            log.msg( "i[1]=%s" % i[1] ,level=log.DEBUG) 
+            log.msg( "i[1].extract()=%s" % i[1].extract() ,level=log.DEBUG) 
         [point_lat, point_long] = map(float, i[1].extract().split(",")) 
         point_list.append((i[0], point_lat, point_long)) 
     result_dict["point_list"] = PointList(point_list).uid 
     return Neighborhood(result_dict) 
 
-def do_hotels(hotel_list) :
-    return [do_hotel(h) for h in hotel_list] 
+def do_hotels(hotel_list, meta_info) :
+    return [do_hotel(h, meta_info) for h in hotel_list] 
 
-def do_hotel(hotel) :
+def do_hotel(hotel, meta_info) :
     if debug_level > 7 :     
-        print hotel
+        log.msg("doing hotel %s" % hotel,level=log.DEBUG) 
     dict = dict_extract(hotel_element_dict, hotel) 
     amenity_codes_raw = hotel.select(".//AmenityCodes/Code/text()") 
-    if debug_level > 8 : 
-        print amenity_codes_raw 
+    if debug_level > 9 : 
+        log.msg("raw amenity codes: %s" % amenity_codes_raw ,level=log.DEBUG) 
     amenity_codes = [i.extract() for i in amenity_codes_raw]
-    if debug_level > 8 : 
-        print amenity_codes 
+    if debug_level > 9 : 
+        log.msg( "amenity codes=%s" % amenity_codes ,level=log.DEBUG) 
     dict['amenity_codes'] = amenity_codes 
-    x = HotWireHotelInfo(dict)
+    x = HotWireHotelInfo(dict, meta_info)
     session.add(x) 
     session.commit()
 
 # this makes all the tables - so must come after class definitions 
-metadata.create_all(engine) 
+# metadata.create_all(engine) 
 
-def gendate(offset, cursecs) : 
+def gen_date(offset, nights) : 
     """
     given an offset (number of days in the future to check) this returns a pair of strings
     (start_date, end_date) that is that number of days into the future and the day after
@@ -149,8 +155,10 @@ def gendate(offset, cursecs) :
     Do this by getting the time, adding the right number of seconds and converting using
     strftime - which avoids having to cope with month endings by hand
     """ 
+
+    cursecs = time.time() 
     startgmt = time.gmtime(cursecs + offset * 24 * 60 * 60)    # offset days in the future 
-    endgmt = time.gmtime(cursecs + (offset+1) * 24 * 60 * 60)  # offset + 1 days in the future 
+    endgmt = time.gmtime(cursecs + (offset+nights) * 24 * 60 * 60)  # offset + nights days in the future 
     start_date = time.strftime("%m/%d/%Y", startgmt)    #start date in the format mm/dd/yyyy
     end_date = time.strftime("%m/%d/%Y", endgmt)      #end date in the format mm/dd/yyyy
     return (start_date, end_date) 
@@ -180,12 +188,6 @@ class hotwire_api_analysis(BaseSpider):
     
     # 
     # city_names = ['Anchorage, AK'] 
-    city_names = [] 
-    if all_cities : 
-        city_names = ['Boston, MA'] 
-    else : 
-        city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
-
     # date_offsets = [0, 7, 14]  # offsets in days from today 
     date_offsets = [0] 
     api_key='eupzwn43dwtmgxhmkw5pbta7'
@@ -193,22 +195,35 @@ class hotwire_api_analysis(BaseSpider):
 
     nowsecs = time.time() 
 
-    date_list = [gendate(i, nowsecs) for i in date_offsets ] 
+    def start_requests(self) :
+        def gen_request() : 
+            i = 0 
+            for r in ( self.make_request(city=city, date_offset=date_offset,
+                                         nights=nts, rooms=rms,
+                                         adults=ads, children=cs )
+                       for date_offset in request_generator_settings["offsets"]
+                       for city        in request_generator_settings["city_names"]
+                       for rms         in request_generator_settings["room_count"]
+                       for ads         in request_generator_settings["adults"]
+                       for cs          in request_generator_settings["child_range"]
+                       for nts         in request_generator_settings["nights"]
+                     ) :  
+                yield r 
+                if debug_level > 5 :
+                    log.msg("query number %d" % i, log.DEBUG) 
+                i += 1
+                if i > request_generator_settings["result_count"] :
+                    return
+        return gen_request() 
 
-    yearday = time.strftime("%Y-%j", time.localtime())  # year and day of year - used both in directory and filename
-    hourmin = time.strftime("%H-%M", time.localtime())  # hour and minute - used in filename to avoid overwriting
-    result_file_dir =  os.path.join(base_data_dir, yearday) 
-    try : 
-        os.makedirs(result_file_dir) 
-    except : 
-        log.msg("failed to make output directory: " + result_file_dir, level=log.WARNING) 
-    result_file_name = os.path.join(base_data_dir, yearday, "hotel_info-%s-%s" % (yearday, hourmin)) 
-    result_file = open(result_file_name, "w")  # year + day of year 
-
-    start_urls = [base_query_format % (api_key, city_name, start_date, end_date) for city_name in city_names for (start_date, end_date) in date_list ]
-
-    for i in start_urls : 
-        log.msg("start url : %s" % i, level=log.INFO) 
+    def make_request(self, **kwargs) : 
+        (start_date, end_date) = gen_date(kwargs["date_offset"], kwargs["nights"]) 
+        kwargs["start_date"] = start_date
+        kwargs["end_date"]=end_date 
+        kwargs["api_key"] = self.api_key 
+        query = base_query_format % kwargs
+        log.msg("query = <<%s>>" % query, level=log.INFO) 
+        return Request(query, callback=self.parse, meta=kwargs) 
 
     def parse(self, response):
         if saving_results and raw_results : 
@@ -217,63 +232,121 @@ class hotwire_api_analysis(BaseSpider):
         hxs = XmlXPathSelector(response)
 
         if debug_level > 0 :         
-            print "doing amenities" 
+            log.msg( "doing amenities" ,level=log.DEBUG) 
         amenities = hxs.select("//Hotwire/MetaData/HotelMetaData/Amenities/Amenity")
         amenities_dict = do_amenities(amenities) 
         session.commit()
         
         if debug_level > 0 : 
-            print "doing neighborhoods" 
+            log.msg( "doing neighborhoods" ,level=log.DEBUG) 
         neighborhoods = hxs.select("//Hotwire/MetaData/HotelMetaData/Neighborhoods/Neighborhood") 
         neighborhoods_dict = do_neighborhoods(neighborhoods) 
         session.commit() 
         
         if debug_level > 0 : 
-            print "doing hotels" 
+            log.msg( "doing hotels" ,level=log.DEBUG) 
         hotels = hxs.select("//Hotwire/Result/HotelResult") 
-        hotels_list = do_hotels(hotels) 
+        hotels_list = do_hotels(hotels, response.meta) 
         session.commit() 
-        return (amenities_dict, neighborhoods_dict, hotels_list) 
-    
+        return None
+
 def main() :     
-    global debug_level, raw_results, all_cities
+    global debug_level, raw_results, request_generator_settings 
 
     parser = argparse.ArgumentParser(description='Run spider')
-    parser.add_argument('--do-all-cities', help="do all cities or just test with one (default=one)", dest='all_cities',  action='store_true') 
-    parser.add_argument('--do-spider', help='run spider if true (default=false)', dest='do_spider', action='store_true')
-    parser.add_argument('--debug-level', nargs='?', help='debug level (0-10) default=0') 
-    parser.add_argument('--foo-bar-baz') 
+
+    parser.add_argument('--do-all-cities',
+                        help="do all cities or just test with one (default=one)",
+                        dest='all_cities',
+                        action='store_true') 
+
+    parser.add_argument('--do-spider',
+                        help='run spider if true (default=false)',
+                        dest='do_spider',
+                        action='store_true')
+
+    parser.add_argument('--debug-level', nargs='?', type=int,
+                        default=0,
+                        help='debug level (0-10) default=0') 
+
+    parser.add_argument('--adults',
+                        default="1,2", 
+                        help='number of adults, if comma separated use values from list') 
+    parser.add_argument('--child_range',
+                        default="0", 
+                        help='number of children, if comma separated use values from list')
+    parser.add_argument('--nights',
+                        default="1", 
+                        help='number of nights, if comma separated use values from list')
+
+    parser.add_argument('--result-count', type=int, 
+                        help='total number of results to fetch',
+                        default=10) 
+
+    parser.add_argument('--offsets',
+                        default="0,7,14", 
+                        help='number of nights in the future to look (0=today), if comma separated use values from list') 
+
+    parser.add_argument('--room-count',
+                        default="1",
+                        help='number of rooms, if comma separated use values from list') 
+
     arg_result = parser.parse_args()
 
-    if not arg_result.debug_level : 
-        debug_level = 0 
-    else :
-        debug_level = arg_result.debug_level
-
-    all_cities = arg_result.all_cities 
+    debug_level = arg_result.debug_level
 
     if debug_level > 0 : 
         log.start(logfile="hotwire_api_analysis.log")
+        for i in vars(arg_result).items() :
+            log.msg("command line var %s -> %s" % i, level=log.INFO)  
+
     if saving_results : # to save raw results.   
-        try : 
-            try :
-                os.mkdirs(os.path.join(base_data_dir, "raw")) 
-            except :
-                pass 
-            results_fn = os.path.join(base_data_dir, "raw", "%d" % int(time.time())) # crude, dirs must exist 
-            if debug_level > 8 : 
-                print "results_fn=", results_fn 
-            raw_results = open(results_fn, "w") 
-        except Exception,e :
-            log.msg("unable to open raw data file - won't be saving raw data", level=log.WARNING) 
+        yearday = time.strftime("%Y-%j", time.localtime())  # year and day of year - used both in directory and filename
+        hourmin = time.strftime("%H-%M", time.localtime())  # hour and minute - used in filename to avoid overwriting
+
+        raw_data_dir = None 
+
+        try :
+            raw_data_dir = os.path.join(base_data_dir, "raw", yearday) 
+            os.makedirs(raw_data_dir) 
+        except Exception, e:
+            log.msg("unable to make data directory %s" % raw_data_dir) 
+            log.msg("error_was %s" % e) 
+            raw_data_dir = None 
+
+        if raw_data_dir  : 
+            try : 
+                result_file_name = os.path.join(raw_data_dir, "raw-request-results-%s-%s" % (yearday, hourmin)) 
+                raw_results = open(result_file_name, "w")  # year + day of year 
+                if debug_level > 8 : 
+                    log.msg( "results_fn= %s" % result_file_name , level=log.DEBUG) 
+            except Exception, e : 
+                log.msg("unable to open raw data file - won't be saving raw data", level=log.WARNING) 
+                log.msg("error was %s" % e) 
+                raw_results = None 
+
+    request_generator_settings = vars(arg_result) 
+    if arg_result.all_cities :
+        request_generator_settings["city_names"] = all_city_names
+    else : 
+        request_generator_settings["city_names"] = one_city_name
+    for arg in ["adults", "child_range", "nights", "room_count", "offsets"] : 
+        request_generator_settings[arg] = commas_to_list(request_generator_settings[arg]) 
     if arg_result.do_spider : 
+        log.msg("running spider")
         do_spider() 
     else :
         print 'not running spider\nto run spider with python -i use "do_spider()"'
 
-def do_spider() :     
+
+def commas_to_list(s) :
+    return map(int, s.split(",")) 
+
+def do_spider() :
     settings.overrides['USER_AGENT'] = "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10"
     settings.overrides['SCHEDULER_ORDER'] = 'BFO'
+    settings.overrides['LOG_FILE'] = 'hotwire-scraping.log'
+    settings.overrides['LOG_LEVEL'] = 'INFO' 
     crawler = CrawlerProcess(settings)
     crawler.install()
     crawler.configure()
