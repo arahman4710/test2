@@ -986,7 +986,7 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
             if city_area in area_dict.keys():
                 area_id = area_dict[city_area]
             elif city_area in city_dict[states].keys():
-                city_id = city_dict[city_area]
+                city_id = city_dict[states][city_area]
 
             source_forum = 'bb'
             target_site = 'priceline'
