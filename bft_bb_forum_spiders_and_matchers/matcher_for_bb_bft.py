@@ -267,7 +267,9 @@ def get_scraped_data_from_db():
 
         (hotel,city,region,state,url) = map(lambda x:str(x).strip(),line)
 
-        hotel = hotel.replace(' previously','')
+        hotel = hotel.replace('previously','').strip()
+
+        if not hotel: continue
         
         if return_dict.has_key(state) and state:
 
@@ -973,11 +975,14 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
         else:
 
+            #   get region id, city/area id and state of unmatched hotel entries and input them in the database
+
             input_hotel_name = hotel_matches[0]
             internal_hotel_name = hotel_matches[1]
-            print present_internal_city.lower()
+
             if not internal_hotel_name: continue
-            internal_htl_id = hotel_id_dict[internal_hotel_name] 
+
+            internal_htl_id = hotel_id_dict[internal_hotel_name]
             (states,city_area,region_name) = intrnl_hotel_index[internal_htl_id]
 
             area_id = 0
@@ -990,6 +995,7 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
             source_forum = 'bb'
             target_site = 'priceline'
+
             db_record = (input_hotel_name,str(city_id),str(area_id),str(region_id),source_forum,target_site,url,str('0'))
             db_rec_to_ck = (input_hotel_name,str(city_id),str(area_id),source_forum,target_site)
 
@@ -1002,54 +1008,6 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
                     db_rec = (str(unmatched_entry_id),str(hotel_id_dict[irnl_htls]),str(ratio))
                     insert_possible_matches_for_unmatched_entries(db_rec)
-
-            '''
-
-            if city_area in area_dict.keys():
-                print 'In area'
-            elif city_area in city_dict[states].keys():
-                print 'In City'
-            else:
-                print 'NOOOOOOOOOOOOOOOONEE'
-
-            print city_area,
-            print states,
-            print region_name
-            
-            
-            
-            if current_input_state_name.lower() in area_dict.keys():
-                if present_internal_city.lower() in area_dict[current_input_state_name.lower()].keys():
-                    print 'IN AREA'
-            elif present_internal_city.lower() in city_dict.keys():    
-                print 'IN CITY'
-            else: print 'NONEEE!'
-            
-            if present_internal_city.lower() in area_dict.keys():
-                print 'its an area!!'
-            else:
-                print state,
-                print present_internal_city
-                if present_internal_city.strip()=='':
-                    if current_input_region_name in city_dict.keys():
-                        print city_dict[current_input_state_name][current_input_region_name]
-                    else:
-                        print 'SKIPPPPED!'
-                else:
-               #     pass
-                    print "state: "+str(current_input_state_name)
-                    print present_internal_city
-                    print city_dict[current_input_state_name][present_internal_city]
-            '''
-          #  internal_hotel_id = hotel_id_dict[internal_hotel_name]
-            url = hotel_url_dict[input_hotel_name]
-            print '\t\t\t\t' + str(hotel_matches)
-            print '\t\t\t\t\t\t Internal State: ' + str(state) +'\t\t Input State: ' + str(current_input_state_name)
-            print '\t\t\t\t\t\t Internal City/area: ' + str(present_internal_city) +'\t\t Input City/area: ' + str(current_input_city_name)
-            print '\t\t\t\t\t\t Internal Region: ' + str(present_internal_region) +'\t\t Input Region: ' + str(current_input_region_name)
-            print '\t\t\t\t\t\t URL: ' +str(url)
-            print '\t\t\t\t\t\t Possible Matches: '
-            print '\t\t\t\t\t\t' + str(hotel_matches[3])
             
             count+=1
 
