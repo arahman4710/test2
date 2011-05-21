@@ -1,0 +1,2 @@
+#!/bin/bash
+pg_dump --format=custom testing -f /work/jeff/dumps/`date +%Y-%j`.dump
