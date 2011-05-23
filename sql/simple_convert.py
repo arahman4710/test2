@@ -1,6 +1,5 @@
 import re
 import sys 
-import time
 # simple (and simple minded) python script to convert mysql tables
 # to base classes for sqlalchemy
 # this is NOT a real parser and does not fill in the objects generated in
@@ -13,31 +12,34 @@ import time
 # 
 def recmp(x) :
     return re.compile(x,  re.IGNORECASE | re.MULTILINE)
-
 rem_pats = map(recmp,      ["^SET.*$",
                             "^CREATE SCHEMA.*$", 
                             "^USE.*$",
+                            "/\*.*\*/", 
                             "NOT NULL",
+                            "USE.*$"
                             "^\s+INDEX.*$",
+                            "DROP TABLE.*$", 
                             "ON DELETE NO ACTION",
                             "ON UPDATE NO ACTION",
+                            "DEFAULT NULL", 
+                            "ENGINE.*$", 
                             "ENGINE = Innodb",
                             "`acuity`.", 
                             "`", 
                             "--.*$"]) 
 
-tablename = re.compile("CREATE\s+TABLE IF NOT EXISTS (?P<tname>[a-zA-Z0-9_]+)") 
-fieldname = re.compile("^\s+(?P<fn>[a-zA-Z0-9_]+)\s+(?P<type>[A-Z]+)\s*(?P<len>\([0-9]+\))?.*(?P<seq>AUTO_INCREMENT)?") 
+tablename = re.compile("CREATE\s+TABLE\s* (IF NOT EXISTS)?\s*(?P<tname>[a-zA-Z0-9_]+)") 
+fieldname = re.compile("^\s+(?P<fn>[a-zA-Z0-9_]+)\s+(?P<type>[a-zA-Z]+)\s*(?P<len>\([0-9]+\))?.*(?P<seq>AUTO_INCREMENT)?") 
 pkey = re.compile("^\s+PRIMARY KEY\s+\((?P<pkey>[a-zA-Z0-9_]+)\)" )
 fkey = re.compile("^\s+FOREIGN KEY\s+\((?P<fkey>[a-zA-Z0-9_]+)\s*\)" )
 ref  = re.compile("^\s+REFERENCES\s+(?P<tab>[a-zA-Z0-9_]+)\s+\((?P<field>[a-zA-Z0-9_]+)\s*\)")
 
+
 def to_underscores(name) :
     """
     Convert name in "camelCase" to one using underscores "camel_case"
-    This avoids having to quote all the field and table names.
-    This does tend to make a mess of strings with multiple consecutive caps,
-    so URL becomes u_r_l.   
+    This avoids having to quote all the field and table names. 
     """ 
     ln = list(name)
     outl = [] 
@@ -76,15 +78,13 @@ class Field(object) :
         unlength'ed strings is pretty good.  However, if use_lengths=True the
         length info is included. 
         """ 
-
-        name = to_underscores(self.name) 
         seqstr = "" 
         if self.needs_sequence :
-            seqstr = ",Sequence(%s_sequence" % name  
+            seqstr = ",Sequence(%s_sequence)" % name  
         pstr = "" 
         if self.is_primary :
             pstr = ",primary_key=True" 
-
+        
         fref = "" 
         if self.reference_table :
             fref = ",ForeignKey('%s.%s')" % (to_underscores(self.reference_table),
@@ -92,7 +92,7 @@ class Field(object) :
         length = "" 
         if use_lengths :
             length = "%s" % self.len 
-        return "    %s = Column(%s(%s)%s%s%s) " % (name , self.tipe, length, seqstr, pstr, fref) 
+        return "    %s = Column(%s(%s)%s%s%s) " % (self.name , self.tipe, length, seqstr, pstr, fref) 
 
 class Table(object) :
     """
@@ -100,9 +100,8 @@ class Table(object) :
     the sql definition it is added to the table and primary key, foreign key info
     added as it is found.
     """ 
-
     def __init__(self, n) :
-        self.name = n
+        self.name =   n  
         self.fields = {}  
 
     def add_field(self, name, tipe, len=None, auto_inc=None) : 
@@ -116,13 +115,11 @@ class Table(object) :
         elif tipe == "DATETIME":
             tipe = "DateTime" 
         elif tipe == "CHAR" :
-            tipe = "Char"
-        elif tipe == "DATE" : 
-            tipe = "Date" 
+            tipe = "Char" 
         self.fields[name] = Field(name, tipe, len, auto_inc) 
 
     def set_primary(self, name) : 
-        # print self.fields 
+        print self.fields 
         self.fields[name].is_primary = True 
         
     def add_foreign_key(self, field, tab_ref, field_ref) : 
@@ -156,13 +153,15 @@ def main() :
 
     for i in rem_pats :   # eliminate cruft 
         sql = i.sub("", sql) 
-    
+
+    print sql 
+
     lines =  sql.split("\n") 
     tables = [] 
     table = None 
     # ugly matching for regexes we're looking for 
     for l in lines : 
-        # print l 
+        print l 
         mo = tablename.match(l)  
         if mo : 
             table = Table(mo.group("tname"))
@@ -195,4 +194,4 @@ def main() :
         outf.write(i.to_string(use_lengths=True)) 
         outf.write("\n") 
     
-main()
+main() 
