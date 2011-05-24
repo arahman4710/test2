@@ -1,0 +1,5 @@
+#!/bin/bash
+fn=/work/jeff/dumps/`date +%Y-%j`.dumpall
+pg_dumpall -f $fn
+bzip2 $fn 
+
