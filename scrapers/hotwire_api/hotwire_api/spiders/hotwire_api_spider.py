@@ -1,4 +1,8 @@
 # scrapy imports 
+import sys 
+
+sys.path.insert(0,'/work/jeff/backend/sql/alchemy/') 
+
 from alchemy_session import get_engine_session
 
 from scrapy.selector import HtmlXPathSelector,XmlXPathSelector
@@ -20,9 +24,7 @@ import re
 import datetime 
 import time
 import urllib
-import sys
 import os 
-import sys
 import argparse 
 
 from hotwire_tables import * 
