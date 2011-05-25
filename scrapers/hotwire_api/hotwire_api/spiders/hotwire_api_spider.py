@@ -1,5 +1,6 @@
 # scrapy imports 
-from alchemy_session import get_engine_session
+import sys 
+sys.path.insert(0, "/home/jefu/fetch/backend/sql/alchemy/") 
 
 from scrapy.selector import HtmlXPathSelector,XmlXPathSelector
 from scrapy.http import FormRequest
@@ -16,6 +17,10 @@ from scrapy.utils.response import body_or_str
 from sqlalchemy import * 
 from sqlalchemy.sql import and_
 
+# local imports 
+from alchemy_session import get_alchemy_info 
+from point import Point, find_point
+
 import re
 import datetime 
 import time
@@ -30,8 +35,6 @@ from hotwire_tables import *
 saving_results = True  # save raw xml for debugging etc 
 raw_results = None 
 request_generator_settings = None 
-
-(engine,session) = get_engine_session() 
 
 one_city_name = ['Boston, MA'] 
 all_city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  

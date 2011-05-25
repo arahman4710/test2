@@ -1,19 +1,20 @@
 import string 
+import sys 
 import datetime 
 
 from sqlalchemy import * 
 from sqlalchemy.orm import sessionmaker, scoped_session
-
 # the declarative stuff lets you use objects with defined columns
 # instead of creating the tables using DDL or the like
-
 from sqlalchemy.ext.declarative import declarative_base
 
-debug_level = 0 
+sys.path.insert(0, "/home/jefu/fetch/backend/sql/alchemy/" )
+from alchemy_session import get_engine_session 
 
-engine = create_engine('postgresql:///testing', echo=True)
-Session = scoped_session(sessionmaker(bind=engine)) 
-session = Session() 
+(engine, session) = get_engine_session () 
+
+
+debug_level = 0 
 
 # set up base class for sqlalchemy 
 # all our classes that mirror the database will have this as a base 

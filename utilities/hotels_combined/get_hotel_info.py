@@ -50,15 +50,16 @@ namesdict = {
 def main() :    
     if len(sys.argv) < 1 : 
         print "Usage:",sys.argv[0], "csv_filename"
-        # the decoded hotels file contains the dreaded byte order mark
-        # there are workarounds for the csv reader, but none seem to work well
-        # so just be sure to remove it. 
-        print "Don't forget to remove the byte order mark (?) before hotelID or"
-        print "   all the hotelId entries will contain that " 
         sys.exit(1)
 
-    text_file = open(sys.argv[1])
-    csvreader = csv.DictReader(text_file) 
+    f = open(sys.argv[1])
+    h = f.read(3)
+    if h[0] != chr(0xef) : # seen byte order mark, we're good 
+        print "did not get byte order mark, resetting" 
+        f.close()
+        f = open(sys.argv[1]) 
+
+    csvreader = csv.DictReader(f) 
     for d in csvreader :
         if d['countryCode'] == 'US' or d['countryCode'] == 'CA' : 
             match = get_hotel_by_id(d['hotelId']) 
