@@ -3,7 +3,7 @@ import codecs
 
 # not a scraper, so in utilities 
 # should be changed to reflect current location for the hotwire sqlalchemy tables 
-sys.path.insert(0, "/home/jefu/fetch/backend/sql/alchemy")
+sys.path.insert(0, "/work/jeff/backend/sql/alchemy")
 
 from point import Point, find_point
 from hotwire_tables import *

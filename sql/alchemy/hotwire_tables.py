@@ -1,4 +1,8 @@
 import datetime 
+import sys
+
+if '/work/jeff/backend/sql/alchemy' not in sys.path :
+   sys.path.insert(0,'/work/jeff/backend/sql/alchemy') 
 
 # the declarative stuff lets you use objects with defined columns
 # instead of creating the tables using DDL or the like

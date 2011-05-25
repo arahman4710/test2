@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 # instead of creating the tables using DDL or the like
 from sqlalchemy.ext.declarative import declarative_base
 
-sys.path.insert(0, "/home/jefu/fetch/backend/sql/alchemy/" )
+sys.path.insert(0, "/work/jeff/backend/sql/alchemy/" )
 from alchemy_session import get_alchemy_info
 
 (engine, session, Base, metadata) = get_alchemy_info ()

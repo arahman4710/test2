@@ -1,6 +1,7 @@
 # scrapy imports 
 import sys 
-sys.path.insert(0, "/home/jefu/fetch/backend/sql/alchemy/") 
+
+sys.path.insert(0,'/work/jeff/backend/sql/alchemy/') 
 
 from scrapy.selector import HtmlXPathSelector,XmlXPathSelector
 from scrapy.http import FormRequest
@@ -25,9 +26,7 @@ import re
 import datetime 
 import time
 import urllib
-import sys
 import os 
-import sys
 import argparse 
 
 from hotwire_tables import * 
