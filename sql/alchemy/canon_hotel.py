@@ -8,19 +8,16 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 # instead of creating the tables using DDL or the like
 from sqlalchemy.ext.declarative import declarative_base
 
-sys.path.insert(0, "/home/jefu/fetch/backend/sql/alchemy/" )
-from alchemy_session import get_engine_session 
+sys.path.insert(0, "/work/jeff/backend/sql/alchemy/" )
+from alchemy_session import get_alchemy_info
 
-(engine, session) = get_engine_session () 
+(engine, session,Base, metadata) = get_alchemy_info () 
 
 
 debug_level = 0 
 
 # set up base class for sqlalchemy 
 # all our classes that mirror the database will have this as a base 
-
-Base = declarative_base() 
-metadata = Base.metadata
 
 #
 # this table reflects (pretty much 1-1) the information in the
