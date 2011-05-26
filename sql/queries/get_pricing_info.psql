@@ -1,4 +1,5 @@
 -- get prices from hotwire scraping and write to csv file 
+\c testing
 -- set output file 
 \o prices.out
 -- switch to unaligned output 
@@ -7,10 +8,13 @@
 \f , 
 -- and do it! 
 select 
-    neighborhood.id, neighborhood.city, hotwire_hotel_info.city as city_queried, hotwire_hotel_info.uid, subtotal, taxes_and_fees, total_price, average_price_per_night, rooms, adults, nights, date_offset 
+    neighborhood.id as neighborhood_id, neighborhood.city, hotwire_hotel_info.city as city_queried, hotwire_hotel_info.uid, subtotal, taxes_and_fees, total_price, average_price_per_night, rooms, adults, nights, date_offset, star_rating 
 from 
-    neighborhood, hotwire_hotel_info 
+    neighborhood, hotwire_hotel_info
 where 
     neighborhood.uid = hotwire_hotel_info.neighborhood_uid 
+order by 
+    neighborhood.id  
+
 ; 
  
