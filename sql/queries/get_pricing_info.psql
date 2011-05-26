@@ -6,4 +6,11 @@
 -- field separator is "," 
 \f , 
 -- and do it! 
-select neighborhood.id, neighborhood.city, hotwire_hotel_info.city, hotwire_hotel_info.uid, subtotal, taxes_and_fees, total_price, average_price_per_night, rooms, adults, nights, date_offset from neighborhood, hotwire_hotel_info ; 
+select 
+    neighborhood.id, neighborhood.city, hotwire_hotel_info.city, hotwire_hotel_info.uid, subtotal, taxes_and_fees, total_price, average_price_per_night, rooms, adults, nights, date_offset 
+from 
+    neighborhood, hotwire_hotel_info 
+where 
+    neighborhood.uid = hotwire_hotel_info.neighborhood_uid 
+; 
+ 
