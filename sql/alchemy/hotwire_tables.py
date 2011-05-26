@@ -10,6 +10,7 @@ if '/work/jeff/backend/sql/alchemy' not in sys.path :
 from sqlalchemy import * 
 
 from alchemy_session import get_alchemy_info
+from point import Point 
 
 (engine, session, Base, metadata) = get_alchemy_info () 
 # engine = create_engine('postgresql:///testing', echo=True)
