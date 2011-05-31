@@ -14,7 +14,7 @@ class PossibleForumHotelMatchTable(Base):
     
 	__tablename__ = 'possible_forum_hotel_match_table'
     
-	uid = Column(Integer(Integer, Sequence('possible_forum_hotel_match_sequence'), primary_key=True))   #   primary key
+	uid = Column(Integer, Sequence('possible_forum_hotel_match_sequence'), primary_key=True)   #   primary key
 	unmatched_entry_id = Column(Integer, ForeignKey('unmatched_forum_hotel_table.uid')) #   primary key for the umatched forum hotel entry that the record is related to
 	hotel_id = Column(Integer, ForeignKey('hotels.uid'))    #   primary key of an internal hotel that is considered to be a possible match for the unmatched forum hotel in question
 	percentage_match = Column(Float()) #   measures how close the internal hotel matched with the unmatched forum hotel entry in question
