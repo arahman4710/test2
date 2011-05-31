@@ -11,7 +11,8 @@ debug_level = 0
 #   This table will keep track of possible matches for the unmatched forum hotel entries. These matches will be generated automatically by the forum hotel matching algorithm while trying to come up with hotel matches
 
 class PossibleForumHotelMatchTable(Base):
-    __tablename__ = 'possible_forum_hotel_match_table'
+    
+	__tablename__ = 'possible_forum_hotel_match_table'
     
     uid = Column(Integer(Integer, Sequence('possible_forum_hotel_match_sequence'), primary_key=True))   #   primary key
     unmatched_entry_id = Column(Integer, ForeignKey('unmatched_forum_hotel_table.uid')) #   primary key for the umatched forum hotel entry that the record is related to
@@ -31,6 +32,6 @@ class PossibleForumHotelMatchTable(Base):
 	
 	def __str__(self) :
 
-        return "< possible_match_table hotel_id=%s percentage_match=%s >" % (self.hotel_id, self.percentage_match)
+		return "< possible_match_table hotel_id=%s percentage_match=%s >" % (self.hotel_id, self.percentage_match)
 
 metadata.create_all(engine)
