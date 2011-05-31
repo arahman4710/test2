@@ -13,7 +13,7 @@ debug_level = 0
 
 #   This table contains all information regarding priceline regions
 
-class PricelineAreaCityTable(Base) :
+class PricelineRegionTable(Base) :
 
     __tablename__ = 'priceline_region_table'
 
