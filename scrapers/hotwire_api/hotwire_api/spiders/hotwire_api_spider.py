@@ -21,6 +21,7 @@ from sqlalchemy.sql import and_
 # local imports 
 from alchemy_session import get_alchemy_info 
 from point import Point, find_point
+from amenity import Amenity, AmenityString
 
 import re
 import datetime 
@@ -39,8 +40,8 @@ one_city_name = ['Boston, MA']
 all_city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
 
 
-base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%(api_key)s&dest=%(city)s&rooms=%(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
-# base_query_format = "http://localhost/raw_data_hotwire"
+# base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%(api_key)s&dest=%(city)s&rooms=%(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
+base_query_format = "http://localhost/raw_data_hotwire"
 # base_query_format = "http://localhost/raw_data_hotwire?apikey=%s&dest=%(city)s&rooms=$(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
 base_data_dir = "data"  # this really needs to be something better, or a database 
 
@@ -85,20 +86,6 @@ hotel_element_dict = {'TotalPrice': 'total_price', 'CheckOutDate': 'checkout_dat
 # this makes all the tables - so must come after class definitions 
 metadata.create_all(engine) 
 
-def do_amenities(amenities) :
-    return [do_amenity(i) for i in amenities ] 
-
-def do_amenity(amenity) : 
-    if debug_level > 5 : 
-        log.msg( "do_amenity :%s" % amenity,level=log.DEBUG ) 
-    info = dict_extract(amenities_element_dict, amenity) 
-    if debug_level > 5 : 
-        log.msg("amenity info : %s" % info, level=log.DEBUG) 
-    am = session.query(Amenity).filter_by(code=info['code']).all() 
-    if am :
-        return am[0].uid 
-    am = Amenity(info) 
-    return am.uid 
 
 def do_neighborhoods(neighborhoods) :
     return [do_one_neighborhood(i) for i in neighborhoods] 
@@ -147,9 +134,21 @@ def do_hotel(hotel, meta_info) :
     x = HotWireHotelInfo(dict, meta_info)
     session.add(x) 
     session.commit()
-
-# this makes all the tables - so must come after class definitions 
-# metadata.create_all(engine) 
+    
+def do_amenities(amenities) :
+    return [do_amenity(i) for i in amenities ] 
+    
+def do_amenity(amenity) : 
+    if debug_level > 5 : 
+        log.msg( "do_amenity :%s" % amenity,level=log.DEBUG ) 
+    info = dict_extract(amenities_element_dict, amenity) 
+    if debug_level > 5 : 
+        log.msg("amenity info : %s" % info, level=log.DEBUG) 
+    am = session.query(Amenity).filter_by(code=info['code']).all() 
+    if am :
+        return am[0]
+    am = Amenity(info) 
+    return am 
 
 def gen_date(offset, nights) : 
     """
@@ -236,10 +235,12 @@ class hotwire_api_analysis(BaseSpider):
             raw_results.flush() # ensure whole xml response is written 
         hxs = XmlXPathSelector(response)
 
+        # parse out the list of amenities defined (this is not
+        # specific to a hotel 
         if debug_level > 0 :         
             log.msg( "doing amenities" ,level=log.DEBUG) 
         amenities = hxs.select("//Hotwire/MetaData/HotelMetaData/Amenities/Amenity")
-        amenities_dict = do_amenities(amenities) 
+        amenities_list = do_amenities(amenities) 
         session.commit()
         
         if debug_level > 0 : 

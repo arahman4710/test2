@@ -11,6 +11,7 @@ from sqlalchemy import *
 
 from alchemy_session import get_alchemy_info
 from point import Point 
+from amenity import Amenity, find_amenity_string
 
 (engine, session, Base, metadata) = get_alchemy_info () 
 # engine = create_engine('postgresql:///testing', echo=True)
@@ -23,41 +24,6 @@ from point import Point
 
 debug_level = 0 
 
-class Amenity(Base) : 
-   __tablename__ = 'amenity'    # set the table name 
- 
-   # variables declared in a class using "Column"
-   # these are going to be reflected in the table built
-   # other variables in the class will not 
-   name = Column(String())                     # name 
-   code = Column(String(), primary_key=True)   # two character code 
-   description = Column(String())              # long description. 
-
-   def __init__(self, namesdict) : 
-       for i in namesdict : 
-           self.__setattr__(i, namesdict[i]) 
-       session.add(self) 
-       session.commit() 
-
-class Amenities(Base) :
-    __tablename__ = 'amenity_list' 
-
-    uid = Column(Integer, Sequence('amenity_list_sequence'), primary_key=True)  # unique id 
-    amenity_string = Column(String()) 
-
-    def __init__(self, amenitystring) : 
-        self.amenity_string = amenitystring 
-        session.add(self) 
-        session.commit() 
-            
-def find_amenity_list(self, al) :
-    norm_al = "|".join(sorted(al)) 
-    amenity = session.query(AmenityList).filter_by(amenity_string=norm_al).one()   
-    if amenity :
-       return amenity.uid 
-    else :
-       return AmenityList(norm_al).uid
-    
 class Neighborhood (Base) : 
    __tablename__ = 'neighborhood'
    
@@ -89,7 +55,7 @@ class HotWireHotelInfo (Base) :
    subtotal = Column(Float())                                           # total for lodging 
    taxes_and_fees = Column(Float())                                     # taxes and fees 
    total_price = Column(Float())                                        # total price 
-   amenity_list = Column(Integer, ForeignKey('amenity_list.uid'))       # a list of amenities at this hotel 
+   amenity_list = Column(Integer) # , ForeignKey('amenity_list.uid'))       # a list of amenities at this hotel 
    checkin_date = Column(Date())                                        # the check in date we asked about 
    checkout_date = Column(Date())                                       # and the check out date 
    neighborhood_uid = Column(Integer, ForeignKey('neighborhood.uid'))   # neighborhood id (our neighborhood primary key) 
@@ -112,7 +78,7 @@ class HotWireHotelInfo (Base) :
 
        self.checkin_date = fix_date(self.checkin_date) 
        self.checkout_date = fix_date(self.checkout_date) 
-       self.amenity_list = AmenityList(self.amenity_codes).uid
+       self.amenity_list = find_amenity_string(self.amenity_codes)
        neighborhood = session.query(Neighborhood).filter_by(id=self.neighborhood_id).all()
        self.neighborhood_uid = neighborhood[0].uid 
 
@@ -126,10 +92,6 @@ class HotWireHotelInfo (Base) :
        session.add(self)
        session.commit()
        
-def get_amenity(c) : 
-    amenity = session.query(Amenity).filter_by(code='code').one()
-    return amenity 
-
 # date in format separated by "/" (m/d/y) change to " and (y:m:d) 
 def fix_date(d) : 
     x = d.split('/')
