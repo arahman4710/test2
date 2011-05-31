@@ -14,20 +14,20 @@ class PossibleForumHotelMatchTable(Base):
     
 	__tablename__ = 'possible_forum_hotel_match_table'
     
-    uid = Column(Integer(Integer, Sequence('possible_forum_hotel_match_sequence'), primary_key=True))   #   primary key
-    unmatched_entry_id = Column(Integer, ForeignKey('unmatched_forum_hotel_table.uid')) #   primary key for the umatched forum hotel entry that the record is related to
-    hotel_id = Column(Integer, ForeignKey('hotels.uid'))    #   primary key of an internal hotel that is considered to be a possible match for the unmatched forum hotel in question
-    percentage_match = Column(Float()) #   measures how close the internal hotel matched with the unmatched forum hotel entry in question
+	uid = Column(Integer(Integer, Sequence('possible_forum_hotel_match_sequence'), primary_key=True))   #   primary key
+	unmatched_entry_id = Column(Integer, ForeignKey('unmatched_forum_hotel_table.uid')) #   primary key for the umatched forum hotel entry that the record is related to
+	hotel_id = Column(Integer, ForeignKey('hotels.uid'))    #   primary key of an internal hotel that is considered to be a possible match for the unmatched forum hotel in question
+	percentage_match = Column(Float()) #   measures how close the internal hotel matched with the unmatched forum hotel entry in question
 
 
-    def __init__(self, uid, unmatched_entry_id,hotel_id,percentage_match):
+	def __init__(self, uid, unmatched_entry_id,hotel_id,percentage_match):
 
         #   assign params to member variables
 
-        self.uid = uid
-        self.unmatched_entry_id = unmatched_entry_id
-        self.hotel_id = hotel_id
-        self.percentage_match = percentage_match
+		self.uid = uid
+		self.unmatched_entry_id = unmatched_entry_id
+		self.hotel_id = hotel_id
+		self.percentage_match = percentage_match
     
 	
 	def __str__(self) :
