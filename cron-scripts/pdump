@@ -13,7 +13,7 @@ todays=${localtarget}/`date +pgdump+%a`
 bzipped=${localtarget}/`date +pgdump+%a.bz2`
 weekday=`date +%a`
 pg_dumpall > $todays 
-bzip2 $todays 
+bzip2 -f $todays 
 
 if [ `date +%w` == 1 ] 
 then 
@@ -31,7 +31,7 @@ fi
 if [ `date +%d` -eq 1 ]
 then
    month=`date +%m`
-   mondir =  $localtarget/monthly/$month  
+   mondir=$localtarget/monthly/$month  
    if [ ! -d $mondir ] 
    then 
        mkdir $mondir 
