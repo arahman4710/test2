@@ -1,15 +1,12 @@
 #!/bin/bash
-#!/bin/bash
-# this keeps a complete tarred bzipped backup in 
-# /copies/jefu/complete-[weekday].tbz
-# (so there's a copy there for every day in the last week) 
-# a copy of that in /media/maxtor/copies/daily
-#            and in /media/kensington/jefu/copies/daily
-# and once a week a copy (without day name) in :  
-#  /media/kensington/jefu/weekly/[week number in year mod 10] 
-# and once a month (again without day name) in : 
-#  /media/kensington/jefu/monthly/[month-name] 
-# phew!  
+#  dump postgresql using dump all
+#  daily dumps go into /work/jeff/dumps/pgdump-Wed  (etc)
+#    could use date, but that complicates the rest of this and we can get the date
+#    from the file timestamp. 
+#  every monday a dump goes into /work/jeff/dumps/weekly/week-number-of-year%8 
+#    so there are at most 8 of those, redundant as there's also one every month  
+#  the first of every month, one goes into /work/jeff/dumps/monthly 
+#    so there will be one of these for every month 
 set -xv 
 localtarget=/work/jeff/dumps 
 todays=${localtarget}/`date +pgdump+%a`
@@ -20,9 +17,13 @@ bzip2 $todays
 
 if [ `date +%w` == 1 ] 
 then 
-    # week number mod 10 
-    wn=$((`date +%U` % 10))   
+    # week number mod 8 
+    wn=$((`date +%U` % 8))   
     wd=$localtarget/weekly/$wn 
+    if [ ! -d $wd ] 
+    then 
+        mkdir $wd 
+    fi 
     cp $bzipped $wd 
 fi 
 
