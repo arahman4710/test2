@@ -18,8 +18,9 @@ class Amenity(Base) :
    # variables declared in a class using "Column"
    # these are going to be reflected in the table built
    # other variables in the class will not 
+   uid = Column(Integer, Sequence('amenity_uid_sequence'), primary_key=True) 
    name = Column(String())                     # name 
-   code = Column(String(), primary_key=True)   # two character code 
+   code = Column(String())   # two character code 
    description = Column(String())              # long description. 
 
    def __init__(self, namesdict) : 
