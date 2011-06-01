@@ -1,5 +1,41 @@
 #!/bin/bash
-fn=/work/jeff/dumps/`date +%Y-%j`.dumpall
-pg_dumpall -f $fn
-bzip2 $fn 
+#!/bin/bash
+# this keeps a complete tarred bzipped backup in 
+# /copies/jefu/complete-[weekday].tbz
+# (so there's a copy there for every day in the last week) 
+# a copy of that in /media/maxtor/copies/daily
+#            and in /media/kensington/jefu/copies/daily
+# and once a week a copy (without day name) in :  
+#  /media/kensington/jefu/weekly/[week number in year mod 10] 
+# and once a month (again without day name) in : 
+#  /media/kensington/jefu/monthly/[month-name] 
+# phew!  
+set -xv 
+localtarget=/work/jeff/dumps 
+todays=${localtarget}/`date +pgdump+%a`
+bzipped=${localtarget}/`date +pgdump+%a.bz2`
+weekday=`date +%a`
+pg_dumpall > $todays 
+bzip2 $todays 
+
+if [ `date +%w` == 1 ] 
+then 
+    # week number mod 10 
+    wn=$((`date +%U` % 10))   
+    wd=$localtarget/weekly/$wn 
+    cp $bzipped $wd 
+fi 
+
+# first day of month? 
+if [ `date +%d` -eq 1 ]
+then
+   month=`date +%m`
+   mondir =  $localtarget/monthly/$month  
+   if [ ! -d $mondir ] 
+   then 
+       mkdir $mondir 
+   fi 
+   cp $bzipped $mondir 
+fi 
+
 
