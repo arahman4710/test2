@@ -21,15 +21,15 @@ class PricelineCityRegionMap(Base) :
 
 	uid = Column(Integer, Sequence('priceline_regions_cities_mapping_sequence'), primary_key=True)  #   primary key
 	city_id = Column(Integer, ForeignKey('city.uid'))   #   primary key for internal city
-	priceline_region_id = Column(Integer, ForeignKey('priceline_region.uid'))   #   primary key for priceline regions
+	priceline_region_id = Column(Integer, ForeignKey('priceline_region_table.uid'))   #   primary key for priceline regions
 
 
 	def __init__(self, uid, cities_cityid, priceline_regionid) :
 		#   Assign params to member variables
 
-		self.uid = uid
-		self.city_id = cities_cityid
-		self.priceline_region_id = priceline_regionid
+            self.uid = uid
+            self.city_id = cities_cityid
+            self.priceline_region_id = priceline_regionid
 
 	def __str__(self) :
 

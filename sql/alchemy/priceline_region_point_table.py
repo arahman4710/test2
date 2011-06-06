@@ -17,10 +17,10 @@ class PricelineRegionPointTable(Base):
     __tablename__ = 'priceline_region_point_table'
 
     uid = Column(Integer, Sequence('priceline_region_point_sequence'), primary_key=True)   #   primary key
-    priceline_region_id =  Column(Integer, ForeignKey('priceline_region.uid'))  #   foreign key pointing to a particular priceline region, to which the set of points belong to
+    priceline_region_id =  Column(Integer, ForeignKey('priceline_region_table.uid'))  #   foreign key pointing to a particular priceline region, to which the set of points belong to
     order_id =  Column(Integer())  #   sequence # of points, the order in which the points make up a region
-    latitude = Column(Decimal())    #   latitude of the point
-    longitude = Column(Decimal())    #   longitude of the point
+    latitude = Column(Float())    #   latitude of the point
+    longitude = Column(Float())    #   longitude of the point
 
 
     def __init__(self, uid, priceline_region_id, order_id,latitude,longitude) :
@@ -32,6 +32,7 @@ class PricelineRegionPointTable(Base):
         self.order_id = order_id
         self.latitude = latitude
         self.longitude = longitude
+
 
 
     def __str__(self) :
