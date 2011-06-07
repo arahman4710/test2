@@ -1,0 +1,15 @@
+#!/bin/bash
+set -xv 
+destdir=/work/jeff/backend/system 
+if [ ! -d ${destdir} ] 
+then
+    mkdir ${destdir}
+    mkdir ${destdir}/postgresql-config 
+fi    
+
+cp -r /etc/ ${destdir}/
+cp -r /opt/redmine-1.2/config ${destdir}/redmine-config 
+cp /work/pgsql/data/pg_hba.conf /work/pgsql/data/pg_ident.conf  /work/pgsql/data/postgresql.conf  ${destdir}/postgresql-config 
+yum list installed >${destdir}/yum-installed
+
+chown -R jeff:jeff ${destdir} 
