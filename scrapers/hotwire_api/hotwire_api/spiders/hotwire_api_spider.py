@@ -20,7 +20,7 @@ from sqlalchemy.sql import and_
 
 # local imports 
 from alchemy_session import get_alchemy_info 
-from point import Point, find_point
+from point import Point, find_point, PointList
 from amenity import Amenity, AmenityString
 
 import re
@@ -231,7 +231,8 @@ class hotwire_api_analysis(BaseSpider):
 
     def parse(self, response):
         if request_generator_settings['return_results_to_stdout'] and raw_results :
-            sys.stdout.write(raw_results) 
+            sys.stdout.write(body_or_str(response)) 
+            sys.stdout.flush() 
         if saving_results and raw_results : 
             raw_results.write(body_or_str(response) + "\n\n")
             raw_results.flush() # ensure whole xml response is written 
@@ -280,7 +281,7 @@ def main() :
     parser.add_argument('--adults',
                         default="1,2", 
                         help='number of adults, if comma separated use values from list') 
-    parser.add_argument('--child_range',
+    parser.add_argument('--child-range',
                         default="0", 
                         help='number of children, if comma separated use values from list')
     parser.add_argument('--nights',
