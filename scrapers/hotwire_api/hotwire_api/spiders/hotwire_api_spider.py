@@ -230,6 +230,8 @@ class hotwire_api_analysis(BaseSpider):
         return Request(query, callback=self.parse, meta=kwargs) 
 
     def parse(self, response):
+        if request_generator_settings['return_results_to_stdout'] and raw_results :
+            sys.stdout.write(raw_results) 
         if saving_results and raw_results : 
             raw_results.write(body_or_str(response) + "\n\n")
             raw_results.flush() # ensure whole xml response is written 
@@ -297,6 +299,16 @@ def main() :
                         default="1",
                         help='number of rooms, if comma separated use values from list') 
 
+    parser.add_argument('--do-this-city',
+                        dest='do_this_city',
+                        default=False, 
+                        help='just do this one city') 
+
+    parser.add_argument('--return-results-to-stdout',
+                        default=False,
+                        action='store_true',
+                        help='if set, write xml returned to stdout')
+    
     arg_result = parser.parse_args()
 
     debug_level = arg_result.debug_level
@@ -332,12 +344,16 @@ def main() :
                 raw_results = None 
 
     request_generator_settings = vars(arg_result) 
-    if arg_result.all_cities :
+    if arg_result.do_this_city :
+        request_generator_settings["city_names"] = [ arg_result.do_this_city ] 
+    elif arg_result.all_cities :
         request_generator_settings["city_names"] = all_city_names
     else : 
         request_generator_settings["city_names"] = one_city_name
+
     for arg in ["adults", "child_range", "nights", "room_count", "offsets"] : 
         request_generator_settings[arg] = commas_to_list(request_generator_settings[arg]) 
+
     if arg_result.do_spider : 
         log.msg("running spider")
         do_spider() 
