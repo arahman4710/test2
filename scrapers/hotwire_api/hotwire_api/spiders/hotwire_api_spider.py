@@ -40,9 +40,9 @@ one_city_name = ['Boston, MA']
 all_city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
 
 
-base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%(api_key)s&dest=%(city)s&rooms=%(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
+#base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%(api_key)s&dest=%(city)s&rooms=%(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
 # base_query_format = "http://localhost/raw_data_hotwire"
-# base_query_format = "http://localhost/raw_data_hotwire?apikey=%s&dest=%(city)s&rooms=$(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
+base_query_format = "http://localhost/raw_data_hotwire?apikey=%s&dest=%(city)s&rooms=$(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
 base_data_dir = "data"  # this really needs to be something better, or a database 
 
 # debug_level controls amount of debugging information written :
@@ -230,7 +230,8 @@ class hotwire_api_analysis(BaseSpider):
         return Request(query, callback=self.parse, meta=kwargs) 
 
     def parse(self, response):
-        if request_generator_settings['return_results_to_stdout'] and raw_results :
+        if request_generator_settings['return_results_to_stdout'] :
+            print "results are..." 
             sys.stdout.write(body_or_str(response)) 
             sys.stdout.flush() 
         if saving_results and raw_results : 
