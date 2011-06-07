@@ -17,7 +17,7 @@ class PricelineAreaCityTable(Base) :
     __tablename__ = 'priceline_area_city_table'
 
     uid = Column(Integer, Sequence('priceline_area_city_sequence'), primary_key=True)  #   primary key
-    priceline_area_id =  Column(Integer, ForeignKey('priceline_area.uid'))  #   foreign key for priceline area
+    priceline_area_id =  Column(Integer, ForeignKey('priceline_area_table.uid'))  #   foreign key for priceline area
     city_id =  Column(Integer, ForeignKey('city.uid'))  #   foreign key for internal city
 
 
