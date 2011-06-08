@@ -40,9 +40,9 @@ one_city_name = ['Boston, MA']
 all_city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
 
 
-#base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%(api_key)s&dest=%(city)s&rooms=%(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
-# base_query_format = "http://localhost/raw_data_hotwire"
-base_query_format = "http://localhost/raw_data_hotwire?apikey=%s&dest=%(city)s&rooms=$(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
+base_query_format = "http://api.hotwire.com/v1/search/hotel?apikey=%(api_key)s&dest=%(city)s&rooms=%(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
+#base_query_format = "http://localhost/raw_data_hotwire"
+#base_query_format = "http://localhost/raw_data_hotwire?apikey=%s&dest=%(city)s&rooms=$(rooms)s&adults=%(adults)s&children=%(children)s&startdate=%(start_date)s&enddate=%(end_date)s"
 base_data_dir = "data"  # this really needs to be something better, or a database 
 
 # debug_level controls amount of debugging information written :
@@ -156,16 +156,15 @@ def gen_date(offset, nights) :
     (start_date, end_date) that is that number of days into the future and the day after
     that.
 
-    Do this by getting the time, adding the right number of seconds and converting using
-    strftime - which avoids having to cope with month endings by hand
+    Use the datetime module to manage this instead of time. 
     """ 
 
-    cursecs = time.time() 
-    startgmt = time.gmtime(cursecs + offset * 24 * 60 * 60)    # offset days in the future 
-    endgmt = time.gmtime(cursecs + (offset+nights) * 24 * 60 * 60)  # offset + nights days in the future 
-    start_date = time.strftime("%m/%d/%Y", startgmt)    #start date in the format mm/dd/yyyy
-    end_date = time.strftime("%m/%d/%Y", endgmt)      #end date in the format mm/dd/yyyy
-    return (start_date, end_date) 
+    today = datetime.date.today()
+    start_date = today+datetime.timedelta(days=offset) 
+    end_date = startdate+datetime.timedelta(days=nights) 
+    
+    # I don't know if this will take other formats for dates.  
+    return (start_date.strftime("%m/%d/%y"), end_date.strftime("%m/%d/%y"))
 
 class hotwire_api_analysis(BaseSpider):
     """
@@ -202,15 +201,34 @@ class hotwire_api_analysis(BaseSpider):
     def start_requests(self) :
         def gen_request() : 
             i = 0 
-            for r in ( self.make_request(city=city, date_offset=date_offset,
-                                         nights=nts, rooms=rms,
-                                         adults=ads, children=cs )
-                       for date_offset in request_generator_settings["offsets"]
+            dates = [] 
+            if request_generator_settings["start_date"] :
+                sd = request_generator_settings["start_date"] 
+                start_raw = datetime.datetime.strptime(sd, "%m/%d/%Y") 
+                if request_generator_settings["end_date"] :
+                    dates = [(request_generator_settings["start_date"],
+                              request_generator_settings["end_date"])] 
+                    
+                elif request_generator_settings["nights"] :
+                    dates = [(sd, (start_raw+ datetime.timedelta(days=nights)).strftime("%m/%d/%Y"))
+                             for nights in request_generator_settings["nights"]] 
+                else :
+                    end_date = start_raw + datetime.timedelta(days=1)
+                    dates = [(sd, end_date.strftime("%m/%d/%Y"))] 
+            else : 
+                dates = [gen_date(s,n)
+                         for s in request_generator_settings["offsets"]
+                         for n in request_generator_settings["nights"] ]
+            for r in ( self.make_request(city=city,
+                                         start_date=start_date, end_date=end_date, 
+                                         rooms=rms,
+                                         adults=ads,
+                                         children=cs )
+                       for (start_date, end_date) in dates
                        for city        in request_generator_settings["city_names"]
                        for rms         in request_generator_settings["room_count"]
                        for ads         in request_generator_settings["adults"]
                        for cs          in request_generator_settings["child_range"]
-                       for nts         in request_generator_settings["nights"]
                      ) :  
                 yield r 
                 if debug_level > 5 :
@@ -221,9 +239,6 @@ class hotwire_api_analysis(BaseSpider):
         return gen_request() 
 
     def make_request(self, **kwargs) : 
-        (start_date, end_date) = gen_date(kwargs["date_offset"], kwargs["nights"]) 
-        kwargs["start_date"] = start_date
-        kwargs["end_date"]=end_date 
         kwargs["api_key"] = self.api_key 
         query = base_query_format % kwargs
         log.msg("query = <<%s>>" % query, level=log.INFO) 
@@ -304,7 +319,15 @@ def main() :
     parser.add_argument('--do-this-city',
                         dest='do_this_city',
                         default=False, 
-                        help='just do this one city') 
+                        help='just do this one city')
+
+    parser.add_argument('--start-date',
+                        default=False, 
+                        help="first night requested")
+
+    parser.add_argument('--end-date',
+                        default=False,
+                        help='last-night-requested') 
 
     parser.add_argument('--return-results-to-stdout',
                         default=False,
