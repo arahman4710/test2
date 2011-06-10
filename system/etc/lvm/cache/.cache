@@ -1,0 +1,18 @@
+# This file is automatically maintained by lvm.
+
+persistent_filter_cache {
+	valid_devices=[
+		"/dev/block/202:1",
+		"/dev/xvda1",
+		"/dev/block/202:3",
+		"/dev/xvda3",
+		"/dev/disk/by-uuid/ca5b4703-b102-4b89-bc7f-6e25d1788269",
+		"/dev/disk/by-uuid/7b4d287b-b3ff-4bdb-bf41-f37a49259ffe",
+		"/dev/sda1",
+		"/dev/disk/by-path/xen-vbd-2049",
+		"/dev/root",
+		"/dev/disk/by-path/xen-vbd-2051",
+		"/dev/disk/by-label/\\x2f",
+		"/dev/sda3"
+	]
+}

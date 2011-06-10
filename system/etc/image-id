@@ -1,0 +1,8 @@
+image_name="amzn-ami"
+image_version="2011.02.1"
+image_arch="i386"
+image_file="amzn-ami-2011.02.1.i386.ext4"
+image_stamp="32e3-676f"
+image_date="20110224163435"
+recipe_name="amzn ami"
+recipe_id="157fed54-3193-49e1-8ac4-53595517377f"
