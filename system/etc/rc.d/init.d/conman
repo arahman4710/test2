@@ -1,0 +1,123 @@
+#!/bin/sh
+#
+# chkconfig: - 95 5
+# description: The ConMan daemon is used for console management.
+#
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+# Disable suppression of stderr msgs.
+INITLOG_ARGS=""
+
+# Default params, override in /etc/sysconfig/conman
+CONFIG="/etc/conman.conf"
+OPTIONS=
+USER=root
+NICE=
+#SIGHUP_RELOAD=
+
+. /etc/sysconfig/conman
+
+# Make code somewhat more genaric using this:
+DAEMON_BASENAME="conmand"
+DAEMON_NAME="/usr/sbin/$DAEMON_BASENAME"
+
+
+MY_UID=`id -u`
+check() {
+	[ -x "$DAEMON_NAME" ] || exit 5
+	[ x"$NETWORKING" = x"no" ] && exit 1
+	[ x"$MY_UID" = x"0" ] || exit 4
+}
+
+# Note: since pidfile name is specified in the config file,
+# we can not rely on its existence. What if user tweaked config
+# and pidfile has a different name, or is not created at all?
+# Because of this, we use more realible "pidof" instead.
+
+start() {
+	check
+	echo -n "Starting ConMan: "
+	if ! grep -ci "^CONSOLE" $CONFIG >/dev/null 2>&1; then
+		echo
+		echo -n "  ERROR: No CONSOLE(s) defined in $CONFIG "
+		echo_failure
+		RETVAL=1
+	elif ! pidof $DAEMON_BASENAME >/dev/null 2>&1; then
+		# No daemon process seen: start
+		daemon $NICE --user "$USER" "$DAEMON_NAME" -c "$CONFIG" $OPTIONS
+		RETVAL=$?
+	else
+		# Already running, display "Ok"
+		success
+		RETVAL=$?
+	fi
+	echo
+	return $RETVAL
+}
+
+stop() {
+	echo -n "Stopping ConMan: "
+	killproc $DAEMON_BASENAME
+	RETVAL=$?
+	echo
+	return $RETVAL
+}
+
+restart() {
+	check
+	if status $DAEMON_BASENAME >/dev/null; then
+		stop && start
+		RETVAL=$?
+	else
+		start
+		RETVAL=$?
+	fi
+	return $RETVAL
+}
+
+RETVAL=0
+
+# See how we were called.
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    status)
+	status $DAEMON_BASENAME
+	RETVAL=$?
+	;;
+    restart)
+	restart
+	;;
+    condrestart|try-restart)
+	RETVAL=0
+	if pidof $DAEMON_BASENAME >/dev/null 2>&1; then
+		# Daemon is running, stop it and start again:
+		restart
+		RETVAL=$?
+		echo
+	fi
+	;;
+    reload)
+	echo -n "Reloading ConMan: "
+	killproc $DAEMON_BASENAME -HUP
+	RETVAL=$?
+	echo
+	;;
+    force-reload)
+	restart
+	;;
+    *)
+	echo "Usage: $0 {start|stop|status|restart|reload|force-reload|condrestart|try-restart}"
+	exit 2
+esac
+
+exit $RETVAL

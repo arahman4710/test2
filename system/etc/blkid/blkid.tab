@@ -1,0 +1,4 @@
+<device DEVNO="0x0811" TIME="1298565264.445491" LABEL="/local2" UUID="4186b9ba-c54a-4cd5-b37c-a844f106e4d3" TYPE="ext3">/dev/sdb1</device>
+<device DEVNO="0x0803" TIME="1298565264.895029" LABEL="SWAP-sda3" TYPE="swap">/dev/sda3</device>
+<device DEVNO="0x0802" TIME="1298565264.895324" LABEL="/local" UUID="342dfaaa-7898-469d-8e53-eed59427d240" TYPE="ext3">/dev/sda2</device>
+<device DEVNO="0x0801" TIME="1298565264.895628" LABEL="/" UUID="b08128b0-9da5-4cf1-8962-88bda7e5ed20" TYPE="ext3">/dev/sda1</device>
