@@ -2,6 +2,7 @@
 from sqlalchemy import *
 
 from alchemy_session import get_alchemy_info
+from priceline_regions_table import PricelineRegionTable
 
 (engine, session, Base, metadata) = get_alchemy_info ()
 

@@ -3,6 +3,8 @@ from sqlalchemy import *
 
 from alchemy_session import get_alchemy_info
 
+from hotel import Hotel
+from priceline_regions_table import PricelineRegionTable
 
 (engine, session, Base, metadata) = get_alchemy_info ()
 
@@ -21,7 +23,7 @@ class PricelineRegionHotelMap(Base) :
     __tablename__ = 'priceline_region_hotel_mapping'
 
     uid = Column(Integer, Sequence('priceline_region_hotel_mapping_sequence'), primary_key=True)    #   primary key
-    hotel_id = Column(Integer, ForeignKey('canonical_hotel.uid')) #   primary key for the internal hotel that is in question
+    hotel_id = Column(Integer, ForeignKey('hotels.hotel_id')) #   primary key for the internal hotel that is in question
     priceline_region_id = Column(Integer, ForeignKey('priceline_region_table.uid'))    #   primary key for the priceline region in question
 
 

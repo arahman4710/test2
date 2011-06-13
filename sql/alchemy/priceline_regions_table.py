@@ -1,7 +1,7 @@
 
 
 from sqlalchemy import *
-import decimal
+
 from alchemy_session import get_alchemy_info
 
 
@@ -18,7 +18,7 @@ class PricelineRegionTable(Base) :
     __tablename__ = 'priceline_region_table'
 
     uid = Column(Integer, Sequence('priceline_region_sequence'), primary_key=True)  #   primary key
-    priceline_id =  Column(Integer())  #   priceline id retrived from scraping priceline system
+    priceline_id =  Column(String(100))  #   priceline id retrived from scraping priceline system
     name =  Column(String(500))  #   name of the priceline region
     latitude = Column(Float())    #   latitude of the center of the region
     longitude = Column(Float())    #   longitude of the center of the region
