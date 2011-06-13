@@ -17,7 +17,7 @@ class PricelineAreaTable(Base) :
     __tablename__ = 'priceline_area_table'
 
     uid = Column(Integer, Sequence('priceline_area_sequence'), primary_key=True)  #   primary key
-    name = Column(String()) #   name of the area
+    name = Column(String(500)) #   name of the area
 
 
     def __init__(self, uid, name) :
