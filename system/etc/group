@@ -42,7 +42,7 @@ mysql:x:27:
 navid:x:504:
 postgres:x:26:
 screen:x:84:
-apache:x:48:apache,nobody
+apache:x:48:apache,nobody,repos
 stapdev:x:498:
 stapusr:x:497:
 oprofile:x:16:
@@ -50,3 +50,4 @@ stap-server:x:155:
 redmine:x:506:
 slocate:x:21:
 repos:x:507:
+jayesh:x:508:

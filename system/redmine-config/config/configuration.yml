@@ -121,7 +121,7 @@ default:
   # scm_darcs_command:      darcs-1.0.9-i386-linux                    # (default: darcs)
   scm_subversion_command:
   scm_mercurial_command:
-  scm_git_command:
+  scm_git_command: /usr/bin/git
   scm_cvs_command:
   scm_bazaar_command:
   scm_darcs_command:

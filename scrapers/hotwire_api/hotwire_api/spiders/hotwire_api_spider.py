@@ -161,7 +161,7 @@ def gen_date(offset, nights) :
 
     today = datetime.date.today()
     start_date = today+datetime.timedelta(days=offset) 
-    end_date = startdate+datetime.timedelta(days=nights) 
+    end_date = today+datetime.timedelta(days=nights) 
     
     # I don't know if this will take other formats for dates.  
     return (start_date.strftime("%m/%d/%y"), end_date.strftime("%m/%d/%y"))

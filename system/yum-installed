@@ -38,6 +38,7 @@ byacc.i686                    1.9.20070509-6.1.6.amzn1             @amzn-main
 bzip2.i686                    1.0.6-8.12.amzn1                     installed    
 bzip2-libs.i686               1.0.6-8.12.amzn1                     installed    
 ca-certificates.noarch        2010.63-3.6.amzn1                    installed    
+cairo.i686                    1.8.8-3.1.4.amzn1                    @amzn-main   
 checkpolicy.i686              2.0.22-1.6.amzn1                     installed    
 chkconfig.i686                1.3.47-1.9.amzn1                     installed    
 cloog-ppl.i686                0.15.7-1.2.5.amzn1                   @amzn-main   
@@ -103,6 +104,7 @@ findutils.i686                1:4.4.2-6.9.amzn1                    installed
 fipscheck.i686                1.2.0-4.1.8.amzn1                    installed    
 fipscheck-lib.i686            1.2.0-4.1.8.amzn1                    installed    
 flex.i686                     2.5.35-8.5.amzn1                     @amzn-main   
+fontconfig.i686               2.8.0-3.5.amzn1                      @amzn-main   
 freetype.i686                 2.3.11-6.8.amzn1                     installed    
 gamin.i686                    0.1.10-9.8.amzn1                     installed    
 gamin-python.i686             0.1.10-9.8.amzn1                     installed    
@@ -110,6 +112,7 @@ gawk.i686                     3.1.7-6.8.amzn1                      installed
 gcc.i686                      4.4.4-13.33.amzn1                    @amzn-main   
 gcc-c++.i686                  4.4.4-13.33.amzn1                    @amzn-main   
 gcc-gfortran.i686             4.4.4-13.33.amzn1                    @amzn-main   
+gd.i686                       2.0.35-10.9.amzn1                    @amzn-main   
 gdb.i686                      7.1-29.9.amzn1                       @amzn-main   
 gdbm.i686                     1.8.0-36.6.amzn1                     installed    
 get_reference_source.noarch   1.0.2-1.9.amzn1                      installed    
@@ -125,6 +128,7 @@ gmp.i686                      4.3.1-7.10.amzn1                     installed
 gnupg2.i686                   2.0.14-4.9.amzn1                     installed    
 gpgme.i686                    1.1.8-3.7.amzn1                      installed    
 gpm-libs.i686                 1.20.6-11.6.amzn1                    installed    
+graphviz.i686                 2.26.0-4.12.amzn1                    @amzn-main   
 grep.i686                     2.6.3-2.7.amzn1                      installed    
 groff.i686                    1.18.1.4-21.7.amzn1                  installed    
 grubby.i686                   7.0.15-2.4.amzn1                     installed    
@@ -169,7 +173,9 @@ libX11.i686                   1.3-2.9.amzn1                        installed
 libX11-common.i686            1.3-2.9.amzn1                        installed    
 libXau.i686                   1.0.5-1.8.amzn1                      installed    
 libXext.i686                  1.1-3.7.amzn1                        installed    
+libXft.i686                   2.1.13-4.1.6.amzn1                   @amzn-main   
 libXi.i686                    1.3-3.6.amzn1                        installed    
+libXpm.i686                   3.5.8-2.8.amzn1                      @amzn-main   
 libXrender.i686               0.9.5-1.6.amzn1                      installed    
 libXtst.i686                  1.0.99.2-3.6.amzn1                   installed    
 libacl.i686                   2.2.49-4.8.amzn1                     installed    
@@ -211,6 +217,7 @@ libssh2.i686                  1.2.2-7.6.amzn1                      installed
 libstdc++.i686                4.4.4-13.33.amzn1                    installed    
 libstdc++-devel.i686          4.4.4-13.33.amzn1                    @amzn-main   
 libsysfs.i686                 2.1.0-6.1.9.amzn1                    installed    
+libthai.i686                  0.1.12-3.5.amzn1                     @amzn-main   
 libtool.i686                  2.2.10-1.8.amzn1                     @amzn-main   
 libudev.i686                  147-2.18.10.amzn1                    installed    
 libusb.i386                   0.1.12-5.1.8.amzn1                   installed    
@@ -281,6 +288,7 @@ pam.i686                      1.1.1-4.12.amzn1                     installed
 pam_ccreds.i386               3-5.9.amzn1                          installed    
 pam_krb5.i686                 2.3.11-1.10.amzn1                    installed    
 pam_passwdqc.i686             1.0.5-6.8.amzn1                      installed    
+pango.i686                    1.28.1-3.9.amzn1                     @amzn-updates
 parted.i686                   2.1-10.8.amzn1                       installed    
 passwd.i686                   0.77-4.8.amzn1                       installed    
 patch.i686                    2.6-6.6.amzn1                        @amzn-main   
@@ -315,6 +323,7 @@ perl-libs.i686                4:5.10.1-115.10.amzn1                installed
 perl-libwww-perl.noarch       5.833-2.4.amzn1                      installed    
 perl-version.i686             3:0.77-115.10.amzn1                  installed    
 pinentry.i686                 0.7.6-5.10.amzn1                     installed    
+pixman.i686                   0.18.4-1.5.amzn1                     @amzn-main   
 pkgconfig.i686                1:0.23-9.1.6.amzn1                   @amzn-main   
 policycoreutils.i686          2.0.82-28.1.8.amzn1                  installed    
 popt.i686                     1.13-7.7.amzn1                       installed    
@@ -413,6 +422,7 @@ tzdata-java.noarch            2010l-1.8.amzn1                      installed
 udev.i686                     147-2.18.10.amzn1                    installed    
 unzip.i686                    6.0-1.7.amzn1                        installed    
 upstart.i686                  0.6.5-6.1.5.amzn1                    installed    
+urw-fonts.noarch              2.4-10.7.amzn1                       @amzn-main   
 ustr.i686                     1.0.4-9.1.6.amzn1                    installed    
 util-linux-ng.i686            2.17.2-6.12.amzn1                    installed    
 uuid.i686                     1.6.1-10.12.amzn1                    @amzn-main   
@@ -437,5 +447,3 @@ yum-utils.noarch              1.1.26-11.8.amzn1                    @amzn-main
 zip.i686                      3.0-1.10.amzn1                       installed    
 zlib.i686                     1.2.3-24.7.amzn1                     installed    
 zlib-devel.i686               1.2.3-24.7.amzn1                     @amzn-main   
-
-
