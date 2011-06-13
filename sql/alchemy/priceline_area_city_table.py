@@ -3,6 +3,8 @@ from sqlalchemy import *
 
 from alchemy_session import get_alchemy_info
 
+from priceline_area_table import PricelineAreaTable
+from city_table import CityTable
 
 (engine, session, Base, metadata) = get_alchemy_info ()
 
