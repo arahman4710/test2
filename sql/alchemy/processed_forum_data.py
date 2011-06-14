@@ -17,14 +17,14 @@ class ProcessedRawForumData(Base) :
     __tablename__ = 'processed_raw_forum_data'
 
     uid = Column(Integer, Sequence('processed_raw_forum_data_sequence'), primary_key=True)  #   Primary key
-    hotel_name = Column(String())   #   name of the hotel from the forum
-    city_area = Column(String())    #   city/area information for the particular hotel from the forum
-    region = Column(String())   #   region name from the forum
-    star = Column(String())  #   star rating of the hotel according to that forum
-    state = Column(String())    #   name of the state the hotel is from
-    url = Column(String())  #   address to the page it was scraped from
-    target_site = Column(String())   #  the target site is the site the forum is referring to (priceline, hotwire etc)
-    source_forum = Column(String()) #   the name of the forum the data has been scraped from (bb, bft)
+    hotel_name = Column(String(500))   #   name of the hotel from the forum
+    city_area = Column(String(500))    #   city/area information for the particular hotel from the forum
+    region = Column(String(500))   #   region name from the forum
+    star = Column(String(500))  #   star rating of the hotel according to that forum
+    state = Column(String(500))    #   name of the state the hotel is from
+    url = Column(String(500))  #   address to the page it was scraped from
+    target_site = Column(String(500))   #  the target site is the site the forum is referring to (priceline, hotwire etc)
+    source_forum = Column(String(500)) #   the name of the forum the data has been scraped from (bb, bft)
 
     def __init__(self, uid, hotel_name, city_area,region, star, url, state, target, source):
 

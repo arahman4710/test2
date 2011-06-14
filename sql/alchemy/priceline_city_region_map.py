@@ -3,8 +3,9 @@ from sqlalchemy import *
 
 from alchemy_session import get_alchemy_info
 
-(engine, session, Base, metadata) = get_alchemy_info ()
+from hotel import Hotel
 
+(engine, session, Base, metadata) = get_alchemy_info ()
 
 debug_level = 0
 
@@ -20,8 +21,8 @@ class PricelineCityRegionMap(Base) :
 	__tablename__ = 'priceline_regions_cities_mapping'
 
 	uid = Column(Integer, Sequence('priceline_regions_cities_mapping_sequence'), primary_key=True)  #   primary key
-	city_id = Column(Integer, ForeignKey('city.uid'))   #   primary key for internal city
-	priceline_region_id = Column(Integer, ForeignKey('priceline_region_table.uid'))   #   primary key for priceline regions
+	city_id = Column(Integer, ForeignKey('hotels.hotel_id'))   #   primary key for internal city
+	priceline_region_id = Column(String(100))   #    priceline regions id
 
 
 	def __init__(self, uid, cities_cityid, priceline_regionid) :
