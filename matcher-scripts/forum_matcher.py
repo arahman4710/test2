@@ -1146,9 +1146,11 @@ def test_matcher():
 
                                 #acquare the hotel list
 
+                                #when region name is empty
+
                                 foreign_hotel_list = current_input_city_dict[f_regions]
 
-                                # when db has only one region for the specified city match it with it
+                                # when db has only one region for the specified city match it with the database region
 
                                 if len(current_internal_city_dict.keys()) == 1:
 
