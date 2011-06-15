@@ -339,7 +339,7 @@ def main() :
     debug_level = arg_result.debug_level
 
     if debug_level > 0 : 
-        log.start(logfile="hotwire_api_analysis.log")
+        log.start(logfile="/work/jeff/logs/hotwire_api_analysis.log")
         for i in vars(arg_result).items() :
             log.msg("command line var %s -> %s" % i, level=log.INFO)  
 
