@@ -164,7 +164,7 @@ def gen_date(offset, nights) :
     end_date = today+datetime.timedelta(days=nights) 
     
     # I don't know if this will take other formats for dates.  
-    return (start_date.strftime("%m/%d/%y"), end_date.strftime("%m/%d/%y"))
+    return (start_date.strftime("%m/%d/%Y"), end_date.strftime("%m/%d/%Y"))
 
 class hotwire_api_analysis(BaseSpider):
     """
