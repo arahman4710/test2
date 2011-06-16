@@ -20,3 +20,6 @@ chmod -R u+rw ${destdir}
 
 tar -tjvf /work/jeff/system.tbz ${destdir} 
 
+rkhunter --rwo --sk
+chkrootkit -q
+
