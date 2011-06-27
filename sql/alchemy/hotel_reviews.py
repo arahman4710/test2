@@ -37,6 +37,9 @@ class ReviewsTable(Base) :
         self.rating = rating
         self.norm_rating = norm_rating
         self.review_url_source = review_url_source
+        
+        session.add(self)
+        session.commit()
 
     def __unicode__(self) :
 
