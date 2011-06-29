@@ -1,5 +1,5 @@
 from alchemy_session import get_alchemy_info
-from sqlalchemy import ForeignKey
+from sqlalchemy import *
 
 (engine, session, Base, metadata) = get_alchemy_info ()
 
@@ -16,7 +16,7 @@ class ReviewsTable(Base) :
     review_user = Column(String(500)) # User name of review creator
     review = Column(String(500)) # Entire text of review (raw or processed eliminating html tags??)
     review_short = Column(String(500)) # Short text of review (Like a summary, maybe 80 words?)
-    review_date = Column(String(500)) # Date of the review
+    review_date = Column(Time()) # Date of the review, delivers a datetime.date() python object
     rating = Column(Float) 
     norm_rating = Column(Float) # If rating goes from 0 to 10 we normalize from 0 to 5
     review_url_source = Column(String(500))
@@ -37,6 +37,9 @@ class ReviewsTable(Base) :
         self.rating = rating
         self.norm_rating = norm_rating
         self.review_url_source = review_url_source
+        
+        session.add(self)
+        session.commit()
 
     def __unicode__(self) :
 
