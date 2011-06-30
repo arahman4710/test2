@@ -21,7 +21,7 @@ class ReviewsTable(Base) :
     rating = Column(Float) 
     norm_rating = Column(Float) # If rating goes from 0 to 10 we normalize from 0 to 5
     review_url_source = Column(String(500))
-
+    reviewer_type = Column(Text()) # Field to comply with travelpost_reviews_spider reviewertype 
     def __init__(self, uid, hotel_uid, review, review_user, review_short, review_date, rating, norm_rating, review_source):
 
         """
