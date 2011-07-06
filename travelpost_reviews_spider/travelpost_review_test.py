@@ -10,6 +10,8 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.spider import BaseSpider
 from scrapy.xlib.pydispatch import dispatcher
 from scrapy.http import Request
+from scrapy.utils.response import body_or_str
+import codecs 
 import re
 import time
 
@@ -88,6 +90,13 @@ class ReviewSpider(BaseSpider):
         
         def findhotels(self,response):
             print response.url
+            try : 
+                codecs.open("responses", "w+",encoding='utf-8').write(body_or_str(response)) 
+            except Exception, e:
+                print "error in printing response body" 
+                print e
+                
+
             if response.url:
                 if response.request.meta["backlink"]:
                     if response.request.meta["backlink"]==response.url or response.request.meta["redir"]:
@@ -146,6 +155,7 @@ class ReviewSpider(BaseSpider):
 
 
         def getReview(self,response):
+            codecs.open("responses", "w+",encoding='utf-8').write(body_or_str(response)) 
             if response.request.meta["backlink"]:
                 if response.request.meta["backlink"]==response.url:
                     hxs=HtmlXPathSelector(response)
@@ -155,12 +165,29 @@ class ReviewSpider(BaseSpider):
                         #insert_sql = "INSERT INTO `acuity`.`travelpost_hotel_review_description` "
                         #insert_param_sql = "( `hotel_id`, "
                         #insert_value_sql = "VALUES ( '"+ printable(re.sub('''(['"])''', r'\\\1',hotel.strip())) +"', "
+                        try : 
+                            print "content : "
+                            print content.extract() 
+                        except Exception, e :
+                            print "trying to print content, but it doesn't work"
+                            print e
+                            
                         temp_reviewurl = content.select(".//td[contains(@class , 'title')]/a/@href|.//tr[3]/td[2]/div[1]/div/p[2]/a/@href")
+                        print "FIRST:", temp_reviewurl.extract()
+                        temp_reviewurl = content.select(".//td[contains(@class , 'title')]/a/@href|.//tr[3]/td[2]/div[1]/div/p[2]/a/@href")
+                        print "SECOND:", temp_reviewurl.extract()
                         temp_source = content.select(".//tr[2]/td/span[1]/img/@title")
+                        print "Temp_source:"
+                        print temp_source.extract() 
+
                         temp_rate = content.select(".//tr[4]/td[1]/div[2]/text()|.//tr[3]/td[1]/div[2]/text()")
+                        print "temp_rate" 
+                        print temp_rate.extract()
                         temp_date = content.select(".//tr[2]/td/span[2]/text()")
                         temp_reviewertype = content.select(".//tr[4]/td[2]/div[1]/span/div/text()|.//tr[3]/td[2]/div[1]/span/div/text()")
                         temp_content = content.select(".//tr[4]/td[2]/div[1]/div/p/text()|.//tr[3]/td[2]/div[1]/div/p/text()")
+                        print "temp content"
+                        print temp_content.extract() 
                         temp_id = content.select(".//tr[contains(@id, 'helpfulCounts')]/@id")
                         #if temp_id:
                         #    id = temp_id.extract()[0].replace("helpfulCounts","")
@@ -232,12 +259,14 @@ def main():
         crawler.install()
         crawler.configure()
         spider = ReviewSpider()
-        cities = ['New York, New York','Los Angeles, California','Chicago, Illinois','Houston, Texas','Philadelphia, Pennsylvania',
-        'Phoenix, Arizona','San Diego, California','Dallas, Texas','San Antonio, Texas','Detroit, Michigan','San Jose, California',
-        'Indianapolis, Indiana','San Francisco, California','Jacksonville, Florida','Columbus, Ohio','Austin, Texas','Memphis, Tennessee',
-        'Baltimore, Maryland','Milwaukee, Wisconsin','Boston, Massachusetts','Charlotte, North Carolina','El Paso, Texas','Washington, D.C.',
-        'Seattle, Washington','Fort Worth, Texas','Denver, Colorado','Nashville, Tennessee','Portland, Oregon','Oklahoma City, Oklahoma',
-        'Las Vegas, Nevada','Toronto','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada']
+        cities = ['Seattle, Washington'] 
+        if False : 
+            cities = ['New York, New York','Los Angeles, California','Chicago, Illinois','Houston, Texas','Philadelphia, Pennsylvania',
+                      'Phoenix, Arizona','San Diego, California','Dallas, Texas','San Antonio, Texas','Detroit, Michigan','San Jose, California',
+                      'Indianapolis, Indiana','San Francisco, California','Jacksonville, Florida','Columbus, Ohio','Austin, Texas','Memphis, Tennessee',
+                      'Baltimore, Maryland','Milwaukee, Wisconsin','Boston, Massachusetts','Charlotte, North Carolina','El Paso, Texas','Washington, D.C.',
+                      'Seattle, Washington','Fort Worth, Texas','Denver, Colorado','Nashville, Tennessee','Portland, Oregon','Oklahoma City, Oklahoma',
+                      'Las Vegas, Nevada','Toronto','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada']
         test_city = ['houston,Tx']
         spider.input = test_city
         crawler.queue.append_spider(spider)
