@@ -61,7 +61,7 @@ class ReviewSpider(BaseSpider):
         def findApproxCities(self,response):
             hxs=HtmlXPathSelector(response)
             print response.body
-            city_id = hxs.select("html/body/ul/li[1]/@id").extract()[0]
+            city_id = hxs.select("//html/body/ul/li[1]/@id").extract()[0]
             print city_id
             city_id = city_id.replace("citypage-","")
             city = response.request.meta["city"]
@@ -103,9 +103,9 @@ class ReviewSpider(BaseSpider):
                         hxs=HtmlXPathSelector(response)
                         for hotels in hxs.select("//table[starts-with(@id, 'rslt')]"):
                             if hotels.select(".//tr[2]/td/div[4]/span[2]/a/@href"):
-                                insert_sql = "INSERT INTO `acuity`.`travelpost_hotel_review_overview` "
-                                insert_param_sql = "( "
-                                insert_value_sql = "VALUES ( "
+                                #insert_sql = "INSERT INTO `acuity`.`travelpost_hotel_review_overview` "
+                                #insert_param_sql = "( "
+                                #insert_value_sql = "VALUES ( "
                                 temp_id = hotels.select(".//tr[2]/td[2]/table/tbody[1]/tr[1]/td[1]/a/@href")
                                 temp_userrating = hotels.select(".//span[@class = 'userrating']/b/text()")
                                 temp_url = hotels.select(".//tr[2]/td/div[4]/span[2]/a/@href")
@@ -117,28 +117,28 @@ class ReviewSpider(BaseSpider):
                                 if temp_id:
                                     hotelID = temp_id.extract()[0]
                                     print hotelID[hotelID.find("hid") + 3:hotelID.find("?")]
-                                    insert_param_sql +="`hotelid`,"
-                                    insert_value_sql +="'"+ str(hotelID[hotelID.find("hid") + 3:]) +"',"
+                                    #insert_param_sql +="`hotelid`,"
+                                    #insert_value_sql +="'"+ str(hotelID[hotelID.find("hid") + 3:]) +"',"
                                     hotelID = str(hotelID[hotelID.find("hid") + 3:])#str(hotelID[hotelID.find("hid") + 3:hotelID.find("?")])
                                 if temp_userrating:
                                     userrating=temp_userrating.extract()[0]
-                                    insert_param_sql +="`averagerating`,"
-                                    insert_value_sql +="'"+ printable(re.sub('''(['"])''', r'\\\1',userrating.strip())) +"',"
+                                    #insert_param_sql +="`averagerating`,"
+                                    #insert_value_sql +="'"+ printable(re.sub('''(['"])''', r'\\\1',userrating.strip())) +"',"
                                 if temp_name:
                                     hotel= temp_name.extract()[0].replace("&amp;","")
-                                    insert_param_sql +="`hotelname`,"
-                                    insert_value_sql +="'"+ printable(re.sub('''(['"])''', r'\\\1',hotel.strip())) +"',"
+                                    #insert_param_sql +="`hotelname`,"
+                                    #insert_value_sql +="'"+ printable(re.sub('''(['"])''', r'\\\1',hotel.strip())) +"',"
                                 if temp_url:
                                     full_url = "http://www.travelpost.com%s" % temp_url.extract()[0]
-                                    insert_param_sql +="`hotelurl`,"
-                                    insert_value_sql +="'"+ printable(re.sub('''(['"])''', r'\\\1',full_url.strip())) +"',"
-                                insert_param_sql =  insert_param_sql[0:-1] + ")"
-                                insert_value_sql = insert_value_sql[0:-1] + ");"
-                                try:
-                                    Connection.cursor.execute(insert_sql + insert_param_sql + insert_value_sql)
-                                    Connection.database.commit()
-                                except:
-                                    log.msg(insert_sql + insert_param_sql + insert_value_sql,level=log.ERROR)
+                                    #insert_param_sql +="`hotelurl`,"
+                                    #insert_value_sql +="'"+ printable(re.sub('''(['"])''', r'\\\1',full_url.strip())) +"',"
+                                #insert_param_sql =  insert_param_sql[0:-1] + ")"
+                                #insert_value_sql = insert_value_sql[0:-1] + ");"
+                                #try:
+                                #    Connection.cursor.execute(insert_sql + insert_param_sql + insert_value_sql)
+                                #    Connection.database.commit()
+                                #except:
+                                #    log.msg(insert_sql + insert_param_sql + insert_value_sql,level=log.ERROR)
                                 equest= Request(full_url,callback=self.getReview)
                                 equest.meta["hotel"] = hotelID
                                 equest.meta["backlink"] = full_url
@@ -282,7 +282,7 @@ def main():
         #        c.execute("UPDATE `acuity`.`travelpost_hotel_review_overview` SET `numberofreviews` = '%s' WHERE \
         #        `hotelid` = '%s';" % (number[0],hotel[0] ))
         #        db.commit()
-        #log.msg("COMPLETED!",level=log.INFO)
+        log.msg("COMPLETED!",level=log.INFO)
         #Connection.database.close()
 
                 
