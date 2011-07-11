@@ -65,6 +65,7 @@ class ReviewSpider(BaseSpider):
             print city_id
             city_id = city_id.replace("citypage-","")
             city = response.request.meta["city"]
+            print city
             #http://www.travelpost.com/search.aspx?srch=Houston,%20TX%C2%A0%C2%A0%E2%86%92%C2%A0%C2%A0All%20hotels&h=c31193
             resp= Request("http://www.travelpost.com/search.aspx?srch=%s&h=%s" % (city,city_id),callback=self.findhotels)
             resp.meta["backlink"] ="http://www.travelpost.com/search.aspx?srch=%s&h=%s" % (city,city_id)
@@ -179,13 +180,21 @@ class ReviewSpider(BaseSpider):
                         temp_source = content.select(".//tr[2]/td/span[1]/img/@title")
                         print "Temp_source:"
                         print temp_source.extract() 
-
+                        
                         temp_rate = content.select(".//tr[4]/td[1]/div[2]/text()|.//tr[3]/td[1]/div[2]/text()")
                         print "temp_rate" 
                         print temp_rate.extract()
+                        
+                        print "Posted On:"
                         temp_date = content.select(".//tr[2]/td/span[2]/text()")
+                        print temp_date.extract()
+                        
+                        print "Posted By:"
+                        temp_post_user = content.select(".//tr[3]/td[1]/span/text()")
+                        print temp_post_user.extract()
+                        
                         temp_reviewertype = content.select(".//tr[4]/td[2]/div[1]/span/div/text()|.//tr[3]/td[2]/div[1]/span/div/text()")
-                        temp_content = content.select(".//tr[4]/td[2]/div[1]/div/p/text()|.//tr[3]/td[2]/div[1]/div/p/text()")
+                        temp_content = content.select(".//tr[4]/td[2]/div[1]/div/p/text()|.//tr[3]/td[2]/div[1]/div/p/text()")[0]
                         print "temp content"
                         print temp_content.extract() 
                         temp_id = content.select(".//tr[contains(@id, 'helpfulCounts')]/@id")
@@ -259,7 +268,7 @@ def main():
         crawler.install()
         crawler.configure()
         spider = ReviewSpider()
-        cities = ['Seattle, Washington'] 
+        cities = ['New York, New York'] 
         if False : 
             cities = ['New York, New York','Los Angeles, California','Chicago, Illinois','Houston, Texas','Philadelphia, Pennsylvania',
                       'Phoenix, Arizona','San Diego, California','Dallas, Texas','San Antonio, Texas','Detroit, Michigan','San Jose, California',
@@ -267,7 +276,7 @@ def main():
                       'Baltimore, Maryland','Milwaukee, Wisconsin','Boston, Massachusetts','Charlotte, North Carolina','El Paso, Texas','Washington, D.C.',
                       'Seattle, Washington','Fort Worth, Texas','Denver, Colorado','Nashville, Tennessee','Portland, Oregon','Oklahoma City, Oklahoma',
                       'Las Vegas, Nevada','Toronto','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada']
-        test_city = ['houston,Tx']
+        test_city = ['New York, NY']
         spider.input = test_city
         crawler.queue.append_spider(spider)
         crawler.start()
