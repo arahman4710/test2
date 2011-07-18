@@ -1,5 +1,6 @@
 from alchemy_session import get_alchemy_info
 from sqlalchemy import *
+import canon_hotel 
 
 (engine, session, Base, metadata) = get_alchemy_info ()
 
@@ -7,12 +8,14 @@ debug_level = 0
 
 # Database Mapper Class for reviews table
 
+
 class ReviewsTable(Base) :
 
     __tablename__ = 'hotel_reviews'
 
     uid = Column(Integer, Sequence('hotel_reviews_sequence'), primary_key=True)  #   primary key
-    hotel_uid = Column(Integer, ForeignKey('hotels.uid')) # Foreign Key should point to hotel table uid, for hotels of X City
+    hotel_uid = Column(Integer, ForeignKey('canonical_hotel.uid')) # Foreign Key should point to hotel table uid, for hotels of X City
+#    hotel_uid = Column(Integer, ForeignKey('point.uid')) # Foreign Key should point to hotel table uid, for hotels of X City
     review_user = Column(String(500)) # User name of review creator
     review = Column(String(500)) # Entire text of review (raw or processed eliminating html tags??)
     review_short = Column(String(500)) # Short text of review (Like a summary, maybe 80 words?)

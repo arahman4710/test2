@@ -1,6 +1,5 @@
 #!/bin/bash
 set -xv 
 cd /work/jeff/repos/backend 
-git fetch origin master 
-rsync -av /work/jeff/repos/backend/ /work/repos/backend 
+git pull origin master 
 

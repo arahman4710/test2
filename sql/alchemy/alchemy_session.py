@@ -11,7 +11,7 @@ session = None
 Session = None 
 Base = None 
 metadata = None 
-def get_alchemy_info(echo=True) : 
+def get_alchemy_info(echo=False) : 
     global engine, Session, session, Base, metadata 
     if engine == None : 
         engine = create_engine('postgresql:///testing', echo=echo)

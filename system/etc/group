@@ -49,5 +49,6 @@ oprofile:x:16:
 stap-server:x:155:
 redmine:x:506:
 slocate:x:21:
-repos:x:507:
+repos:x:507:apache,nobody,jeff
 jayesh:x:508:
+munin:x:496:
