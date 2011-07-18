@@ -15,7 +15,6 @@ class ReviewsTable(Base) :
 
     uid = Column(Integer, Sequence('hotel_reviews_sequence'), primary_key=True)  #   primary key
     hotel_uid = Column(Integer, ForeignKey('canonical_hotel.uid')) # Foreign Key should point to hotel table uid, for hotels of X City
-#    hotel_uid = Column(Integer, ForeignKey('point.uid')) # Foreign Key should point to hotel table uid, for hotels of X City
     review_user = Column(String(500)) # User name of review creator
     review = Column(String(500)) # Entire text of review (raw or processed eliminating html tags??)
     review_short = Column(String(500)) # Short text of review (Like a summary, maybe 80 words?)
@@ -23,7 +22,7 @@ class ReviewsTable(Base) :
     rating = Column(Float) 
     norm_rating = Column(Float) # If rating goes from 0 to 10 we normalize from 0 to 5
     review_url_source = Column(String(500))
-
+    reviewer_type = Column(Text()) # Field to comply with travelpost_reviews_spider reviewertype 
     def __init__(self, uid, hotel_uid, review, review_user, review_short, review_date, rating, norm_rating, review_source):
 
         """
