@@ -1,0 +1,114 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+.child {
+  border-left: 5px solid #eee;
+  padding-left:5px;
+  border-right: 5px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 20px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+#user_nav
+{
+	float:right;
+	font-size:12px;
+}
+#map_canvas {
+  border:thick;
+  width: 99%;
+  height: 100%;
+}
+#Not_reg
+{ background:#CCC;
+border:thin;
+	
+	}
+        #sl-pagination span { padding-left: 2px; padding-right: 2px; }
+  .sl-pagination-selected { border: 1px solid #336699; background-color: #E5F3FE; font-weight: bold; padding: 2px; }
+  .sl-pagination-selected a:link, .sl-pagination-selected a:visited { text-decoration: none; color: #0099FF }
+
+  .markertip {
+    border:1px solid #000;
+    background-color:#aff;
+    height:25px;
+    width:200px;
+    font-family:"Lucida Grande",Verdana;
+    font-size:10px;
+    color:#333;
+}

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Hotwire><Errors/><MetaData><HotelMetaData>
+<Amenities>
+   <Amenity>
+       <Code>AS</Code>
+       <Description>Property offers transportation to and from the airport. Shuttles may run during limited hours or require a reservation; an additional charge may apply.</Description>
+       <Name>Airport Shuttle</Name>
+   </Amenity>
+   <Amenity>
+      <Code>BC</Code>
+      <Description>Guests have access to business equipment and services; an additional charge may apply.</Description>
+      <Name>Business Center</Name>
+   </Amenity>
+   <Amenity>
+      <Code>BH</Code>
+      <Description>Property offers a distinctive, unique or eclectic atmosphere. Many boutique hotels are smaller, hip properties in an urban setting, or renovated hotels with historical flair.</Description>
+      <Name>Boutique Hotel</Name>
+   </Amenity>
+   <Amenity>
+      <Code>CB</Code>
+      <Description>Rates include continental or full breakfast.</Description>
+      <Name>Complimentary Breakfast</Name>
+   </Amenity>
+   <Amenity>
+      <Code>FC</Code>
+      <Description>Guests have access to exercise equipment; an additional charge may apply.</Description>
+      <Name>Fitness Center</Name>
+   </Amenity>
+   <Amenity>
+      <Code>GN</Code>
+      <Description>Property is located within walking distance or a short drive of at least one golf course; an extra charge typically applies.</Description>
+      <Name>Golf Nearby</Name>
+   </Amenity>
+   <Amenity>
+      <Code>HS</Code>
+      <Description>Guestrooms are equipped with high-speed Internet access; an extra charge may apply.</Description>
+      <Name>High-Speed Internet Access</Name>
+   </Amenity>
+   <Amenity>
+      <Code>LF</Code>
+      <Description>Guests have access to a coin-operated washer and dryer.</Description>
+      <Name>Laundry Facilities (self-service)</Name>
+   </Amenity>
+   <Amenity>
+      <Code>PO</Code>
+      <Description>Property offers at least one pool area; hours and dates of operation may be seasonal.</Description>
+      <Name>Pool(s)</Name>
+   </Amenity>
+   <Amenity>
+      <Code>RE</Code>
+      <Description>Property offers at least one restaurant on the premises; hours and days of operation may vary.</Description>
+      <Name>Restaurant(s)</Name>
+   </Amenity>
+   <Amenity>
+      <Code>SR</Code>
+      <Description>Guest rooms at this hotel are always smoke-free.</Description>
+      <Name>Smoke Free Rooms</Name>
+   </Amenity>
+   <Amenity>
+      <Code>TN</Code>
+      <Description>Property is located within walking distance or a short drive of at least one tennis court; an extra charge typically applies.</Description>
+      <Name>Tennis Nearby</Name>
+   </Amenity>
+</Amenities>
+<Neighborhoods>
+<Neighborhood>
+<Centroid>61.176801,-149.928848</Centroid>
+<City>Anchorage</City>
+<Country>US</Country>
+<Id>87937</Id>
+<Name>Anchorage Intl Airport ANC</Name>
+<Shape>
+<LatLong>61.186889,-149.943404</LatLong>
+<LatLong>61.185404,-149.944333</LatLong>
+<LatLong>61.168512,-149.944333</LatLong>
+<LatLong>61.166656,-149.94359</LatLong>
+<LatLong>61.165171,-149.941734</LatLong>
+<LatLong>61.165117,-149.91563</LatLong>
+<LatLong>61.166126,-149.914217</LatLong>
+<LatLong>61.166996,-149.913525</LatLong>
+<LatLong>61.186451,-149.913525</LatLong>
+<LatLong>61.187756,-149.914543</LatLong>
+<LatLong>61.188543,-149.915739</LatLong>
+<LatLong>61.188374,-149.942105</LatLong>
+<LatLong>61.186889,-149.943404</LatLong></Shape>
+<State>AK</State></Neighborhood>
+<Neighborhood>
+<Centroid>61.214007,-149.888153</Centroid>
+<City>Anchorage</City>
+<Country>US</Country>
+<Id>87938</Id>
+<Name>Downtown Anchorage</Name>
+<Shape>
+<LatLong>61.211561,-149.864205</LatLong>
+<LatLong>61.223998,-149.868091</LatLong>
+<LatLong>61.224639,-149.868733</LatLong>
+<LatLong>61.225025,-149.870145</LatLong>
+<LatLong>61.225449,-149.874811</LatLong>
+<LatLong>61.22541,-149.880157</LatLong>
+<LatLong>61.223741,-149.891966</LatLong>
+<LatLong>61.21908,-149.908648</LatLong>
+<LatLong>61.218002,-149.910265</LatLong>
+<LatLong>61.215212,-149.914904</LatLong>
+<LatLong>61.208352,-149.914904</LatLong>
+<LatLong>61.206302,-149.913424</LatLong>
+<LatLong>61.205002,-149.911755</LatLong>
+<LatLong>61.205002,-149.867944</LatLong>
+<LatLong>61.206302,-149.865714</LatLong>
+<LatLong>61.208162,-149.864274</LatLong>
+<LatLong>61.211561,-149.864205</LatLong></Shape>
+<State>AK</State></Neighborhood>
+<Neighborhood>
+<Centroid>61.176228,-149.871727</Centroid>
+<City>Anchorage</City>
+<Country>US</Country>
+<Id>88835</Id>
+<Name>Midtown Anchorage</Name>
+<Shape>
+<LatLong>61.19449,-149.894879</LatLong>
+<LatLong>61.158663,-149.893635</LatLong>
+<LatLong>61.158022,-149.892736</LatLong>
+<LatLong>61.157893,-149.891581</LatLong>
+<LatLong>61.15815,-149.849608</LatLong>
+<LatLong>61.158663,-149.848709</LatLong>
+<LatLong>61.15969,-149.848324</LatLong>
+<LatLong>61.193705,-149.849993</LatLong>
+<LatLong>61.19449,-149.850946</LatLong>
+<LatLong>61.19449,-149.894879</LatLong></Shape>
+<State>AK</State></Neighborhood>
+<Neighborhood>
+<Centroid>61.342793,-149.556999</Centroid>
+<City>Eagle River</City>
+<Country>US</Country>
+<Id>92495</Id>
+<Name>Eagle River</Name>
+<Shape>
+<LatLong>61.317522,-149.556011</LatLong>
+<LatLong>61.317556,-149.554033</LatLong>
+<LatLong>61.317629,-149.552061</LatLong>
+<LatLong>61.317736,-149.550097</LatLong>
+<LatLong>61.317877,-149.548139</LatLong>
+<LatLong>61.318056,-149.546198</LatLong>
+<LatLong>61.31827,-149.544269</LatLong>
+<LatLong>61.318518,-149.542358</LatLong>
+<LatLong>61.318796,-149.54047</LatLong>
+<LatLong>61.319113,-149.538605</LatLong>
+<LatLong>61.319464,-149.536764</LatLong>
+<LatLong>61.319845,-149.534952</LatLong>
+<LatLong>61.320261,-149.533173</LatLong>
+<LatLong>61.320707,-149.531426</LatLong>
+<LatLong>61.321184,-149.529714</LatLong>
+<LatLong>61.321692,-149.528044</LatLong>
+<LatLong>61.322229,-149.526411</LatLong>
+<LatLong>61.322798,-149.524824</LatLong>
+<LatLong>61.323393,-149.523281</LatLong>
+<LatLong>61.324014,-149.521788</LatLong>
+<LatLong>61.324663,-149.520342</LatLong>
+<LatLong>61.325338,-149.518949</LatLong>
+<LatLong>61.32604,-149.517609</LatLong>
+<LatLong>61.326761,-149.516325</LatLong>
+<LatLong>61.327509,-149.515098</LatLong>
+<LatLong>61.328276,-149.513931</LatLong>
+<LatLong>61.329066,-149.512825</LatLong>
+<LatLong>61.329874,-149.511782</LatLong>
+<LatLong>61.330698,-149.510803</LatLong>
+<LatLong>61.331541,-149.509888</LatLong>
+<LatLong>61.332403,-149.509039</LatLong>
+<LatLong>61.333277,-149.508259</LatLong>
+<LatLong>61.334162,-149.507549</LatLong>
+<LatLong>61.335062,-149.506907</LatLong>
+<LatLong>61.335974,-149.506336</LatLong>
+<LatLong>61.336893,-149.505838</LatLong>
+<LatLong>61.33782,-149.505411</LatLong>
+<LatLong>61.338758,-149.505058</LatLong>
+<LatLong>61.339697,-149.504778</LatLong>
+<LatLong>61.340643,-149.504572</LatLong>
+<LatLong>61.341593,-149.504441</LatLong>
+<LatLong>61.342543,-149.504383</LatLong>
+<LatLong>61.343493,-149.5044</LatLong>
+<LatLong>61.344442,-149.504492</LatLong>
+<LatLong>61.345392,-149.504658</LatLong>
+<LatLong>61.346334,-149.504898</LatLong>
+<LatLong>61.347273,-149.505211</LatLong>
+<LatLong>61.348207,-149.505598</LatLong>
+<LatLong>61.349131,-149.506058</LatLong>
+<LatLong>61.350046,-149.50659</LatLong>
+<LatLong>61.350954,-149.507193</LatLong>
+<LatLong>61.351847,-149.507868</LatLong>
+<LatLong>61.352728,-149.50861</LatLong>
+<LatLong>61.353594,-149.509422</LatLong>
+<LatLong>61.354448,-149.510302</LatLong>
+<LatLong>61.355284,-149.511248</LatLong>
+<LatLong>61.3561,-149.512258</LatLong>
+<LatLong>61.356897,-149.513332</LatLong>
+<LatLong>61.357679,-149.514467</LatLong>
+<LatLong>61.358434,-149.515663</LatLong>
+<LatLong>61.359171,-149.516918</LatLong>
+<LatLong>61.359884,-149.518231</LatLong>
+<LatLong>61.360571,-149.519596</LatLong>
+<LatLong>61.361234,-149.521015</LatLong>
+<LatLong>61.361872,-149.522486</LatLong>
+<LatLong>61.362482,-149.524006</LatLong>
+<LatLong>61.363066,-149.525572</LatLong>
+<LatLong>61.363619,-149.527183</LatLong>
+<LatLong>61.364142,-149.528836</LatLong>
+<LatLong>61.364637,-149.530529</LatLong>
+<LatLong>61.365099,-149.532259</LatLong>
+<LatLong>61.36553,-149.534025</LatLong>
+<LatLong>61.365931,-149.535824</LatLong>
+<LatLong>61.366297,-149.537651</LatLong>
+<LatLong>61.366629,-149.539507</LatLong>
+<LatLong>61.366926,-149.541388</LatLong>
+<LatLong>61.367193,-149.543291</LatLong>
+<LatLong>61.367422,-149.545212</LatLong>
+<LatLong>61.367617,-149.547152</LatLong>
+<LatLong>61.367777,-149.549104</LatLong>
+<LatLong>61.367903,-149.551067</LatLong>
+<LatLong>61.367994,-149.553042</LatLong>
+<LatLong>61.368048,-149.555019</LatLong>
+<LatLong>61.368063,-149.556999</LatLong>
+<LatLong>61.368048,-149.558981</LatLong>
+<LatLong>61.367994,-149.560959</LatLong>
+<LatLong>61.367903,-149.562931</LatLong>
+<LatLong>61.367777,-149.564896</LatLong>
+<LatLong>61.367617,-149.566847</LatLong>
+<LatLong>61.367422,-149.568787</LatLong>
+<LatLong>61.367193,-149.570709</LatLong>
+<LatLong>61.366926,-149.572611</LatLong>
+<LatLong>61.366629,-149.574492</LatLong>
+<LatLong>61.366297,-149.576347</LatLong>
+<LatLong>61.365931,-149.578177</LatLong>
+<LatLong>61.36553,-149.579973</LatLong>
+<LatLong>61.365099,-149.581739</LatLong>
+<LatLong>61.364637,-149.583469</LatLong>
+<LatLong>61.364142,-149.585163</LatLong>
+<LatLong>61.363619,-149.586817</LatLong>
+<LatLong>61.363066,-149.588427</LatLong>
+<LatLong>61.362482,-149.589993</LatLong>
+<LatLong>61.361872,-149.591513</LatLong>
+<LatLong>61.361234,-149.592983</LatLong>
+<LatLong>61.360571,-149.594402</LatLong>
+<LatLong>61.359884,-149.59577</LatLong>
+<LatLong>61.359171,-149.59708</LatLong>
+<LatLong>61.358434,-149.598335</LatLong>
+<LatLong>61.357679,-149.599531</LatLong>
+<LatLong>61.356897,-149.600668</LatLong>
+<LatLong>61.3561,-149.601742</LatLong>
+<LatLong>61.355284,-149.602751</LatLong>
+<LatLong>61.354448,-149.603697</LatLong>
+<LatLong>61.353594,-149.604576</LatLong>
+<LatLong>61.352728,-149.605389</LatLong>
+<LatLong>61.351847,-149.606133</LatLong>
+<LatLong>61.350954,-149.606806</LatLong>
+<LatLong>61.350046,-149.607408</LatLong>
+<LatLong>61.349131,-149.607941</LatLong>
+<LatLong>61.348207,-149.608401</LatLong>
+<LatLong>61.347273,-149.608788</LatLong>
+<LatLong>61.346334,-149.609102</LatLong>
+<LatLong>61.345392,-149.609343</LatLong>
+<LatLong>61.344442,-149.609507</LatLong>
+<LatLong>61.343493,-149.609598</LatLong>
+<LatLong>61.342543,-149.609616</LatLong>
+<LatLong>61.341593,-149.609558</LatLong>
+<LatLong>61.340643,-149.609427</LatLong>
+<LatLong>61.339697,-149.609221</LatLong>
+<LatLong>61.338758,-149.60894</LatLong>
+<LatLong>61.33782,-149.608587</LatLong>
+<LatLong>61.336893,-149.60816</LatLong>
+<LatLong>61.335974,-149.607662</LatLong>
+<LatLong>61.335062,-149.607092</LatLong>
+<LatLong>61.334162,-149.606451</LatLong>
+<LatLong>61.333277,-149.605739</LatLong>
+<LatLong>61.332403,-149.604959</LatLong>
+<LatLong>61.331541,-149.604111</LatLong>
+<LatLong>61.330698,-149.603197</LatLong>
+<LatLong>61.329874,-149.602217</LatLong>
+<LatLong>61.329066,-149.601173</LatLong>
+<LatLong>61.328276,-149.600067</LatLong>
+<LatLong>61.327509,-149.5989</LatLong>
+<LatLong>61.326761,-149.597673</LatLong>
+<LatLong>61.32604,-149.59639</LatLong>
+<LatLong>61.325338,-149.595051</LatLong>
+<LatLong>61.324663,-149.593657</LatLong>
+<LatLong>61.324014,-149.592213</LatLong>
+<LatLong>61.323393,-149.590717</LatLong>
+<LatLong>61.322798,-149.589174</LatLong>
+<LatLong>61.322229,-149.587587</LatLong>
+<LatLong>61.321692,-149.585957</LatLong>
+<LatLong>61.321184,-149.584284</LatLong>
+<LatLong>61.320707,-149.582573</LatLong>
+<LatLong>61.320261,-149.580828</LatLong>
+<LatLong>61.319845,-149.579046</LatLong>
+<LatLong>61.319464,-149.577234</LatLong>
+<LatLong>61.319113,-149.575396</LatLong>
+<LatLong>61.318796,-149.57353</LatLong>
+<LatLong>61.318518,-149.57164</LatLong>
+<LatLong>61.31827,-149.569731</LatLong>
+<LatLong>61.318056,-149.567802</LatLong>
+<LatLong>61.317877,-149.565859</LatLong>
+<LatLong>61.317736,-149.563904</LatLong>
+<LatLong>61.317629,-149.561937</LatLong>
+<LatLong>61.317556,-149.559965</LatLong>
+<LatLong>61.317522,-149.557989</LatLong>
+<LatLong>61.317522,-149.556011</LatLong></Shape>
+<State>AK</State></Neighborhood></Neighborhoods></HotelMetaData></MetaData>
+<Result>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMDY-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMDY-</ResultId>
+<HWRefNumber>5224665677</HWRefNumber>
+<SubTotal>82.00</SubTotal>
+<TaxesAndFees>16.26</TaxesAndFees>
+<TotalPrice>98.26</TotalPrice>
+
+<AmenityCodes>
+<Code>SR</Code>
+<Code>FC</Code>
+<Code>RE</Code>
+<Code>BC</Code>
+<Code>HS</Code>
+<Code>TN</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>87938</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>82.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>4.0</StarRating></HotelResult>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMTY-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMTY-</ResultId>
+<HWRefNumber>6858073550</HWRefNumber>
+<SubTotal>55.00</SubTotal>
+<TaxesAndFees>13.27</TaxesAndFees>
+<TotalPrice>68.27</TotalPrice>
+
+<AmenityCodes>
+<Code>BH</Code>
+<Code>SR</Code>
+<Code>AS</Code>
+<Code>FC</Code>
+<Code>RE</Code>
+<Code>BC</Code>
+<Code>LF</Code>
+<Code>HS</Code>
+<Code>GN</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>87938</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>55.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>3.0</StarRating></HotelResult>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMDQ-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMDQ-</ResultId>
+<HWRefNumber>5588048831</HWRefNumber>
+<SubTotal>67.00</SubTotal>
+<TaxesAndFees>13.47</TaxesAndFees>
+<TotalPrice>80.47</TotalPrice>
+
+<AmenityCodes>
+<Code>PO</Code>
+<Code>BC</Code>
+<Code>LF</Code>
+<Code>HS</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>87938</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>67.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>2.5</StarRating></HotelResult>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMTA-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMTA-</ResultId>
+<HWRefNumber>6492963094</HWRefNumber>
+<SubTotal>117.00</SubTotal>
+<TaxesAndFees>20.45</TaxesAndFees>
+<TotalPrice>137.45</TotalPrice>
+
+<AmenityCodes>
+<Code>AS</Code>
+<Code>FC</Code>
+<Code>PO</Code>
+<Code>RE</Code>
+<Code>BC</Code>
+<Code>HS</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>88835</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>117.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>3.5</StarRating></HotelResult>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMDU-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMDU-</ResultId>
+<HWRefNumber>6701608500</HWRefNumber>
+<SubTotal>73.00</SubTotal>
+<TaxesAndFees>14.22</TaxesAndFees>
+<TotalPrice>87.22</TotalPrice>
+
+<AmenityCodes>
+<Code>FC</Code>
+<Code>LF</Code>
+<Code>HS</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>88835</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>73.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>2.5</StarRating></HotelResult>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMTI-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMTI-</ResultId>
+<HWRefNumber>6958306194</HWRefNumber>
+<SubTotal>50.00</SubTotal>
+<TaxesAndFees>13.46</TaxesAndFees>
+<TotalPrice>63.46</TotalPrice>
+
+<AmenityCodes>
+<Code>AS</Code>
+<Code>FC</Code>
+<Code>BC</Code>
+<Code>HS</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>87938</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>50.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>2.0</StarRating></HotelResult>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMDM-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMDM-</ResultId>
+<HWRefNumber>6470879555</HWRefNumber>
+<SubTotal>50.00</SubTotal>
+<TaxesAndFees>13.26</TaxesAndFees>
+<TotalPrice>63.26</TotalPrice>
+
+<AmenityCodes>
+<Code>AS</Code>
+<Code>SR</Code>
+<Code>CB</Code>
+<Code>LF</Code>
+<Code>HS</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>87937</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>50.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>2.0</StarRating></HotelResult>
+<HotelResult>
+<CurrencyCode>USD</CurrencyCode>
+<DeepLink>http://www.hotwire.com/hotel/deeplink-details.jsp?resultId=NTgxOTU0MjAxODoxMDY4Njg0OTMyMTM-&amp;sid=B001&amp;bid=B001&amp;inputId=api-results&amp;actionType=303</DeepLink>
+<ResultId>NTgxOTU0MjAxODoxMDY4Njg0OTMyMTM-</ResultId>
+<HWRefNumber>5123110489</HWRefNumber>
+<SubTotal>69.00</SubTotal>
+<TaxesAndFees>13.92</TaxesAndFees>
+<TotalPrice>82.92</TotalPrice>
+
+<AmenityCodes>
+<Code>CB</Code>
+<Code>HS</Code></AmenityCodes>
+<CheckInDate>04/13/2011</CheckInDate>
+<CheckOutDate>04/14/2011</CheckOutDate>
+<NeighborhoodId>92495</NeighborhoodId>
+<LodgingTypeCode>H</LodgingTypeCode>
+<Nights>1</Nights>
+<PaidAmenities/>
+<AveragePricePerNight>69.00</AveragePricePerNight>
+<Rooms>1</Rooms>
+<SpecialTaxItems/>
+<StarRating>2.0</StarRating></HotelResult></Result>
+<StatusCode>0</StatusCode>
+<StatusDesc>success</StatusDesc></Hotwire>
+

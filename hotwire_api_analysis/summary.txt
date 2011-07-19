@@ -1,0 +1,4 @@
+api_result_analysis
+	-detects changes (in price/hotel for a region) in the hotwire api
+scheduled_api_info_hotwire
+	-saves api information to csv files for analysis

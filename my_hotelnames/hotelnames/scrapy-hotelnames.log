@@ -1,0 +1,11 @@
+2011-04-11 13:54:21-0700 [scrapy] INFO: Scrapy 0.13.0.2580 started (bot: hotelnames)
+2011-04-11 13:54:21-0700 [scrapy] ERROR: Unable to find spider: hotelnames
+2011-04-11 13:55:31-0700 [scrapy] INFO: Scrapy 0.13.0.2580 started (bot: hotelnames)
+2011-04-11 13:55:31-0700 [scrapy] ERROR: Unable to find spider: hotelnames
+2011-04-11 13:56:42-0700 [scrapy] INFO: Scrapy 0.13.0.2580 started (bot: hotelnames)
+2011-04-11 13:58:00-0700 [scrapy] INFO: Scrapy 0.13.0.2580 started (bot: hotelnames)
+2011-04-11 13:58:00-0700 [hotelnames] INFO: Spider opened
+2011-04-11 13:58:19-0700 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force unclean shutdown
+2011-04-11 13:58:19-0700 [hotelnames] INFO: Closing spider (shutdown)
+2011-04-11 13:58:20-0700 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2011-04-11 13:58:20-0700 [hotelnames] INFO: Spider closed (shutdown)

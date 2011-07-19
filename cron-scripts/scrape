@@ -1,4 +1,0 @@
-#!/bin/bash
-mv /work/jeff/logs/hotwire_api_analysis.log `date +/work/jeff/logs/hotwire_api_analysis-%m-%d.log`
-python /work/jeff/backend/scrapers/hotwire_api/hotwire_api/spiders/hotwire_api_spider.py --do-all-cities --do-spider --result-count=500 --debug-level=9  --offsets=1,2,7
-

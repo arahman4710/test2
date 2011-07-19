@@ -1,0 +1,4 @@
+hotelnames_spider
+	-goes to hotelnames.net and scraps all the information about hotels for analysis
+compare_info
+	-analyzes data collected by hotelnames_spider

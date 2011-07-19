@@ -1,0 +1,29 @@
+one:
+  name: MyString
+  rating: 1.5
+  city_id: 1
+  state: MyString
+  country: MyString
+  address: MyString
+  minimumrate: 1.5
+  currency: MyString
+  latitude: 1.5
+  longitude: 1.5
+  ratingcount: 1
+  userrating: 1.5
+  property: 1
+
+two:
+  name: MyString
+  rating: 1.5
+  city_id: 1
+  state: MyString
+  country: MyString
+  address: MyString
+  minimumrate: 1.5
+  currency: MyString
+  latitude: 1.5
+  longitude: 1.5
+  ratingcount: 1
+  userrating: 1.5
+  property: 1

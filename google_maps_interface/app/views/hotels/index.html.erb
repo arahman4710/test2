@@ -1,0 +1,55 @@
+<% title "Hotels" %>
+    <style type="text/css">
+        .style1
+        {
+            width: 300px;
+        }
+
+.tooltip {
+		border:1px solid #000;
+		background-color:#fff;
+		height:25px;
+		width:200px;
+		font-family:"Lucida Grande",Verdana;
+		font-size:10px;
+		color:#333;
+                position: absolute;
+	}
+.regionselected
+{
+  background-color: #1078E1;
+}
+    </style>
+<table style="width: 100%; height: 850px;">
+        <tr>
+            <td class="style1">
+              <input id="Button1" type="button" value="City-Level" onclick="panToLevel(1);" />
+              <input id="Button1" type="button" value="State-Level" onclick="panToLevel(2);" />
+              <input id="Button1" type="button" value="Country-Level" onclick="showRegionNav(); panToLevel(3); " />
+              
+              <div id="sidebar" style="overflow: auto;  height: 400px; width: 300px; font-size: 11px; color: #000"></div>
+              <div style="overflow: auto;">
+              <table id="regiontable" style="height: 400px; width: 300px; float:right; overflow: auto;font-size: 11px; color: #000" >
+              </table>
+              </div>
+              <a id="backbutton" href="javascript:back();" style="display:none" >Back</a>
+              <div id="regionlistdiv" style="display:none; height: 400px; width: 300px;">
+              <ul id="regionnavlist" style="list-style:none; background-color: #eee;">
+              </ul>
+              </div>
+                </td>
+            <td>
+              <body onload="initialize();" style="width: 1900px; height:800px">
+                <a id="hide" href='#' style="display:none;" onclick="hideStreetView();">Back</a>
+                
+        <div id="map_canvas" style="width: 1500px; height:800px; border:1px"></div>
+              <td>
+
+        <div id="street_canvas" style=" width: 360px; height:800px; border:1px; float: right;"></div>
+              </td>
+        </body>
+            </td>
+        </tr>
+    </table>
+
+
