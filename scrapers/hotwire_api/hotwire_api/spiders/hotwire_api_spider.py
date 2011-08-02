@@ -161,10 +161,10 @@ def gen_date(offset, nights) :
 
     today = datetime.date.today()
     start_date = today+datetime.timedelta(days=offset) 
-    end_date = today+datetime.timedelta(days=nights) 
+    end_date = today+datetime.timedelta(days=offset+nights) 
     
     # I don't know if this will take other formats for dates.  
-    return (start_date.strftime("%m/%d/%y"), end_date.strftime("%m/%d/%y"))
+    return (start_date.strftime("%m/%d/%Y"), end_date.strftime("%m/%d/%Y"))
 
 class hotwire_api_analysis(BaseSpider):
     """
@@ -339,7 +339,7 @@ def main() :
     debug_level = arg_result.debug_level
 
     if debug_level > 0 : 
-        log.start(logfile="hotwire_api_analysis.log")
+        log.start(logfile="/work/jeff/logs/hotwire_api_analysis.log")
         for i in vars(arg_result).items() :
             log.msg("command line var %s -> %s" % i, level=log.INFO)  
 

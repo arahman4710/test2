@@ -18,5 +18,8 @@ yum list installed >${destdir}/yum-installed
 chown -R jeff:jeff ${destdir} 
 chmod -R u+rw ${destdir} 
 
-tar -tjvf /work/jeff/system.tbz ${destdir} 
+tar -cjvf /work/jeff/system.tbz ${destdir} 
+
+rkhunter --rwo --sk
+/usr/sbin/chkrootkit -q
 
