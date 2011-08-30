@@ -34,59 +34,44 @@ debug_level = 0
 class CanonicalHotel (Base):
    __tablename__ = 'canonical_hotel' # set the table name
 
-   uid          = Column(Integer(), Sequence('canon_hotel_sequence'), primary_key=True)
-   hotel_id     = Column(Integer())# Unique id (from hotelscombined)
-   hotel_name   = Column(String()) # Unique hotel name
-   address      = Column(String()) # The hotel's address
-   city         = Column(String()) # Name of the city
-   state_code   = Column(String()) # Name of the state (Optional)
-   country_code = Column(String()) # Two letter unique country code
-   postal_code  = Column(String()) # Postal code
-   low_rate     = Column(Float())  # The average low rate
-   high_rate    = Column(Float())  # The average low rate
-   currency_code= Column(String()) # The currency code for the 'minRate' column
-   latitude     = Column(Float())  # The geographical latitude of the hotel
-   longitude    = Column(Float())  # The geographical longitude of the hotel
-   property_type= Column(String())# An Enumerator for the type of the hotel. See wiki
-   chain_name   = Column(String()) # The chain ID for this hotel
-   status_code  = Column(String()) # Hotel data source Indicator 
+   uid           = Column(Integer(),\
+                          Sequence('canon_hotel_sequence'),\
+                          primary_key=True)
+   hotel_name    = Column(String()) # Unique hotel name
+   address       = Column(String()) # The hotel's address
+   city          = Column(String()) # Name of the city
+   state_code    = Column(String()) # Name of the state (Optional)
+   country_code  = Column(String()) # Two letter unique country code
+   postal_code   = Column(String()) # Postal code
+   latitude      = Column(Float())  # The geographical latitude of the hotel
+   longitude     = Column(Float())  # The geographical longitude of the hotel
+   currency_code = Column(String()) # The currency code
+   property_type = Column(String()) # An Enumerator for the type of the hotel. See wiki
+   chain_name    = Column(String()) # The chain ID for this hotel
+   check_in      = Column(String()) # Check in time
+   check_out     = Column(String()) # Check out time
+   status        = Column(String()) # Status code init. loaded by 'expedia
+   expedia_id    = Column(Integer())# Expedia id
+   combined_id   = Column(Integer())# Hotel Combined id
 
    def __init__(self, valuesdict) :
       for i in valuesdict : self.__setattr__(i, valuesdict[i])
       session.add(self)
       session.commit()
 
-class FacilitiesList(Base) :
-   __tablename__ = "facilities_list"
-
-   uid = Column(Integer(), Sequence('facilities_list_sequence'), primary_key='True')
-   string_value = Column(String())
-
-   def __init__(self, facilities_string) :
-      self.string_value = facilities_string
-      session.add(self)
-      session.commit()
-      
-def find_facilities_list(str) :
-   reslist = session.query(FacilitiesList).filter_by(string_value=str).all()
-   if reslist :
-      return reslist[0]
-   else :
-      return FacilitiesList(str)
-
-def get_hotel_by_id(hotelId) :
-   return session.query(CanonicalHotel).filter_by(hotel_id=int(hotelId)).scalar()
-
 metadata.create_all(engine)
 
-# Property types are an Integer with the following possible values :
-   # 0 - Hotel
-   # 1 - Motel
-   # 2 - Inn
-   # 3 - Bed & Breakfast
-   # 4 - Vacation Rental
-   # 5 - Hostel
-   # 6 - Retreat
-   # 7 - Resort
-   # 8 - Other
-   # 9 - Apartment
+# Default (Expedia) property types:
+   # LUX - luxury
+   # FCS - firstClass
+   # ECO - economy
+   # MOT - motel
+   # RES - resort
+   # BNB - Bed&Breakfast
+   # CAS - castle
+   # FRM - farm
+   # APT - apartment
+   # STE - suites
+   # EXT - ExtendedStay
+   # CTR - conventions / conference center
+   # MOD - moderate
