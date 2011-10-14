@@ -21,7 +21,7 @@ class PricelineCityRegionMap(Base) :
 	__tablename__ = 'priceline_regions_cities_mapping'
 
 	uid = Column(Integer, Sequence('priceline_regions_cities_mapping_sequence'), primary_key=True)  #   primary key
-	city_id = Column(Integer, ForeignKey('hotels.hotel_id'))   #   primary key for internal city
+	city_id = Column(Integer, ForeignKey('city.uid'))   #   primary key for internal city
 	priceline_region_id = Column(String(100))   #    priceline regions id
 
 
