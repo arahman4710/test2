@@ -236,7 +236,9 @@ def find_name(str):
 	
 	cleaned = re.sub("(?i)[^a-z0-9\s]", "", cleaned)
 	names = re.split("[0-9]*", cleaned)
-	
+
+        #print 'IN FIND NAMES'
+        #print names
 	
 	# 2  Finds the largest substring and returns it
 	#

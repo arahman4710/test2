@@ -14,7 +14,7 @@ metadata = None
 def get_alchemy_info(echo=False) : 
     global engine, Session, session, Base, metadata 
     if engine == None : 
-        engine = create_engine('postgresql:///testing', echo=echo)
+        engine = create_engine('postgresql://postgres:areek@localhost:5432/acuity', echo=echo)# postgresql:///testing
         Session = scoped_session(sessionmaker(bind=engine))
         session = Session()
         Base = declarative_base(bind=session) 

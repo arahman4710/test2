@@ -10,6 +10,11 @@ class BBPricelinePostSpider(BaseSpider):
 	
 		# 1  Finds all of the regions for USA
 		#
+
+                request= Request('http://www.betterbidding.com/index.php?showtopic=546&',callback=self.parse_priceline_list)
+                request.meta['states'] = 'Texas'
+                yield request
+                '''
 		hxs = HtmlXPathSelector(response)
 		regions = hxs.select("//div[@id='fo_441']/table[@class='ipbtable']//tr")
 		
@@ -23,7 +28,8 @@ class BBPricelinePostSpider(BaseSpider):
 				# 3  Format the response url and then crawl each of the boards
 				#
 				url = url[0].extract()
-				yield Request(url, callback=self.find_board)				
+				yield Request(url, callback=self.find_board)
+                '''
 	
 	def find_board(self, response):
 		
@@ -167,6 +173,10 @@ class BBPricelinePostSpider(BaseSpider):
 			for post in posts:
 				post = post.extract()
 				post = post.strip()
+                                #print '\n\n\n'
+                                #print response.url
+                                print 'BEFORE ',
+                                print post
 			#	print '_____POST________'
                         #        try:
                         #            print post
@@ -183,7 +193,7 @@ class BBPricelinePostSpider(BaseSpider):
 					
 					# 4c  ... and is underlined, set a new region and reset newline
 					#
-                                       # print '        '+post
+                                        #print '        '+post
 					if (post[0:3] == '<u>'):
                                             is_state = 0
                                             for every in response.request.meta['states'].split(','):
@@ -226,6 +236,8 @@ class BBPricelinePostSpider(BaseSpider):
 					# 4e  ... and is text, find hotel into and store it
 					#
 					if (not re.search("<|>", post)):
+                                                print 'IN LOOP!    ',
+                                                print post
 						star = find_star(post)
 						name = (find_name(post)).strip()
 						if (star and name):
@@ -236,13 +248,22 @@ class BBPricelinePostSpider(BaseSpider):
 							rgn = re.search("(?s)(?<=\().*(?=\))", region)
 							if rgn: rgn = (rgn.group()).strip()
 							else: rgn = " "
-
+                                                        
                                                         if state == 'dc':
                                                             city = 'Washington'
+                                                        
                                                         #..add current state in every hotel record
-
-
-							output += [CSV.pack(CSV(), [state,city, rgn, name, star,response.url], "#")]
+                                                        '''
+                                                        f = open('texas.csv','a')
+                                                        f.write('\n')
+                                                        f.write(rgn)
+                                                        f.write('\n')
+                                                        f.write('\t')
+                                                        f.write(name)
+                                                        f.write('\n')
+                                                        f.close()
+							'''
+                                                        output += [CSV.pack(CSV(), [state,city, rgn, name, star,response.url], "#")]
                                                      #   print '_____OUTPUT________'
                                                      #   try:
                                                      #       print [CSV.pack(CSV(), [state,city, rgn, name, star], "#")]

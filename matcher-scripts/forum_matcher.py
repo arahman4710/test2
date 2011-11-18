@@ -1,6 +1,9 @@
 import Levenshtein
 import re
 import time
+import sys
+
+sys.path.insert(0, "/home/areek/Documents/fetchopia/backend_git/sql/alchemy/" )
 
 from sqlalchemy import distinct
 from alchemy_session import get_alchemy_info
@@ -10,7 +13,8 @@ from priceline_city_region_map import PricelineCityRegionMap
 from priceline_regions_table import PricelineRegionTable
 from priceline_area_city_table import PricelineAreaCityTable
 from processed_forum_data import ProcessedRawForumData
-from hotel import Hotel
+#from hotel import Hotel
+from canon_hotel import CanonicalHotel
 from priceline_area_table import PricelineAreaTable
 from unmatched_forum_hotel_table import UnmatchedForumHotelTable
 from possible_forum_hotel_match import PossibleForumHotelMatchTable
@@ -230,6 +234,8 @@ def state_city(area_dictionary,excluded_city_id,state_region):
         #4a get all the cities information from db
 
         if city_obj.state.lower() in state_city.keys():
+        
+            if not city_obj.name: continue
 
             if city_obj.name.lower() not in state_city[city_obj.state.lower()].keys():
 
@@ -682,7 +688,10 @@ def region_hotel_finder(region_id):
 
     if len(hotel_ids) > 0:
 
-        hotels = session.query(Hotel).filter( Hotel.hotel_id.in_( hotel_ids ) )
+        #	changed
+        
+        hotels = session.query(CanonicalHotel).filter( CanonicalHotel.uid.in_( hotel_ids ) )
+        #hotels = session.query(Hotel).filter( Hotel.hotel_id.in_( hotel_ids ) )
 
     return (hotels,region_name)
 
@@ -870,8 +879,11 @@ def get_city_dict(target_site):
 
     state_city_dict = {}
 
-    for cityid,city,state in get_city_lst:
-
+    print 'DEBUGG::'
+#    print get_city_lst.all()
+    
+    for rec in get_city_lst.all():
+	cityid,city,state = rec
         state = state.lower().strip()
         city = city.lower().strip()
 
@@ -879,7 +891,7 @@ def get_city_dict(target_site):
             state_city_dict[state] = {}
 
         state_city_dict[state][city] = cityid
-
+    
     return state_city_dict
 
 
@@ -924,7 +936,7 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
     for htl,url,uid in foreign_hotel_list: hotel_url_dict[htl] = (url,uid)
 
-    for internal_hotel in hotels_in_all_regions: hotel_id_dict[internal_hotel.name] = internal_hotel.hotel_id
+    for internal_hotel in hotels_in_all_regions: hotel_id_dict[internal_hotel.name] = internal_hotel.uid #changed hotel_id
 
     hotel_match_array = hotel_name_match(f_hotel_list,map(lambda x:x.name,hotels_in_all_regions),present_internal_city,state,present_internal_region)
 
@@ -939,7 +951,7 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
             log_write_hotels.write(',,,'+str(",".join(hotel_matches[:-2]))+'\n')
         
-            insert_matched_forum_hotel = (forum_hotel_id,internal_hotel.hotel_id)
+            insert_matched_forum_hotel = (forum_hotel_id,internal_hotel.uid)	#changed hotel_id
 
             insert_matched_forum_hotel_entries(insert_matched_forum_hotel)
 
@@ -1063,7 +1075,7 @@ def test_matcher():
 
                 for hotels in hotel_list:
 
-                    intrnl_hotel_index[hotels.hotel_id]=(states,city_area,region_name)
+                    intrnl_hotel_index[hotels.uid]=(states,city_area,region_name)
 
     global  INTERNAL_STATE_CITY_REGION_DICT
 
@@ -1091,7 +1103,7 @@ def test_matcher():
 
         test_log.write(str(current_input_state_name)+'\n')
 
-        print possible_matchs
+        #print possible_matchs
 
         #match cities
 

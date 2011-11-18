@@ -1235,7 +1235,8 @@ def main():
 
     #Main matcher function is called
     
-    test_matcher()
+    pass
+    #test_matcher()
 
 
 if __name__ == '__main__':
