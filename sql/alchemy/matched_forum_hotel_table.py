@@ -14,13 +14,16 @@ class MatchedForumHotel(Base) :
 
     uid = Column(Integer, Sequence('matched_forum_hotel_table_sequence'), primary_key=True)
     forum_hotel_id = Column(Integer, ForeignKey('processed_raw_forum_data.uid'))  #   id of the processed forum hotel table, that was matched
-    hotel_id = Column(Integer, ForeignKey('hotels.hotel_id'))   #   id of the internal hotel that was matched with the corrosponding forum hotel
+    hotel_id = Column(Integer())   #   id of the internal hotel that was matched with the corrosponding forum hotel
+    match_ratio = Column(Float())   #   match ratio of the forum, internal hotel pair
 
-    def __init__(self, forum_hotel_id, hotel_id) :
+
+    def __init__(self, forum_hotel_id, hotel_id,match_ratio) :
 
         #   Assign the params to the member variables
-        self.forum_hotel_id = hotel_id
-        self.hotel_id = forum_hotel_id
+        self.forum_hotel_id = forum_hotel_id
+        self.hotel_id = hotel_id
+        self.match_ratio = match_ratio
 
     def __str__(self) :
 
