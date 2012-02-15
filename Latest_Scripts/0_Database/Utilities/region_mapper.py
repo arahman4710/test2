@@ -47,6 +47,7 @@ def region_mapper(regions_dictionary):
                     
                     region_hotel_map_rec = PricelineRegionHotelMap(hotel.uid,region)
                     session.add(region_hotel_map_rec)
+                break
 	session.commit()
                     
 
