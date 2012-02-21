@@ -1,0 +1,32 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Unmatched Forum Hotel Info</title>
+    <%= stylesheet_link_tag 'application' %>
+
+    <%= yield(:head) %>
+
+  </head>
+<body bgcolor="white" text="black">
+
+<h1>Unmatched Forum Hotel List</h1>
+
+<a href="/hotel/add_index">Marked for add list</a>
+<ol>
+  <% for unmatched_hotel in @unmatched_hotel %>
+    <li>
+      <div>
+        <a href="/hotel/detail/<%= unmatched_hotel.uid %>"><%= unmatched_hotel.get_forum_hotel_info.hotel_name  %></a>
+      <% if unmatched_hotel.matched != 0 %>
+          <img src="images/icon_checkmark.gif"></img>
+        <% end %>
+      </div>
+    </li>
+  <% end %>
+</ol>
+
+</body>
+
+</html>
