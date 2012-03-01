@@ -31,20 +31,16 @@ saving_results = True  # save raw xml for debugging etc
 raw_results = None 
 request_generator_settings = None 
 
-## generates the priceline city list, only 10 elements currently for testing
+## generates the priceline city list to crawl
 city_list = []
 x = session.query(CityTable).distinct()
-y = 0
 for instance in x:
 	city_name = "%s, %s, %s" % (instance.name, instance.state, instance.country)
 	if instance.name == "0":
 		pass
 	else:
 		city_list.append(city_name)
-	y += 1
-	if y == 10: 
-		print city_list
-		break
+
 all_city_names = city_list
 one_city_name = ['Waterloo, On, Canada'] 
 #all_city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
