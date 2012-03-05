@@ -14,6 +14,35 @@ from datetime import date
 import time
 import urllib
 
+import sys
+sys.path.insert(0, "/home/areek/Documents/fetchopia/backend_git/sql/alchemy/" )
+
+from sqlalchemy import *
+from alchemy_session import get_alchemy_info
+
+(engine, session, Base, metadata) = get_alchemy_info ()
+
+from city_table import CityTable
+from kayak_hotels import kayak_hotels
+
+'''
+city_list = []
+
+x = session.query(CityTable).distinct()
+
+for instance in x:
+
+	city_name = "%s, %s" % (instance.name, instance.state)
+
+	if instance.name == "0":
+
+		pass
+
+	else:
+		city_list.append(city_name)
+'''
+
+
 def printable(str):
     control = "".join(map(unichr, range(0,127)))
     control = re.escape( control)
@@ -23,10 +52,8 @@ class KayakSpider(BaseSpider):
     name = "KayakSpider"
     start_urls = ["http://www.kayak.com/hotels"];
     allowed_domains = ["kayak.com"];
-    selec_city=['Miami, FL'];
-    results=[];
-    query_price=[];
-    price_results={};
+    selec_city=["Alabaster, Alabama", "Alexander City, Alabama", "Houston, Texas"]
+
 
     def parse(self, response):
 
@@ -45,7 +72,7 @@ class KayakSpider(BaseSpider):
         url = response.url
         hxs = HtmlXPathSelector(response)
         total_hotels_in_city = hxs.select("//span[@id='showingnumber']/text()")
-        pages = int(total_hotels_in_city.extract()[0]) / 15 ##find out how many pages of hotels to iterate through within city
+        pages = int(total_hotels_in_city[0].extract()) / 15 ##find out how many pages of hotels to iterate through within city
         x = 0
         while x <= pages:
             y = str(x)
@@ -73,23 +100,39 @@ class KayakSpider(BaseSpider):
         hxs = HtmlXPathSelector(response)
         
         name = hxs.select(".//div[@class='overviewDataName']/text()")
-        name = name.extract()[0]
+        if name:
+        	name = name[0].extract()
         address = hxs.select(".//div[@class='address']/text()")
-        address = address.extract()[0]
+        if address:
+        	address = address[0].extract()
+        	address = re.sub("\s{2,}", "", address) ##take out extra spaces from raw scraped data
         price = hxs.select(".//span[@class='hoteldetailPrice']/text()")
-        price = price.extract()[0]
+        if price:
+        	price = price[0].extract()
+        	price = re.sub("\$", "", price)
+        state_city = response.request.meta['city']
+        kayak_id = response.request.meta['hid']
+        city = re.search(".*(?=\,)", state_city).group()
+        state = re.search("(?<=\,\s).*", state_city).group()
 
         star = hxs.select(".//div[contains(@class,'starsprite')]/@class")
         if star:
-            star = star.extract()[0]
+            star = star[0].extract()
             star = star[-1:]
+            star = float(star)
+            
+        if (name and address and price and star):
+            entry = kayak_hotels(name, city, state, address, star, price, kayak_id)
+            session.add(entry)
+            session.commit()
+            
 
-        print name, address, star, price
 
 def main():
     log.start()
     settings.overrides['USER_AGENT'] = "Mozilla/4.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10"
     settings.overrides['SCHEDULER_ORDER'] = 'BFO'
+    settings.overrides['DOWNLOAD_DELAY'] = 2;
     crawler = CrawlerProcess(settings)
     crawler.install()
     crawler.configure()
