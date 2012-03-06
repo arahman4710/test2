@@ -12,18 +12,20 @@ class kayak_hotels(Base) :
     name =  Column(String(500))  #   name of the priceline region
     city = Column(String(500))
     state = Column(String(500))
+    postal_code = Column(String())
     address = Column(String(500))
     star = Column(Float())    #   latitude of the center of the region
     price = Column(String())    #   longitude of the center of the region
     kayak_id = Column(String())
 
-    def __init__(self, name, city, state, address, star, price, kayak_id) :
+    def __init__(self, name, city, state, postal_code, address, star, price, kayak_id) :
 
         #   Assign params to member variables
 
         self.name = name
         self.city = city
         self.state = state
+        self.postal_code = postal_code
         self.address = address
         self.star = star
         self.price = price

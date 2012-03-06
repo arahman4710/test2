@@ -25,22 +25,29 @@ from alchemy_session import get_alchemy_info
 from city_table import CityTable
 from kayak_hotels import kayak_hotels
 
-'''
-city_list = []
+def get_city_list():
+	
+	city_list = []
 
-x = session.query(CityTable).distinct()
+	x = session.query(CityTable).distinct()
+	y = 0
 
-for instance in x:
+	for instance in x:
 
-	city_name = "%s, %s" % (instance.name, instance.state)
+		city_name = "%s, %s" % (instance.name, instance.state)
 
-	if instance.name == "0":
+		if instance.name == "0":
+			pass
 
-		pass
+		else:
+			city_list.append(city_name)
+		
+		y += 1
+		if y == 10:
+			break
+	
+	return city_list
 
-	else:
-		city_list.append(city_name)
-'''
 
 
 def printable(str):
@@ -52,7 +59,7 @@ class KayakSpider(BaseSpider):
     name = "KayakSpider"
     start_urls = ["http://www.kayak.com/hotels"];
     allowed_domains = ["kayak.com"];
-    selec_city=["Alabaster, Alabama", "Alexander City, Alabama", "Houston, Texas"]
+    selec_city = get_city_list()
 
 
     def parse(self, response):
@@ -72,9 +79,11 @@ class KayakSpider(BaseSpider):
         url = response.url
         hxs = HtmlXPathSelector(response)
         total_hotels_in_city = hxs.select("//span[@id='showingnumber']/text()")
-        pages = int(total_hotels_in_city[0].extract()) / 15 ##find out how many pages of hotels to iterate through within city
+        pages = 1
+        if total_hotels_in_city:
+        	pages = int(total_hotels_in_city[0].extract()) / 15 ##find out how many pages of hotels to iterate through within city
         x = 0
-        while x <= pages:
+        while x < pages:
             y = str(x)
             pattern = "&pn=0"
             new_pattern = re.sub("0", y, pattern)
@@ -104,8 +113,12 @@ class KayakSpider(BaseSpider):
         	name = name[0].extract()
         address = hxs.select(".//div[@class='address']/text()")
         if address:
-        	address = address[0].extract()
-        	address = re.sub("\s{2,}", "", address) ##take out extra spaces from raw scraped data
+        	street = address[0].extract()
+        	street = re.sub("\s{2,}", "", street) ##take out extra spaces from raw scraped data
+        	city_postal_country = address[1].extract()
+        	postal_code = re.search("(?<=\,\s\w\w\s).*(?=\,)", city_postal_country).group()
+        	
+        	
         price = hxs.select(".//span[@class='hoteldetailPrice']/text()")
         if price:
         	price = price[0].extract()
@@ -122,7 +135,7 @@ class KayakSpider(BaseSpider):
             star = float(star)
             
         if (name and address and price and star):
-            entry = kayak_hotels(name, city, state, address, star, price, kayak_id)
+            entry = kayak_hotels(name, city, state, postal_code, address, star, price, kayak_id)
             session.add(entry)
             session.commit()
             
