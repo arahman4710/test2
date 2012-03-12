@@ -9,21 +9,49 @@ sys.path.insert(0, "/home/areek/Documents/fetchopia/backend_git/sql/alchemy/" )
 from sqlalchemy import *
 from alchemy_session import get_alchemy_info
 
-from processed_forum_data5 import ProcessedRawForumData2
+
+from processed_forum_data_hotwire import ProcessedRawForumData_hotwire
 from hotwire_tables import *
 
 
 (engine, session,Base, metadata) = get_alchemy_info()
 
-all_hotwire_hotels = session.query(ProcessedRawForumData2).filter(ProcessedRawForumData2.target_site == 'Hotwire') ## all better bidding hotwire hotels scraped
+all_hotwire_hotels = session.query(ProcessedRawForumData_hotwire) ## all better bidding hotwire hotels scraped
+
+def get_hotwire_amenity_info(amenity_list_id):
+	
+	items = session.query(AmenityListItem).filter(AmenityListItem.amenity_list_id == amenity_list_id)
+	items_list_id = []
+	for item in items:
+		items_list_id.append(item.amenity_id)
+	
+	
+	items_list_code = []
+	for instance in items_list_id:
+		amenity_item = session.query(Amenity).filter(Amenity.uid == instance).first()
+		items_list_code.append(str(amenity_item.code))
+	
+	return items_list_code
+		
+	
+
 
 for instance in all_hotwire_hotels.all():
-	
-	possible_match = session.query(HotWireHotelInfo).filter(HotWireHotelInfo.state == hotwire state)
+
+	##gets the city name of the bbhw hotel in question
+	# gets rid of possible (region_name) in the city name
+	bbhw_hotel_city = instance.city_area
+	region_in_city_detect = re.search(".*(?=\()", bbhw_hotel_city)
+	if region_in_city_detect:
+		bbhw_hotel_city = region_in_city_detect.group()
+		
+	possible_match = session.query(HotWireHotelInfo).filter(HotWireHotelInfo.city == bbhw_hotel_city)
 	
 	for match in possible_match:
 	
 		amenity_info = get_amenity_info() ##function that gets amenity info from hotwirehotelinfo table's amenity_list column
+		
+		session.query(AmenityListItem).filter(AmenityListItem.amenity_list_id == '18229').all()
 		
 		bb_amenity_info = make_amenity_list(instance.amenity) ## make amenity list func turns raw amenity info into a list to compare
 		
