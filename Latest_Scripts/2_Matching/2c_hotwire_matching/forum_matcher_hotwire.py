@@ -35,6 +35,8 @@ from canon_hotel import CanonicalHotel
 INTERNAL_STATE_CITY_REGION_DICT = {}
 
 state_code_dict = {}
+
+state_code_dict = {}
 with open('us_state_code','r') as f:
 	for content in f.read().split('\n'):
 		fields = content.split('\t')
@@ -43,43 +45,44 @@ with open('us_state_code','r') as f:
 			state_code_dict[str(code)] = str(state)
 	state_code_dict[str('DC')] = str('District of Columbia')
 
+def city_region_finder(hotwire_city, hotwire_state):
+	
+	regions = session.query(Neighborhood).filter(Neighborhood.state == hotwire_state).filter(Neighborhood.city == hotwire_city)
+	region_dict = {}
+	if regions.count() > 0:
+		for region in regions.all():
+			region_dict[str(region.name)] = region.uid
+	
+	return region_dict
+		
+
+	
 def hotwire_area():
 	
-	return_dict = []
+	return_dict = {}
 	
 	for record in session.query(Neighborhood).all():
 	
 		(uid,region_name,city,state) = (record.uid,record.name,record.city,record.state)
 		state = str(state)
 		city = str(city)
-		region_name = str(region_name)
 		
 		if state not in state_code_dict.keys():
 			continue
 		
 		else:
+			state = state_code_dict[state]
 		
 			if return_dict.has_key(state) and state:
 				
-				if return_dict[state].has_key(city) and city:
 					
-					return_dict[state][city] = region_name
-				
-				else:
-					
-					return_dict[state][city] = region_name
+					return_dict[state][city] = city_region_finder(city, state)
 			
 			else:
 				return_dict[state] = {}
-				return_dict[state][city] = region_name
+				return_dict[state][city] = city_region_finder(city, state)
+	
 	return return_dict
-
-
-
-
-
-
-
 
 
 
@@ -95,28 +98,7 @@ def print_timing(func):
         return res
     return wrapper
 
-def city_region_finder(cityid):
 
-    # Given a cityid this function returns an array of regions for the provided cityid (helper method for state_city())
-
-    #1  get the regionids for a city
-
-    region_ids = session.query(PricelineCityRegionMap_canada).filter(PricelineCityRegionMap_canada.city_id == int(cityid)).all()
-    priceline_region_ids =map(lambda x:x.priceline_region_id,region_ids)# .priceline_region_id
-    region_hotel = {}
-
-    #2  Iterate through the regionids to get the region name
-
-    for region_id in priceline_region_ids:
-
-        priceline_region_record = session.query(PricelineRegionTable_canada).filter(PricelineRegionTable_canada.uid == region_id).all()
-
-        #2a Construct an array of regions information for all the regionids in a city
-
-        for one in priceline_region_record:
-            region_hotel[str(re.sub(', [A-Za-z][A-Za-z]', '', one.name))]=one.uid
-
-    return region_hotel
 
 
 
@@ -552,13 +534,13 @@ def region_name_match(foreign_list,internal_list,city_name,state_name):
 
 def region_hotel_finder(region_id):
 
-    hotel_ids = session.query(PricelineRegionHotelMap_canada.hotel_id).filter(PricelineRegionHotelMap_canada.priceline_region_id == region_id )
+    hotel_ids = session.query(HotWireRegionHotelMap.hotel_id).filter(HotWireRegionHotelMap.hotwire_neighborhood_id == region_id)
+    region = session.query(Neighborhood).filter(Neighborhood.uid == region_id).first()
+    region_name = region.name
 
     #   extract hotel_ids from query
     
     hotel_ids = tuple(map(lambda x: x[0],hotel_ids))
-
-    region_name = session.query(PricelineRegionTable_canada.name).filter(PricelineRegionTable_canada.uid == region_id).one()[0]
 
     hotels = ()
 
@@ -735,50 +717,7 @@ def insert_matched_forum_hotel_entries(db_record):
     session.add(matched_forum_hotel_record)
     session.commit()
 
-def get_area_dict(target_site):
 
-    #returns a dictionary for areas with respect to a target_site (e.g. priceline, hotwire...)
-
-    area_dict = {}
-
-    priceline_area_records = session.query(PricelineAreaTable_canada.uid, PricelineAreaTable_canada.name)
-
-    for id,area_name in priceline_area_records:
-        area_name = re.sub(', [A-Za-z][A-Za-z]', '', area_name.lower())
-        area_dict[area_name] = id
-
-    return area_dict
-
-def get_city_dict(target_site):
-
-    #   returns a dictionary of cityids organized in state => city => cityid
-
-    #   param is included to differentiate between priceline, hotwire systems
-
-    # !!note: has to be changed to account for handling hotwire entries too!
-
-    exclude_list = None
-
-    get_city_lst = session.query(CityTable_canadian.uid,CityTable_canadian.name,CityTable_canadian.state)
-
-    state_city_dict = {}
-
-#    print 'DEBUGG::'
-#    print get_city_lst.all()
-    
-    for rec in get_city_lst.all():
-	cityid,city,state = rec
-	if state:
-        	state = state.lower().strip()
-        if city:
-        	city = city.lower().strip()
-
-        if state not in state_city_dict.keys():
-            state_city_dict[state] = {}
-
-        state_city_dict[state][city] = cityid
-    
-    return state_city_dict
 
 
 
@@ -953,7 +892,7 @@ def test_matcher():
     
 
     intrnl_hotel_index = {}
-    [internal_state_city_region, state_region = hotwire_area()
+    internal_state_city_region = hotwire_area()
 #    pdb.set_trace()
     for states in internal_state_city_region.keys():
 
