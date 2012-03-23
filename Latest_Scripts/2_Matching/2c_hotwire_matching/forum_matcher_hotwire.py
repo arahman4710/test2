@@ -913,7 +913,7 @@ def test_matcher():
     not_matched_regions_list = []
     not_matched_hotels_list = 0
 
-    area_city_dict = (get_area_dict('priceline'),get_city_dict('priceline'))
+    area_city_dict = ()
 
     #process information from scraped data from the forums and construct a structured dictionary similar to that of the previous
 
