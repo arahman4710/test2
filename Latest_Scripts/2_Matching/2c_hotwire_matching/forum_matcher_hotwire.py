@@ -28,6 +28,11 @@ from matched_forum_hotel_table2 import MatchedForumHotel2
 from hotwire_tables import *
 
 from canon_hotel import CanonicalHotel
+from hotwire_region_hotel_map import HotWireRegionHotelMap
+from processed_forum_data_hotwire import ProcessedRawForumData_hotwire
+from unmatched_forum_hotel_hotwire_table import UnmatchedForumHotelTable
+from possible_forum_hotel_hotwire_match import PossibleForumHotelMatchTable
+from matched_forum_hotel_hotwire_table import MatchedForumHotelTable
 
 
 (engine, session,Base, metadata) = get_alchemy_info()
@@ -113,7 +118,7 @@ def extract_content(file_name):
 
 def retrive_raw_scraped_from_db():
 
-    return session.query(ProcessedRawForumData_canada).all()
+    return session.query(ProcessedRawForumData_hotwire).all()
 
 
 
@@ -127,7 +132,7 @@ def get_scraped_data_from_db():
 
     for record in retrive_raw_scraped_from_db():
 
-        (uid,hotel,city,region,state,url) = (record.uid,record.hotel_name,record.city_area,record.region,record.state,record.url)#map(lambda x:str(x).strip(),line)
+        (uid,hotel,city,region,state) = (record.uid,record.hotel_name,record.city_area,record.region,record.state)#map(lambda x:str(x).strip(),line)
 
         hotel = hotel.replace('previously','').strip()
 
@@ -139,25 +144,25 @@ def get_scraped_data_from_db():
 
                 if return_dict[state][city].has_key(region.strip()):
 
-                    return_dict[state][city][region.strip()].append((hotel,url,uid))
+                    return_dict[state][city][region.strip()].append((hotel,uid))
                     count+=1
 
                 else:
 
-                    return_dict[state][city][region.strip()]= [(hotel,url,uid)]
+                    return_dict[state][city][region.strip()]= [(hotel,uid)]
                     count+=1
 
             else:
 
                 return_dict[state][city] = {}
-                return_dict[state][city][region.strip()]= [(hotel,url,uid)]
+                return_dict[state][city][region.strip()]= [(hotel,uid)]
                 count+=1
 
         else:
 
             return_dict[state]={}
             return_dict[state][city] = {}
-            return_dict[state][city][region.strip()]= [(hotel,url,uid)]
+            return_dict[state][city][region.strip()]= [(hotel,uid)]
             count+=1
 
 #    print "Total Hotels to Match::" +str(count)
@@ -660,8 +665,8 @@ def check_entry_listed_as_unmatched(db_record):
     #   param is a tuple => (input_hotel_name,str(city_id),str(area_id),source_forum,target_site)
 
     (forum_hotel_id,city_id,area_id,source_forum, target_site) = db_record
-    record = session.query(UnmatchedForumHotelTable_canada).filter(UnmatchedForumHotelTable_canada.forum_hotel_id == forum_hotel_id).filter(UnmatchedForumHotelTable_canada.city_id == city_id)\
-    .filter(UnmatchedForumHotelTable_canada.area_id == area_id).filter(UnmatchedForumHotelTable_canada.source_forum == source_forum).filter(UnmatchedForumHotelTable_canada.target_site == target_site).first()
+    record = session.query(UnmatchedForumHotelTable).filter(UnmatchedForumHotelTable.forum_hotel_id == forum_hotel_id).filter(UnmatchedForumHotelTable.city_id == city_id)\
+    .filter(UnmatchedForumHotelTable.area_id == area_id).filter(UnmatchedForumHotelTable.source_forum == source_forum).filter(UnmatchedForumHotelTable.target_site == target_site).first()
 
     return (record != None)
 
@@ -674,8 +679,8 @@ def fetch_unmatched_entry_list_id(db_record):
 
     (forum_hotel_id,city_id,area_id,source_forum, target_site) = db_record
 
-    record = session.query(UnmatchedForumHotelTable_canada.uid).filter(UnmatchedForumHotelTable_canada.forum_hotel_id == forum_hotel_id).filter(UnmatchedForumHotelTable_canada.city_id == city_id)\
-    .filter(UnmatchedForumHotelTable_canada.area_id == area_id).filter(UnmatchedForumHotelTable_canada.source_forum == source_forum).filter(UnmatchedForumHotelTable_canada.target_site == target_site).first()
+    record = session.query(UnmatchedForumHotelTable.uid).filter(UnmatchedForumHotelTable.forum_hotel_id == forum_hotel_id).filter(UnmatchedForumHotelTable.city_id == city_id)\
+    .filter(UnmatchedForumHotelTable.area_id == area_id).filter(UnmatchedForumHotelTable.source_forum == source_forum).filter(UnmatchedForumHotelTable.target_site == target_site).first()
 
     return record[0]
 
@@ -690,7 +695,7 @@ def insert_unmatched_entry_to_db(db_record):
 
     (hotel_name,city_id,area_id,region_id,source_forum,target_site,url) = db_record
 
-    unmatched_record = UnmatchedForumHotelTable_canada(hotel_name,city_id,area_id,region_id,source_forum,target_site,url)
+    unmatched_record = UnmatchedForumHotelTable(hotel_name,city_id,area_id,region_id,source_forum,target_site,url)
 
     session.add(unmatched_record)
     session.commit()
@@ -703,7 +708,7 @@ def insert_possible_matches_for_unmatched_entries(db_record):
     #   param format (unmatched_entry_id,hotel_id,ratio)
     #global session
     (unmatched_entry_id,hotel_id,ratio) = db_record
-    possible_match_record = PossibleForumHotelMatchTable_canada(unmatched_entry_id,hotel_id,ratio)
+    possible_match_record = PossibleForumHotelMatchTable(unmatched_entry_id,hotel_id,ratio)
 
     session.add(possible_match_record)
     session.commit()
@@ -712,7 +717,7 @@ def insert_matched_forum_hotel_entries(db_record):
 
     (forum_hotel_id,internal_hotel_id,matched_ratio) = db_record
 
-    matched_forum_hotel_record = MatchedForumHotel_canada(forum_hotel_id,internal_hotel_id,matched_ratio)
+    matched_forum_hotel_record = MatchedForumHotel(forum_hotel_id,internal_hotel_id,matched_ratio)
 
     session.add(matched_forum_hotel_record)
     session.commit()
