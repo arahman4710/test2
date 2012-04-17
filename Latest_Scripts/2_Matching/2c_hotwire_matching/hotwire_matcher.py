@@ -11,7 +11,9 @@ from alchemy_session import get_alchemy_info
 
 
 from processed_forum_data_hotwire import ProcessedRawForumData_hotwire
+from matched_forum_hotel_hotwire_table import MatchedForumHotelTable
 from hotwire_tables import *
+from canon_hotel import CanonicalHotel
 
 
 (engine, session,Base, metadata) = get_alchemy_info()
@@ -66,94 +68,67 @@ def generate_amenity_list(amenity):
 	
 	return items_list_code
 
-		
-
-
-for instance in all_hotwire_hotels.all():
-
-	##gets the city name of the bbhw hotel in question
-	# gets rid of possible (region_name) in the city name
-	bbhw_hotel_city = instance.city_area
-	region_in_city_detect = re.search(".*(?=\()", bbhw_hotel_city)
-	if region_in_city_detect:
-		bbhw_hotel_city = region_in_city_detect.group()
+def main_match():
 	
-	bb_amenity_info = generate_amenity_list(instance.amenities) ## make amenity list func turns raw amenity info into a list to compare
-		
-	possible_match = session.query(HotWireHotelInfo).filter(HotWireHotelInfo.city == bbhw_hotel_city)
+	bbhw_matched = session.query(MatchedForumHotelTable) ##all matched bbhw scraped to internal entries
+	hotwire_hotels = session.query(HotWireHotelInfo) ##official hotwire.com hotel entries to match
 	
-	for match in possible_match:
+	#1 loop through each hotwire.com hotel and find bbhw hotels within its neighborhood coords
+	for hotel in hotwire_hotels.all():
 	
-		amenity_info = get_hotwire_amenity_info(match.amenity_list) ##function that gets amenity info from hotwirehotelinfo 
+		##making the ray casting region
+		neighborhood = session.query(Neighborhood).filter(Neighborhood.uid == hotel.neighborhood_uid).one()	
+		points = session.query(PointListEntry).filter(PointListEntry.listid == neighborhood.point_list)
+		points_list = []
+		for point in points.all():
+			point_id = point.pid
+		 	point_entry = session.query(Point).filter(Point.uid == point_id).first()
+		 	point_lat = point_entry.latitude
+		 	point_lon = point_entry.longitude
+		 	pair = (point_lat, point_lon)
+		 	points_list.append(pair)
 		
-		amenity_match_flag = False
-		star_match_flag = False
+	
+		regions_coords = ray_casting.make_region(neighborhood.name, points_list)
+		hotel_star = hotel.star_rating		
 		
-		##if both lists of amenity have same elements
-		if amenity_info == bb_amenity_info:
-			#match 
+		# for each bbhw entry, check if the hotel lat long belongs to the official hotwire.com'sneighborhood
+		
+		for instance in bbhw_matched.all():					
+		
+			bbhw_info = session.query(ProcessedRawForumData_hotwire).filter(ProcessedRawForumData_hotwire.uid == instance.forum_hotel_id).first()
+			internal_info = session.query(CanonicalHotel).filter(CanonicalHotel.uid == instance.hotel_id).first()
 			
-			amenity_match_flag = True
-		
-		if match.star_rating == instance.star:
-			star_match_flag = True
+			if ray_casting.ispointinside(Pt(x=internal_info.latitude, y=internal_info.longitude),regions_coords):
 			
-		if amenity_match_flag and star_match_flag:
-			## log this in a table with a column for hotwire_id and bbhw_id
-			
-			entry = hotwire_forum_table(instance.uid, match.uid)
-			session.add(entry)
-			session.commit()
-			
-##after matching hotwire scraped hotels to bbhw scraped hotels
-##match bbhw to internal hotels, with the help of internal hotel's lat/lng and hotwire's region points
-
-for instance in all_hotwire_hotels.all():
-	
-	bbhw_id = instance.uid
-	associated_hotwire_hotel_id = session.query(hotwire_forum_table.hotwire_id).filter(hotwire_forum_table.bbhw_id == bbhw_id).first()
-	#get hotwire region points
-	for hotel in session.query(CanonicalHotel).all():
-		
-		if ray.casting(hotel.lat, hotel.lng, hotwire_region_points):
-			hotellist += hotel
-		
-		return hotellist
-	
-	##use hotellist (hotels within the region of the bbhw hotel) to match hotel name using levenshtein ratio
-	if hotellist.count() > 0:
-
-		for match in hotellist.all():
+				print "REGION match"
+				##get amenity in list form for comparison
+				bbhw_amenity = generate_amenity_list(bbhw_info.amenities)
+				hotwire_hotel_amenity = get_hotwire_amenity_info(hotel.amenity_list)
 				
-			name_ratio = find_htl_name_match_ratio(hotellist.hotel_name, kayak_name) 
-			address_ratio = find_htl_address_match_ratio(hotellist.address,kayak_address)
+				amenity_item_match_count = 0
+				##count amenity items that are same
+				for item in bbhw_amenity:
+					if item in hotwire_hotel_amenity:
+						amenity_item_match_count += 1
 					
-			if address_ratio > float(0.98):
-				address_ratio = 2
-					
-			if name_ratio > float(0.95):
-				name_ratio = 2
-				
-			ratio = name_ratio + address_ratio
-				
-			if max_ratio < ratio:
-				max_ratio = ratio
-				max_match_tuple = (match, name_ratio, address_ratio)
-				
-		(match, name_ratio, address_ratio) = max_match_tuple
+				amenity_match_percentage = amenity_item_match_count / len(hotwire_hotel_amenity)
+				##if star is same and amenity match is good
+				if float(bbhw_info.star) == hotel_star and amenity_match_percentage > float(0.9):
+						
+					print "FULL match"
+					#hotel.processing_status = instance.uid
+					#session.commit()
 
-		if max_ratio > 1.35:
-			canonical_id = match.uid
-			kayak_id = instance.uid
-			entry = kayak_internal_table(canonical_id, kayak_id)
-			session.add(entry)					
-			session.commit()
-				
-		else:
-			pass ## not good enough a match
 					
 			
-	else:
-		continue ## no match for this kayak hotel case
+		
+			
+
+#main_match()
+
+		
+		
+		
 	
 		
