@@ -10,8 +10,11 @@ from libs import *
 from sqlalchemy import * 
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
-from Unprocessed_Raw_Postforum_Data import Unprocessed_Raw_Postforum_Data
-from Unprocessed_Raw_Hotellist_Data import Unprocessed_Raw_Hotellist_Data
+import sys
+sys.path.insert(0, "/home/areek/Documents/fetchopia/backend_git/sql/alchemy/" )
+
+#table in database to store the results 
+from processed_forum_data import ProcessedRawForumData
 
 ##establishing connection to the database
 engine = create_engine('postgresql://postgres:areek@localhost:5432/acuity', echo=False)
@@ -20,10 +23,18 @@ session = Session()
 Base = declarative_base(bind=session) 
 metadata = Base.metadata
 
+#####################################################################
+#David@fetchopia 
+#Date:4/25/2012
+#Description:
+#Scrapes the betterbidding forum site for all Canada priceline hotel lists
+#Additional manual processing for entries state field after running this script (Canadian hotels have no states)
+
+
 class BBPricelinePostSpider(BaseSpider):
 
     name = "BBHotwirePostSpider"
-    start_urls = ["http://www.betterbidding.com/"]
+    start_urls = ["http://www.betterbidding.com"]
     allowed_domains = ["betterbidding.com"]
 
     def parse(self, response):
@@ -71,44 +82,7 @@ class BBPricelinePostSpider(BaseSpider):
             yield Request(hotel_list[0], callback = self.parse_priceline_list)
 
 
-        for post in posts:
-
-            #iterate through the posts and extract information from post
-            title = post.select(".//a[@id]/text()")
-            subtitle = post.select(".//span[@class='desc']/text()")
-            replies = post.select(".//a[@onclick]/text()")
-            post_url = post.select(".//a[@id]/@href")
-            
-            if (title and subtitle and post_url and replies):
-
-                #extract more information               
-                title = title[0].extract()
-                subtitle = subtitle[0].extract()
-                star = find_star(title)
-                price = find_price(subtitle)
-                replies = replies[0].extract()
-                hotel_name = find_name(title)
-                post_url = post_url[0].extract()
-                post_num = self.find_post_num(post_url)
-                dates = self.find_dates(subtitle)
-                if (dates):
-                    date = dates[0]
-                    nights = dates[1]
-                else:
-                    date = False
-                    nights = False
-                if (hotel_name and star and price and date and nights and post_num):
-                	post_counter += 1
-                	entry = Unprocessed_Raw_Postforum_Data(hotel_name, star, price, date, nights, replies, post_num, country, state, target_site, source_forum)
-                	session.add(entry)
-	
-	assert session.query(Unprocessed_Raw_Postforum_Data).count() == post_counter ## make sure the entries in database equal amount of entries scraped
-        session.commit()
-
-        #Gets the next page link and sends it to parse_board
-        next_page = hxs.select("//a[@title='Next page']/@href").extract()
-        if next_page:
-            yield Request(next_page[0], callback = self.parse_board)
+        
 
     def parse_priceline_list(self, response):
 
@@ -118,29 +92,44 @@ class BBPricelinePostSpider(BaseSpider):
         post = hxs.select("//div[@class='post entry-content ']")
         state = ""
         country = "Canada"
-        target_site = "priceline"
+        target_site = "Priceline"
         source_forum = "BB"
-        hotelpost_counter = 0
+        url = ""
+        delete_flag = False
 
         if (post):
             post = post[0]
 
             #extracts all text from the post and also the span tags to detect new region 
-            posts = post.select(".//span|.//text()")
+            posts = post.select(".//span|.//text()|.//del")
 
             #initialize variables for iteration
             region = ""
-            name = ""
+            city_area = ""
+            hotel_name = ""
             star = 0
             amenities = ""
 
             for post in posts:
                 post = post.extract()
                 post = post.strip()
+                
+                if (post[0:4] == '<del'):
+                	delete_flag = True
+                	continue
+                
+                if delete_flag == True:
+                	delete_flag = False
+                	continue
 
                 #detects the region information
                 if (post[0:28] == '<span class="bbc_underline">'):
                     city_area = re.search(r'(?s)(?<=\>).*(?=\<)', post).group()
+                    region = re.search("(?s)(?<=\().*(?=\))", city_area)
+                    if region: 
+                        region = (region.group()).strip()
+                        city_area = re.search(r'.*(?=\()', city_area).group()
+                    else: region = " "
 
                 else:
                     #detects if its the hotel info (usually starts with digit for star rating)
@@ -150,17 +139,18 @@ class BBPricelinePostSpider(BaseSpider):
                             star = match_star.group()
                         match_name = re.search(r'(?<=\s).*', post)
                         if match_name:
-                            name = match_name.group()
-                            name = re.sub(r'\(previously.*', "", name)
-                            name = re.sub(r'\-\-', "", name)
-                        region = re.search("(?s)(?<=\().*(?=\))", city_area)
-                        if region: region = (region.group()).strip()
-                        else: region = " "
-                        hotelpost_counter += 1
-                        entry = Unprocessed_Raw_Hotellist_Data(hotel_name, city_area, region, star, amenities, state, country, target_site, source_forum)
+                            hotel_name = match_name.group()
+                            hotel_name = re.sub(r'\(previously.*', "", hotel_name)
+                            hotel_name = re.sub(r'\-\-', "", hotel_name)
+                        
+                        entry = ProcessedRawForumData(hotel_name, city_area, region, star, url, state, target_site, source_forum, country)
                         session.add(entry)
-
-        assert session.query(Unprocessed_Raw_Hotellist_Data).count() == hotelpost_counter                             
+                    elif (re.search(r'^Resort', post)):
+                           hotel_name = post
+                           star = 0
+                           entry = ProcessedRawForumData(hotel_name, city_area, region, star, url, state, target_site, source_forum, country)
+                           session.add(entry)
+                            
         session.commit()
 
 

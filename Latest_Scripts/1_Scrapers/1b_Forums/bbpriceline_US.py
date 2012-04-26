@@ -11,7 +11,11 @@ import re
 from sqlalchemy import * 
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
-from processed_forum_data5 import ProcessedRawForumData2
+import sys
+sys.path.insert(0, "/home/areek/Documents/fetchopia/backend_git/sql/alchemy/" )
+
+#table in database to store the results 
+from processed_forum_data import ProcessedRawForumData
 
 ##establishing connection to the database
 engine = create_engine('postgresql://postgres:areek@localhost:5432/acuity', echo=False)
@@ -19,6 +23,14 @@ Session = scoped_session(sessionmaker(bind=engine))
 session = Session()
 Base = declarative_base(bind=session) 
 metadata = Base.metadata
+
+#####################################################################
+#David@fetchopia 
+#Date:4/25/2012
+#Description:
+#Scrapes the betterbidding forum site for all US priceline hotel lists
+#Additional manual processing for entries state field after running this script (Some US states are clustered together)
+
 
 class BBPricelineSpider(BaseSpider):
     name = "BBPricelinePostSpider"
@@ -80,24 +92,34 @@ class BBPricelineSpider(BaseSpider):
         post = hxs.select("//div[@class='post entry-content ']")
         state = response.request.meta['state']
         country = "US"
-        target_site = "priceline"
+        target_site = "Priceline"
         source_forum = "BB"
         url = ""
+        delete_flag = False
 
         if (post):
             post = post[0]
             #extracts the span bbc_underline tags, and all text 
-            posts = post.select(".//span|.//text()")
+            posts = post.select(".//span|.//text()|.//del")
 
             #initialize variables for loop
             city_area = ""
             hotel_name = ""
+            region = ""
             star = 0
             amenities = ""
 
             for post in posts:
                 post = post.extract()
                 post = post.strip()
+                
+                if (post[0:4] == '<del'):
+                	delete_flag = True
+                	continue
+                
+                if delete_flag == True:
+                	delete_flag = False
+                	continue
 
                 #detects the region information
                 if (post[0:28] == '<span class="bbc_underline">'):
@@ -106,7 +128,7 @@ class BBPricelineSpider(BaseSpider):
                     if region: 
                         region = (region.group()).strip()
                         city_area = re.search(r'.*(?=\()', city_area).group()
-                    else: region = " "
+                    else: region = ""
 
                 else:
                     #detects if its the hotel info (usually starts with digit for star rating)
@@ -121,14 +143,14 @@ class BBPricelineSpider(BaseSpider):
                             hotel_name = re.sub(r'\(previously.*', "", hotel_name)
                             hotel_name = re.sub(r'\-\-', "", hotel_name)
 
-                        entry = ProcessedRawForumData2(hotel_name, city_area, region, star, url, state, target_site, source_forum)
+                        entry = ProcessedRawForumData(hotel_name, city_area, region, star, url, state, target_site, source_forum, country)
                         session.add(entry)
 
                     #may not start with digit, may start with Resort (hawaii list in particular)    
                     elif (re.search(r'^Resort', post)):
                           hotel_name = post
                           star = 0
-                          entry = ProcessedRawForumData2(hotel_name, city_area, region, star, url, state, target_site, source_forum)
+                          entry = ProcessedRawForumData(hotel_name, city_area, region, star, url, state, target_site, source_forum, country)
                           session.add(entry)
                     
               

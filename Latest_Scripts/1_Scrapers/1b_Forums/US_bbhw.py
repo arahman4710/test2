@@ -10,8 +10,10 @@ from libs import *
 from sqlalchemy import * 
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
-from Unprocessed_Raw_Postforum_Data import Unprocessed_Raw_Postforum_Data
-from Unprocessed_Raw_Hotellist_Data import Unprocessed_Raw_Hotellist_Data
+import sys
+
+sys.path.insert(0, "/home/areek/Documents/fetchopia/backend_git/sql/alchemy/" )
+from processed_forum_data_hotwire import ProcessedRawForumData_hotwire
 
 
 ##establishing connection to the database
@@ -20,6 +22,15 @@ Session = scoped_session(sessionmaker(bind=engine))
 session = Session()
 Base = declarative_base(bind=session) 
 metadata = Base.metadata
+
+
+#####################################################################
+#David@fetchopia 
+#Date:4/25/2012
+#Description:
+#Scrapes the betterbidding forum site for all US hotwire hotel lists
+#Additional manual processing for entries state field after running this script (Some US states are clustered together)
+
 
 class BBHotwirePostSpider(BaseSpider):
 
@@ -80,47 +91,10 @@ class BBHotwirePostSpider(BaseSpider):
                           meta={'state':state},
                           callback = self.parse_hotwire_list)
 
-	post_counter = 0
-	
-        for post in posts:
-
-            #iterate through the posts and extract information from post
-            title = post.select(".//a[@id]/text()")
-            subtitle = post.select(".//span[@class='desc']/text()")
-            replies = post.select(".//a[@onclick]/text()")
-            post_url = post.select(".//a[@class='topic_title']/@href")
-            post_url = post_url[0].extract()
-            post_num = self.find_post_num(post_url)
-
-            if (title and subtitle and replies):
-                title = title[0].extract()
-                subtitle = subtitle[0].extract()
-                replies = replies[0].extract()
-                star = find_star(title)
-                price = find_price(subtitle)
-                hotel_name = find_name(title)
-                dates = self.find_dates(subtitle)
-                if (dates):
-                    date = dates[0]
-                    nights = dates[1]
-                else:
-                    date = False
-                    nights = False
-                if (hotel_name and star and price and date and nights and post_num):
-                	post_counter += 1 
-                	## entry into the db
-                	entry = Unprocessed_Raw_Postforum_Data(hotel_name, star, price, date, nights, replies, post_num, country, state, target_site, source_forum)
-                	session.add(entry)
-                	
-	assert session.query(Unprocessed_Raw_Postforum_Data).count() == post_counter ## make sure the entries in database equal amount of entries scraped       
-        session.commit()
-
-        #Gets the next page link and sends it to parse_board
-        next_page = hxs.select("//a[@title='Next page']/@href").extract()
-        if next_page:
-            yield Request(next_page[0], callback = self.parse_board)
 
     def parse_hotwire_list(self, response):
+    
+#    	print "parsed this page::%s" % response.url
 
         hxs = HtmlXPathSelector(response)
         post = hxs.select("//div[@class='post entry-content ']")
@@ -128,18 +102,18 @@ class BBHotwirePostSpider(BaseSpider):
         country = "US"
         target_site = "Hotwire"
         source_forum = "BB"
+        delete_flag = False
 
         if (post):
             post = post[0]
             #extracts the span bbc_underline tags, and all text 
-            posts = post.select(".//span|.//text()")
+            posts = post.select(".//span|.//text()|.//del")
 	
 	    ##initialize variables for loop		
             region = ""
-            name = ""
+            hotel_name = ""
             star = 0
             amenities = ""
-            hotelpost_counter = 0
 
             for post in posts:
                 post = post.extract()
@@ -151,8 +125,16 @@ class BBHotwirePostSpider(BaseSpider):
                 case3 = re.search(r'^\(with.*', post)
                 case4 = re.search(r'^\(can.*be:', post)
                 case5 = re.search(r'^\(may be:.*', post)
+                
+                if (post[0:4] == '<del'):
+                	delete_flag = True
+                	continue
+                
+                if delete_flag == True:
+                	delete_flag = False
+                	continue
 
-                match_amenities = re.search("(?i)(?<=amenities:).*", post)
+                match_amenities = re.search("(?i)(?<=Amenities:).*", post)
                 if (match_amenities):
                     #in case theres more amenity info specified by "OR" 
                     amenities_partial = match_amenities.group()
@@ -161,17 +143,19 @@ class BBHotwirePostSpider(BaseSpider):
                 #no longer use of <u> tag, the span tag is the new detection
                 if(post[0:28] == '<span class="bbc_underline">'):
                     city_area = re.search(r'(?s)(?<=\>).*(?=\<)', post).group()
+                    region = re.search("(?s)(?<=\().*(?=\))", city_area)
+                    if region:
+                    	region = (region.group()).strip()
+                    	city_area = re.search(r'.*(?=\()', city_area).group()
+                    else: region = ""
 
                 elif ((not case1) and (not case2) and (not case3) and (not case4) and (not case5)):
                     #if information collected, then store and reset amenities
-                    if ((len(name)>0) and (len(amenities)>0)):
-                        region = re.search("(?s)(?<=\().*(?=\))", city_area)
-                        if region: region = (region.group()).strip()
-                        else: region = " "
-                        if ((not re.search(r'(?<=,).*', name)) or (re.search(r'.*\d.*', name))):
-                            hotelpost_counter += 1
-                            entry = Unprocessed_Raw_Hotellist_Data(hotel_name, city_area, region, star, amenities, state, country, target_site, source_forum)
+                    if ((len(hotel_name)>0) and (len(amenities)>0)):                   
+                        if (not re.search(r'(?<=,).*', hotel_name)) or (not re.search(r'.*\d.*', hotel_name)):
+                            entry = ProcessedRawForumData_hotwire(hotel_name, city_area, region, star, state, country, amenities, target_site, source_forum)
                             session.add(entry)
+                            session.commit()
                             amenities = ""
 
                     else:
@@ -182,11 +166,10 @@ class BBHotwirePostSpider(BaseSpider):
                         match_name = re.search(r'(?<=\s).*', post)
                         if match_name:
                             hotel_name = match_name.group()
-                            hotel_name = re.sub(r'\(previously.*', "", name)
-                    
+                            hotel_name = re.sub(r'\(previously.*', "", hotel_name)
+                            hotel_name = re.sub(r'^now', "", hotel_name)
+                            hotel_name = re.sub(r' not reported to the board\)', "", hotel_name)
 
-        assert session.query(Unprocessed_Raw_Hotellist_Data).count() == hotelpost_counter                
-        session.commit()
 
     def date_diff(self, date1, date2):
         try:
