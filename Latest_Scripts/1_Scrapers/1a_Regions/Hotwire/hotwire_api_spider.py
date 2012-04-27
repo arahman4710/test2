@@ -22,27 +22,34 @@ import urllib
 import sys
 import os 
 import sys
+import pdb
 import argparse 
 
-from city_table import CityTable
+import logging
+logging.basicConfig(filename='HOTWIRE_API.log',filemode='w',level=logging.DEBUG)
+##############################
+# Used to get hotwire neighborhoods (region) and also the hotwire.com hotels
+# city to region relationship stored in HOTWIRE_API.log, use process_hotwire to process into database
+
+from city_table2 import CityTable_canadian
 from hotwire_tables import * 
 
 saving_results = True  # save raw xml for debugging etc 
 raw_results = None 
 request_generator_settings = None 
 
-## generates the priceline city list to crawl
+
 city_list = []
-x = session.query(CityTable).distinct()
+x = session.query(CityTable_canadian).distinct()
 for instance in x:
 	city_name = "%s, %s, %s" % (instance.name, instance.state, instance.country)
 	if instance.name == "0":
 		pass
 	else:
 		city_list.append(city_name)
-
+		
 all_city_names = city_list
-one_city_name = ['Waterloo, On, Canada'] 
+one_city_name = ['Mississauga, ON'] 
 #all_city_names =['Houston, Texas, USA','Toronto','New York, New York','Los Angeles, California','Chicago, Illinois','Ottawa, ON Canada','Vancouver, BC Canada','Calgary, AB Canada','Boston, Massachusetts','Anchorage, AK']  
 
 
@@ -116,6 +123,7 @@ def do_one_neighborhood(nb) :
     if debug_level > 9 : 
         log.msg("do one neighborhood", log.INFO) 
     result_dict = dict_extract(neighborhood_element_dict, nb)  
+    logging.info("%s#" % result_dict['name'])
     nresult = session.query(Neighborhood).filter_by(id=result_dict['id']).all() 
     if nresult :   # we have it already 
         return nresult[0]
@@ -244,7 +252,8 @@ class hotwire_api_analysis(BaseSpider):
         kwargs["end_date"]=end_date 
         kwargs["api_key"] = self.api_key 
         query = base_query_format % kwargs
-        log.msg("query = <<%s>>" % query, level=log.INFO) 
+        log.msg("query = <<%s>>" % query, level=log.INFO)  
+        
         return Request(query, callback=self.parse, meta=kwargs) 
 
     def parse(self, response):
@@ -252,6 +261,7 @@ class hotwire_api_analysis(BaseSpider):
             raw_results.write(body_or_str(response) + "\n\n")
             raw_results.flush() # ensure whole xml response is written 
         hxs = XmlXPathSelector(response)
+        city = response.request.meta['city']
 
         if debug_level > 0 :         
             log.msg( "doing amenities" ,level=log.DEBUG) 
@@ -263,7 +273,8 @@ class hotwire_api_analysis(BaseSpider):
         
         if debug_level > 0 : 
             log.msg( "doing neighborhoods" ,level=log.DEBUG) 
-        neighborhoods = hxs.select("//Hotwire/MetaData/HotelMetaData/Neighborhoods/Neighborhood") 
+        neighborhoods = hxs.select("//Hotwire/MetaData/HotelMetaData/Neighborhoods/Neighborhood")
+        logging.info("%s$" % city) ##### for the city - area hotwire mapping table
         neighborhoods_dict = do_neighborhoods(neighborhoods) 
         session.commit() 
         
@@ -275,6 +286,7 @@ class hotwire_api_analysis(BaseSpider):
         return None
 
 def main() :     
+
     global debug_level, raw_results, request_generator_settings 
 
     parser = argparse.ArgumentParser(description='Run spider')
@@ -305,7 +317,7 @@ def main() :
 
     parser.add_argument('--result-count', type=int, 
                         help='total number of results to fetch',
-                        default=10) 
+                        default=50000) 
 
     parser.add_argument('--offsets',
                         default="0", 
@@ -358,6 +370,7 @@ def main() :
         request_generator_settings[arg] = commas_to_list(request_generator_settings[arg]) 
     if arg_result.do_spider : 
         log.msg("running spider")
+#        pdb.set_trace()
         do_spider() 
     else :
         print 'not running spider\nto run spider with python -i use "do_spider()"'
@@ -367,6 +380,7 @@ def commas_to_list(s) :
     return map(int, s.split(",")) 
 
 def do_spider() :
+    log.start()
     settings.overrides['USER_AGENT'] = "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10"
     settings.overrides['SCHEDULER_ORDER'] = 'BFO'
     settings.overrides['LOG_FILE'] = 'hotwire-scraping.log'

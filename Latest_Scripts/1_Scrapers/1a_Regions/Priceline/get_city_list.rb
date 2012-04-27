@@ -1,14 +1,16 @@
 require 'rubygems'
 require 'watir'
 
+########### Saves the city list to scrape through from priceline
+########### Change line 13 to get to correct page of states
+
 browser = Watir::Browser.start("http://travela.priceline.com/hotels/?plf=pcln")
 browser.div(:class, "bidNowBtn").links.first.click
 browser.text_field(:id, "OFFER/HOTELS/SEARCH_CITY_OPQ").set "Miami, Florida"
 browser.text_field(:id, "bid_htl_checkin_CTL").set((Time.now + 86400 * 3).strftime("%m/%d/%y"))
 browser.text_field(:id, "bid_htl_checkout_CTL").set((Time.now + 86400 * 4).strftime("%m/%d/%y"))
 browser.form(:name, "bid_htl").submit()
-browser.goto("http://www.priceline.com/hotels/Lang/en-us/city_list.asp?r=US")
-browser.link(:text, "V-Z").click
+browser.goto("http://www.priceline.com/hotels/Lang/en-us/city_list.asp?&plf=pcln&c=US&l=9&r=US")
 File.open('test_html.txt', "w") { |f| f.write(browser.html) }
 counter = 1
 file = File.new("test_html.txt", "r")
@@ -24,7 +26,7 @@ while (line = file.gets)
   elsif find_state
     if line =~ /(>)([a-zA-Z\s]+)(<)/ then state = $2 end
     if state
-      city_list << "#{city}, #{state}"
+      city_list << " \"#{city}, #{state}\","
     end
   end
 end

@@ -29,6 +29,12 @@ metadata = Base.metadata
 ### For US state fix
 US_hotels = session.query(ProcessedRawForumData_hotwire).filter(ProcessedRawForumData_hotwire.state == "Alabama / Alaska / Arizona / Arkansas")
 
+#################################
+#This code is to manually fill in state information for bbpl and bbhw US states where the states are grouped together (e.g Alabama / Alaska / Arizona / Arkansas)
+#When queried from the server, the entries come in order that was scraped
+
+#Canadian cities dont have states at all, so this includes code to fill in states for bbhw and bbpl Canada
+
 for instance in US_hotels.all():
 	print instance.hotel_name, instance.city_area
 	
