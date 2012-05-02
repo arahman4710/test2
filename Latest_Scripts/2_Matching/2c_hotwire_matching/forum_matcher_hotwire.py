@@ -33,7 +33,10 @@ from processed_forum_data_hotwire import ProcessedRawForumData_hotwire
 from unmatched_forum_hotel_hotwire_table import UnmatchedForumHotelTable
 from possible_forum_hotel_hotwire_match import PossibleForumHotelMatchTable
 from matched_forum_hotel_hotwire_table import MatchedForumHotelTable
+from hotwire_cities_region_map import Hotwire_cities_region_map
 
+import logging
+logging.basicConfig(filename='hotwire_matcher.log',filemode='w',level=logging.DEBUG)
 
 (engine, session,Base, metadata) = get_alchemy_info()
 
@@ -48,15 +51,26 @@ with open('us_state_code','r') as f:
 		if len(fields) == 2:
 			state,code = fields
 			state_code_dict[str(code)] = str(state)
-	state_code_dict[str('DC')] = str('District of Columbia')
+	state_code_dict[str('DC')] = str('Washington, DC')
+
+state_code_dict_reverse = {}
+with open('us_state_code','r') as f:
+	for content in f.read().split('\n'):
+		fields = content.split('\t')
+		if len(fields) == 2:
+			state,code = fields
+			state_code_dict_reverse[str(state)] = str(code)
+	state_code_dict_reverse[str('Washington, DC')] = str('DC')
 
 def city_region_finder(hotwire_city, hotwire_state):
+
+#	hotwire_state_code = state_code_dict_reverse[hotwire_state]
 	
-	regions = session.query(Neighborhood).filter(Neighborhood.state == hotwire_state).filter(Neighborhood.city == hotwire_city)
+	regions = session.query(Hotwire_cities_region_map).filter(Hotwire_cities_region_map.state == hotwire_state).filter(Hotwire_cities_region_map.city == hotwire_city)
 	region_dict = {}
 	if regions.count() > 0:
 		for region in regions.all():
-			region_dict[str(region.name)] = region.uid
+			region_dict[str(region.region_name)] = region.uid
 	
 	return region_dict
 		
@@ -65,30 +79,41 @@ def city_region_finder(hotwire_city, hotwire_state):
 def hotwire_area():
 	
 	return_dict = {}
+	state_region = {}
 	
-	for record in session.query(Neighborhood).all():
+	hotwire_regions = session.query(Hotwire_cities_region_map)
 	
-		(uid,region_name,city,state) = (record.uid,record.name,record.city,record.state)
+	for record in hotwire_regions.all():
+	
+		(uid,region_name,city,state) = (record.uid,record.region_name,record.city,record.state)
 		state = str(state)
 		city = str(city)
+		region_name = str(region_name)
 		
-		if state not in state_code_dict.keys():
-			continue
-		
-		else:
-			state = state_code_dict[state]
-		
-			if return_dict.has_key(state) and state:
-				
-					
-					return_dict[state][city] = city_region_finder(city, state)
-			
-			else:
-				return_dict[state] = {}
-				return_dict[state][city] = city_region_finder(city, state)
-	
-	return return_dict
 
+		
+		if return_dict.has_key(state) and state:
+				
+			return_dict[state][city] = city_region_finder(city, state)
+			
+		else:
+			return_dict[state] = {}
+			return_dict[state][city] = city_region_finder(city, state)
+		
+		if state not in state_region.keys():
+			state_region[state] = []
+		
+		state_region[state].append((region_name, uid))
+	
+	for state in state_region.keys():
+		regions_list = state_region[state]
+		regions_dict = {}
+		for instance in regions_list:
+			regions_dict[instance[0]] = instance[1]
+		
+		state_region[state] = regions_dict
+	
+	return (return_dict, state_region)
 
 
 def print_timing(func):
@@ -539,25 +564,33 @@ def region_name_match(foreign_list,internal_list,city_name,state_name):
 
 def region_hotel_finder(region_id):
 
-    hotel_ids = session.query(HotWireRegionHotelMap.hotel_id).filter(HotWireRegionHotelMap.hotwire_neighborhood_id == region_id)
-    region = session.query(Neighborhood).filter(Neighborhood.uid == region_id).first()
-    region_name = region.name
-
-    #   extract hotel_ids from query
+    new_region = session.query(Hotwire_cities_region_map).filter(Hotwire_cities_region_map.uid == region_id).first()
+    old_region_id = session.query(Neighborhood).filter(Neighborhood.name == new_region.region_name).first()
     
-    hotel_ids = tuple(map(lambda x: x[0],hotel_ids))
+    if old_region_id:
+	    
+	    
+	    hotel_ids = session.query(HotWireRegionHotelMap.hotel_id).filter(HotWireRegionHotelMap.hotwire_neighborhood_id == old_region_id.uid)
+	    region = session.query(Neighborhood).filter(Neighborhood.uid == old_region_id.uid).first()
+	    region_name = region.name
 
-    hotels = ()
+	    #   extract hotel_ids from query
+	    
+	    hotel_ids = tuple(map(lambda x: x[0],hotel_ids))
 
-    if len(hotel_ids) > 0:
+	    hotels = ()
 
-        #	changed
-        
-        hotels = session.query(CanonicalHotel).filter( CanonicalHotel.uid.in_( hotel_ids ) )
-        #hotels = session.query(Hotel).filter( Hotel.hotel_id.in_( hotel_ids ) )
+	    if len(hotel_ids) > 0:
 
-    return (hotels,region_name)
+		#	changed
+		
+		hotels = session.query(CanonicalHotel).filter( CanonicalHotel.uid.in_( hotel_ids ) )
+		#hotels = session.query(Hotel).filter( Hotel.hotel_id.in_( hotel_ids ) )
 
+	    return (hotels,region_name)
+	   	
+    else:
+    	return ((),'')
 
 
 
@@ -717,7 +750,7 @@ def insert_matched_forum_hotel_entries(db_record):
 
     (forum_hotel_id,internal_hotel_id,matched_ratio) = db_record
 
-    matched_forum_hotel_record = MatchedForumHotel(forum_hotel_id,internal_hotel_id,matched_ratio)
+    matched_forum_hotel_record = MatchedForumHotelTable(forum_hotel_id,internal_hotel_id,matched_ratio)
 
     session.add(matched_forum_hotel_record)
     session.commit()
@@ -758,31 +791,29 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
     
     f_hotel_list = map(lambda x:x[0],foreign_hotel_list)
 
-    (area_dict,city_dict) = area_city_dict
+#    (area_dict,city_dict) = area_city_dict
 
-    hotel_url_dict = {} #dictionary to store hotel and their urls (for input hotels)
+    hotel_id_dict_input = {} #dictionary to store hotel and their urls (for input hotels)
 
-    hotel_id_dict = {}  #dictionary to store hotel and their ids  (for internal hotels)
+    hotel_id_dict_internal = {}  #dictionary to store hotel and their ids  (for internal hotels)
+    
+    for htl,uid in foreign_hotel_list: hotel_id_dict_input[htl] = uid
 
-    #print foreign_hotel_list
-
-    for htl,url,uid in foreign_hotel_list: hotel_url_dict[htl] = (url,uid)
-
-    for internal_hotel in hotels_in_all_regions: hotel_id_dict[internal_hotel.hotel_name] = internal_hotel.uid #changed hotel_id
+    for internal_hotel in hotels_in_all_regions: hotel_id_dict_internal[internal_hotel.hotel_name] = internal_hotel.uid #changed hotel_id
 
     hotel_match_array = hotel_name_match(f_hotel_list,map(lambda x:x.hotel_name,hotels_in_all_regions),present_internal_city,state,present_internal_region)
     
     for hotel_matches in hotel_match_array:
 
         if hotel_matches:
-            (url,forum_hotel_id) = hotel_url_dict[hotel_matches[0]]
+            forum_hotel_id = hotel_id_dict_input[hotel_matches[0]]
         else:
             continue
 
         if hotel_matches[2] > 0.83 and hotel_matches[1]:
 
         
-            insert_matched_forum_hotel = (forum_hotel_id,hotel_id_dict[hotel_matches[1]],hotel_matches[2])	#changed hotel_id ##modified by david march 12/12
+            insert_matched_forum_hotel = (forum_hotel_id,hotel_id_dict_internal[hotel_matches[1]],hotel_matches[2])	#changed hotel_id ##modified by david march 12/12
 
             insert_matched_forum_hotel_entries(insert_matched_forum_hotel)
 
@@ -795,19 +826,21 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
             if not internal_hotel_name: continue
 
-            internal_htl_id = hotel_id_dict[internal_hotel_name]
-            (states,city_area,region_name) = intrnl_hotel_index[internal_htl_id]
+            internal_htl_id = hotel_id_dict_internal[internal_hotel_name]
+#            (states,city_area,region_name) = intrnl_hotel_index[internal_htl_id]
+            
 
             area_id = 0
             city_id = 0
             
-            if city_area in area_dict.keys():
-                area_id = area_dict[city_area]
-            elif city_area in city_dict[states].keys():
-                city_id = city_dict[states][city_area]
+#            if city_area in area_dict.keys():
+#                area_id = area_dict[city_area]
+#            elif city_area in city_dict[states].keys():
+#                city_id = city_dict[states][city_area]
 
             source_forum = 'bb'
             target_site = 'priceline'
+            url = ''
 
             db_record = (forum_hotel_id,city_id,area_id,region_id,source_forum,target_site,url)
             db_rec_to_ck = (forum_hotel_id,city_id,area_id,source_forum,target_site)
@@ -819,7 +852,7 @@ def match_hotels(region_id,foreign_hotel_list,present_internal_city,state,presen
 
                 for foreign_htls,irnl_htls,ratio in hotel_matches[3]:
 
-                    db_rec = (unmatched_entry_id,hotel_id_dict[irnl_htls],ratio)
+                    db_rec = (unmatched_entry_id,hotel_id_dict_internal[irnl_htls],ratio)
                     insert_possible_matches_for_unmatched_entries(db_rec)
             
             count+=1
@@ -842,13 +875,13 @@ def match_regions(current_input_region_list,current_internal_region_list,current
 
         current_internal_regions_name = regions[1]
         current_input_region_name = regions[0]
+        ratio = regions[2]
 
         if regions[2] < 0.7:
 
             # if region not matched log it
 
-            if str(current_input_region_name)+' '+str(current_input_city_name)+' '+str(current_input_state_name) not in not_matched_regions_list:
-                not_matched_regions_list.append(str(current_input_region_name)+' '+str(current_input_city_name)+' '+str(current_input_state_name))
+           logging.info("No region match:: %s with %s ratio %f" % (current_internal_regions_name, current_input_region_name, ratio))
 
         else:
 
@@ -888,16 +921,14 @@ def test_matcher():
     test_log = open('hotel_matches2.csv','w')
     
     #process hotel information from db, exclude irelevant cities and make a structured dictionary of (states => city/area => region => hotels)
-#    pdb.set_trace()
     
     ##area_dictionary is states=>
 #    [area_dictionary,exclude_city_list,state_region] = pl_area()
 
-#    [internal_state_city_region,state_region] = state_city(area_dictionary,exclude_city_list,state_region)
-    
+#    [internal_state_city_region,state_region] = state_city(area_dictionary,exclude_city_list,state_region) 
 
     intrnl_hotel_index = {}
-    internal_state_city_region = hotwire_area()
+    (internal_state_city_region, state_region) = hotwire_area()
 #    pdb.set_trace()
     for states in internal_state_city_region.keys():
 
@@ -928,8 +959,13 @@ def test_matcher():
 
     # match state
 #    pdb.set_trace()
+    
+
 
     for possible_matchs in entity_match(input.keys(),internal_state_city_region.keys()):
+    
+    	if possible_matchs[1] == '':
+    		continue
 
         current_internal_state_name = possible_matchs[1]
         current_input_state_name = possible_matchs[0]
@@ -947,7 +983,8 @@ def test_matcher():
 
         for possible_cities in city_match(current_input_state_dict.keys(),current_internal_state_dict.keys()):
 
-            found_city = 0
+            found_city = 0            
+          
 
 #            print '\t\t' + str(possible_cities)
 
@@ -965,6 +1002,7 @@ def test_matcher():
 
                     current_internal_city_name = cities[1]
                     current_input_city_name = cities[0]
+                    
                     current_internal_city_dict = current_internal_state_dict[current_internal_city_name]
                     current_input_city_dict = current_input_state_dict[current_input_city_name]
                     current_input_region_list = current_input_city_dict.keys()
@@ -1036,7 +1074,10 @@ def test_matcher():
 
  #                           print '\t\t\t' + str(city_to_state_match)
 
-                            if city_to_state_match[2] > 0.7:
+                            if city_to_state_match[2] > -1.7:
+                            
+                            	if city_to_state_match[1] == '':
+                            		continue
 
                                 foreign_hotel_list = []
 
@@ -1047,13 +1088,16 @@ def test_matcher():
                                     foreign_hotel_list.extend(current_input_city_dict[all_region])
                                     regions_string+=' '+str(all_region)
 
-                                region_id = state_region[current_internal_state_name][city_to_state_match[1]]
-                                match_hotels(region_id,foreign_hotel_list,city_to_state_match[1],regions_string,current_internal_state_name,test_log,current_input_state_name,current_input_city_name,'',area_city_dict)
+                                region = session.query(Neighborhood).filter(Neighborhood.name == city_to_state_match[1]).first()
+                                if region:
+                                	region_id = region.uid
+                                	match_hotels(region_id,foreign_hotel_list,city_to_state_match[1],regions_string,current_internal_state_name,test_log,current_input_state_name,current_input_city_name,'',area_city_dict)
+                                else:
+                                	print city_to_state_match                         
 
-#        test_log.write('\n')
+                               
 
-##    print not_matched_regions_list
-##    print not_matched_hotels_list
+
 
 
 @print_timing

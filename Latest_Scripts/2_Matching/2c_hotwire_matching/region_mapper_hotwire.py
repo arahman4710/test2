@@ -47,7 +47,7 @@ def region_finder():
 
 def region_mapper(regions_dictionary):
     
-    hotels = session.query(CanonicalHotel).filter(CanonicalHotel.country_code == "US").all()
+    hotels = session.query(CanonicalHotel).all()
     
     for hotel in hotels:
         
