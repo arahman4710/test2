@@ -117,8 +117,8 @@ def main_match():
 				if float(bbhw_info.star) == hotel_star and amenity_match_percentage > float(0.9):
 						
 					print "FULL match"
-					#hotel.processing_status = instance.uid
-					#session.commit()
+					hotel.processing_status = instance.uid
+					session.commit()
 
 					
 			
