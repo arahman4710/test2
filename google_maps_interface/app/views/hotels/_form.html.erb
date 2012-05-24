@@ -1,0 +1,56 @@
+<% form_for @hotel do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.label :city_id %><br />
+    <%= f.text_field :city_id %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :minimumrate %><br />
+    <%= f.text_field :minimumrate %>
+  </p>
+  <p>
+    <%= f.label :currency %><br />
+    <%= f.text_field :currency %>
+  </p>
+  <p>
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </p>
+  <p>
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </p>
+  <p>
+    <%= f.label :ratingcount %><br />
+    <%= f.text_field :ratingcount %>
+  </p>
+  <p>
+    <%= f.label :userrating %><br />
+    <%= f.text_field :userrating %>
+  </p>
+  <p>
+    <%= f.label :property %><br />
+    <%= f.text_field :property %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

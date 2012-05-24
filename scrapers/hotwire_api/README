@@ -1,0 +1,8 @@
+Top level for hotwire_api scraper.    
+
+See hotwire information on the api at http://developer.hotwire.com/docs/read/Home
+
+This is not currently set up to be run from scrapyd, but either by hand or repeatedly via something like cron.
+
+Output files are now json rather than csv.   Ideally this should be run with configuration read from a database or other input mechanisms instead of internal settings, and output should go to a database, but which database and how?   
+

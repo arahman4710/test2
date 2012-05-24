@@ -1,0 +1,3 @@
+it : 
+	scrapy crawl hotelnames
+

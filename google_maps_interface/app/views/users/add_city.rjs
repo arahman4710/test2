@@ -1,0 +1,3 @@
+page.insert_html :bottom, :tasks, :partial => 'city_fields',
+                 :locals => { :task => @task, :index => params[:index] }
+page.replace :add_task_link, :partial => 'add_city_link', :locals => { :index => (params[:index].to_i + 1) }

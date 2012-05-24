@@ -1,0 +1,11205 @@
+wyoming
+	worland
+		Worland
+		Thermopolis
+
+	sheridan
+		Sheridan
+
+	jackson hole
+		Jackson Hole
+		Targhee
+
+	lander
+		Lander
+
+	rawlins
+		Rawlins
+
+	gillette
+		Gillette
+
+	evansville
+		Evansville
+		Casper
+
+	thermopolis
+		Worland
+		Thermopolis
+
+	pinedale
+		Pinedale
+
+	douglas
+		Douglas
+
+	lusk
+		Lusk
+
+	laramie
+		Laramie
+
+	green river
+		Green River
+
+	cheyenne
+		Cheyenne
+
+	casper
+		Evansville
+		Casper
+
+	riverton
+		Riverton
+
+	evanston
+		Evanston
+
+	buffalo
+		Buffalo
+
+	rock springs
+		Rock Springs
+
+	cody
+		Cody
+
+
+colorado
+	sterling
+		Sterling
+
+	parker
+		Parker
+
+	fort morgan
+		Brush
+		Fort Morgan
+
+	grand junction
+		Grand Junction
+
+	fraser
+		Grand Lake
+		Fraser
+		Idaho Springs
+		Nederland
+
+	clifton
+		Clifton
+		Fruita
+
+	durango
+		Durango
+
+	parachute
+		Parachute
+		Silt
+		Rifle
+
+	pagosa springs
+		Pagosa Springs
+
+	brush
+		Brush
+		Fort Morgan
+
+	estes park
+		Estes Park
+
+	silt
+		Parachute
+		Silt
+		Rifle
+
+	trinidad
+		Raton
+		Walsenburg
+		Trinidad
+
+	eagle county - summit county
+		Copper Mountain
+		Vail
+		Avon - Beaver Creek
+		Breckenridge
+		Keystone
+		Dillon - Silverthorne - Frisco
+
+	castle rock
+		Castle Rock
+
+	salida
+		Buena Vista
+		Salida
+
+	telluride
+		Telluride
+		Ouray
+
+	alamosa
+		Alamosa
+
+	denver
+		Cherry Creek
+		Denver Airport (DEN)
+		Tech Center South
+		Stapleton
+		Aurora
+		Denver West
+		Downtown Denver
+		Littleton
+		Westminster - Broomfield
+		Northglenn - Thornton
+		Northeast Denver
+		I70 - Airport West
+		Denver Southwest - Lakewood
+		Tech Center North
+
+	ouray
+		Ouray
+		Telluride
+
+	fountain
+		Fountain
+
+	gunnison
+		Gunnison
+
+	idaho springs
+		Fraser
+		Idaho Springs
+		Nederland
+
+	walsenburg
+		Walsenburg
+		Trinidad
+
+	colorado springs
+		Manitou Springs - Garden of the Gods
+		Colorado Springs Airport (COS)
+		Central Colorado Springs
+		Colorado Springs - Air Force Academy
+		Colorado Springs South
+
+	boulder
+		Boulder
+		Longmont
+		Louisville
+
+	eagle
+		Eagle
+
+	lamar
+		Lamar
+
+	aspen
+		Glenwood Springs
+		Snowmass Village
+		Crested Butte
+		Aspen
+		Carbondale
+
+	nederland
+		Fraser
+		Idaho Springs
+		Nederland
+
+	rifle
+		Parachute
+		Silt
+		Rifle
+
+	cedaredge
+		Montrose
+		Cedaredge
+		Delta
+
+	delta
+		Montrose
+		Cedaredge
+		Delta
+
+	pueblo
+		Canon City
+		Pueblo
+
+	buena vista
+		Buena Vista
+		Salida
+
+	fruita
+		Clifton
+		Fruita
+
+	montrose
+		Cedaredge
+		Delta
+		Montrose
+
+	fort collins
+		Fort Collins
+		Greeley
+		Loveland
+
+	steamboat springs
+		Craig
+		Steamboat Springs
+
+	grand lake
+		Grand Lake
+		Fraser
+
+	la junta
+		La Junta
+
+	cortez
+		Cortez
+
+	stratton
+		Stratton
+
+
+washington
+	bellingham
+		Bellingham
+
+	wenatchee - yakima
+		Yakima
+		Ellensburg
+		Wenatchee
+
+	elma
+		Elma
+
+	liberty lake
+		Liberty Lake
+		Greenacres
+
+	friday harbor
+		Friday Harbor
+
+	chelan
+		Chelan
+
+	portland
+		Clackamas
+		Lake Oswego - Tigard
+		Beaverton - Hillsboro
+		Gresham - Troutdale
+		Convention Center - Lloyd Center
+		North Harbor - Jantzen Beach
+		South Waterfront District
+		Portland Airport (PDX)
+		Downtown Portland
+		Northwest Portland
+		Vancouver, Washington
+
+	seattle
+		Lake Union
+		Bellevue
+		Mukilteo - South Everett
+		Lynnwood - Edmonds
+		Seattle Downtown - Pike Place
+		North Everett
+		Seattle Airport (SEA)
+		Seattle Center - Space Needle
+		Renton - Kent
+		Redmond - Kirkland
+		Univ of Washington - Northgate
+		Bothell
+		Kirkland
+
+	pullman
+		Colfax
+		Moscow
+		Pullman
+
+	monroe
+		Marysville
+		Monroe
+
+	greenacres
+		Liberty Lake
+		Greenacres
+
+	ocean shores
+		Ocean Shores
+		Hoquiam
+
+	colfax
+		Colfax
+		Pullman
+
+	tacoma
+		Olympia
+		Auburn - Federal Way
+		Lakewood - Tacoma South
+		Puyallup
+		Buckley
+		Tacoma
+
+	chehalis
+		Chehalis
+
+	gig harbor
+		Gig Harbor
+		Sumner
+		Bremerton
+
+	washougal
+		Battle Ground
+		Washougal
+
+	hoquiam
+		Ocean Shores
+		Hoquiam
+
+	bremerton
+		Gig Harbor
+		Bremerton
+		Port Orchard
+		Silverdale
+
+	burlington
+		Burlington - Mount Vernon
+
+	oak harbor
+		Oak Harbor
+
+	battle ground
+		Washougal
+		Battle Ground
+
+	cle elum
+		Cle Elum
+
+	issaquah
+		Issaquah
+
+	omak
+		Omak
+
+	toppenish
+		Toppenish
+
+	mount vernon
+		Burlington - Mount Vernon
+
+	moses lake
+		Othello
+		Moses Lake
+
+	anacortes
+		Oak Harbor
+		Anacortes
+
+	shelton
+		Shelton
+
+	kelso
+		Kelso
+
+	othello
+		Othello
+		Moses Lake
+
+	bainbridge island
+		Bainbridge Island
+		Silverdale
+		Poulsbo
+
+	marysville
+		Monroe
+		Marysville
+
+	ferndale
+		Ferndale
+
+	spokane
+		Downtown Spokane
+		Spokane Valley
+		Spokane North
+		Spokane Airport (GEG)
+
+	walla walla
+		Walla Walla
+
+	leavenworth
+		Leavenworth
+
+	silverdale
+		Bremerton
+		Silverdale
+		Bainbridge Island
+
+	port angeles
+		Port Angeles
+
+	long beach
+		Long Beach
+		Warrenton
+
+	ritzville
+		Ritzville
+
+	prosser
+		Prosser
+
+	sumner
+		Gig Harbor
+		Sumner
+
+	sequim
+		Sequim
+
+	richland - kennewick
+		Kennewick
+		Richland
+
+
+alaska
+	ketchikan
+		Ketchikan
+
+	tok
+		Tok
+
+	anchorage
+		South Anchorage - ANC Intl Airport
+		Anchorage
+		Wasilla
+
+	fairbanks
+		Fairbanks
+
+	sitka
+		Sitka
+
+	kodiak
+		Kodiak
+
+	juneau
+		Juneau
+
+	seward
+		Seward - Kenai National Park Area
+
+
+tennessee
+	white house
+		White House
+		Franklin
+		Gallatin
+		Joelton
+
+	monterey
+		Monterey
+		Cookeville
+		Crossville
+
+	clinton
+		Oak Ridge
+		Clinton
+
+	joelton
+		White House
+		Joelton
+		Hermitage
+
+	ardmore
+		Pulaski
+		Fayetteville
+		Athens
+		Ardmore
+
+	jellico
+		Jellico
+
+	hermitage
+		Mount Juliet
+		Lebanon
+		Gallatin
+		Joelton
+		Hermitage
+
+	sweetwater
+		Lenoir City
+		Sweetwater
+		Loudon
+		Athens
+
+	kingsport
+		Kingsport
+		Blountville
+
+	clarksville
+		Clarksville
+		Sango
+
+	soddy daisy
+		Soddy Daisy
+		Dayton
+
+	manchester
+		Manchester
+		Winchester
+		Tullahoma
+
+	athens
+		Sweetwater
+		Athens
+
+	cleveland
+		Cleveland
+
+	bulls gap
+		Greeneville
+		Morristown
+		Bulls Gap
+
+	shelbyville
+		Shelbyville
+		Tullahoma
+
+	south pittsburg
+		South Pittsburg
+		Jasper
+
+	gallatin
+		White House
+		Mount Juliet
+		Lebanon
+		Gallatin
+		Hermitage
+
+	spring city
+		Spring City
+		Dayton
+
+	jackson
+		Jackson
+
+	crossville
+		Monterey
+		Crossville
+
+	dyersburg
+		Dyersburg
+		Ripley
+
+	germantown
+		Horn Lake
+		Southaven
+		Collierville
+		Millington
+		Olive Branch
+		Germantown
+
+	knoxville
+		Knoxville East
+		Knoxville North
+		Papermill Drive
+		McGhee Tyson Airport (TYS)
+		Downtown Knoxville
+		Knoxville West
+
+	cookeville
+		Monterey
+		Cookeville
+
+	blountville
+		Kingsport
+		Blountville
+
+	pulaski
+		Pulaski
+		Ardmore
+
+	covington
+		Covington
+		Ripley
+		Millington
+
+	ripley
+		Dyersburg
+		Covington
+		Ripley
+		Brownsville
+
+	paris
+		Paris
+		Murray
+
+	pigeon forge - gatlinburg
+		Gatlinburg East
+		Pigeon Forge
+		Gatlinburg North
+		Gatlinburg
+		Kodak
+		Sevierville
+
+	loudon
+		Lenoir City
+		Sweetwater
+		Loudon
+
+	bells
+		Brownsville
+
+	murfreesboro
+		Murfreesboro
+
+	columbia
+		Columbia
+		Spring Hill
+
+	morristown
+		Dandridge
+		Morristown
+		Bulls Gap
+		Newport
+
+	tullahoma
+		Shelbyville
+		Manchester
+		Winchester
+		Tullahoma
+
+	dayton
+		Spring City
+		Soddy Daisy
+		Dayton
+
+	lebanon
+		Mount Juliet
+		Lebanon
+		Gallatin
+		Hermitage
+
+	nashville
+		Goodlettsville
+		Nashville Airport (BNA)
+		Bellevue
+		Brentwood
+		South Nashville
+		Opryland
+		Antioch - Smyrna
+		Downtown - Vanderbilt - Metrocenter
+		Hendersonville
+		Franklin - Cool Springs
+		West Nashville
+		North Nashville
+
+	greeneville
+		Greeneville
+		Bulls Gap
+
+	spring hill
+		Columbia
+		Spring Hill
+
+	dickson
+		Dickson
+
+	holladay
+		Holladay
+
+	millington
+		Covington
+		Germantown
+		Millington
+
+	memphis
+		Downtown Memphis
+		Memphis Southeast
+		Memphis East
+		Memphis - Hacks Cross
+		Cordova
+		Memphis Airport (MEM)
+
+	lenoir city
+		Oak Ridge
+		Lenoir City
+		Sweetwater
+		Loudon
+		Maryville
+
+	chattanooga
+		Ringgold
+		Chattanooga South
+		Hixson
+		Downtown Chattanooga
+		Lookout Mountain
+		Chattanooga Airport (CHA)
+
+	johnson city
+		Jonesborough
+		Johnson City
+
+	maryville
+		Lenoir City
+		Maryville
+
+	mount juliet
+		Mount Juliet
+		Lebanon
+		Gallatin
+		Hermitage
+
+	winchester
+		Manchester
+		Tullahoma
+		Winchester
+
+	lexington
+		Lexington
+
+	collierville
+		Olive Branch
+		Germantown
+		Collierville
+
+	erwin
+		Erwin
+
+	dandridge
+		Dandridge
+		Morristown
+		Newport
+
+	oak ridge
+		Lenoir City
+		Oak Ridge
+		Clinton
+
+	newport
+		Dandridge
+		Morristown
+		Newport
+
+	mc minnville
+		Mc Minnville
+
+	crump
+		Crump
+
+	martin
+		Martin
+
+	fayetteville
+		Fayetteville
+		Ardmore
+
+	whiteville
+		Brownsville
+		Whiteville
+
+	hurricane mills
+		Hurricane Mills
+
+	brownsville
+		Ripley
+		Brownsville
+		Whiteville
+
+	jasper
+		South Pittsburg
+		Jasper
+
+
+wisconsin
+	new london
+		Shawano
+		New London
+
+	madison
+		Madison East
+		Madison Southwest
+		Madison South
+		Madison West
+		Madison Downtown
+
+	hudson
+		River Falls
+		Hudson
+		Inver Grove Heights
+		Stillwater
+
+	wisconsin dells area
+		Portage
+		Reedsburg
+		Wisconsin Dells
+		Baraboo
+
+	saint croix falls
+		Saint Croix Falls
+		North Branch
+		Stillwater
+		Chisago City
+
+	delafield
+		Whitewater
+		Oconomowoc
+		Delafield
+		East Troy
+		Watertown
+		Franklin
+		Waterford
+		Germantown
+
+	janesville
+		Whitewater
+		Delavan
+		Fort Atkinson
+		Janesville
+
+	belmont
+		Mineral Point
+		Belmont
+		Galena
+		Dodgeville
+
+	lodi
+		Sun Prairie
+		Lodi
+		Windsor
+		De Forest
+		Waunakee
+
+	la crosse area
+		La Crosse Area
+
+	shawano
+		Shawano
+		New London
+
+	menomonie
+		Menomonie
+
+	sun prairie
+		Lodi
+		Columbus
+		De Forest
+		Beaver Dam
+		Sun Prairie
+		Windsor
+		Waunakee
+
+	sturtevant
+		Wadsworth
+		Sturtevant
+		Franklin
+		Kenosha
+		Waterford
+		Pleasant Prairie
+
+	milwaukee
+		South Milwaukee
+		Brookfield - New Berlin
+		Milwaukee Downtown
+		Pewaukee
+		Milwaukee North
+		Milwaukee Northwest
+
+	delavan
+		Whitewater
+		Delavan
+		East Troy
+		Waterford
+		Richmond
+		Lake Geneva
+		Fort Atkinson
+		Janesville
+
+	eau claire
+		Eau Claire
+		Chippewa Falls
+
+	baldwin
+		Menomonie
+		Hudson
+		Baldwin
+
+	windsor
+		Lodi
+		Columbus
+		De Forest
+		Sun Prairie
+		Windsor
+		Waunakee
+
+	mauston
+		Tomah
+		Mauston
+
+	west bend
+		Saukville
+		Port Washington
+		Germantown
+		Plymouth
+		West Bend
+
+	minocqua
+		Minocqua
+
+	marinette
+		Marinette
+
+	west salem
+		West Salem
+		Sparta
+
+	manitowoc
+		Manitowoc
+
+	sparta
+		West Salem
+		Tomah
+		Black River Falls
+		Sparta
+
+	pleasant prairie
+		Wadsworth
+		Kenosha
+		Richmond
+		Lake Geneva
+		Franklin
+		Sturtevant
+		Waterford
+		Pleasant Prairie
+
+	plover
+		Wisconsin Rapids
+		Plover
+
+	lake winnebago
+		Fond du Lac
+		Oshkosh
+
+	antigo
+		Wittenberg
+		Antigo
+
+	plymouth
+		Saukville
+		Plymouth
+		Port Washington
+		West Bend
+
+	beaver dam
+		Watertown
+		Columbus
+		Waupun
+		Sun Prairie
+		Beaver Dam
+
+	phillips
+		Phillips
+
+	river falls
+		River Falls
+		Hudson
+		Stillwater
+		Red Wing
+
+	eagle river
+		Eagle River
+
+	beloit
+		Beloit
+
+	lake geneva
+		Whitewater
+		Delavan
+		East Troy
+		Richmond
+		Lake Geneva
+		Waterford
+		Pleasant Prairie
+
+	whitewater
+		Whitewater
+		Oconomowoc
+		Delavan
+		Delafield
+		East Troy
+		Watertown
+		Lake Geneva
+		Fort Atkinson
+		Janesville
+
+	saukville
+		Saukville
+		Port Washington
+		Germantown
+		Plymouth
+		West Bend
+
+	grafton
+		Saukville
+		Port Washington
+		West Bend
+		Plymouth
+		Franklin
+		Germantown
+
+	racine
+		Racine
+
+	hayward
+		Hayward
+
+	wittenberg
+		Wittenberg
+		Antigo
+
+	columbus
+		Columbus
+		Waupun
+		De Forest
+		Beaver Dam
+		Watertown
+		Sun Prairie
+		Windsor
+		Waunakee
+
+	oconomowoc
+		Whitewater
+		Oconomowoc
+		Delafield
+		East Troy
+		Watertown
+		Fort Atkinson
+		Germantown
+
+	black river falls
+		Black River Falls
+		Sparta
+
+	marshfield
+		Marshfield
+
+	prairie du chien
+		Prairie Du Chien
+
+	wausau
+		Wausau
+		Schofield - Weston
+		Rothschild
+
+	east troy
+		Whitewater
+		Oconomowoc
+		Delavan
+		Delafield
+		East Troy
+		Richmond
+		Lake Geneva
+		Franklin
+		Waterford
+
+	waterford
+		Delavan
+		Delafield
+		East Troy
+		Richmond
+		Lake Geneva
+		Franklin
+		Sturtevant
+		Waterford
+		Pleasant Prairie
+
+	mineral point
+		Mineral Point
+		Belmont
+		Dodgeville
+
+	berlin
+		Berlin
+		Redgranite
+		Waupun
+		Wautoma
+
+	waupun
+		Watertown
+		Columbus
+		Waupun
+		Berlin
+		Beaver Dam
+
+	fort atkinson
+		Whitewater
+		Oconomowoc
+		Delavan
+		Watertown
+		Fort Atkinson
+		Janesville
+
+	sheboygan
+		Sheboygan
+
+	wautoma
+		Westfield
+		Redgranite
+		Berlin
+		Wautoma
+
+	dodgeville
+		Dodgeville
+		Belmont
+		Mineral Point
+
+	tomah
+		Tomah
+		Mauston
+		Sparta
+
+	la crosse
+		La Crosse Area
+
+	germantown
+		Saukville
+		Port Washington
+		Oconomowoc
+		West Bend
+		Delafield
+		Franklin
+		Germantown
+
+	greenbay - appleton
+		Greenbay Airport (GRB)
+		Greenbay Downtown
+		Kaukauna
+		Greenbay East
+		Kimberly
+		Appleton
+
+	wisconsin rapids
+		Wisconsin Rapids
+		Plover
+
+	hurley
+		Hurley
+		Ironwood
+
+	de forest
+		Lodi
+		Columbus
+		De Forest
+		Sun Prairie
+		Windsor
+		Waunakee
+
+	stevens point
+		Stevens Point
+
+	rice lake
+		Rice Lake
+
+	watertown
+		Columbus
+		Oconomowoc
+		Waupun
+		Delafield
+		Whitewater
+		Beaver Dam
+		Watertown
+		Fort Atkinson
+
+	duluth
+		Superior
+		Duluth
+		Duluth South - Proctor
+
+	franklin
+		Kenosha
+		Delafield
+		East Troy
+		Franklin
+		Sturtevant
+		Waterford
+		Germantown
+		Grafton
+		Pleasant Prairie
+
+	kenosha
+		Wadsworth
+		Pleasant Prairie
+		Sturtevant
+		Kenosha
+		Franklin
+
+	sturgeon bay
+		Sturgeon Bay
+
+	ashland
+		Ashland
+
+	westfield
+		Westfield
+		Redgranite
+		Wautoma
+
+	redgranite
+		Westfield
+		Redgranite
+		Berlin
+		Wautoma
+
+	port washington
+		Saukville
+		Port Washington
+		Germantown
+		Plymouth
+		West Bend
+
+	waunakee
+		Lodi
+		Columbus
+		De Forest
+		Sun Prairie
+		Windsor
+		Waunakee
+
+
+nevada
+	laughlin
+		Laughlin
+
+	winnemucca
+		Winnemucca
+
+	fallon
+		Fallon
+
+	elko
+		Elko
+
+	reno
+		Sparks
+		Reno
+		Reno South - Airport (RNO)
+
+	ely
+		Ely
+
+	las vegas
+		Las Vegas Strip North
+		Near Las Vegas Strip East
+		Las Vegas Convention Center
+		Summerlin
+		Lake Las Vegas
+		Fremont St. Vicinity
+		Mount Charleston - Indian Springs
+		Boulder Strip
+		Las Vegas Strip Vicinity South
+		NW Las Vegas
+		Nellis - Las Vegas Speedway
+		Las Vegas Airport (LAS)
+		Near Las Vegas Strip West
+		Las Vegas Strip Vicinity North - Condo
+		Henderson
+
+	lake tahoe
+		Carson City
+		Truckee
+		Gardnerville - Minden
+		Incline Village
+		South Lake Tahoe
+		North Lake Tahoe
+
+	mesquite
+		Mesquite
+
+	boulder city
+		Boulder City
+
+
+maine
+	bangor - bar harbor
+		Bangor - Orono
+		Bar Harbor
+		Ellsworth
+
+	boothbay harbor
+		Boothbay Harbor
+
+	waterville
+		Waterville
+
+	freeport
+		Brunswick - Bath
+		Freeport
+		Lewiston - Auburn
+
+	millinocket
+		Millinocket
+
+	augusta
+		Augusta
+
+	portsmouth - kittery
+		Portsmouth
+		Ogunquit - Wells
+		Dover - Durham
+		Kennebunk Area
+		York
+		Kittery
+
+	portland
+		Portland - Portland West
+		South Portland - Scarborough
+		Biddeford - Saco
+
+	caribou
+		Caribou
+
+
+north dakota
+	wahpeton
+		Wahpeton
+
+	rugby
+		Rugby
+
+	bismarck
+		Bismarck
+
+	casselton
+		Casselton
+
+	devils lake
+		Lakota
+		Devils Lake
+
+	lakota
+		Lakota
+		Devils Lake
+
+	minot
+		Minot
+
+	grand forks
+		Grand Forks
+
+	dickinson
+		Dickinson
+
+	fargo
+		Fargo
+		Hector Airport
+		Moorhead
+
+	jamestown
+		Jamestown
+
+	mandan
+		Mandan
+
+
+mississippi
+	clinton
+		Clinton
+		Brandon
+
+	tupelo
+		Tupelo
+
+	robinsonville
+		Horn Lake
+		Southaven
+		Hernando
+		Robinsonville
+
+	natchez
+		Natchez
+
+	laurel
+		Laurel
+		Ellisville
+
+	canton
+		Canton
+
+	indianola
+		Indianola
+
+	ellisville
+		Laurel
+		Ellisville
+
+	hattiesburg
+		Hattiesburg
+
+	horn lake
+		Horn Lake
+		Southaven
+		Robinsonville
+		West Memphis
+		Hernando
+		Olive Branch
+		Germantown
+
+	olive branch
+		Horn Lake
+		Southaven
+		Collierville
+		West Memphis
+		Hernando
+		Olive Branch
+		Germantown
+
+	jackson
+		Jackson
+		Richland
+		Jackson Airport (JAN)
+		Jackson Southwest
+		North Jackson
+		Byram
+		Ridgeland
+
+	mc comb
+		Mc Comb
+
+	brandon
+		Clinton
+		Brandon
+
+	vicksburg
+		Vicksburg
+		Tallulah
+
+	forest
+		Forest
+
+	new albany
+		New Albany
+
+	meridian
+		Meridian
+
+	columbus
+		West Point
+		Columbus
+		Starkville
+
+	columbia
+		Columbia
+
+	moss point
+		Moss Point
+
+	west point
+		West Point
+		Columbus
+		Starkville
+
+	sardis
+		Sardis
+		Hernando
+		Batesville
+
+	winona
+		Winona
+		Grenada
+
+	hernando
+		Horn Lake
+		Southaven
+		Robinsonville
+		Sardis
+		Hernando
+		Olive Branch
+		Germantown
+
+	brookhaven
+		Brookhaven
+
+	picayune
+		Picayune
+
+	batesville
+		Sardis
+		Batesville
+
+	kosciusko
+		Kosciusko
+
+	greenwood
+		Greenwood
+
+	southaven
+		Horn Lake
+		Southaven
+		Robinsonville
+		Collierville
+		Millington
+		West Memphis
+		Hernando
+		Olive Branch
+		Germantown
+
+	booneville
+		Booneville
+
+	magee
+		Magee
+
+	bay saint louis
+		Bay Saint Louis
+		Long Beach
+
+	long beach
+		Bay Saint Louis
+		Long Beach
+
+	biloxi - gulfport
+		Gulfport Coast
+		Biloxi Coast
+		North Gulfport - Airport (GPT)
+		North Biloxi - Ocean Springs
+
+	starkville
+		West Point
+		Columbus
+		Starkville
+
+	grenada
+		Winona
+		Grenada
+
+	fulton
+		Fulton
+
+
+south dakota
+	fort pierre
+		Fort Pierre
+		Pierre
+
+	sioux falls
+		Sioux Falls
+
+	wall
+		Wall
+
+	pierre
+		Fort Pierre
+		Pierre
+
+	oacoma
+		Chamberlain
+		Oacoma
+
+	mobridge
+		Mobridge
+
+	huron
+		Huron
+
+	aberdeen
+		Aberdeen
+
+	kadoka
+		Kadoka
+
+	winner
+		Winner
+
+	brandon
+		Brandon
+
+	brookings
+		Brookings
+
+	hot springs
+		Hot Springs
+
+	chamberlain
+		Chamberlain
+		Oacoma
+
+	sioux city
+		North Sioux City
+		Sioux City
+
+	canistota
+		Canistota
+
+	yankton
+		Yankton
+
+	mission
+		Mission
+		Valentine
+
+	the black hills
+		Black Hawk
+		Deadwood - Lead
+		Custer
+		Sturgis
+		Rapid City
+		Mt. Rushmore Area
+		Spearfish
+
+	belle fourche
+		Belle Fourche
+
+	watertown
+		Watertown
+
+	mitchell
+		Mitchell
+
+
+new jersey
+	somerset - brunswick - edison
+		Basking Ridge
+		Clinton - Lebanon
+		Somerset - Piscataway - S. Plainfield
+		Clark - Westfield
+		Carteret
+		Edison - Woodbridge
+		East Brunswick - Edison
+		North Brunswick
+		Somerville - Bridgewater
+
+	bordentown
+		Columbus
+		Bordentown
+
+	rockaway
+		Rockaway
+
+	atlantic city - cape may
+		Atlantic City Area
+		Atlantic City West
+		Somers Point - Ocean City
+		Ventnor
+		Cape May - The Wildwoods
+		Absecon
+		Vineland - Millville
+
+	budd lake
+		Budd Lake - Mt. Olive - Mt. Arlington
+
+	perth amboy
+		Basking Ridge
+		Clinton - Lebanon
+		Somerset - Piscataway - S. Plainfield
+		Clark - Westfield
+		Edison - Woodbridge
+		Carteret
+		East Brunswick - Edison
+		North Brunswick
+		Somerville - Bridgewater
+
+	saddle brook - teaneck
+		Paramus - Hackensack
+		Saddle Brook - Hasbrouck Heights
+		Ridgefield
+		Teaneck - Fort Lee
+
+	haskell
+		Haskell
+
+	trenton - princeton
+		Princeton West
+		Princeton East - Monmouth Junction
+		Mount Holly
+		Trenton
+		South Brunswick - Cranbury
+		Langhorne - Levittown
+		Cookstown - Wrightstown
+
+	mahwah
+		Mahwah - Ramsey - Allendale
+		Woodcliff - Park Ridge
+
+	flemington
+		Flemington
+
+	philadelphia
+		Philadelphia Airport (PHL)
+		Mount Laurel
+		Cherry Hill
+		Downtown Philadelphia
+		University Area
+		Gloucester - Runnemede - Deptford
+		Trevose - Bensalem
+		City Line
+
+	colts neck
+		Colts Neck
+		Freehold
+
+	williamstown
+		Williamstown
+		Voorhees
+		Hammonton
+
+	tenafly
+		Palisades
+		Tenafly
+
+	sea girt
+		Sea Girt
+		Seaside Heights
+
+	pennsville
+		Pennsville
+
+	paulsboro
+		Paulsboro
+		Chester
+
+	columbus
+		Columbus
+		Bordentown
+
+	tinton falls
+		Hazlet
+		Neptune - Wall
+		Red Bank - Middletown
+		Tinton Falls - Eatontown - Long Branch
+
+	seaside heights
+		Seaside Park
+		Sea Girt
+		Seaside Heights
+
+	voorhees
+		Williamstown
+		Voorhees
+
+	freehold
+		Colts Neck
+		Freehold
+
+	south amboy
+		South Amboy
+
+	manahawkin
+		Manahawkin
+
+	wayne - fairfield - totowa
+		Wayne - Fairfield - Totowa
+		Pompton Plains
+
+	hammonton
+		Williamstown
+		Hammonton
+
+	hamburg
+		Hamburg
+
+	parsippany - morristown nj
+		East Hanover - Livingston
+		Morristown - Florham Park
+		Parsippany - Hanover
+
+	budd lake - mt. arlington
+		Budd Lake - Mt. Olive - Mt. Arlington
+
+	seaside park
+		Seaside Park
+		Seaside Heights
+
+	wilmington
+		New Castle
+		Elkton
+		Penn's Grove - Bridgeport
+		Newark - Christiana
+		Claymont
+		Wilmington - Brandywine
+
+	toms river
+		Toms River
+		Lakewood
+
+	newark - meadowlands
+		Elizabeth
+		Jersey City
+		Newark - Newark Airport (EWR)
+		West Orange
+		Short Hills - Summit
+		Secaucus - North Bergen
+		Meadowlands - Rutherford
+
+
+oklahoma
+	muskogee
+		Muskogee
+		Checotah
+
+	picher
+		Miami
+		Picher
+
+	clinton
+		Weatherford
+		Clinton
+
+	sapulpa
+		Owasso
+		Sapulpa
+
+	ardmore
+		Ardmore
+
+	woodward
+		Woodward
+
+	altus
+		Altus
+
+	claremore
+		Pryor
+		Owasso
+		Claremore
+
+	el reno
+		El Reno
+		Yukon
+
+	erick
+		Shamrock
+		Erick
+
+	weatherford
+		Clinton
+		Weatherford
+
+	enid
+		Enid
+
+	guymon
+		Guymon
+
+	pryor
+		Pryor
+		Claremore
+		Locust Grove
+		Vinita
+
+	durant
+		Durant
+
+	perry
+		Stillwater
+
+	shawnee
+		Shawnee
+
+	pauls valley
+		Pauls Valley
+
+	anadarko
+		Anadarko
+		Chickasha
+
+	locust grove
+		Pryor
+		Locust Grove
+		Tahlequah
+
+	sallisaw
+		Sallisaw
+
+	ada
+		Ada
+
+	hinton
+		Weatherford
+
+	yukon
+		El Reno
+		Yukon
+
+	mcalester
+		Mcalester
+
+	ponca city
+		Ponca City
+		Arkansas City
+
+	norman
+		Norman
+
+	tulsa
+		Downtown Tulsa
+		Midtown - Expo Center
+		Tulsa - Catoosa
+		Southeast Tulsa - Broken Arrow
+		Tulsa Airport (TUL)
+		Sand Springs & Southwest Tulsa
+		Southern Hills - Warren Park
+
+	chickasha
+		Anadarko
+		Chickasha
+
+	guthrie
+		Guthrie
+
+	poteau
+		Poteau
+
+	owasso
+		Owasso
+		Sapulpa
+		Claremore
+
+	checotah
+		Muskogee
+		Checotah
+
+	bartlesville
+		Caney
+		Bartlesville
+
+	lawton
+		Lawton
+
+	atoka
+		Atoka
+
+	vinita
+		Miami
+		Pryor
+		Vinita
+
+	stillwater
+		Stillwater
+
+	idabel
+		Broken Bow
+		Idabel
+
+	broken bow
+		Broken Bow
+		Idabel
+
+	miami
+		Miami
+		Picher
+		Vinita
+
+	tahlequah
+		Locust Grove
+		Tahlequah
+
+	okmulgee
+		Okmulgee
+
+	colcord
+		Colcord
+		Siloam Springs
+
+	oklahoma city
+		Tinker - Del City
+		Will Rogers Airport Area (OKC)
+		Frontier City
+		Quail Springs
+		Edmond
+		Crossroads - Moore
+		Oklahoma City North
+		Oklahoma City
+
+	elk city
+		Elk City
+
+
+delaware
+	milford
+		Harrington
+		Milford
+		Milton
+
+	smyrna
+		Smyrna
+
+	wilmington
+		New Castle
+		Elkton
+		Penn's Grove - Bridgeport
+		Newark - Christiana
+		Claymont
+		Wilmington - Brandywine
+
+	bear
+		Bear
+
+	delaware beaches
+		Rehoboth Beach
+		Bethany Beach
+
+	harrington
+		Harrington
+		Milford
+
+	seaford
+		Seaford
+
+	milton
+		Milford
+		Milton
+
+	dover
+		Dover
+
+
+minnesota
+	baxter
+		Nisswa
+
+	madelia
+		Madelia
+		New Ulm
+		Fairmont
+
+	alexandria
+		Alexandria
+
+	hinckley
+		Hinckley
+
+	fairmont
+		Fairmont
+		Madelia
+
+	owatonna
+		Owatonna
+
+	lakeville
+		Lakeville
+
+	inver grove heights
+		Inver Grove Heights
+
+	morton
+		Morton
+
+	worthington
+		Worthington
+
+	elk river
+		Elk River
+
+	minneapolis - st. paul
+		Airport - Mall of America
+		Bloomington West - Mall of America Area
+		New Brighton - Mounds View
+		Eagan
+		Burnsville
+		Fridley
+		Minneapolis West
+		Eden Prairie
+		St. Paul Northeast
+		Roseville
+		University - Metrodome
+		Woodbury - Oakdale
+		Midtown Minneapolis
+		Downtown Minneapolis
+		Coon Rapids - Blaine
+		Minneapolis Northwest
+		St. Paul
+
+	rochester
+		Rochester South
+		Rochester North
+		Rochester
+
+	nisswa
+		Nisswa
+
+	cannon falls
+		Cannon Falls
+
+	saint cloud
+		Saint Cloud
+
+	chanhassen
+		Chanhassen - Chaska
+
+	fargo
+		Fargo
+		Hector Airport
+		Moorhead
+
+	new ulm
+		Madelia
+		New Ulm
+
+	waconia
+		Waconia
+
+	mountain iron
+		Mountain Iron
+
+	mankato
+		Mankato
+
+	shakopee
+		Shakopee
+
+	winona
+		Winona
+
+	faribault
+		Faribault
+
+	red wing
+		Cannon Falls
+		River Falls
+		Red Wing
+
+	north branch
+		North Branch
+
+	chisago city
+		Chisago City
+
+	avon
+		Avon
+
+	chaska
+		Chanhassen - Chaska
+
+	stillwater
+		Stillwater
+
+	albert lea
+		Albert Lea
+
+	benson
+		Benson
+
+	willmar
+		Willmar
+
+	detroit lakes
+		Detroit Lakes
+
+	international falls
+		International Falls
+
+	rogers
+		Rogers
+
+	princeton
+		Becker
+		Elk River
+		Rogers
+		Albertville
+
+	hutchinson
+		Hutchinson
+
+	bemidji
+		Bemidji
+
+	duluth
+		Superior
+		Duluth
+		Duluth South - Proctor
+
+	grand rapids
+		Grand Rapids
+
+	northfield
+		Northfield
+
+	walker
+		Walker
+
+	becker
+		Becker
+
+	austin
+		Austin
+
+	albertville
+		Albertville
+
+
+north carolina
+	siler city
+		Siler City
+
+	kenly
+		Goldsboro
+		Wilson
+		Kenly
+		Smithfield
+
+	hendersonville
+		Columbus
+		Brevard
+		Hendersonville
+		Flat Rock
+
+	clinton
+		Clinton
+		Warsaw
+
+	cornelius
+		Mooresville
+		Lake Norman - Huntersville
+
+	elizabethtown
+		Elizabethtown
+
+	pinehurst
+		Southern Pines
+		Pinehurst
+
+	sanford
+		Sanford
+
+	wallace
+		Wallace
+		Warsaw
+
+	apex
+		Apex
+		Fuquay Varina
+
+	north topsail beach
+		North Topsail Beach
+
+	lumberton
+		Saint Pauls
+		Lumberton
+		Pembroke
+
+	kernersville
+		Kernersville
+		Thomasville
+		Clemmons
+
+	rockingham
+		Bennettsville
+		Cheraw
+		Rockingham
+
+	burlington
+		Mebane
+		Hillsborough
+		Haw River
+		Burlington
+
+	thomasville
+		Kernersville
+		Thomasville
+		Lexington
+
+	clemmons
+		Kernersville
+		Lexington
+		Clemmons
+
+	henderson
+		Franklinton
+		Henderson
+
+	forest city
+		Shelby
+		Rutherfordton
+		Forest City
+
+	mebane
+		Mebane
+		Hillsborough
+		Haw River
+		Burlington
+
+	jacksonville
+		Jacksonville
+
+	atlantic beach
+		Atlantic Beach
+		Morehead City
+
+	wilmington
+		Wrightsville Beach
+		Wilmington
+
+	lexington
+		Thomasville
+		Lexington
+		Clemmons
+		Salisbury
+
+	reidsville
+		Eden
+		Reidsville
+
+	yanceyville
+		Yanceyville
+		Danville
+
+	salisbury
+		Salisbury
+		Lexington
+
+	winston salem
+		Winston Salem West
+		North Winston Salem
+		Winston Salem
+
+	mount airy
+		Mount Airy
+		Hillsville
+
+	hamptonville
+		Elkin
+		Hamptonville
+
+	kings mountain
+		Kings Mountain
+		York
+		Lincolnton
+		Shelby
+
+	kinston
+		Kinston
+
+	blowing rock
+		Blowing Rock
+		Lenoir
+
+	greenville
+		Greenville
+
+	biscoe
+		Biscoe
+
+	hickory - statesville
+		Statesville
+		Hickory - Conover
+
+	southern pines
+		Pinehurst
+		Southern Pines
+
+	smithfield
+		Kenly
+		Smithfield
+		Dunn
+
+	columbus
+		Columbus
+		Hendersonville
+		Flat Rock
+		Rutherfordton
+
+	dunn
+		Dunn
+		Smithfield
+
+	ocean isle beach
+		Sunset Beach
+		Ocean Isle Beach
+		Shallotte
+
+	raleigh - durham
+		Raleigh South
+		Crabtree
+		Wake Forest
+		Research Triangle Park
+		Durham
+		RDU Airport
+		Raleigh
+		Chapel Hill
+		Cary North - Raleigh South
+		Cary South
+
+	sylva
+		Sylva
+		Bryson City
+		Waynesville
+		Franklin
+
+	macclesfield
+		Macclesfield
+		Wilson
+		Tarboro
+
+	flat rock
+		Columbus
+		Brevard
+		Hendersonville
+		Flat Rock
+
+	rocky mount
+		Rocky Mount
+
+	roanoke rapids
+		Emporia
+		Weldon
+		Roanoke Rapids
+
+	franklin
+		Clayton
+		Sylva
+		Dillard
+		Franklin
+
+	tarboro
+		Macclesfield
+		Tarboro
+
+	dillsboro
+		Dillsboro
+
+	sunset beach
+		Shallotte
+		Ocean Isle Beach
+		Sunset Beach
+
+	greensboro
+		Greensboro East
+		High Point - Archdale
+		Greensboro
+		Greensboro West
+		Greensboro Airport (GSO)
+
+	carolina beach
+		Carolina Beach
+		Shallotte
+
+	elkin
+		Elkin
+		Hamptonville
+
+	fuquay varina
+		Apex
+		Fuquay Varina
+
+	goldsboro
+		Goldsboro
+		Kenly
+
+	hope mills
+		Saint Pauls
+		Hope Mills
+
+	hillsborough
+		Hillsborough
+		Mebane
+		Haw River
+		Burlington
+
+	new bern
+		New Bern
+
+	rutherfordton
+		Columbus
+		Rutherfordton
+		Forest City
+
+	saint pauls
+		Saint Pauls
+		Hope Mills
+		Pembroke
+		Lumberton
+
+	haw river
+		Mebane
+		Hillsborough
+		Haw River
+		Burlington
+
+	laurinburg
+		Bennettsville
+		Pembroke
+		Laurinburg
+
+	kill devil hills
+		Nags Head Beach
+
+	murphy
+		Murphy
+		Blairsville
+
+	asheville
+		Asheville Downtown - Biltmore Estate
+		Asheville Airport (AVL)
+		Asheville West
+		Asheville East
+		Biltmore Square Mall Area
+
+	franklinton
+		Henderson
+		Creedmoor
+		Franklinton
+
+	eden
+		Martinsville
+		Collinsville
+		Eden
+		Reidsville
+
+	plymouth
+		Plymouth
+
+	bryson city
+		Sylva
+		Bryson City
+
+	charlotte
+		Concord - Kannapolis
+		Charlotte Airport (CLT)
+		Executive Park - Airport South
+		Gastonia
+		Rock Hill
+		Charlotte - South Park
+		University Area
+		Downtown Charlotte
+		Fort Mill - Carowinds
+		North Charlotte -Northlake
+		Pineville - Piper Glen - Ballantyne
+		Matthews
+		Independence
+		Carowinds North - Arrowood
+
+	waynesville
+		Sylva
+		Waynesville
+		Maggie Valley
+		Canton
+
+	monroe
+		Monroe
+
+	weldon
+		Emporia
+		Weldon
+		Roanoke Rapids
+
+	wilson
+		Macclesfield
+		Wilson
+		Kenly
+
+	shelby
+		Forest City
+		Kings Mountain
+		Gaffney
+		Lincolnton
+		Shelby
+
+	morganton
+		Morganton
+		Lenoir
+
+	canton
+		Waynesville
+		Maggie Valley
+		Canton
+
+	asheboro
+		Asheboro
+
+	brevard
+		Brevard
+		Hendersonville
+		Flat Rock
+
+	lincolnton
+		Kings Mountain
+		Lincolnton
+		Shelby
+
+	warsaw
+		Clinton
+		Wallace
+		Warsaw
+
+	elizabeth city
+		Elizabeth City
+
+	creedmoor
+		Creedmoor
+		Franklinton
+
+	southport
+		Shallotte
+		Southport
+
+	pembroke
+		Pembroke
+		Lumberton
+		Laurinburg
+		Saint Pauls
+
+	lenoir
+		Blowing Rock
+		Morganton
+		Lenoir
+
+	maggie valley
+		Waynesville
+		Maggie Valley
+		Canton
+
+	shallotte
+		Sunset Beach
+		Carolina Beach
+		Southport
+		Ocean Isle Beach
+		Shallotte
+
+	boone
+		Boone
+
+	fayetteville
+		Fayetteville - Fort Bragg
+		Wade
+		Fayetteville - Interstate
+
+
+illinois
+	mattoon
+		Mattoon
+		Tuscola
+		Charleston
+
+	sycamore
+		Dekalb
+		Sycamore
+
+	stockton
+		Galena
+		Stockton
+
+	oglesby
+		Mendota
+		Oglesby
+		Peru
+		Ottawa
+
+	annawan
+		Annawan
+
+	washington
+		Pekin
+		Morton
+		Washington
+
+	collinsville
+		Collinsville - Fairview Heights
+		Granite City
+
+	moline
+		Moline
+
+	troy
+		Troy
+		Highland
+		East Saint Louis
+		Staunton
+		Mascoutah
+
+	salem
+		Salem
+		Mount Vernon
+
+	galena
+		Galena
+		Stockton
+
+	chicago north shore
+		North Shore
+		Gurnee
+		Libertyville - Mundelein
+		Lincolnshire - Vernon Hills
+		Deerfield Area
+		Waukegan - Lake Bluff
+
+	dekalb
+		Dekalb
+		Rochelle
+		Sycamore
+
+	effingham
+		Effingham
+
+	morton
+		Pekin
+		Morton
+		Washington
+
+	robinson
+		Robinson
+
+	jacksonville
+		Jacksonville
+
+	wadsworth
+		Wadsworth
+		Pleasant Prairie
+		Sturtevant
+		Kenosha
+
+	carlyle
+		Carlyle
+		Nashville
+		Greenville
+
+	gilman
+		Gilman
+		Watseka
+
+	savoy
+		Rantoul
+		Savoy
+		Tuscola
+
+	streator
+		Ottawa
+		Streator
+
+	le roy
+		Le Roy
+
+	chicago
+		Franklin Park Area
+		O'Hare Airport (ORD) South
+		Millennium Park, Loop & Grant Park Area
+		Hyde Park
+		Midway Airport Area (MDW)
+		Midway Airport North
+		Greater Chicago
+		Lincoln Park
+		O'Hare Airport (ORD) North
+		Skokie - Niles - Evanston
+		North Michigan Ave - River North Area
+
+	paris
+		Paris
+
+	mc lean
+		Lincoln
+		Mc Lean
+
+	greenville
+		Carlyle
+		Highland
+		Vandalia
+		Greenville
+
+	rockford
+		Rockford
+
+	du quoin
+		Carbondale
+		Du Quoin
+
+	richmond
+		Richmond
+		Pleasant Prairie
+		Lake Geneva
+		Woodstock
+
+	marion
+		Marion
+
+	rochelle
+		Dekalb
+		Rochelle
+
+	mascoutah
+		Troy
+		Mascoutah
+
+	chicago south
+		Matteson
+		Hammond IN
+		Valparaiso
+		Holland - Lansing IL
+		Tinley Park
+		Joliet
+		Merrillville
+
+	danville
+		Danville
+
+	carbondale
+		Carbondale
+		Du Quoin
+
+	rock falls
+		Rock Falls
+
+	bourbonnais
+		Bourbonnais - Manteno
+
+	springfield
+		South Springfield
+		Springfield
+
+	la grange
+		La Grange
+		Oak Park
+		Bridgeview
+		Lemont
+
+	rantoul
+		Savoy
+		Rantoul
+
+	metropolis
+		Metropolis
+
+	manteno
+		Bourbonnais - Manteno
+
+	tuscola
+		Mattoon
+		Savoy
+		Tuscola
+
+	peru
+		Mendota
+		Oglesby
+		Ottawa
+		Peru
+
+	staunton
+		Litchfield
+		Troy
+		Staunton
+
+	alton
+		East Saint Louis
+		Alton
+
+	champaign
+		Champaign - Urbana
+
+	peoria
+		West Peoria
+		East Peoria
+
+	nashville
+		Carlyle
+		Nashville
+
+	chicago suburbs
+		Lisle - Naperville - Warrenville
+		Saint Charles
+		Itasca Area
+		Aurora
+		Bolingbrook - Romeoville
+		Arlington Heights North
+		Dundee - Elgin
+		Bloomingdale - Carol Stream
+		Algonquin
+		Elmhurst
+		Oak Brook - Downer's Grove
+		Hoffman Estates
+		Willowbrook - Burr Ridge
+		Arlington Heights
+		McHenry County
+		Lake Zurich
+		Schaumburg
+
+	lemont
+		La Grange
+		Lemont
+		Bridgeview
+		Oak Park
+
+	bridgeview
+		La Grange
+		Oak Park
+		Bridgeview
+		Lemont
+
+	bourbonnais - manteno
+		Bourbonnais - Manteno
+
+	bloomington
+		Bloomington Area
+
+	oak park
+		La Grange
+		Oak Park
+		Bridgeview
+		Lemont
+
+	macomb
+		Macomb
+
+	vandalia
+		Vandalia
+		Greenville
+
+	decatur
+		Decatur
+		Forsyth
+
+	oswego
+		Oswego
+
+	quincy
+		Hannibal
+		Quincy
+
+	morris
+		Morris
+
+	lincoln
+		Lincoln
+		Mc Lean
+
+	highland
+		Troy
+		Highland
+		Greenville
+
+	east saint louis
+		Troy
+		East Saint Louis
+		Waterloo
+		Arnold
+		Alton
+
+	waterloo
+		East Saint Louis
+		Waterloo
+
+	litchfield
+		Litchfield
+		Staunton
+
+	freeport
+		Freeport
+
+	ottawa
+		Peru
+		Oglesby
+		Ottawa
+		Streator
+
+	mount vernon
+		Salem
+		Mount Vernon
+
+	el paso
+		El Paso
+
+	mendota
+		Mendota
+		Oglesby
+		Peru
+
+	pekin
+		Washington
+		Morton
+		Pekin
+
+	forsyth
+		Decatur
+		Forsyth
+
+	charleston
+		Charleston
+		Mattoon
+
+	olney
+		Olney
+
+	galesburg
+		Galesburg
+
+	watseka
+		Gilman
+		Watseka
+
+
+nebraska
+	kimball
+		Kimball
+
+	alliance
+		Alliance
+
+	ogallala
+		Paxton
+		Ogallala
+
+	beatrice
+		Beatrice
+
+	valentine
+		Mission
+		Valentine
+
+	crete
+		Crete
+
+	gretna
+		Gretna
+
+	sidney
+		Sidney
+
+	cozad
+		Cozad
+		Lexington
+		Gothenburg
+
+	north platte
+		North Platte
+
+	mc cook
+		Mc Cook
+
+	wayne
+		Wayne
+
+	gothenburg
+		Cozad
+		Lexington
+		Gothenburg
+
+	grand island
+		Grand Island
+		Hastings
+
+	columbus
+		Columbus
+
+	west point
+		West Point
+
+	oneill
+		Oneill
+
+	fremont
+		Fremont
+
+	paxton
+		Paxton
+		Ogallala
+
+	york
+		York
+
+	syracuse
+		Syracuse
+
+	lincoln
+		Lincoln
+		Airport - Lincoln North
+
+	norfolk
+		Norfolk
+
+	omaha
+		West Omaha
+		Bellevue
+		Omaha Downtown
+		Eppley Airport West (OMA)
+		Southwest Omaha
+		Omaha Northwest - Cherry Hills
+		Central Omaha
+		Eppley Airport East (OMA)
+		Council Bluffs
+
+	seward
+		Seward
+
+	lexington
+		Cozad
+		Lexington
+		Gothenburg
+
+	holdrege
+		Holdrege
+
+	ainsworth
+		Ainsworth
+
+	kearney
+		Kearney
+
+	hastings
+		Grand Island
+		Hastings
+
+
+arkansas
+	texarkana
+		Texarkana
+		Texarkana - Greater Central Mall
+
+	conway
+		Maumelle
+		Conway
+
+	van buren
+		Van Buren
+
+	lonoke
+		Cabot
+		Lonoke
+		Jacksonville
+
+	little rock
+		Little Rock Southwest
+		Little Rock West
+		Little Rock Airport (LIT)
+		North Little Rock
+		Downtown Little Rock
+
+	hardy
+		Hardy
+
+	harrison
+		Harrison
+
+	clinton
+		Clinton
+
+	blytheville
+		Blytheville
+		Osceola
+
+	jacksonville
+		Cabot
+		Lonoke
+		Jacksonville
+
+	warren
+		Monticello
+		Warren
+
+	russellville
+		Russellville
+
+	forrest city
+		Forrest City
+
+	mountain view
+		Mountain View
+
+	brinkley
+		Brinkley
+
+	clarksville
+		Clarksville
+
+	el dorado
+		El Dorado
+
+	cabot
+		Cabot
+		Lonoke
+		Jacksonville
+
+	hot springs
+		Hot Springs
+
+	west memphis
+		Horn Lake
+		West Memphis
+		Southaven
+
+	maumelle
+		Maumelle
+		Conway
+
+	hope
+		Hope
+
+	pine bluff
+		Pine Bluff
+		White Hall
+
+	eureka springs
+		Eureka Springs
+
+	mountain home
+		Mountain Home
+
+	monticello
+		Monticello
+		Warren
+
+	white hall
+		Pine Bluff
+		White Hall
+
+	fort smith
+		Fort Smith
+
+	ozark
+		Ozark
+
+	jonesboro
+		Jonesboro
+		Paragould
+
+	malvern
+		Malvern
+		Benton
+
+	batesville
+		Batesville
+
+	bryant
+		Benton
+		Bryant
+
+	fordyce
+		Fordyce
+
+	siloam springs
+		Siloam Springs
+		Colcord
+
+	arkadelphia
+		Arkadelphia
+
+	benton
+		Malvern
+		Benton
+		Bryant
+
+	osceola
+		Blytheville
+		Osceola
+
+	paragould
+		Paragould
+		Jonesboro
+
+	stuttgart
+		Stuttgart
+
+	searcy
+		Searcy
+
+	newport
+		Newport
+
+	fayetteville
+		Fayetteville
+		Bentonville - Rogers
+		Springdale Area
+
+	magnolia
+		Magnolia
+
+
+indiana
+	goshen
+		Goshen
+
+	madison
+		Scottsburg
+		Madison
+		Carrollton
+
+	angola
+		Fremont
+		Angola
+		Montpelier
+		Coldwater
+		Auburn
+
+	greenfield
+		Anderson
+		Shelbyville
+		Greenfield
+		Noblesville
+
+	edinburgh
+		Edinburgh
+		Greenwood
+		Shelbyville
+		Franklin
+		Seymour
+
+	shipshewana
+		Shipshewana
+		Sturgis
+		Three Rivers
+		Howe
+
+	lebanon
+		Avon
+		Brownsburg
+		Lebanon
+		Plainfield
+		Crawfordsville
+
+	corydon
+		New Albany
+		Corydon
+
+	hebron
+		Hebron
+		Portage
+		Chesterton
+
+	kokomo
+		Kokomo
+
+	marion
+		Wabash
+		Huntington
+		Marion
+
+	jasper
+		Huntingburg
+		Washington
+		Jasper
+
+	huntington
+		Wabash
+		Huntington
+		Marion
+
+	shelbyville
+		Edinburgh
+		Greenfield
+		Greensburg
+		Franklin
+		Shelbyville
+		Greenwood
+
+	michigan city
+		Michigan city
+
+	lawrenceburg
+		Lawrenceburg
+		Harrison
+
+	la porte
+		Chesterton
+		La Porte
+		New Buffalo
+		Sawyer
+
+	rochester
+		Plymouth
+		Rochester
+		Logansport
+
+	plainfield
+		Martinsville
+		Lebanon
+		Plainfield
+		Brownsburg
+		Avon
+		Greenwood
+
+	portland
+		Portland
+		Muncie
+		Decatur
+
+	portage
+		Hebron
+		Portage
+		Chesterton
+
+	crawfordsville
+		Crawfordsville
+		Lebanon
+
+	greensburg
+		Shelbyville
+		Greensburg
+
+	louisville
+		Louisville Northeast
+		Brooks - Shepherdsville
+		Louisville Airport Area (SDF)
+		East Louisville
+		Clarksville - Jeffersonville
+		Hurstbourne - Louisville East
+		Louisville Southwest
+		Louisville Downtown
+
+	richmond
+		Richmond
+		Oxford
+		Greenville
+		New Paris
+
+	anderson
+		Anderson
+		Muncie
+		Greenfield
+		Noblesville
+
+	brownsburg
+		Avon
+		Brownsburg
+		Lebanon
+		Plainfield
+		Greenwood
+
+	chicago south
+		Matteson
+		Hammond IN
+		Valparaiso
+		Holland - Lansing IL
+		Tinley Park
+		Joliet
+		Merrillville
+
+	wabash
+		Wabash
+		Huntington
+		Marion
+
+	bloomington
+		Bloomington
+
+	evansville
+		Evansville North
+		Evansville
+
+	vincennes
+		Vincennes
+		Washington
+		Princeton
+
+	franklin
+		Edinburgh
+		Martinsville
+		Franklin
+		Avon
+		Shelbyville
+		Greenwood
+
+	cloverdale
+		Cloverdale
+		Avon
+
+	columbus
+		Columbus
+
+	indianapolis
+		Indianapolis Northwest
+		Keystone - Carmel
+		Speedway - West Indianapolis
+		Indianapolis Airport (IND)
+		Indianapolis South
+		Indianapolis Northeast - Fishers
+		Downtown Indianapolis
+		Indianapolis East
+
+	sellersburg
+		Scottsburg
+		Sellersburg
+		New Albany
+
+	seymour
+		Edinburgh
+		Scottsburg
+		Seymour
+
+	scottsburg
+		Madison
+		Scottsburg
+		Sellersburg
+		Seymour
+
+	elkhart
+		Elkhart
+
+	fremont
+		Angola
+		Fremont
+		Montpelier
+		Coldwater
+		Auburn
+
+	kendallville
+		Kendallville
+		Howe
+		Auburn
+
+	avon
+		Cloverdale
+		Martinsville
+		Lebanon
+		Plainfield
+		Brownsburg
+		Franklin
+		Avon
+		Greenwood
+
+	auburn
+		Fremont
+		Kendallville
+		Angola
+		Auburn
+
+	huntingburg
+		Huntingburg
+		Jasper
+
+	decatur
+		Portland
+		Van Wert
+		Decatur
+
+	greenwood
+		Edinburgh
+		Martinsville
+		Plainfield
+		Brownsburg
+		Franklin
+		Avon
+		Shelbyville
+		Greenwood
+
+	bedford
+		Bedford
+
+	muncie
+		Anderson
+		Muncie
+		Portland
+
+	washington
+		Vincennes
+		Washington
+		Jasper
+
+	princeton
+		Vincennes
+		Princeton
+
+	martinsville
+		Martinsville
+		Plainfield
+		Avon
+		Franklin
+		Greenwood
+
+	south bend
+		South Bend
+		Mishawaka - Granger
+
+	terre haute
+		Terre Haute
+
+	new albany
+		Corydon
+		Sellersburg
+		New Albany
+
+	plymouth
+		Plymouth
+		Rochester
+
+	lafayette
+		Lafayette
+
+	fort wayne
+		Fort Wayne
+		Southwest Fort Wayne
+
+	howe
+		Shipshewana
+		Kendallville
+		Sturgis
+		Three Rivers
+		Howe
+
+	warsaw
+		Warsaw
+
+	chesterton
+		Hebron
+		Portage
+		La Porte
+		New Buffalo
+		Chesterton
+
+	noblesville
+		Anderson
+		Greenfield
+		Noblesville
+
+	logansport
+		Rochester
+		Logansport
+
+
+maryland
+	cambridge
+		Cambridge
+		Easton
+
+	wilmington
+		New Castle
+		Elkton
+		Penn's Grove - Bridgeport
+		Newark - Christiana
+		Claymont
+		Wilmington - Brandywine
+
+	essex
+		Essex
+
+	salisbury
+		Salisbury
+
+	cumberland
+		Cumberland - Frostburg
+
+	annapolis
+		Annapolis
+		Annapolis Downtown
+		Cape Saint Claire
+
+	baltimore south
+		Columbia North
+		Ellicott City
+		Hanover - Fort Meade
+		Columbia South - Jessup
+
+	westminster
+		Westminster
+
+	washington d.c.
+		DC Suburbs - Northeast Area
+		Silver Spring
+		Convention Ctr - Capitol Hill area
+		Georgetown North
+		Crystal City
+		Arlington
+		Georgetown - Foggy Bottom
+		National Harbor
+		Mount Vernon
+		Bethesda
+		Alexandria West
+		White House - Downtown
+		Alexandria East - Old Town
+		Dupont Circle - Woodley Park
+
+	california - lexington park
+		California - Lexington Park
+		Prince Frederick
+
+	baltimore north
+		Towson
+		Baltimore North - White Marsh
+		Hunt Valley & Timonium
+
+	grasonville
+		Grasonville
+
+	north east
+		North East
+
+	maryland - dc suburbs
+		Camp Springs
+		Bowie
+		Rockville
+		Greenbelt - Hyattsville
+		Laurel
+		College Park
+		Gaithersburg - Germantown
+
+	leonardtown
+		Solomons
+		Leonardtown
+
+	easton
+		Cambridge
+		Easton
+
+	ocean city
+		North Ocean City
+		Ocean City
+
+	chestertown
+		Chestertown
+
+	solomons
+		Solomons
+		Leonardtown
+
+	la plata
+		Waldorf
+		La Plata
+
+	thurmont
+		Thurmont
+
+	hancock
+		Hancock
+
+	frederick
+		Frederick
+		Hagerstown
+
+	waldorf
+		Waldorf
+		La Plata
+
+	frostburg
+		Cumberland - Frostburg
+
+	maryland northeast suburbs
+		Edgewood
+		Bel Air - Belcamp
+		Aberdeen
+		Havre De Grace - Perryville
+
+	baltimore
+		Owings Mills
+		Baltimore East
+		Baltimore West
+		Glen Burnie
+		Baltimore Stadiums
+		University Area
+		Inner Harbor Area - Downtown
+		Baltimore - Washington Airport (BWI)
+		Mt Vernon
+
+
+louisiana
+	alexandria
+		Alexandria
+		Pineville
+
+	la place
+		Saint Rose
+		La Place
+
+	monroe
+		Ruston
+		Monroe
+
+	cut off
+		Cut Off
+
+	donaldsonville
+		Gonzales
+		Donaldsonville
+
+	gonzales
+		Walker
+		Gonzales
+		Donaldsonville
+		Denham Springs
+
+	zachary
+		Zachary
+
+	saint rose
+		Saint Rose
+		La Place
+
+	new orleans
+		Metairie - Harahan
+		Downtown New Orleans
+		French Quarter
+		New Orleans West Bank
+		Garden District
+		New Orleans East
+		New Orleans Airport (MSY)
+		Convention Center and Warehouse - Arts District
+
+	leesville
+		Deridder
+		Leesville
+
+	new orleans northshore
+		Slidell
+		Covington
+
+	lake charles
+		Lake Charles
+		Sulphur
+
+	eunice
+		Eunice
+
+	iowa
+		Iowa
+
+	gray
+		Gray
+		Houma
+		Thibodaux
+
+	hammond
+		Hammond
+		Amite
+
+	houma
+		Gray
+		Houma
+		Thibodaux
+
+	shreveport
+		Bossier City
+		Shreveport Airport (SHV)
+		Shreveport - Central
+
+	amite
+		Hammond
+		Amite
+
+	broussard
+		Breaux Bridge
+		New Iberia
+		Broussard
+
+	morgan city
+		Franklin
+		Morgan City
+
+	pineville
+		Alexandria
+		Pineville
+
+	breaux bridge
+		Breaux Bridge
+		New Iberia
+		Broussard
+
+	natchitoches
+		Natchitoches
+
+	many
+		Many
+
+	baton rouge
+		Baton Rouge
+		East Baton Rouge
+		Port Allen
+		Sherwood Forest
+
+	denham springs
+		Walker
+		Gonzales
+		Denham Springs
+
+	new iberia
+		Breaux Bridge
+		New Iberia
+		Broussard
+
+	lafayette
+		Lafayette
+		Scott
+		Rayne
+
+	franklin
+		Franklin
+		Morgan City
+
+	walker
+		Walker
+		Gonzales
+		Denham Springs
+
+	tallulah
+		Vicksburg
+		Tallulah
+
+	thibodaux
+		Gray
+		Houma
+		Thibodaux
+
+
+idaho
+	blackfoot
+		Blackfoot
+
+	ketchum
+		Ketchum
+
+	mc call
+		Mc Call
+
+	coeur d alene
+		Coeur d'Alene - Post Falls
+
+	ponderay
+		Sandpoint
+		Ponderay
+
+	wallace
+		Kellogg
+		Wallace
+
+	caldwell
+		Caldwell
+		Ontario
+
+	moscow
+		Colfax
+		Moscow
+		Lewiston
+		Pullman
+
+	post falls
+		Coeur d'Alene - Post Falls
+
+	kellogg
+		Kellogg
+		Wallace
+
+	boise
+		Nampa
+		Boise
+		Boise Airport (BOI)
+		West Boise
+		Meridian
+
+	rexburg
+		Rexburg
+
+	pocatello
+		Pocatello
+
+	idaho falls
+		Idaho Falls
+
+	heyburn
+		Burley
+		Heyburn
+
+	burley
+		Burley
+		Heyburn
+
+	twin falls
+		Twin Falls - Jerome
+
+	lewiston
+		Moscow
+		Lewiston
+		Pullman
+
+	jerome
+		Twin Falls - Jerome
+
+	sandpoint
+		Sandpoint
+		Ponderay
+
+
+arizona
+	tolleson
+		Tolleson
+
+	globe
+		Globe
+
+	bullhead city
+		Bullhead City
+
+	lake havasu
+		Needles
+		Parker
+		Lake Havasu City
+
+	wickenburg
+		Wickenburg
+
+	safford
+		Safford
+
+	kingman
+		Kingman
+
+	florence
+		Sacaton
+		Florence
+
+	sacaton
+		Sacaton
+		Florence
+
+	wellton
+		Wellton
+
+	grand canyon - williams
+		Grand Canyon
+		Williams
+
+	winslow
+		Winslow
+
+	holbrook
+		Holbrook
+
+	yuma
+		Yuma
+
+	show low
+		Show Low
+
+	cibola
+		Cibola
+
+	gila bend
+		Gila Bend
+
+	phoenix
+		Apache Junction - Gold Canyon
+		Phoenix North
+		Tempe
+		Phoenix Metrocenter
+		Carefree
+		Scottsdale
+		North Scottsdale
+		Phoenix Airport (PHX)
+		Goodyear - Litchfield Park Area
+		Phoenix West
+		West Mesa
+		Fountain Hills - Fort McDowell
+		Happy Valley Area
+		Glendale - Peoria Area
+		Surprise
+		Tempe South
+		Downtown Phoenix
+		East Mesa
+		Chandler - Gilbert
+
+	willcox
+		Willcox
+
+	sierra vista - bisbee
+		Sierra Vista
+		Bisbee
+
+	heber
+		Heber
+
+	benson
+		Benson
+
+	nogales
+		Nogales
+
+	prescott - camp verde
+		Camp Verde
+		Cottonwood
+		Prescott - Prescott Valley
+
+	kayenta
+		Kayenta
+
+	payson
+		Payson
+
+	pinetop
+		Pinetop
+
+	tucson
+		Oro Valley North
+		Tucson Central
+		Tucson East
+		North Tucson
+		La Paloma - Ventana Canyon
+		Tucson Airport (TUS)
+
+	tombstone
+		Tombstone
+
+	flagstaff - sedona
+		Flagstaff
+		Bellemont
+		Sedona
+
+	chinle
+		Chinle
+
+	casa grande
+		Casa Grande
+
+	page
+		Page
+
+	green valley
+		Green Valley
+
+
+iowa
+	newton
+		Newton
+
+	clinton
+		Clinton
+
+	west union
+		West Union
+
+	storm lake
+		Storm Lake
+
+	le mars
+		Le Mars
+
+	iowa city
+		Iowa City - Coralville
+
+	grinnell
+		Grinnell
+
+	clear lake
+		Clear Lake
+
+	missouri valley
+		Missouri Valley
+
+	cedar rapids
+		Cedar Rapids
+
+	altoona
+		Altoona
+
+	manchester
+		Manchester
+
+	maquoketa
+		Maquoketa
+
+	emmetsburg
+		Emmetsburg
+
+	indianola
+		Indianola
+
+	muscatine
+		Muscatine
+
+	perry
+		Perry
+
+	sheldon
+		Sheldon
+
+	cherokee
+		Cherokee
+
+	anamosa
+		Anamosa
+
+	oskaloosa
+		Oskaloosa
+
+	sioux city
+		North Sioux City
+		Sioux City
+
+	burlington
+		Burlington
+		West Burlington
+
+	fort madison
+		Fort Madison
+
+	toledo
+		Toledo
+
+	harlan
+		Harlan
+
+	pella
+		Pella
+
+	independence
+		Independence
+
+	clarinda
+		Clarinda
+
+	waverly
+		Waverly
+
+	mount pleasant
+		Mount Pleasant
+
+	marshalltown
+		Marshalltown
+
+	forest city
+		Forest City
+
+	stuart
+		Stuart
+
+	dubuque
+		Dubuque
+
+	west burlington
+		West Burlington
+
+	atlantic
+		Adair
+		Atlantic
+		Walnut
+
+	le claire
+		Le Claire
+
+	dyersville
+		Dyersville
+
+	walnut
+		Walnut
+
+	ames
+		Ames
+
+	creston
+		Creston
+		Stuart
+
+	walcott
+		Walcott
+
+	waterloo
+		Cedar Falls
+		Waterloo
+
+	adair
+		Adair
+		Atlantic
+		Stuart
+
+	davenport
+		Davenport
+		Bettendorf
+
+	osceola
+		Osceola
+
+	fort dodge
+		Fort Dodge
+
+	williams
+		Williams
+
+	boone
+		Boone
+
+	des moines
+		Ankeny
+		Des Moines Airport (DSM)
+		Urbandale - Merle Hay
+		Des Moines
+		West Des Moines
+
+	keokuk
+		Keokuk
+
+	percival
+		Percival
+
+	omaha
+		West Omaha
+		Bellevue
+		Omaha Downtown
+		Eppley Airport West (OMA)
+		Southwest Omaha
+		Omaha Northwest - Cherry Hills
+		Central Omaha
+		Eppley Airport East (OMA)
+		Council Bluffs
+
+	de witt
+		De Witt
+
+	charles city
+		Waverly
+		Charles City
+
+	ottumwa
+		Ottumwa
+
+
+west virginia
+	fairmont
+		Fairmont
+		Bridgeport
+
+	wheeling
+		Saint Clairsville
+		Steubenville
+		Wheeling
+		Weirton
+
+	huntington
+		Huntington
+
+	shepherdstown
+		Shepherdstown
+		Ranson
+		Martinsburg
+		Greencastle
+
+	ranson
+		Shepherdstown
+		Ranson
+		Martinsburg
+
+	oak hill
+		Fayetteville
+		Oak Hill
+		Summersville
+
+	gassaway
+		Sutton
+
+	martinsburg
+		Shepherdstown
+		Hancock
+		Ranson
+		Martinsburg
+		Greencastle
+
+	bruceton mills
+		Bruceton Mills
+
+	marietta - parkersburg
+		Parkersburg - Mineral Wells
+		Marietta
+
+	nitro
+		Elkview
+		Nitro
+
+	summersville
+		Sutton
+		Fayetteville
+		Oak Hill
+		Summersville
+
+	weirton
+		Steubenville
+		Wheeling
+		Weirton
+
+	elkview
+		Elkview
+		Nitro
+
+	morgantown
+		Morgantown
+
+	sutton
+		Sutton
+		Summersville
+
+	weston
+		Bridgeport
+
+	barboursville
+		Ashland
+		Barboursville
+
+	princeton
+		Bluefield
+		Princeton
+
+	bridgeport
+		Bridgeport
+		Fairmont
+
+	bluefield
+		Bluefield
+		Princeton
+
+	beckley
+		Beckley
+
+	ripley
+		Ripley
+
+	charleston
+		Charleston
+
+	fayetteville
+		Fayetteville
+		Oak Hill
+		Summersville
+
+	lewisburg
+		Lewisburg
+
+	belington
+		Belington
+
+
+michigan
+	trenton
+		Trenton
+		Belleville
+		Royal Oak
+		Monroe
+
+	dowagiac
+		Niles
+		Dowagiac
+
+	detroit suburbs
+		Auburn Hills - Pontiac
+		Bloomfield Hills
+		Troy - Madison Heights
+		Sterling Heights - Utica
+		Warren
+
+	ann arbor - ypsilanti
+		Ann Arbor North
+		Ann Arbor West
+		Ann Arbor South - Ypsilanti
+
+	ishpeming
+		Negaunee
+		Marquette
+		Ishpeming
+
+	clinton township
+		New Baltimore
+		Roseville
+		Royal Oak
+		Rochester
+		Clinton Township
+
+	waterford
+		Rochester
+		Hartland
+		Lake Orion
+		Royal Oak
+		Waterford
+		Wixom
+
+	grayling
+		Houghton Lake
+		Grayling
+
+	flint
+		Grand Blanc
+		Flint
+
+	muskegon
+		Muskegon
+
+	chesaning
+		Chesaning
+
+	grand haven
+		Grand Haven
+
+	hancock
+		Hancock
+		Houghton
+
+	saginaw valley
+		Birch Run
+		Bay City
+		Bridgeport
+		Saginaw
+		Frankenmuth
+
+	sturgis
+		Shipshewana
+		Sturgis
+		Three Rivers
+		Howe
+
+	detroit
+		Taylor - Southgate
+		Dearborn
+		Southfield
+		Detroit Airport (DTW)
+		Downtown Detroit
+
+	howell
+		Hartland
+		Whitmore Lake
+		Fowlerville
+		Howell
+		Wixom
+		Chelsea
+		Brighton
+
+	iron mountain
+		Iron Mountain
+
+	kalamazoo
+		Kalamazoo
+
+	sault sainte marie
+		Sault Sainte Marie
+
+	stevensville
+		Stevensville
+		Saint Joseph
+		New Buffalo
+		Sawyer
+
+	hudsonville
+		Hudsonville
+
+	milan
+		Whitmore Lake
+		Belleville
+		Dundee
+		Sylvania
+		Milan
+		Monroe
+
+	new buffalo
+		Stevensville
+		La Porte
+		Chesterton
+		New Buffalo
+		Sawyer
+
+	marquette
+		Marquette
+		Ishpeming
+
+	new baltimore
+		New Baltimore
+		Roseville
+		Rochester
+		Marysville
+		Clinton Township
+
+	portland
+		Ionia
+		Portland
+		Charlotte
+
+	munising
+		Munising
+
+	jackson
+		Chelsea
+		Jackson
+
+	battle creek
+		Battle Creek
+
+	fowlerville
+		Chelsea
+		Hartland
+		Fowlerville
+		Howell
+		Brighton
+
+	dundee
+		Belleville
+		Dundee
+		Sylvania
+		Milan
+		Adrian
+		Monroe
+
+	gaylord - mackinaw city
+		Gaylord
+		Cheboygan
+		Lake Charlevoix Area
+		Charlevoix
+		Pellston - Harbor Springs
+		Mackinaw City
+		Petoskey
+
+	ludington
+		Ludington
+		Manistee
+
+	saint joseph
+		South Haven
+		Stevensville
+		Saint Joseph
+		Sawyer
+
+	whitehall
+		Whitehall
+
+	escanaba
+		Escanaba
+
+	alpena
+		Alpena
+
+	port huron
+		Port Huron - Kimball
+
+	lapeer
+		Lake Orion
+		Lapeer
+		Imlay City
+
+	brighton
+		Hartland
+		Whitmore Lake
+		Fowlerville
+		Howell
+		Wixom
+		Chelsea
+		Brighton
+
+	hillsdale
+		Jonesville
+		Hillsdale
+		Coldwater
+		Montpelier
+
+	belleville
+		Trenton
+		Milan
+		Dundee
+		Belleville
+		Wixom
+		Monroe
+
+	adrian
+		Sylvania
+		Dundee
+		Swanton
+		Adrian
+
+	ionia
+		Ionia
+		Portland
+
+	marshall
+		Charlotte
+		Marshall
+		Coldwater
+
+	mount pleasant
+		Mount Pleasant
+
+	ironwood
+		Hurley
+		Ironwood
+
+	negaunee
+		Marquette
+		Ishpeming
+
+	wixom
+		Hartland
+		Whitmore Lake
+		Belleville
+		Royal Oak
+		Howell
+		Waterford
+		Wixom
+		Brighton
+
+	lansing
+		East Lansing - Okemos
+		Lansing
+
+	midland
+		Midland
+
+	whitmore lake
+		Hartland
+		Whitmore Lake
+		Milan
+		Howell
+		Wixom
+		Chelsea
+		Brighton
+
+	west branch
+		West Branch
+
+	three rivers
+		Shipshewana
+		Sturgis
+		Three Rivers
+		Howe
+
+	traverse city
+		Traverse City - Acme
+		Traverse City North
+		Traverse City West
+
+	hartland
+		Hartland
+		Whitmore Lake
+		Fowlerville
+		Howell
+		Waterford
+		Wixom
+		Brighton
+
+	imlay city
+		Lake Orion
+		Lapeer
+		Rochester
+		Imlay City
+
+	niles
+		Saint Joseph
+
+	manistee
+		Ludington
+		Manistee
+
+	saugatuck
+		South Haven
+
+	coldwater
+		Angola
+		Marshall
+		Fremont
+		Hillsdale
+		Jonesville
+		Coldwater
+
+	south haven
+		South Haven
+		Saint Joseph
+
+	lake orion
+		Lapeer
+		Rochester
+		Imlay City
+		Lake Orion
+		Royal Oak
+		Waterford
+
+	kalkaska
+		Kalkaska
+
+	houghton
+		Hancock
+		Houghton
+
+	holland
+		Holland
+
+	roseville
+		New Baltimore
+		Roseville
+		Royal Oak
+		Rochester
+		Clinton Township
+
+	benton harbor
+		Benton Harbor
+
+	royal oak
+		Trenton
+		Rochester
+		Clinton Township
+		Lake Orion
+		Roseville
+		Royal Oak
+		Waterford
+		Wixom
+
+	chelsea
+		Jackson
+		Whitmore Lake
+		Fowlerville
+		Howell
+		Chelsea
+		Brighton
+
+	charlotte
+		Charlotte
+		Portland
+		Marshall
+
+	bad axe
+		Bad Axe
+
+	big rapids
+		Big Rapids
+
+	monroe
+		Trenton
+		Milan
+		Dundee
+		Sylvania
+		Belleville
+		Monroe
+
+	rochester
+		Rochester
+		Imlay City
+		Clinton Township
+		Lake Orion
+		Roseville
+		Royal Oak
+		Waterford
+		New Baltimore
+
+	houghton lake
+		Houghton Lake
+		Grayling
+
+	saint ignace
+		Saint Ignace
+
+	manistique
+		Manistique
+
+	cadillac
+		Cadillac
+
+	beulah
+		Beulah
+
+	marysville
+		New Baltimore
+		Marysville
+
+	sawyer
+		Stevensville
+		La Porte
+		Saint Joseph
+		New Buffalo
+		Sawyer
+
+	grand rapids
+		Grand Rapids North
+		Grand Rapids South - Wyoming
+		Grandville
+		Grand Rapids Southeast - Airport (GRR)
+
+	jonesville
+		Jonesville
+		Hillsdale
+		Coldwater
+
+	detroit northwest
+		Farmington
+		Plymouth
+		Livonia
+		Novi
+		Canton
+
+
+kansas
+	liberal
+		Liberal
+
+	de soto
+		Bonner Springs
+		De Soto
+
+	great bend
+		Larned
+		Great Bend
+
+	pittsburg
+		Frontenac
+		Pittsburg
+
+	beloit
+		Beloit
+
+	newton
+		Newton
+
+	andover
+		El Dorado
+		Andover
+		Augusta
+
+	concordia
+		Belleville
+		Concordia
+
+	iola
+		Chanute
+		Iola
+
+	coffeyville
+		Caney
+		Independence
+		Coffeyville
+
+	wa keeney
+		Wa Keeney
+
+	ulysses
+		Ulysses
+
+	emporia
+		Emporia
+
+	russell
+		Russell
+
+	abilene
+		Abilene
+
+	caney
+		Caney
+		Bartlesville
+		Independence
+		Coffeyville
+
+	holton
+		Holton
+
+	el dorado
+		Augusta
+		Andover
+		El Dorado
+
+	frontenac
+		Frontenac
+		Pittsburg
+
+	colby
+		Colby
+
+	wamego
+		Wamego
+
+	manhattan
+		Manhattan
+
+	independence
+		Caney
+		Independence
+		Coffeyville
+
+	bonner springs
+		Bonner Springs
+		De Soto
+
+	lawrence
+		Lawrence
+
+	larned
+		Larned
+		Great Bend
+
+	arkansas city
+		Ponca City
+		Arkansas City
+
+	kansas city
+		Kansas City Airport (MCI)
+		KC Downtown/Crown Center
+		Overland Park
+		Sports Complex - Independence
+		Kansas City North
+		Kansas City West
+		Lees Summit - Blue Springs
+		Leavenworth
+		Liberty
+		Kansas City Airport South
+		Platte City
+		Shawnee Mission
+		Kansas City South
+		Olathe
+		Country Club Plaza
+		Lenexa
+
+	atchison
+		Atchison
+		Saint Joseph
+
+	pratt
+		Pratt
+
+	salina
+		Salina
+
+	mcpherson
+		Mcpherson
+
+	hays
+		Hays
+
+	dodge city
+		Dodge City
+
+	hutchinson
+		Hutchinson
+
+	wichita
+		Wichita South
+		Downtown Wichita
+		Wichita East
+		Wichita Northeast
+		Park City
+		Wichita Airport (ICT)
+
+	parsons
+		Parsons
+
+	ottawa
+		Ottawa
+
+	augusta
+		El Dorado
+		Andover
+		Augusta
+
+	belleville
+		Belleville
+		Concordia
+
+	topeka
+		Topeka
+
+	garden city
+		Garden City
+
+	chanute
+		Chanute
+		Iola
+
+	goodland
+		Goodland
+
+
+utah
+	kanab
+		Orderville
+		Kanab
+
+	provo
+		Provo - Orem
+		Lehi - American Fork
+
+	logan
+		Logan
+		Wellsville
+		Brigham City
+
+	wellsville
+		Logan
+		Wellsville
+		Brigham City
+
+	salt lake city
+		South Salt Lake
+		Downtown and University Park
+		Salt Lake City Airport (SLC)
+		West Valley
+		Sandy - South Valley - Draper
+		Salt Lake North
+		Mid Valley - Cottonwood
+
+	clearfield
+		Brigham City
+		Clearfield
+
+	wendover
+		Wendover
+
+	hurricane
+		Hurricane
+		Springdale - Zion Park
+
+	moab
+		Moab
+
+	park city
+		Midway - Heber City
+		Park City
+
+	orderville
+		Kanab
+		Orderville
+
+	price
+		Price
+
+	richfield
+		Richfield
+
+	coalville
+		Coalville
+
+	torrey
+		Torrey
+
+	monticello
+		Monticello
+
+	green river
+		Green River
+
+	bryce canyon
+		Bryce Canyon
+
+	layton - ogden
+		Ogden
+		Layton
+
+	brigham city
+		Clearfield
+		Logan
+		Wellsville
+		Brigham City
+
+	cedar city
+		Cedar City
+		Parowan
+		Paragonah
+
+	st. george
+		St. George
+
+	vernal
+		Vernal
+
+
+virginia
+	new market
+		Mount Jackson
+		Luray
+		New Market
+		Woodstock
+
+	abingdon
+		Abingdon
+
+	exmore
+		Exmore
+
+	dublin
+		Max Meadows
+		Dublin
+		Radford
+
+	waynesboro
+		Mount Crawford
+		Waynesboro
+
+	fredericksburg
+		Fredricksburg North
+		Fredricksburg Central
+		Fredricksburg South
+
+	northern virginia
+		Leesburg - Ashburn West
+		Dulles North - Herndon - Reston
+		Sterling - Ashburn
+		Falls Church East
+		Tysons Corner - Falls Church
+		Dulles South - Chantilly
+		Manassas
+		Fairfax
+		Springfield
+
+	la crosse
+		South Hill
+		La Crosse
+
+	farmville
+		Farmville
+
+	max meadows
+		Wytheville
+		Max Meadows
+		Dublin
+		Hillsville
+
+	christiansburg
+		Blacksburg - Christiansburg
+
+	hillsville
+		Mount Airy
+		Max Meadows
+		Galax
+		Hillsville
+
+	strasburg
+		Front Royal
+		Woodstock
+		Strasburg
+
+	tappahannock
+		Tappahannock
+		Warsaw
+
+	doswell
+		Ashland
+		Doswell
+		Mechanicsville
+		Ruther Glen
+
+	woodstock
+		Mount Jackson
+		New Market
+		Strasburg
+		Woodstock
+
+	raphine
+		Raphine
+
+	warsaw
+		Tappahannock
+		Warsaw
+
+	roanoke
+		Roanoke - Tanglewood
+		Roanoke North - Airport
+		Salem
+		Troutville
+
+	newport news - hampton
+		Hampton
+		North Newport News - North Yorktown
+		South Newport News - South Yorktown
+
+	emporia
+		Emporia
+		Weldon
+		Roanoke Rapids
+
+	south boston
+		South Boston
+
+	pounding mill
+		Pounding Mill
+
+	mount crawford
+		Mount Crawford
+		Waynesboro
+
+	williamsburg
+		Williamsburg Center - Outlets
+		Williamsburg Historic - Busch Gardens
+
+	galax
+		Hillsville
+		Galax
+
+	richmond
+		Innsbrook
+		Downtown Richmond
+		Richmond West End
+		Richmond Airport (RIC)
+		Chester
+		Midlothian
+		Glen Allen
+		Richmond South
+
+	ruckersville
+		Ruckersville
+
+	covington
+		Covington
+
+	chincoteague island
+		Chincoteague Island
+
+	petersburg
+		Petersburg
+		Hopewell
+		Colonial Heights
+
+	charlottesville
+		Charlottesville
+
+	danville
+		Yanceyville
+		Danville
+
+	midlothian
+		Midlothian
+		Mechanicsville
+
+	culpeper
+		Culpeper
+
+	smithfield
+		Smithfield
+
+	radford
+		Dublin
+		Radford
+
+	washington d.c.
+		DC Suburbs - Northeast Area
+		Silver Spring
+		Convention Ctr - Capitol Hill area
+		Georgetown North
+		Crystal City
+		Arlington
+		Georgetown - Foggy Bottom
+		National Harbor
+		Mount Vernon
+		Bethesda
+		Alexandria West
+		White House - Downtown
+		Alexandria East - Old Town
+		Dupont Circle - Woodley Park
+
+	harrisonburg
+		Harrisonburg
+
+	staunton
+		Staunton
+
+	kilmarnock
+		Kilmarnock
+
+	spotsylvania
+		Ruther Glen
+		Spotsylvania
+
+	collinsville
+		Martinsville
+		Rocky Mount
+		Eden
+		Collinsville
+
+	hopewell
+		Petersburg
+		Hopewell
+		Colonial Heights
+
+	mount jackson
+		Mount Jackson
+		Luray
+		New Market
+		Woodstock
+
+	luray
+		Mount Jackson
+		Luray
+		New Market
+
+	virginia beach
+		Central Suffolk
+		Virginia Beach Area
+		Downtown Portsmouth
+		Norfolk Airport (ORF)
+		Chesapeake - Bowers Hill
+		Chesapeake - Greenbrier Area
+		Norfolk Naval Base - Tidewater
+		Virginia Beach - Pembroke Area
+		Downtown Norfolk
+		Chesapeake - Churchland - Suffolk
+
+	lynchburg
+		Lynchburg - Madison Heights
+
+	wytheville
+		Wytheville
+		Max Meadows
+
+	rocky mount
+		Rocky Mount
+		Collinsville
+
+	winchester
+		Winchester
+
+	warrenton
+		Warrenton
+
+	martinsville
+		Martinsville
+		Eden
+		Collinsville
+
+	woodbridge - dumfries
+		Lorton
+		Dumfries - Quantico
+		Woodbridge
+		Stafford
+
+	south hill
+		South Hill
+		La Crosse
+
+	blacksburg
+		Blacksburg - Christiansburg
+
+	lexington
+		Lexington
+
+	mechanicsville
+		Ashland
+		Midlothian
+		Doswell
+		Mechanicsville
+
+	king george
+		King George
+
+	franklin
+		Franklin
+
+	bristol
+		Bristol
+
+	ruther glen
+		Ashland
+		Ruther Glen
+		Spotsylvania
+		Doswell
+
+	ashland
+		Ashland
+		Doswell
+		Mechanicsville
+		Ruther Glen
+
+	marion
+		Marion
+
+	front royal
+		Front Royal
+		Strasburg
+
+	colonial heights
+		Colonial Heights
+		Hopewell
+		Petersburg
+
+	norton
+		Norton
+
+	gloucester
+		Gloucester
+
+
+oregon
+	baker city
+		Baker City
+
+	coos bay
+		Coos Bay
+
+	canyonville
+		Canyonville
+
+	lincoln city
+		Lincoln City
+		Depoe Bay
+
+	tillamook
+		Tillamook
+
+	lakeview
+		Lakeview
+
+	salem
+		Salem
+
+	bend
+		Bend
+
+	hood river
+		Hood River
+
+	la grande
+		La Grande
+
+	portland
+		Clackamas
+		Lake Oswego - Tigard
+		Beaverton - Hillsboro
+		Gresham - Troutdale
+		Convention Center - Lloyd Center
+		North Harbor - Jantzen Beach
+		South Waterfront District
+		Portland Airport (PDX)
+		Downtown Portland
+		Northwest Portland
+		Vancouver, Washington
+
+	roseburg
+		Roseburg
+		Sutherlin
+
+	florence
+		Florence
+
+	albany
+		Albany
+		Corvallis
+		Monmouth
+
+	ontario
+		Ontario
+
+	madras
+		Madras
+
+	dallas
+		Mcminnville
+		Monmouth
+		Dallas
+
+	pendleton
+		Pendleton
+
+	newberg
+		Mcminnville
+		Woodburn
+		Newberg
+		Tualatin
+		Forest Grove
+		Wilsonville
+
+	brookings
+		Brookings
+
+	forest grove
+		Forest Grove
+		Newberg
+
+	klamath falls
+		Klamath Falls
+
+	creswell
+		Creswell
+
+	redmond
+		Redmond
+
+	monmouth
+		Albany
+		Corvallis
+		Dallas
+		Monmouth
+
+	sutherlin
+		Roseburg
+		Sutherlin
+
+	woodburn
+		Woodburn
+		Tualatin
+		Wilsonville
+		Newberg
+
+	rogue valley
+		Ashland
+		Medford - Central Point
+		Grants Pass
+
+	sisters
+		Sisters
+
+	john day
+		John Day
+
+	depoe bay
+		Depoe Bay
+		Newport
+		Lincoln City
+
+	burns
+		Burns
+
+	corvallis
+		Albany
+		Corvallis
+		Monmouth
+
+	warrenton
+		Warrenton
+		Seaside
+
+	wilsonville
+		Tualatin
+		Woodburn
+		Wilsonville
+		Newberg
+
+	mcminnville
+		Mcminnville
+		Newberg
+		Dallas
+
+	seaside
+		Warrenton
+		Seaside
+
+	the dalles
+		The Dalles
+
+	shady cove
+		Shady Cove
+		White City
+
+	white city
+		White City
+		Shady Cove
+
+	newport
+		Depoe Bay
+		Newport
+
+	umatilla
+		Umatilla
+
+	tualatin
+		Tualatin
+		Woodburn
+		Wilsonville
+		Newberg
+
+	eugene
+		Springfield
+		Eugene
+
+
+connecticut
+	new haven
+		Meriden - Wallingford
+		Hamden - North Haven
+		New Haven
+		East Haven - Branford
+		Orange - West Haven
+
+	trumbull - milford
+		Bridgeport
+		Trumbull - Shelton
+		Stratford - Milford
+
+	lower fairfield county
+		Greenwich - Stamford
+		Norwalk - Westport
+
+	simsbury
+		Simsbury
+
+	dayville
+		Dayville
+		Plainfield
+		Putnam
+
+	rockfall
+		Rockfall
+
+	plainfield
+		Plainfield
+		Dayville
+
+	hartford
+		Bradley Intl Airport - Windsor Vicinity (BDL)
+		East Hartford
+		Avon - West Hartford
+		Farmington - New Britain
+		Rocky Hill Area
+		Enfield
+		Downtown Hartford
+		Manchester - Vernon
+		Hartford South - Brainard Airport (HFD)
+		Kensington - Cromwell
+		Southington - Milldale
+
+	ridgefield
+		Ridgefield
+
+	torrington
+		Torrington
+
+	niantic - norwich - mystic
+		New London
+		Groton
+		Niantic
+		Old Saybrook
+		North Stonington
+		Ledyard (Mashantucket) - Mystic Areas
+		Norwich - Uncasville
+
+	danbury - southbury
+		Southbury
+		Waterbury
+		Danbury
+
+	putnam
+		Dayville
+		Putnam
+
+
+montana
+	red lodge
+		Red Lodge
+		Laurel
+
+	glendive
+		Glendive
+
+	kalispell
+		Kalispell
+
+	polson
+		Polson
+
+	dillon
+		Dillon
+
+	whitefish
+		Whitefish
+
+	lolo
+		Hamilton
+		Lolo
+
+	missoula
+		Missoula
+
+	hamilton
+		Lolo
+		Hamilton
+
+	helena
+		Helena
+
+	cut bank
+		Cut Bank
+		Conrad
+
+	yellowstone park - bozeman
+		Gardiner
+		Livingston
+		West Yellowstone
+		Big Sky
+		Bozeman
+
+	great falls
+		Great Falls
+
+	laurel
+		Laurel
+		Red Lodge
+
+	billings
+		Billings
+
+	butte
+		Butte
+
+	conrad
+		Cut Bank
+		Conrad
+
+
+california
+	kettleman city
+		Kettleman City
+		Lemoore
+
+	fresno
+		Clovis
+		Fresno West
+		Pinedale - UC Fresno
+		Fresno
+
+	merced
+		Merced
+		Turlock
+		Chowchilla
+
+	beaumont
+		Hemet
+		Beaumont
+		Banning
+		Perris
+
+	auburn
+		Lincoln
+		Grass Valley
+		Auburn
+
+	sutter creek
+		Jackson
+		Sutter Creek
+
+	healdsburg
+		Healdsburg
+		Windsor
+
+	victorville
+		Adelanto
+		Victorville
+		Hesperia
+
+	yreka
+		Yreka
+
+	los angeles - central l.a.
+		Downtown Los Angeles
+		Beverly Hills - West Hollywood
+		Culver City
+		Santa Monica & Marina Del Rey
+		Lawndale
+		Brentwood - Westwood
+		Hollywood
+		Los Angeles Airport (LAX)
+		Redondo - Manhattan Beaches
+
+	angels camp
+		Jamestown
+		Angels Camp
+		Sonora
+
+	madera
+		Madera
+		Chowchilla
+
+	dixon
+		Davis
+		Woodland
+		Vacaville
+		Dixon
+
+	hesperia
+		Adelanto
+		Victorville
+		Wrightwood
+		Hesperia
+
+	frazier park
+		Frazier Park
+		Lebec
+
+	el centro
+		Westmorland
+		El Centro
+		Calexico
+
+	oakdale
+		Turlock
+		Oakdale
+
+	ben lomond
+		Freedom
+		Watsonville
+		Aptos
+		Ben Lomond
+		Los Gatos
+
+	selma
+		Kingsburg
+		Dinuba
+		Selma
+		Reedley
+		Lemoore
+		Fowler
+
+	westmorland
+		Westmorland
+		El Centro
+
+	lemoore
+		Kettleman City
+		Selma
+		Lemoore
+		Kingsburg
+
+	tulare
+		Dinuba
+		Kingsburg
+		Visalia
+		Porterville
+		Tulare
+		Lindsay
+
+	upper lake
+		Ukiah
+		Lakeport
+		Upper Lake
+
+	vacaville
+		Davis
+		Vacaville
+		Dixon
+
+	sonora
+		Jamestown
+		Angels Camp
+		Sonora
+		Groveland
+
+	alpine
+		Alpine
+
+	fortuna
+		Fortuna
+		Arcata
+
+	lincoln
+		Lincoln
+		Yuba City
+		Marysville
+		Auburn
+
+	susanville
+		Susanville
+
+	aptos
+		Los Gatos
+		Freedom
+		Watsonville
+		Aptos
+		Ben Lomond
+		Gilroy
+
+	central coast
+		Cambria - San Simeon
+		San Simeon
+		Pismo Beach Area
+		Atascadero
+		San Luis Obispo
+		Cambria
+		Morro Bay
+		Paso Robles
+
+	redding
+		Redding
+
+	chico
+		Oroville
+		Chico
+		Willows
+		Corning
+
+	ridgecrest
+		Ridgecrest
+
+	wrightwood
+		Wrightwood
+		Adelanto
+		Hesperia
+
+	monterey - salinas
+		Monterey
+		Salinas
+		Marina - Seaside
+		Carmel - Carmel Valley
+		Pacific Grove
+
+	fallbrook
+		Lake Elsinore
+
+	lake havasu
+		Needles
+		Parker
+		Lake Havasu City
+
+	groveland
+		Jamestown
+		Sonora
+		Groveland
+
+	marin county
+		San Rafael - Larkspur
+		Novato
+
+	brentwood
+		Brentwood
+		Antioch
+
+	lancaster
+		Lancaster
+		Mojave
+		Palmdale
+
+	los banos
+		Los Banos
+
+	jackson
+		Jackson
+		Sutter Creek
+
+	calistoga
+		Sebastopol
+		Calistoga
+
+	barstow
+		Newberry Springs
+		Barstow
+
+	yosemite area
+		Oakhurst
+		Mariposa
+		Fish Camp
+		Mammoth Lakes
+
+	glendora
+		San Dimas
+		Glendora
+
+	wasco
+		Wasco
+		Lost Hills
+		Delano
+
+	santa barbara county
+		Solvang - Santa Ynez Valley
+		Ojai
+		Goleta
+		Carpinteria
+		Santa Maria
+		Santa Ynez
+		Lompoc
+		Santa Barbara
+
+	willits
+		Willits
+		Ukiah
+
+	banning
+		Hemet
+		Beaumont
+		Banning
+
+	mendota
+		Mendota
+
+	jamestown
+		Jamestown
+		Angels Camp
+		Sonora
+		Groveland
+
+	lodi
+		Galt
+		Lodi
+		Elk Grove
+
+	half moon bay
+		Pacifica
+		Half Moon Bay
+
+	big bear lake
+		Big Bear Lake
+
+	los gatos
+		Morgan Hill
+		Aptos
+		Los Gatos
+		Ben Lomond
+
+	san dimas
+		San Dimas
+		Glendora
+
+	napa - sonoma
+		Benicia
+		Sonoma
+		Fairfield - Suisun City
+		Napa
+		Rohnert Park - Petaluma
+		Santa Rosa
+		Upper Napa Valley
+		Vallejo - American Canyon
+
+	palmdale
+		Lancaster
+		Palmdale
+
+	calexico
+		El Centro
+		Calexico
+
+	bakersfield
+		Bakersfield
+
+	blythe
+		Blythe
+
+	los angeles - san fernando valley
+		Burbank - Universal City - Glendale
+		Van Nuys - Mission Hills
+		Simi Valley
+		North Hollywood - Studio City
+		Valencia - Stevenson Ranch
+		Warner Center - Woodland Hills Area
+
+	inland empire
+		Redlands
+		Moreno Valley
+		Riverside - San Bernardino
+		Ontario East - Rancho Cucamonga
+		Corona - Riverside West
+		Pomona - Diamond Bar
+		Ontario West - Upland
+
+	freedom
+		Freedom
+		Morgan Hill
+		Watsonville
+		Aptos
+		Ben Lomond
+		Gilroy
+
+	compton
+		Hawaiian Gardens
+		Lynwood
+		Compton
+		South Gate
+
+	davis
+		Davis
+		Vacaville
+		Woodland
+		Dixon
+
+	crescent city
+		Crescent City
+		Brookings
+
+	los angeles - san gabriel valley
+		Commerce - Norwalk - Rosemead
+		Monrovia - Duarte
+		West Covina
+		Pasadena
+
+	antioch
+		Antioch
+
+	yucca valley
+		Twentynine Palms
+		Yucca Valley
+
+	ukiah
+		Upper Lake
+		Lakeport
+		Willits
+		Ukiah
+
+	fort bragg
+		Fort Bragg
+
+	delano
+		Wasco
+		Delano
+
+	bodega bay
+		Bodega Bay
+		Sebastopol
+
+	san francisco
+		Fisherman's Wharf
+		Civic Center
+		SOMA - Moscone Center
+		SFO North - San Bruno
+		Marina - Lombard Street
+		Japan Town - Civic Center North
+		San Mateo
+		Union Square West - Nob Hill
+		Civic Center South - Hayes Valley
+		Financial District - Embarcadero
+		Union Square East
+		SFO international Airport - Burlingame
+		South San Francisco
+
+	turlock
+		Merced
+		Turlock
+		Oakdale
+
+	gilroy
+		Freedom
+		Morgan Hill
+		Watsonville
+		Gilroy
+		Aptos
+
+	temecula
+		Temecula
+
+	king city
+		King City
+
+	lost hills
+		Wasco
+		Lost Hills
+
+	adelanto
+		Adelanto
+		Victorville
+		Wrightwood
+		Hesperia
+
+	anderson
+		Anderson
+		Red Bluff
+
+	lakeport
+		Ukiah
+		Lakeport
+		Upper Lake
+
+	three rivers
+		Three Rivers
+		Lindsay
+
+	williams
+		Williams
+
+	cloverdale
+		Cloverdale
+
+	palm springs
+		Indio
+		Palm Springs
+		Rancho Mirage-Indian Wells-Palm Desert
+
+	yuba city
+		Lincoln
+		Yuba City
+		Marysville
+
+	sebastopol
+		Bodega Bay
+		Sebastopol
+		Calistoga
+
+	grass valley
+		Auburn
+		Grass Valley
+
+	ojai
+		Ojai
+
+	orange county
+		Seal Beach- North Huntington- Ftn Valley
+		Costa Mesa - Irvine - Santa Ana
+		Laguna Beach
+		Laguna Hills - Mission Viejo
+		Disneyland - Anaheim
+		Anaheim Hills
+		Newport - Huntington Beach
+		Buena Park - Cerritos - Cypress
+		Disneyland - Orange - Garden Grove
+		Fullerton - Brea
+		Dana Point - San Clemente
+
+	long beach
+		Long Beach
+		Long Beach Airport Area
+		San Pedro
+		Torrance - Carson
+
+	arcata
+		Fortuna
+		Arcata
+
+	porterville
+		Tulare
+		Lindsay
+		Porterville
+
+	mckinleyville
+		Mckinleyville
+		Arcata
+
+	mojave
+		Lancaster
+		Tehachapi
+		Mojave
+
+	tehachapi
+		Tehachapi
+		Mojave
+
+	galt
+		Galt
+		Lodi
+		Elk Grove
+
+	littleriver
+		Fort Bragg
+
+	mount shasta
+		Mount Shasta
+
+	dinuba
+		Kingsburg
+		Dinuba
+		Selma
+		Reedley
+		Visalia
+		Fowler
+		Tulare
+
+	stockton - modesto
+		Patterson
+		Modesto - Salida
+		Manteca - Ripon
+		Tracy
+		Lathrop
+		Stockton
+
+	kingsburg
+		Kingsburg
+		Dinuba
+		Selma
+		Reedley
+		Visalia
+		Lemoore
+		Fowler
+		Tulare
+
+	visalia
+		Dinuba
+		Kingsburg
+		Reedley
+		Visalia
+		Tulare
+		Lindsay
+
+	lynwood
+		Hawaiian Gardens
+		Lynwood
+		Compton
+		South Gate
+
+	twentynine palms
+		Twentynine Palms
+		Yucca Valley
+
+	chowchilla
+		Chowchilla
+		Merced
+		Madera
+
+	bishop
+		Bishop
+
+	san diego
+		North County Coastal
+		San Ysidro - Mexico Border
+		Downtown San Diego & Harbor Island
+		Miramar - Rancho Penasquitos - Poway
+		Escondido - Vista
+		Del Mar - Rancho Santa Fe
+		Sorrento Mesa
+		Rancho Bernardo
+		National City - Chula Vista
+		La Mesa
+		Coronado
+		El Cajon - Santee
+		San Diego Coastal
+		Point Loma - Shelter Island - Old Town
+		Mission Valley East - Central San Diego
+		Hotel Circle - Mission Valley West
+
+	woodland
+		Davis
+		Woodland
+		Dixon
+
+	castaic
+		Castaic
+
+	santa cruz
+		Santa Cruz - Scotts Valley
+
+	pacifica
+		Pacifica
+		Half Moon Bay
+
+	ventura county
+		Ventura
+		Port Huenene - Oxnard
+		Camarillo
+		Thousand Oaks
+
+	lake elsinore
+		Hemet
+		Perris
+		Lake Elsinore
+
+	hawaiian gardens
+		Hawaiian Gardens
+		Lynwood
+		Compton
+		South Gate
+
+	watsonville
+		Freedom
+		Morgan Hill
+		Watsonville
+		Aptos
+		Ben Lomond
+		Gilroy
+
+	south gate
+		Hawaiian Gardens
+		Lynwood
+		Compton
+		South Gate
+
+	sacramento
+		Galt
+		Lodi
+		South Natomas
+		Elk Grove
+		University Area
+		Parkway - Florin
+		Sacramento Downtown
+		Folsom
+		Rancho Cordova
+		Roseville - Rocklin
+		West Sacramento
+		Business I-80 Corridor - Arden
+
+	san jose
+		Milpitas
+		Mountain View
+		San Jose South
+		San Jose
+		Sunnyvale - Santa Clara
+		Cupertino - Campbell
+		Redwood City - San Carlos
+		Palo Alto
+		Newark - Fremont
+
+	hemet
+		Hemet
+		Beaumont
+		Lake Elsinore
+		Banning
+		Perris
+
+	lake tahoe
+		Carson City
+		Truckee
+		Gardnerville - Minden
+		Incline Village
+		South Lake Tahoe
+		North Lake Tahoe
+
+	reedley
+		Kingsburg
+		Dinuba
+		Selma
+		Reedley
+		Visalia
+		Fowler
+
+	marysville
+		Lincoln
+		Yuba City
+		Marysville
+
+	perris
+		Hemet
+		Lake Elsinore
+		Beaumont
+		Perris
+
+	red bluff
+		Anderson
+		Red Bluff
+
+	newberry springs
+		Newberry Springs
+		Barstow
+
+	morgan hill
+		Freedom
+		Morgan Hill
+		Watsonville
+		Gilroy
+		Los Gatos
+
+	oakland - eastbay
+		Martinez
+		Livermore
+		Hayward - Castro Valley
+		Berkeley - Emeryville
+		Oakland - Alameda
+
+	eureka
+		Eureka
+
+	fowler
+		Dinuba
+		Selma
+		Reedley
+		Kingsburg
+		Fowler
+
+	lebec
+		Frazier Park
+		Lebec
+
+	lindsay
+		Visalia
+		Tulare
+		Porterville
+		Three Rivers
+		Lindsay
+
+
+massachusetts
+	greenfield
+		Greenfield
+
+	boston
+		Copley Square - Theatre District
+		Quincy Market - Faneuil Hall - Financial
+		North Cambridge - Arlington
+		Medford - Somerville
+		Boston Waterfront - Convention Center
+		Revere - Logan Airport (BOS)
+		Fenway Park
+		Cambridge
+		Boston Harbor Front - Aquarium
+		Brighton - Brookline
+		South Boston
+
+	salem - andover
+		Billerica - Tewksbury Area
+		Salem
+		Andover
+
+	boston north shore
+		Beverly - Salem - Peabody
+		Saugus
+		Woburn - Wakefield
+		Danvers - Peabody
+
+	leominster - boxborough
+		Leominster - Boxborough
+
+	nantucket
+		Nantucket
+
+	boxborough
+		Leominster - Boxborough
+
+	cape cod
+		Provincetown - North Truro
+		Sandwich
+		Brewster
+		Falmouth
+		Eastham
+		Hyannis - Yarmouth - Dennis
+		Chatham
+
+	amesbury
+		Hampton
+		Seabrook
+		Amesbury
+		Exeter
+
+	westford
+		Westford
+
+	providence
+		Cranston - Warwick - Providence Airport (PVD)
+		Coventry - West Warwick
+		Providence Downtown
+		East Providence - Seekonk
+
+	massachusetts southeast suburbs
+		Fall River - New Bedford
+		Plymouth
+		Raynham - Middleboro
+		Fall River - Somerset
+
+	springfield
+		Chicopee - North Springfield Vicinity
+		Holyoke
+		Northampton - Hadley - Amherst
+		Springfield - West Springfield
+
+	milford - foxboro
+		Woonsocket
+		Foxboro - Sharon
+		Attleboro
+		Milford - Franklin
+
+	westborough - marlborough
+		Marlborough - Hudson
+		Westborough
+		Shrewsbury - Northborough
+
+	gardner
+		Gardner
+
+	boston metro - south
+		Braintree - Quincy
+		Stoughton - Rockland
+		Needham - Dedham - Norwood
+
+	the berkshires
+		Williamstown - North Adams
+		Great Barrington
+		Lenox - Lee
+		Pittsfield
+
+	leominster
+		Leominster - Boxborough
+
+	edgartown
+		Edgartown
+
+	worcester - auburn
+		Sturbridge
+		Worcester
+		Auburn
+
+	boston metro-west
+		Newton - Waltham
+		Bedford - Burlington
+		Lexington - Concord
+		Natick - Framingham - Sudbury
+
+	westfield
+		Westfield
+
+
+new york
+	mc graw
+		Mc Graw
+		Cortland
+		Tully
+
+	long island - suffolk county
+		Macarthur Airport (ISP)
+		Hauppauge
+		Stony Brook - Port Jefferson
+		Wading River - Riverhead
+
+	staten island
+		Staten Island
+
+	fredonia
+		Dunkirk
+		Fredonia
+
+	cortland
+		Mc Graw
+		Cortland
+		Tully
+
+	new york airports area
+		Jamaica
+		Bayside
+		La Guardia Airport (LGA)
+		Flushing - Whitestone
+		Kennedy Airport (JFK)
+		Elmhurst - Corona
+
+	batavia
+		Corfu
+		Batavia
+
+	bath
+		Bath
+
+	elmira
+		Elmira
+		Horseheads
+		Corning
+
+	troy
+		Clifton Park
+		Troy
+		Rensselaer
+		East Greenbush
+
+	lake george - saratoga springs
+		Lake George Area - Glens Falls
+		Saratoga Springs
+
+	palisades
+		Bronx
+		Palisades
+		Tenafly
+
+	east greenbush
+		West Coxsackie
+		Troy
+		Rensselaer
+		East Greenbush
+
+	penn yan
+		Penn Yan
+
+	lockport
+		Lockport
+		Newfane
+
+	amsterdam
+		Amsterdam
+		Johnstown
+
+	lake placid
+		Lake Placid
+
+	ithaca
+		Ithaca Airport Area (ITH)
+		Downtown Ithaca
+
+	dunkirk
+		Dunkirk
+		Fredonia
+
+	webster
+		Webster
+
+	albany
+		Downtown Albany
+		SUNY Albany - Thruway Area
+		Albany Airport (ALB)
+		Schenectady
+		Latham
+
+	corfu
+		Corfu
+		Batavia
+
+	weedsport
+		Weedsport
+		Auburn
+
+	rochester
+		Downtown Rochester
+		Pittsford - Fairport
+		Northwest Rochester - Rochester Airport
+		Rochester South - Henrietta
+		Victor
+
+	johnson city
+		Vestal
+		Binghamton
+		Johnson City
+
+	clifton park
+		Clifton Park
+		Troy
+		Rensselaer
+		Ballston Spa
+
+	monticello
+		Monticello
+		Liberty
+
+	verona
+		Vernon
+		Canastota
+		Verona
+
+	ellicottville
+		Ellicottville
+		Springville
+
+	liberty
+		Monticello
+		Liberty
+
+	schoharie
+		Cobleskill
+		Schoharie
+
+	newfane
+		Lockport
+		Newfane
+
+	cooperstown
+		Cooperstown
+
+	vestal
+		Owego
+		Vestal
+		Binghamton
+		Johnson City
+
+	oneonta
+		Oneonta
+
+	massena
+		Massena
+
+	evans mills
+		Watertown
+		Evans Mills
+
+	syracuse
+		Syracuse University
+		Liverpool
+		Fairgrounds Area Syracuse
+		Dewitt - Fayetteville
+		Syracuse Airport (SYR) Area
+		Baldwinsville - Great Northern Mall
+		Cicero
+		East Syracuse
+
+	long island - nassau county
+		Huntington - Plainview
+		Westbury
+		Great Neck - Roslyn
+		Rockville Centre - Freeport
+		Bethpage - Farmingdale
+		Glen Cove - Oyster Bay
+
+	oswego
+		Oswego
+
+	highland falls
+		Highland Falls
+
+	brentwood
+		Copiague
+		Brentwood
+
+	geneva
+		Geneva
+
+	tully
+		Mc Graw
+		Cortland
+		Tully
+
+	vernon
+		Vernon
+		Canastota
+		Verona
+
+	new york city
+		Queensborough Bridge
+		Times Square - Theatre District
+		Empire State Building Area
+		Upper East Side
+		Downtown - SoHo - Financial District
+		Coney Island
+		Midtown West
+		Hell's Kitchen
+		Brooklyn
+		Chelsea Area
+		Midtown East
+		Upper West Side
+		Madison Square Garden - Convention Area
+		Central Park South
+		Long Island City
+
+	hornell
+		Hornell
+
+	buffalo - niagara falls
+		Grand Island
+		South Buffalo - Hamburg
+		Downtown Buffalo
+		Buffalo - Amherst
+		East Niagara Falls
+		Buffalo Airport (BUF)
+		Niagara Falls
+
+	ogdensburg
+		Ogdensburg
+
+	springville
+		Ellicottville
+		Springville
+
+	owego
+		Owego
+		Vestal
+
+	malone
+		Malone
+
+	painted post
+		Corning
+		Painted Post
+
+	binghamton
+		Vestal
+		Binghamton
+		Johnson City
+
+	corning
+		Elmira
+		Horseheads
+		Corning
+		Painted Post
+
+	jamestown
+		Jamestown
+
+	copiague
+		Copiague
+		Brentwood
+
+	cobleskill
+		Cobleskill
+		Schoharie
+
+	auburn
+		Weedsport
+		Auburn
+
+	watertown
+		Watertown
+		Evans Mills
+
+	johnstown
+		Amsterdam
+		Johnstown
+
+	ballston spa
+		Clifton Park
+		Ballston Spa
+
+	west coxsackie
+		West Coxsackie
+		Rensselaer
+		East Greenbush
+
+	poughkeepsie - fishkill
+		Newburgh Airport Vicinity (SWF)
+		Fishkill
+		Poughkeepsie
+		New Paltz
+		Kingston - Saugerties
+		Middletown - Chester
+
+	waterloo
+		Waterloo
+
+	canandaigua
+		Canandaigua
+
+	wellsville
+		Wellsville
+
+	allegany
+		Olean
+		Allegany
+
+	utica - rome
+		Rome - Oriskany
+		Utica
+
+	port jervis
+		Matamoras
+		Port Jervis
+
+	olean
+		Olean
+		Allegany
+
+	canastota
+		Vernon
+		Canastota
+		Verona
+
+	rensselaer
+		Clifton Park
+		Troy
+		Rensselaer
+		East Greenbush
+		West Coxsackie
+
+	plattsburgh
+		Plattsburgh
+
+	findley lake
+		Findley Lake
+		North East
+
+	bronx
+		Bronx
+		Palisades
+
+	brewerton
+		Brewerton
+
+	horseheads
+		Elmira
+		Horseheads
+		Corning
+
+	westchester county
+		New Rochelle
+		Tarrytown - Elmsford
+		Yonkers
+		Mt. Kisco - Armonk
+		Rye - White Plains
+
+	nanuet
+		Pearl River - Orangeburg
+		Suffern - Nanuet
+
+
+rhode island
+	providence
+		Cranston - Warwick - Providence Airport (PVD)
+		Coventry - West Warwick
+		Providence Downtown
+		East Providence - Seekonk
+
+	milford - foxboro
+		Woonsocket
+		Foxboro - Sharon
+		Attleboro
+		Milford - Franklin
+
+	newport
+		Goat Island - Newport & Newport Beach
+		South Kingstown
+		Middletown
+
+	westerly
+		Westerly
+
+
+vermont
+	brattleboro
+		Brattleboro
+
+	middlebury
+		Middlebury
+
+	conway
+		Littleton
+		Plymouth - Campton
+		Gorham
+		North Conway
+		St. Johnsbury
+
+	bennington
+		Bennington
+
+	killington - okemo
+		Lebanon
+		Ludlow - Okemo Mountain
+		Rutland - Killington
+		White River Junction
+
+	saint albans
+		Saint Albans
+
+	burlington - stowe
+		Stowe
+		Burlington
+		Colchester
+		Montpelier - Barre
+		Williston
+		Essex Junction
+
+	springfield
+		Springfield
+
+
+georgia
+	
+		Northlake
+		Downtown Atlanta
+		Smyrna
+		Buckhead Area
+		Galleria Area
+		Stockbridge
+		Perimeter
+		Atlanta West - Six Flags
+		Hartsfield Airport (ATL) West
+		Stone Mountain
+		Druid Hills - Emory - Decatur
+		Marietta
+		Hartsfield Airport (ATL) North
+		Kennesaw
+		Morrow
+		Jonesboro
+		Peachtree Corners - Norcross
+		Union City
+		Midtown Atlanta
+		Hartsfield Airport (ATL) South
+		Lithonia
+		Forest Park - Riverdale
+
+	madison
+		Madison
+		Greensboro
+
+	savannah
+		Savannah Midtown
+		Savannah Gateway
+		Savannah North
+		Savannah Airport (SAV)
+		Historic Savannah and Riverfront
+		Savannah West - Garden City
+
+	fitzgerald
+		Fitzgerald
+
+	thomson
+		Thomson
+
+	hartwell
+		Elberton
+		Lavonia
+		Hartwell
+
+	peachtree city & newnan
+		Peachtree City
+		Newnan
+
+	bainbridge
+		Donalsonville
+		Midway
+		Bainbridge
+
+	dalton
+		Dalton
+		Chatsworth
+		Calhoun
+		La Fayette
+
+	milledgeville
+		Milledgeville
+
+	darien
+		Darien
+
+	griffin
+		Griffin
+		Locust Grove
+		Jackson
+		Fayetteville
+		Mcdonough
+
+	woodstock
+		Cartersville
+		Acworth
+		Woodstock
+		Canton
+
+	fort valley
+		Montezuma
+		Perry
+		Fort Valley
+
+	richmond hill
+		Hinesville
+		Richmond Hill
+
+	swainsboro
+		Swainsboro
+
+	thomasville
+		Thomasville
+		Pelham
+		Midway
+
+	lake park
+		Lake Park
+
+	acworth
+		Dallas
+		Cartersville
+		Hiram
+		Canton
+		Woodstock
+		Acworth
+
+	washington
+		Washington
+
+	saint simons island
+		Saint Simons Island
+
+	mcdonough
+		Griffin
+		Jackson
+		Conyers
+		Locust Grove
+		Mcdonough
+		Covington
+		Fayetteville
+
+	carrollton
+		Villa Rica
+		Carrollton
+		Bremen
+
+	alma
+		Alma
+
+	sandersville
+		Sandersville
+
+	montezuma
+		Fort Valley
+		Americus
+		Montezuma
+
+	lavonia
+		Seneca
+		Lavonia
+		Hartwell
+		Toccoa
+
+	kingsland
+		Kingsland
+
+	hinesville
+		Hinesville
+		Richmond Hill
+
+	flowery branch
+		Oakwood
+		Gainesville
+		Braselton
+		Winder
+		Flowery Branch
+		Cumming
+
+	hogansville
+		Hogansville
+
+	moultrie
+		Moultrie
+
+	dahlonega
+		Dahlonega
+		Dawsonville
+		Gainesville
+		Cleveland
+
+	dillard
+		Clayton
+		Dillard
+		Franklin
+
+	winder
+		Flowery Branch
+		Braselton
+		Jefferson
+		Winder
+		Oakwood
+
+	cleveland
+		Cleveland
+		Sautee Nacoochee
+		Helen
+		Gainesville
+		Cornelia
+		Dahlonega
+
+	perry
+		Perry
+		Hawkinsville
+		Fort Valley
+
+	jackson
+		Griffin
+		Locust Grove
+		Jackson
+		Forsyth
+		Mcdonough
+
+	donalsonville
+		Donalsonville
+		Bainbridge
+
+	locust grove
+		Griffin
+		Locust Grove
+		Jackson
+		Mcdonough
+
+	calhoun
+		Dalton
+		Rome
+		Adairsville
+		Calhoun
+
+	douglas
+		Douglas
+
+	jekyll island
+		Brunswick
+		South Brunswick
+		Jekyll Island
+
+	tifton
+		Ashburn
+		Adel
+		Tifton
+
+	toccoa
+		Lavonia
+		Cornelia
+		Toccoa
+
+	sautee nacoochee
+		Cornelia
+		Sautee Nacoochee
+		Cleveland
+		Helen
+
+	hiram
+		Dallas
+		Cartersville
+		Hiram
+		Villa Rica
+		Douglasville
+		Acworth
+
+	clayton
+		Clayton
+		Dillard
+		Franklin
+
+	trion
+		Trion
+		La Fayette
+
+	chatsworth
+		Dalton
+		Chatsworth
+
+	la fayette
+		Dalton
+		Trion
+		La Fayette
+
+	villa rica
+		Dallas
+		Bremen
+		Hiram
+		Villa Rica
+		Douglasville
+		Carrollton
+
+	dublin
+		Dublin
+
+	lagrange - pine mountain
+		Pine Mountain - Callaway Gardens
+		Lagrange
+
+	braselton
+		Commerce
+		Oakwood
+		Gainesville
+		Braselton
+		Jefferson
+		Winder
+		Flowery Branch
+
+	forsyth
+		Jackson
+		Forsyth
+
+	waycross
+		Waycross
+
+	adel
+		Adel
+		Tifton
+
+	warm springs
+		Warm Springs
+
+	greensboro
+		Madison
+		Greensboro
+
+	macon
+		Warner Robins
+		Macon North
+		Byron
+		Macon West
+		Macon Northwest
+		Macon
+
+	waynesboro
+		Waynesboro
+
+	jesup
+		Jesup
+
+	vidalia
+		Vidalia
+
+	douglasville
+		Villa Rica
+		Douglasville
+		Hiram
+		Dallas
+
+	jasper
+		Dawsonville
+		Jasper
+		Canton
+
+	americus
+		Americus
+		Montezuma
+
+	cordele
+		Ashburn
+		Cordele
+
+	conyers
+		Conyers
+		Covington
+		Snellville
+		Mcdonough
+
+	athens
+		Athens
+
+	covington
+		Conyers
+		Covington
+		Snellville
+		Mcdonough
+
+	blakely
+		Blakely
+
+	elberton
+		Elberton
+		Hartwell
+
+	hawkinsville
+		Eastman
+		Perry
+		Hawkinsville
+
+	blairsville
+		Murphy
+		Blairsville
+		Hiawassee
+
+	rincon
+		Hardeeville
+		Rincon
+
+	ashburn
+		Ashburn
+		Tifton
+		Cordele
+
+	helen
+		Cornelia
+		Sautee Nacoochee
+		Cleveland
+		Hiawassee
+		Helen
+
+	eastman
+		Eastman
+		Hawkinsville
+
+	commerce
+		Commerce
+		Jefferson
+		Braselton
+
+	snellville
+		Conyers
+		Covington
+		Snellville
+
+	adairsville
+		Rome
+		Adairsville
+		Calhoun
+		Cartersville
+
+	augusta
+		Augusta West
+		Augusta North
+		Fort Gordon
+		Augusta
+
+	atlanta
+		Northlake
+		Downtown Atlanta
+		Smyrna
+		Buckhead Area
+		Galleria Area
+		Stockbridge
+		Perimeter
+		Atlanta West - Six Flags
+		Hartsfield Airport (ATL) West
+		Stone Mountain
+		Druid Hills - Emory - Decatur
+		Marietta
+		Hartsfield Airport (ATL) North
+		Jonesboro
+		Morrow
+		Kennesaw
+		Peachtree Corners - Norcross
+		Union City
+		Midtown Atlanta
+		Hartsfield Airport (ATL) South
+		Lithonia
+		Forest Park - Riverdale
+
+	pelham
+		Thomasville
+		Pelham
+
+	cuthbert
+		Cuthbert
+
+	cedartown
+		Rome
+		Cedartown
+
+	cornelia
+		Cleveland
+		Sautee Nacoochee
+		Cornelia
+		Helen
+		Toccoa
+
+	albany
+		Albany
+
+	fulton - gwinnett
+		Buford - Suwanee
+		Lawrenceville
+		Gwinnett - Duluth
+		Johns Creek
+		Alpharetta South - Roswell
+		Alpharetta
+		Lake Lanier
+
+	oakwood
+		Oakwood
+		Gainesville
+		Braselton
+		Winder
+		Flowery Branch
+		Cumming
+
+	cartersville
+		Dallas
+		Cartersville
+		Adairsville
+		Hiram
+		Woodstock
+		Acworth
+
+	gainesville
+		Oakwood
+		Dahlonega
+		Gainesville
+		Braselton
+		Jefferson
+		Cleveland
+		Flowery Branch
+
+	bremen
+		Villa Rica
+		Rockmart
+		Carrollton
+		Bremen
+
+	canton
+		Acworth
+		Jasper
+		Woodstock
+		Canton
+
+	thomaston
+		Thomaston
+
+	jefferson
+		Commerce
+		Jefferson
+		Gainesville
+		Winder
+		Braselton
+
+	camilla
+		Camilla
+		Pelham
+
+	blue ridge
+		Blue Ridge
+
+	cumming
+		Dawsonville
+		Flowery Branch
+		Cumming
+		Oakwood
+
+	hazlehurst
+		Hazlehurst
+
+	statesboro
+		Statesboro
+
+	dawsonville
+		Dahlonega
+		Dawsonville
+		Cumming
+		Jasper
+
+	valdosta
+		Valdosta
+
+	chattanooga
+		Ringgold
+		Chattanooga South
+		Hixson
+		Downtown Chattanooga
+		Lookout Mountain
+		Chattanooga Airport (CHA)
+
+	dallas
+		Dallas
+		Cartersville
+		Hiram
+		Villa Rica
+		Douglasville
+		Acworth
+
+	hiawassee
+		Helen
+		Blairsville
+		Hiawassee
+
+	rome
+		Adairsville
+		Rome
+		Cedartown
+		Calhoun
+
+	fayetteville
+		Fayetteville
+		Griffin
+		Mcdonough
+
+	tybee island
+		Tybee Island
+
+
+pennsylvania
+	jonestown
+		Jonestown
+		Grantville
+		Lebanon
+		Pine Grove
+		Elizabethtown
+
+	sterling
+		Sterling
+		Canadensis
+
+	new stanton
+		Greensburg - Latrobe
+		New Stanton
+
+	donegal
+		Ligonier
+		Donegal
+
+	state college
+		Lemont - Dale Summit
+		State College South
+		State College North
+		Clearfield
+
+	gettysburg
+		Chambersburg
+		Gettysburg
+
+	collegeville
+		Royersford - Collegeville
+
+	lock haven
+		Lock Haven
+
+	scranton - poconos
+		Scranton
+		Hazleton - Drums
+		White Haven - Lake Harmony
+		Tannersville - Bartonsville
+		Stroudsburg
+		Frackville - Pottsville
+		Wilkes Barre
+
+	altoona - duncansville
+		Altoona - Duncansville
+		Somerset
+		Johnstown
+
+	delmont
+		Delmont
+		Irwin
+
+	brookville
+		Brookville
+		Du Bois
+
+	warminster
+		Warminster
+
+	trenton - princeton
+		Princeton West
+		Princeton East - Monmouth Junction
+		Mount Holly
+		Trenton
+		South Brunswick - Cranbury
+		Langhorne - Levittown
+		Cookstown - Wrightstown
+
+	erie
+		Erie
+
+	elizabethtown
+		Jonestown
+		Lebanon
+		Grantville
+		Elizabethtown
+
+	greencastle
+		Shippensburg
+		Greencastle
+
+	warren
+		Jamestown
+		Warren
+
+	honey brook
+		Honey Brook
+		Denver
+
+	grantville
+		Jonestown
+		Lebanon
+		Grantville
+		Elizabethtown
+
+	allentown
+		East Allentown
+		Allentown
+		Allentown - Lehigh Valley
+		Bethlehem
+		Quakertown
+
+	philadelphia
+		Philadelphia Airport (PHL)
+		Mount Laurel
+		Cherry Hill
+		Downtown Philadelphia
+		University Area
+		Gloucester - Runnemede - Deptford
+		Trevose - Bensalem
+		City Line
+
+	denver
+		Honey Brook
+		Lebanon
+		Denver
+
+	bloomsburg
+		Bloomsburg
+		Mifflinville
+
+	ligonier
+		Ligonier
+		Donegal
+
+	royersford
+		Royersford - Collegeville
+
+	indiana
+		Indiana
+
+	meadville
+		Meadville
+
+	gibsonia
+		Monaca
+		Gibsonia
+
+	harrisburg - york
+		Harrisburg West
+		Hershey
+		Harrisburg
+		Harrisburg East
+		York
+		Carlisle
+
+	chester
+		Paulsboro
+		Pennsville
+		Ridley Park
+		Chester
+
+	pittsburgh suburbs - south
+		Washington - Canonsburg
+
+	canadensis
+		Sterling
+		Canadensis
+
+	du bois
+		Du Bois
+		Brookville
+
+	pittsburgh
+		Pittsburgh South
+		Pittsburgh East - Monroeville
+		University Center
+		West Mifflin - West Homestead
+		Pittsburgh Downtown
+		Cranberry Township
+		Pittsburgh Airport (PIT)
+		Greentree
+		Pittsburgh North - Allegheny Valley
+		Pittsburgh South Side
+
+	lebanon
+		Jonestown
+		Grantville
+		Lebanon
+		Pine Grove
+		Denver
+		Elizabethtown
+
+	north east
+		North East
+		Findley Lake
+
+	lancaster - reading
+		Lancaster West
+		Reading
+		Lancaster East and Intercourse Area
+		Morgantown
+
+	saint marys
+		Saint Marys
+
+	williamsport
+		Williamsport
+		Columbia - Lewisburg
+		Danville
+
+	mifflinville
+		Bloomsburg
+		Mifflinville
+
+	hamburg
+		Hamburg
+
+	uniontown
+		Uniontown
+		Waynesburg
+
+	beaver falls
+		Beaver Falls
+		Monaca
+
+	matamoras
+		Matamoras
+		Hamburg
+		Monticello
+		Port Jervis
+
+	ridley park
+		Paulsboro
+		Ridley Park
+		Chester
+
+	breezewood - bedford
+		Breezewood
+		Bedford Downtown
+		Bedford South
+
+	hanover
+		Westminster
+
+	pine grove
+		Jonestown
+		Lebanon
+		Pine Grove
+
+	philadelphia suburbs
+		West Chester - Concordville
+		Plymouth Meeting Norristown
+		Pottstown
+		Horsham - Fort Washington
+		Valley Forge
+		Exton - Malvern
+
+	lansdale
+		Kulpsville - Lansdale
+
+	irwin
+		Delmont
+		Irwin
+
+	clarion
+		Clarion
+
+	north wales
+		Montgomeryville
+
+	youngstown
+		New Castle
+		Mercer
+		West Middlesex
+		Youngstown South
+		Youngstown North
+
+	shippensburg
+		Shippensburg
+		Greencastle
+
+	franklin
+		Franklin
+
+	new milford
+		New Milford
+		Binghamton
+
+	monaca
+		Monaca
+		Gibsonia
+		Beaver Falls
+
+	bentleyville
+		Bentleyville
+
+	sayre
+		Owego
+		Elmira
+		Sayre
+
+
+florida
+	oldsmar
+		Port Richey
+		Oldsmar
+		New Port Richey
+		Lutz
+		Wesley Chapel
+
+	madison
+		Madison
+
+	port charlotte
+		Port Charlotte
+		Port Charlotte - Tamiami Trail
+		Punta Gorda
+
+	tallahassee
+		South Tallahassee
+		Tallahassee North
+		Tallahassee East
+
+	shalimar
+		Niceville
+		Shalimar
+		Crestview
+		Fort Walton Beach
+
+	palatka
+		Elkton
+		Palatka
+
+	seffner
+		Seffner
+		Wesley Chapel
+		Lutz
+		Sun City Center
+		Zephyrhills
+
+	boca raton - deerfield beach
+		Boca Raton - North Deerfield Beach
+		Delray - Highland Beach
+		Deerfield Beach
+
+	milton
+		Milton
+
+	destin
+		Destin
+
+	port richey
+		Oldsmar
+		New Port Richey
+		Spring Hill
+		Wesley Chapel
+		Lutz
+		Port Richey
+
+	sun city center
+		Seffner
+		Sun City Center
+		Bradenton
+		Ellenton
+
+	marianna
+		Marianna
+		Chipley
+
+	lake mary
+		Deltona
+		Sanford
+		Deland
+		Lake Mary
+
+	sebring
+		Lake Placid
+		Sebring
+
+	st. petersburg - clearwater
+		Clearwater Northwest
+		Clearwater Beach
+		Belleair
+		St. Petersburg
+		Clearwater - St. Petersburg North
+		North Clearwater - Safety Harbor Area
+		St. Pete Beach - Treasure Island
+		Largo
+		Palm Harbor - Tarpon Springs
+		Dunedin
+		South St. Petersburg
+
+	panama city
+		Panama City
+		Delwood Beach
+		Panama City Beach
+
+	chipley
+		Bonifay
+		Marianna
+		Chipley
+
+	clewiston
+		Labelle
+		Clewiston
+
+	perry
+		Perry
+		Lamont
+
+	alachua
+		Alachua
+
+	fort lauderdale
+		Coral Springs
+		Ft Lauderdale Airport (FLL)
+		Downtown Ft Lauderdale
+		Ft Lauderdale North
+		Miramar
+		Ft Lauderdale Beach Area
+		West Ft Lauderdale - Sawgrass Mills Area
+		West Ft Lauderdale - Plantation
+		Ft Lauderdale - Airport North
+		Hollywood
+		Pompano Beach
+
+	ocala
+		Homossasa Springs
+		Ocala South
+		Ocala
+		Silver Springs
+		Tavares
+
+	crystal river
+		Inverness
+		Hernando
+		Crystal River
+
+	spring hill
+		Port Richey
+		Wesley Chapel
+		New Port Richey
+		Brooksville
+		Spring Hill
+
+	bushnell
+		Brooksville
+		Inverness
+		Bushnell
+		Wesley Chapel
+		Wildwood
+		Leesburg
+
+	pensacola
+		Pensacola Bay
+		Pensacola Beach
+		University Mall Area - Pensacola North
+		Perdido Key
+		Navarre
+		Pensacola West
+
+	gainesville
+		Gainesville West
+		Gainesville - University
+
+	daytona beach
+		South Ormond Beach - Speedway North
+		Daytona Beach Shores - South Daytona Beach
+		Palm Coast
+		Ormond Beach
+		Speedway - Airport (DAB)
+		Daytona Beach - Ormond Beach
+
+	defuniak springs
+		Defuniak Springs
+
+	inverness
+		Crystal River
+		Brooksville
+		Inverness
+		Bushnell
+		Hernando
+		Wildwood
+
+	fort pierce
+		Vero Beach
+		Fort Pierce
+		Port Saint Lucie
+		Jensen Beach
+		Stuart
+
+	cocoa beach - merritt island
+		Cocoa
+		Merritt Island
+		Cape Canaveral
+		Cocoa Beach
+		Titusville
+
+	zephyrhills
+		Seffner
+		Zephyrhills
+		Lutz
+		Wesley Chapel
+
+	saint augustine
+		Northwest St. Augustine
+		St. Augustine Beach Area
+		St. Augustine Historic Area
+		World Golf Village
+
+	leesburg
+		Bushnell
+		Clermont
+		Mount Dora
+		Lady Lake
+		Wildwood
+		Howey In The Hills
+		Leesburg
+
+	howey in the hills
+		Clermont
+		Mount Dora
+		Apopka
+		Lady Lake
+		Wildwood
+		Howey In The Hills
+		Leesburg
+
+	disney south
+		Haines City
+		Auburndale
+		Davenport
+		Lakeland
+		Winter Haven
+
+	niceville
+		Niceville
+		Shalimar
+		Crestview
+		Fort Walton Beach
+
+	jensen beach
+		Jensen Beach
+		Port Saint Lucie
+		Fort Pierce
+		Stuart
+
+	mount dora
+		Apopka
+		Mount Dora
+		Howey In The Hills
+		Leesburg
+
+	lake city - jasper
+		Lake City
+		Jasper
+		Live Oak
+
+	brooksville
+		Inverness
+		Bushnell
+		Spring Hill
+		Wesley Chapel
+		Brooksville
+
+	sarasota
+		Venice
+		Downtown Sarasota and Airport Area (SRQ)
+		Siesta Key
+		Longboat Key
+		Southwest Sarasota
+		East Sarasota
+		Lido Beach
+
+	elkton
+		Elkton
+		Palatka
+
+	okeechobee
+		Okeechobee
+
+	lutz
+		Oldsmar
+		New Port Richey
+		Seffner
+		Wesley Chapel
+		Lutz
+		Port Richey
+		Zephyrhills
+
+	lamont
+		Perry
+		Lamont
+
+	macclenny
+		Macclenny
+
+	apopka
+		Apopka
+		Clermont
+		Mount Dora
+		Howey In The Hills
+
+	stuart
+		Jensen Beach
+		Port Saint Lucie
+		Fort Pierce
+		Stuart
+
+	wesley chapel
+		Oldsmar
+		New Port Richey
+		Spring Hill
+		Seffner
+		Wesley Chapel
+		Lutz
+		Port Richey
+		Bushnell
+		Zephyrhills
+		Brooksville
+
+	palm beach
+		Palm Beach Gardens
+		Palm Beach
+		Palm Beach Airport (PBI) - Palm Beach Lakes
+		N. Palm Beach Oceanfront/Singer Island
+		West Palm Beach
+		Central Palm Beach
+		Jupiter
+
+	labelle
+		Labelle
+		Clewiston
+
+	indialantic
+		Melbourne
+		Melbourne Beach - Indiatlantic
+		North Melbourne
+
+	lady lake
+		Lady Lake
+		Wildwood
+		Howey In The Hills
+		Leesburg
+
+	port saint lucie
+		Jensen Beach
+		Port Saint Lucie
+		Fort Pierce
+		Stuart
+
+	plant city
+		Plant City
+
+	fort myers - naples
+		Fort Myers Beach
+		Sanibel & Captiva Islands
+		Cape Coral
+		Marco Island
+		Bonita Springs
+		Naples Central
+		Fort Myers North - I-75 Area
+		South Ft Myers & Airport (RSW)
+		Fort Myers
+		Gateway to the Islands
+		Naples I-75 Area
+
+	jacksonville
+		Jacksonville East
+		Jacksonville Southpoint - Butler Blvd
+		Orange Park
+		Amelia Island - Fernandina Beach
+		Jacksonville Airport (JAX) - North
+		Yulee
+		Downtown Jacksonville
+		Jacksonville Beach - Mayo Clinic
+		Jacksonville SE - Baymeadows
+		Jacksonville West
+
+	tampa
+		Busch Gardens
+		Tampa East - Fairgrounds
+		Tampa Airport West
+		Tampa Airport South - Westshore
+		Tampa Stadium - Dale Mabry
+		Tampa North
+		Brandon
+		Tampa Airport North
+		Tampa Downtown
+
+	homestead
+		Homestead
+
+	vero beach
+		Vero Beach
+		Fort Pierce
+		Sebastian
+
+	new port richey
+		Oldsmar
+		New Port Richey
+		Spring Hill
+		Wesley Chapel
+		Lutz
+		Port Richey
+
+	crestview
+		Niceville
+		Shalimar
+		Crestview
+
+	bradenton
+		Sun City Center
+		Bradenton
+		Ellenton
+
+	miami
+		Dadeland
+		Miami Lakes - Hialeah
+		South Beach - Collins Avenue Oceanfront
+		Miami West
+		Aventura
+		Miami Beach
+		South Beach - Ocean Drive
+		Miami Airport West - Doral
+		North Miami
+		Miami Downtown
+		Southwest Miami
+		North Miami Beach
+		Miami International Airport (MIA)
+		Coral Gables - Coconut Grove
+		South Beach - Central
+
+	clermont
+		Apopka
+		Clermont
+		Howey In The Hills
+		Leesburg
+
+	orlando
+		Disney Maingate - Celebration
+		Orlando East
+		Orlando Airport West - FL Mall Area
+		Orlando International Airport (MCO)
+		Lake Buena Vista - Downtown Disney
+		Maitland - Altamonte Springs
+		West Disney Area
+		Downtown Orlando
+		Winter Park
+		Sea World - Intl. Drive - Convention Center
+		Ocoee - Orlando West
+		Kissimmee
+		Universal Orlando Resort Area - Intl. Drive North
+
+	chiefland
+		Chiefland
+
+	ellenton
+		Sun City Center
+		Bradenton
+		Ellenton
+
+	melbourne
+		Melbourne
+		Melbourne Beach - Indiatlantic
+		North Melbourne
+
+	sebastian
+		Vero Beach
+		Sebastian
+		Palm Bay
+
+	hernando
+		Inverness
+		Hernando
+		Crystal River
+
+	palm bay
+		Sebastian
+		Palm Bay
+
+	bartow
+		Bartow
+		Lake Wales
+
+	fort walton beach
+		Niceville
+		Shalimar
+		Fort Walton Beach
+
+	lake wales
+		Bartow
+		Lake Wales
+
+	bonifay
+		Bonifay
+		Chipley
+
+	boynton beach
+		Boynton Beach
+
+	lake placid
+		Lake Placid
+		Sebring
+
+	midway
+		Thomasville
+		Midway
+		Bainbridge
+
+	the florida keys
+		Key West
+		Islamorada
+		Marathon
+		Key Largo
+
+	wildwood
+		Inverness
+		Bushnell
+		Lady Lake
+		Wildwood
+		Howey In The Hills
+		Leesburg
+
+
+hawaii
+	maui
+		Ka'anapali - Lahaina
+		Kahului
+		Kihei
+		Wailea - Makena
+
+	molokai
+		Molokai
+
+	hawaii
+		Kona
+		Pahala - Naalehu Area
+		Waikoloa - Kohala Coast
+		Hilo
+		Volcano
+
+	kauai
+		Princeville
+		Kapaa - Lihue
+		Poipu - Koloa
+
+	oahu
+		Waikiki Beach Area
+		Waikiki Marina Area
+		Waianae
+		Waikiki City Central
+		Honolulu Airport (HNL)
+		Executive Center
+		Diamond Head Area
+		Ihilani
+		Oahu North Shore
+
+
+kentucky
+	mount sterling
+		Mount Sterling
+		Winchester
+
+	cincinnati
+		Downtown Cincinnati
+		Cincinnati Northwest - Fairfield
+		Cincinnati Airport - Florence (CVG)
+		Riverfront - Covington
+		Cincinnati North - Sharonville - West Chester
+		University Area - Norwood
+		Cincinnati East
+		Cincinnati Northeast - Blue Ash
+		Ft. Mitchell
+		King's Island Vicinity
+
+	georgetown
+		Paris
+		Georgetown
+		Frankfort
+
+	murray
+		Paris
+		Murray
+
+	lexington
+		South Lexington - Highway 418
+		Lexington North
+		Lexington - Lexington South
+		Lexington East
+
+	central city
+		Central City
+		Beaver Dam
+
+	owensboro
+		Owensboro
+		Lewisport
+
+	london
+		London
+		Corbin
+
+	maysville
+		Maysville
+
+	grayson
+		Grayson
+
+	lewisport
+		Owensboro
+		Lewisport
+
+	elizabethtown
+		Elizabethtown
+		Fort Knox
+		Radcliff
+
+	dry ridge
+		Walton
+		Williamstown
+		Sparta
+		Dry Ridge
+
+	louisa
+		Louisa
+
+	scottsville
+		Scottsville
+
+	corbin
+		London
+		Corbin
+
+	frankfort
+		Georgetown
+		Frankfort
+
+	mayfield
+		Mayfield
+
+	paris
+		Paris
+		Georgetown
+		Winchester
+
+	shelbyville
+		La Grange
+		Shelbyville
+
+	nicholasville
+		Nicholasville
+		Danville
+
+	morehead
+		Morehead
+
+	paintsville
+		Paintsville
+
+	beaver dam
+		Central City
+		Beaver Dam
+
+	richmond
+		Richmond
+		Winchester
+		Irvine
+
+	louisville
+		Louisville Northeast
+		Brooks - Shepherdsville
+		Louisville Airport Area (SDF)
+		East Louisville
+		Clarksville - Jeffersonville
+		Hurstbourne - Louisville East
+		Louisville Southwest
+		Louisville Downtown
+
+	radcliff
+		Radcliff
+		Fort Knox
+		Elizabethtown
+
+	danville
+		Nicholasville
+		Harrodsburg
+		Danville
+
+	somerset
+		Somerset
+
+	madisonville
+		Madisonville
+
+	glasgow
+		Cave City
+		Horse Cave
+		Glasgow
+
+	la grange
+		La Grange
+		Shelbyville
+
+	cave city
+		Cave City
+		Horse Cave
+		Glasgow
+
+	columbia
+		Columbia
+		Campbellsville
+
+	fort knox
+		Radcliff
+		Fort Knox
+		Elizabethtown
+
+	hazard
+		Hazard
+
+	irvine
+		Richmond
+		Irvine
+
+	walton
+		Walton
+		Williamstown
+		Dry Ridge
+
+	carrollton
+		Madison
+		Carrollton
+		Sparta
+
+	middlesboro
+		Middlesboro
+
+	oak grove
+		Hopkinsville
+		Oak Grove
+
+	pikeville
+		Pikeville
+
+	harrodsburg
+		Harrodsburg
+		Danville
+
+	williamstown
+		Walton
+		Williamstown
+		Dry Ridge
+
+	winchester
+		Paris
+		Richmond
+		Mount Sterling
+		Winchester
+
+	paducah
+		Paducah
+
+	cadiz
+		Cadiz
+
+	sparta
+		Dry Ridge
+		Carrollton
+		Sparta
+
+	bowling green
+		Bowling Green
+
+	bardstown
+		Bardstown
+
+	hopkinsville
+		Hopkinsville
+		Oak Grove
+
+	harlan
+		Harlan
+
+	franklin
+		White House
+		Franklin
+
+	ashland
+		Ashland
+
+	horse cave
+		Cave City
+		Horse Cave
+		Glasgow
+
+	calvert city
+		Calvert City
+
+	campbellsville
+		Columbia
+		Campbellsville
+
+
+district of columbia
+	washington d.c.
+		DC Suburbs - Northeast Area
+		Silver Spring
+		Convention Ctr - Capitol Hill area
+		Georgetown North
+		Crystal City
+		Arlington
+		Georgetown - Foggy Bottom
+		National Harbor
+		Mount Vernon
+		Bethesda
+		Alexandria West
+		White House - Downtown
+		Alexandria East - Old Town
+		Dupont Circle - Woodley Park
+
+
+new hampshire
+	hampton
+		Hampton
+		Amesbury
+		Seabrook
+		Exeter
+
+	rochester
+		Rochester
+
+	conway
+		Littleton
+		Plymouth - Campton
+		Gorham
+		North Conway
+		St. Johnsbury
+
+	meredith
+		Meredith
+		Laconia
+
+	laconia
+		Meredith
+		Tilton
+		Laconia
+
+	whitefield
+		Whitefield
+
+	salem - andover
+		Billerica - Tewksbury Area
+		Salem
+		Andover
+
+	seabrook
+		Hampton
+		Amesbury
+		Seabrook
+		Exeter
+
+	killington - okemo
+		Lebanon
+		Ludlow - Okemo Mountain
+		Rutland - Killington
+		White River Junction
+
+	tilton
+		Tilton
+		Laconia
+
+	concord - nashua
+		Merrimack - Nashua
+		Manchester - Bedford
+		Concord
+
+	portsmouth - kittery
+		Portsmouth
+		Ogunquit - Wells
+		Dover - Durham
+		Kennebunk Area
+		York
+		Kittery
+
+	keene
+		Keene
+
+	newbury
+		Newbury
+
+	exeter
+		Hampton
+		Amesbury
+		Seabrook
+		Exeter
+
+
+texas
+	galveston
+		Galveston - Offatts Bay
+		East Beach Area
+		West Beach - Moody Gardens
+
+	houston
+		Downtown Houston
+		The Woodlands
+		Houston Northwest
+		Webster - Clear Lake
+		Houston West
+		Houston Hobby Airport (HOU)
+		Reliant Park - Med Center
+		Energy Corridor South
+		Willowbrook
+		Conroe
+		League City
+		Tomball
+		Sugar Land - Stafford
+		Brookhollow
+		Kemah - Seabrook
+		Humble
+		Cyfair
+		Houston Galleria
+		Houston Intercontinental Airport (IAH)
+		Katy
+		Houston East
+		Westchase - Houston Southwest
+
+	van horn
+		Van Horn
+
+	alvin
+		Alvin
+
+	sealy
+		Columbus
+		Brookshire
+		Sealy
+		Rosenberg
+		Brenham
+		Waller
+		Hempstead
+
+	hutchins
+		Hutchins
+
+	beaumont
+		Beaumont North
+		Beaumont
+
+	pecos
+		Pecos
+
+	dumas
+		Dumas
+
+	rockport
+		Portland
+		Port Aransas
+		Aransas Pass
+		Rockport
+
+	vidor
+		Port Arthur
+		Nederland
+		Lumberton
+		Vidor
+		Orange
+		Bridge City
+
+	hereford
+		Hereford
+
+	canton
+		Lindale
+		Athens
+		Canton
+		Kaufman
+		Terrell
+		Mabank
+
+	duncanville
+		Duncanville
+
+	brookshire
+		Hempstead
+		Brookshire
+		Sealy
+		Rosenberg
+		Waller
+
+	royse city
+		Rockwall
+		Royse City
+
+	borger
+		Pampa
+		Borger
+
+	paris
+		Paris
+
+	lumberton
+		Port Arthur
+		Lumberton
+		Nederland
+		Vidor
+
+	sulphur springs
+		Sulphur Springs
+		Commerce
+		Mount Vernon
+
+	tyler
+		Kilgore
+		Lindale
+		Tyler
+		Jacksonville
+
+	abilene
+		Abilene
+
+	dickinson
+		Dickinson
+
+	orange
+		Orange
+		Bridge City
+		Port Arthur
+		Nederland
+		Vidor
+
+	deer park
+		Deer Park
+
+	henderson
+		Kilgore
+		Carthage
+		Henderson
+
+	lake jackson
+		Angleton
+		Lake Jackson
+		Alvin
+		Clute
+
+	la porte
+		La Porte
+
+	longview - marshall
+		Marshall
+		Longview
+
+	jourdanton
+		Jourdanton
+		Elmendorf
+
+	amarillo
+		Amarillo West - South
+		Amarillo East - Airport (AMA)
+
+	wharton
+		Wharton
+		Bay City
+		Rosenberg
+
+	perryton
+		Perryton
+
+	port aransas
+		Portland
+		Port Aransas
+		Rockport
+		Aransas Pass
+
+	weatherford - greater granbury
+		Glen Rose
+		Granbury
+		Weatherford
+
+	jacksonville
+		Palestine
+		Tyler
+		Jacksonville
+
+	sonora
+		Sonora
+
+	alpine
+		Marathon
+		Alpine
+
+	channelview
+		Channelview
+
+	childress
+		Childress
+		Quanah
+
+	robstown
+		Kingsville
+		Robstown
+		Portland
+		Alice
+		Sinton
+
+	waxahachie
+		Waxahachie
+
+	giddings
+		La Grange
+		Elgin
+		Giddings
+
+	bridgeport
+		Bridgeport
+		Decatur
+
+	lamesa
+		Lamesa
+
+	alice
+		Kingsville
+		Robstown
+		Alice
+
+	hillsboro
+		Hillsboro
+
+	ozona
+		Ozona
+
+	plainview
+		Plainview
+
+	lufkin
+		Nacogdoches
+		Lufkin
+
+	mercedes
+		Mercedes
+		Raymondville
+		Weslaco
+
+	ennis
+		Ennis
+
+	mexia
+		Corsicana
+		Mexia
+		Fairfield
+
+	cedar hill
+		Cedar Hill
+
+	woodville
+		Woodville
+		Jasper
+
+	colorado city
+		Colorado City
+		Snyder
+		Sweetwater
+
+	midland - odessa
+		Midland
+		Odessa
+
+	sherman - denison
+		Sherman
+		Denison
+
+	big spring
+		Big Spring
+
+	corsicana
+		Corsicana
+		Ennis
+		Mexia
+
+	navasota
+		Waller
+		Brenham
+		Hempstead
+		Navasota
+
+	madisonville
+		Huntsville
+		Madisonville
+
+	wylie
+		Wylie
+
+	wichita falls
+		Wichita Falls
+
+	bonham
+		Bonham
+
+	somerville
+		Somerville
+		Brenham
+
+	burnet
+		Burnet
+		Horseshoe Bay
+		Marble Falls
+		Llano
+
+	greenville
+		Greenville
+
+	beeville
+		Beeville
+		Sinton
+
+	baytown
+		Baytown
+
+	mabank
+		Kaufman
+		Terrell
+		Mabank
+		Athens
+		Canton
+
+	pampa
+		Pampa
+		Borger
+
+	rockdale
+		Hearne
+		Rockdale
+
+	san angelo
+		San Angelo
+
+	columbus
+		La Grange
+		Columbus
+		Sealy
+
+	port arthur
+		Port Arthur
+		Nederland
+		Winnie
+		Lumberton
+		Vidor
+		Orange
+		Bridge City
+
+	salado
+		Salado
+		Georgetown
+		Hutto
+
+	hempstead
+		Brookshire
+		Sealy
+		Hempstead
+		Navasota
+		Brenham
+		Waller
+
+	forney
+		Forney
+
+	ranger
+		Ranger
+		Breckenridge
+		Eastland
+
+	vernon
+		Vernon
+
+	andrews
+		Andrews
+
+	fort stockton
+		Fort Stockton
+
+	post
+		Post
+
+	decatur
+		Bridgeport
+		Decatur
+
+	monahans
+		Monahans
+
+	eastland
+		Ranger
+		Breckenridge
+		Eastland
+
+	uvalde
+		Uvalde
+
+	aransas pass
+		Portland
+		Port Aransas
+		Rockport
+		Aransas Pass
+		Sinton
+
+	riviera
+		Riviera
+		Kingsville
+		Falfurrias
+
+	pearland
+		Pearland - Rosharon
+
+	fort worth
+		Fort Worth South
+		Denton
+		Fort Worth Southwest
+		Fort Worth North
+		Alliance Airport - Solana (AIA)
+		Fort Worth Downtown - Stockyards
+		Lake Worth
+		Mansfield
+		Burleson
+		Fort Worth West
+
+	clute
+		Angleton
+		Lake Jackson
+		Alvin
+		Clute
+
+	livingston
+		Livingston
+		Cleveland
+
+	killeen - temple
+		Killeen
+		Temple
+		Copperas Cove
+
+	la marque
+		La Porte
+		Alvin
+		Texas City
+		Pasadena
+		La Marque
+		Dickinson
+		Deer Park
+
+	brenham
+		Sealy
+		Somerville
+		Hempstead
+		Brenham
+		Navasota
+
+	seagoville
+		Seagoville
+
+	kilgore
+		Kilgore
+		Tyler
+		Henderson
+
+	del rio
+		Del Rio
+
+	austin
+		Austin Southwest
+		Austin Arboretum
+		Austin Northwest
+		Austin North
+		Downtown Austin
+		Round Rock
+		Cedar Park
+		Austin South - Airport (AUS)
+		Lakeway - Lake Travis
+		Austin Central
+
+	joshua
+		Joshua
+
+	rio grande city
+		Rio Grande City
+
+	de soto
+		De Soto
+
+	rosenberg
+		Wharton
+		Brookshire
+		Sealy
+		Rosenberg
+
+	winnie
+		Winnie
+		Port Arthur
+		Nederland
+
+	mount pleasant
+		Mount Pleasant
+		Mount Vernon
+
+	quanah
+		Quanah
+		Childress
+
+	canyon
+		Canyon
+
+	refugio
+		Portland
+		Refugio
+		Sinton
+
+	jasper
+		Woodville
+		Jasper
+
+	elmendorf
+		Jourdanton
+		Elmendorf
+
+	angleton
+		Angleton
+		Lake Jackson
+		Alvin
+		Clute
+
+	bastrop
+		Bastrop
+
+	kingsville
+		Riviera
+		Kingsville
+		Robstown
+		Alice
+
+	waco
+		Bellmead
+		Waco
+
+	dalhart
+		Dalhart
+
+	snyder
+		Snyder
+		Colorado City
+
+	athens
+		Mabank
+		Athens
+		Canton
+
+	fairfield
+		Mexia
+		Fairfield
+
+	buda
+		Buda
+		Kyle
+
+	breckenridge
+		Ranger
+		Breckenridge
+		Eastland
+
+	palestine
+		Palestine
+		Jacksonville
+
+	midlothian
+		Midlothian
+
+	cleburne
+		Cleburne
+
+	laredo
+		Laredo
+
+	la grange
+		La Grange
+		Columbus
+		Giddings
+
+	georgetown
+		Salado
+		Georgetown
+		Hutto
+
+	new boston
+		New Boston
+
+	nederland
+		Port Arthur
+		Nederland
+		Winnie
+		Lumberton
+		Vidor
+		Orange
+		Bridge City
+
+	huntsville
+		Huntsville
+		Madisonville
+
+	wheeler
+		Shamrock
+		Wheeler
+
+	new braunfels - san marcos
+		San Marcos
+		New Braunfels
+		Seguin
+
+	texas city
+		La Porte
+		Alvin
+		Texas City
+		Pasadena
+		La Marque
+		Dickinson
+
+	falfurrias
+		Riviera
+		Falfurrias
+
+	hearne
+		Hearne
+		Rockdale
+
+	atlanta
+		Atlanta
+
+	corpus christi
+		Corpus Christi NorthWest
+		Corpus Christi South
+		Corpus Christi Downtown
+		Corpus Christi North Padre Island
+		Corpus Christi Airport (CRP)
+
+	brady
+		Brady
+
+	commerce
+		Commerce
+
+	horseshoe bay
+		Burnet
+		Horseshoe Bay
+		Marble Falls
+		Llano
+
+	south padre island
+		Harlingen - San Benito
+		South Padre Island
+		Brownsville
+
+	lindale
+		Lindale
+		Tyler
+		Canton
+
+	red oak
+		Red Oak
+
+	waller
+		Navasota
+		Brookshire
+		Sealy
+		Hempstead
+		Waller
+
+	lake dallas
+		Lake Dallas
+
+	marble falls
+		Burnet
+		Horseshoe Bay
+		Marble Falls
+		Llano
+
+	elgin
+		Elgin
+		Hutto
+		Giddings
+
+	texarkana
+		Texarkana
+		Texarkana - Greater Central Mall
+
+	llano
+		Burnet
+		Horseshoe Bay
+		Llano
+		Marble Falls
+
+	edna
+		Edna
+		Port Lavaca
+		Victoria
+
+	brownfield
+		Brownfield
+
+	cleveland
+		Livingston
+		New Caney
+		Cleveland
+
+	kaufman
+		Rockwall
+		Royse City
+		Hutchins
+		Forney
+		Canton
+		Kaufman
+		Seagoville
+		Terrell
+		Mabank
+		Ennis
+
+	rockwall - terrell
+		Terrell
+		Rockwall
+		Royse City
+
+	bridge city
+		Orange
+		Bridge City
+		Port Arthur
+		Nederland
+		Vidor
+
+	graham
+		Graham
+
+	portland
+		Robstown
+		Aransas Pass
+		Sinton
+		Refugio
+		Rockport
+		Portland
+		Port Aransas
+
+	marathon
+		Marathon
+		Alpine
+
+	new caney
+		Cleveland
+		New Caney
+
+	weslaco
+		Mercedes
+		Raymondville
+		Weslaco
+
+	college station
+		College Station
+
+	clint
+		Clint
+
+	dallas
+		Downtown Dallas
+		Knox - Northpark
+		Galleria - Dallas North
+		Plano West
+		Dallas Northwest
+		Garland
+		Park Central
+		Lewisville
+		Arlington South
+		Arlington - Grand Prairie
+		Plano East
+		Grand Prairie South
+		Garland North
+		Irving - Las Colinas
+		Frisco - Plano North
+		East Dallas - Mesquite
+		Richardson
+		Hurst - Euless - Bedford
+		Market Center - DAL Love Field
+		Allen - McKinney
+		DFW Airport South
+		DFW Airport North
+
+	lubbock
+		Lubbock
+		Wolfforth - Lubbock
+
+	gainesville
+		Gainesville
+
+	mcallen
+		Edinburg
+		Pharr
+		Mission
+		McAllen
+		Alamo
+		Hidalgo
+
+	brownwood
+		Brownwood
+
+	pasadena
+		Pasadena
+
+	alvarado
+		Alvarado
+
+	eagle pass
+		Eagle Pass
+
+	sinton
+		Robstown
+		Aransas Pass
+		Sinton
+		Beeville
+		Refugio
+		Portland
+
+	sweetwater
+		Sweetwater
+		Colorado City
+
+	san antonio
+		Boerne
+		Medical Center
+		San Antonio Northwest
+		Fort Sam Houston
+		San Antonio East
+		San Antonio West - Sea World
+		San Antonio South
+		Downtown East
+		San Antonio Northeast
+		Riverwalk Area
+		Fiesta Texas - La Cantera
+		Schertz
+		San Antonio Airport (SAT)
+		Lackland AFB
+		Market Square Area
+		San Antonio North - Stone Oak
+
+	nacogdoches
+		Nacogdoches
+		Lufkin
+
+	raymondville
+		Mercedes
+		Raymondville
+		Weslaco
+
+	port lavaca
+		Edna
+		Port Lavaca
+		Victoria
+
+	hutto
+		Salado
+		Georgetown
+		Elgin
+		Hutto
+
+	victoria
+		Edna
+		Port Lavaca
+		Victoria
+
+	mineral wells
+		Mineral Wells
+
+	shamrock
+		Shamrock
+		Wheeler
+		Erick
+
+	bay city
+		Wharton
+		Bay City
+
+	fredericksburg - kerrville
+		Fredericksburg
+		Kerrville
+
+	center
+		Center
+		Carthage
+
+	carthage
+		Henderson
+		Center
+		Carthage
+
+	kyle
+		Buda
+		Kyle
+
+	el paso
+		El Paso Airport (ELP)
+		El Paso East
+		El Paso Downtown
+		El Paso West
+		El Paso Northwest
+
+	mount vernon
+		Sulphur Springs
+		Mount Pleasant
+		Mount Vernon
+
+
+missouri
+	cape girardeau
+		Cape Girardeau
+
+	sullivan
+		Sullivan
+		Union
+		Saint Clair
+		Cuba
+
+	neosho
+		Neosho
+
+	marshall
+		Marshall
+		Sedalia
+
+	lebanon
+		Camdenton
+		Lebanon
+		Saint Robert
+
+	wentzville
+		Warrenton
+		Troy
+		Washington
+		Wentzville
+
+	rolla
+		Dixon
+		Cuba
+		Saint James
+		Saint Robert
+		Rolla
+
+	jefferson city
+		Jefferson City
+
+	troy
+		Warrenton
+		Troy
+		Wentzville
+
+	cameron
+		Cameron
+		Kearney
+
+	lake ozark - osage beach
+		Osage Beach
+		Lake Ozark
+
+	branson
+		Branson West
+		Branson Southwest
+		Branson Northwest
+		Branson East
+		Branson Central
+
+	pevely
+		Festus
+		Pevely
+		Arnold
+
+	nevada
+		Nevada
+
+	saint robert
+		Rolla
+		Lebanon
+		Saint Robert
+		Dixon
+
+	union
+		Union
+		Sullivan
+		Saint Clair
+		Washington
+		Eureka
+
+	farmington
+		Farmington
+		Potosi
+		Bonne Terre
+
+	mountain grove
+		Mountain Grove
+
+	mexico
+		Kingdom City
+		Fulton
+		Mexico
+
+	new florence
+		Warrenton
+		New Florence
+
+	bolivar
+		Bolivar
+
+	monett
+		Monett
+
+	mound city
+		Mound City
+
+	saint james
+		Cuba
+		Saint James
+		Rolla
+
+	dixon
+		Rolla
+		Dixon
+		Saint Robert
+
+	saint joseph
+		Saint Joseph
+
+	chillicothe
+		Chillicothe
+
+	springfield
+		Springfield Central
+		Springfield Northwest
+		Springfield Regional Airport Area
+		Springfield South
+
+	poplar bluff
+		Poplar Bluff
+
+	perryville
+		Perryville
+		Sainte Genevieve
+
+	warrenton
+		Warrenton
+		New Florence
+		Washington
+		Troy
+		Wentzville
+
+	columbia
+		Columbia
+
+	marshfield
+		Marshfield
+
+	cuba
+		Sullivan
+		Rolla
+		Saint James
+		Cuba
+
+	washington
+		Saint Clair
+		Union
+		Washington
+		Wentzville
+		Eureka
+		Warrenton
+
+	hayti
+		Marston
+		Hayti
+		Blytheville
+
+	bonne terre
+		Festus
+		Farmington
+		Potosi
+		Bonne Terre
+
+	kansas city
+		Kansas City Airport (MCI)
+		KC Downtown/Crown Center
+		Overland Park
+		Sports Complex - Independence
+		Kansas City North
+		Kansas City West
+		Lees Summit - Blue Springs
+		Leavenworth
+		Liberty
+		Kansas City Airport South
+		Platte City
+		Shawnee Mission
+		Kansas City South
+		Olathe
+		Country Club Plaza
+		Lenexa
+
+	festus
+		Festus
+		Pevely
+		Arnold
+		Bonne Terre
+
+	ozark
+		Ozark
+
+	higginsville
+		Higginsville
+		Warrensburg
+
+	camdenton
+		Lebanon
+		Camdenton
+
+	sedalia
+		Sedalia
+		Marshall
+
+	st. louis
+		Fenton - Kirkwood
+		Saint Charles - Saint Peters
+		St. Louis Airport
+		St. Louis Airport West
+		Hazelwood
+		Downtown St. Louis
+		St. Louis West - Chesterfield
+		O' Fallon
+		Westport
+		Forest Park - Clayton
+		St. Louis South
+
+	moberly
+		Moberly
+		Macon
+
+	potosi
+		Farmington
+		Potosi
+		Bonne Terre
+
+	saint clair
+		Union
+		Sullivan
+		Saint Clair
+		Washington
+
+	maryville
+		Maryville
+
+	marston
+		Marston
+		Hayti
+
+	kingdom city
+		Kingdom City
+		Fulton
+		Mexico
+
+	bowling green
+		Bowling Green
+
+	arnold
+		Arnold
+
+	eureka
+		Eureka
+
+	bethany
+		Bethany
+
+	oak grove
+		Oak Grove
+
+	kirksville
+		Kirksville
+
+	west plains
+		West Plains
+
+	warrensburg
+		Higginsville
+		Warrensburg
+
+	reeds spring
+		Reeds Spring
+
+	boonville
+		Boonville
+
+	joplin
+		Carthage
+		Joplin, Missouri
+
+	hannibal
+		Hannibal
+		Quincy
+
+	kearney
+		Cameron
+		Kearney
+
+	fulton
+		Kingdom City
+		Fulton
+		Mexico
+
+	macon
+		Moberly
+		Macon
+
+
+south carolina
+	charlotte
+		Concord - Kannapolis
+		Charlotte Airport (CLT)
+		Executive Park - Airport South
+		Gastonia
+		Rock Hill
+		Charlotte - South Park
+		University Area
+		Downtown Charlotte
+		Fort Mill - Carowinds
+		North Charlotte -Northlake
+		Pineville - Piper Glen - Ballantyne
+		Matthews
+		Independence
+		Carowinds North - Arrowood
+
+	hampton
+		Yemassee
+		Hampton
+
+	aiken
+		Aiken
+
+	georgetown
+		Georgetown
+
+	gaffney
+		Gaffney
+		Shelby
+
+	easley
+		Clemson
+		Travelers Rest
+		Mauldin
+		Easley
+
+	hilton head island
+		Hilton Head Island
+		Bluffton
+
+	cheraw
+		Bennettsville
+		Cheraw
+		Rockingham
+
+	camden
+		Camden
+		Lugoff
+
+	summerville
+		Ladson
+		Goose Creek
+		Summerville
+
+	florence
+		Florence North
+		Florence - Civic Center
+
+	bennettsville
+		Bennettsville
+		Cheraw
+		Rockingham
+		Laurinburg
+
+	simpsonville
+		Simpsonville
+		Travelers Rest
+		Mauldin
+
+	travelers rest
+		Simpsonville
+		Travelers Rest
+		Mauldin
+		Easley
+
+	mauldin
+		Simpsonville
+		Travelers Rest
+		Mauldin
+		Easley
+
+	saint george
+		Santee
+		Saint George
+		Walterboro
+
+	lake city
+		Lake City
+
+	sumter
+		Sumter
+
+	winnsboro
+		Blythewood
+		Winnsboro
+
+	walterboro
+		Yemassee
+		Saint George
+		Walterboro
+
+	anderson
+		Anderson
+
+	myrtle beach
+		Myrtle Beach South
+		Myrtle Beach West
+		Conway
+		Surfside Beach Area
+		Myrtle Beach Central
+		North Myrtle Beach - Little River
+		Myrtle Beach North
+		Pawley's Island & Murrells Inlet
+
+	santee
+		Saint George
+		Santee
+
+	hardeeville
+		Hardeeville
+		Rincon
+
+	columbia
+		Central Columbia
+		Columbia Northeast
+		Lexington
+		Columbia Airport (CAE)
+		Columbia I-26 West & Irmo
+		Columbia Northwest
+		Ft. Jackson Area
+
+	blythewood
+		Blythewood
+		Lugoff
+		Winnsboro
+
+	newberry
+		Newberry
+
+	york
+		Kings Mountain
+		York
+
+	goose creek
+		Ladson
+		Summerville
+		Goose Creek
+
+	lugoff
+		Blythewood
+		Camden
+		Lugoff
+
+	beaufort
+		Port Royal
+		Beaufort
+
+	greenwood
+		Greenwood
+
+	seneca
+		Seneca
+		Clemson
+		Lavonia
+
+	orangeburg
+		Orangeburg
+
+	ladson
+		Ladson
+		Goose Creek
+		Summerville
+
+	greenville - spartanburg
+		Greer
+		Greenville - Spartanburg Airport (GSP)
+		Greenville
+		Spartanburg
+		Duncan
+
+	timmonsville
+		Timmonsville
+
+	lancaster
+		Lancaster
+		Richburg
+
+	yemassee
+		Yemassee
+		Hampton
+		Walterboro
+
+	richburg
+		Lancaster
+		Richburg
+
+	port royal
+		Beaufort
+		Port Royal
+
+	charleston
+		North Charleston - Airport - Coliseum (CHS)
+		Downtown Charleston
+		Charleston Southern University - Trident Medical Center
+		West Charleston - Savannah Highway
+		Mount Pleasant - Isle of Palms
+		Ashley River Area
+		North Charleston - Northwoods Mall
+		Folly Beach
+
+	clemson
+		Seneca
+		Clemson
+		Easley
+
+
+ohio
+	troy
+		Sidney
+		Troy
+		Brookville
+		Tipp City
+		Vandalia
+		Piqua
+
+	alliance
+		Alliance
+		Lisbon
+
+	cincinnati
+		Downtown Cincinnati
+		Cincinnati Northwest - Fairfield
+		Cincinnati Airport - Florence (CVG)
+		Riverfront - Covington
+		Cincinnati North - Sharonville - West Chester
+		University Area - Norwood
+		Cincinnati East
+		Cincinnati Northeast - Blue Ash
+		Ft. Mitchell
+		King's Island Vicinity
+
+	springfield
+		Springfield
+
+	new paris
+		Richmond
+		Oxford
+		Greenville
+		New Paris
+		Brookville
+
+	wooster
+		Ashland
+		Millersburg
+		Medina
+		Wooster
+		Seville
+
+	saint clairsville
+		Saint Clairsville
+		Wheeling
+
+	wilmington
+		Jeffersonville
+		Washington Court House
+		Wilmington
+
+	delphos
+		Delphos
+		Van Wert
+		Lima
+
+	lisbon
+		Niles
+		Alliance
+		Lisbon
+
+	findlay
+		Findlay
+
+	vermilion
+		Amherst
+		Vermilion
+
+	greenville
+		Richmond
+		Brookville
+		Piqua
+		New Paris
+		Greenville
+
+	celina
+		Celina
+		Van Wert
+
+	sylvania
+		Swanton
+		Bowling Green
+		Dundee
+		Sylvania
+		Milan
+		Adrian
+		Monroe
+
+	logan
+		Lancaster
+		Logan
+		Nelsonville
+		Athens
+
+	cambridge
+		Cambridge
+
+	marion
+		Mount Gilead
+		Delaware
+		Marion
+		Marysville
+
+	brookville
+		New Paris
+		Middletown
+		Greenville
+		Troy
+		Brookville
+		Tipp City
+		Vandalia
+		Franklin
+
+	harrison
+		Oxford
+		Hamilton
+		Lawrenceburg
+		Harrison
+
+	cleveland
+		Cleveland Airport South (CLE)
+		Mentor - Painesville
+		Brookpark - Brooklyn
+		Cleveland Heights
+		Cleveland East - Mayfield Heights
+		Elyria
+		Westlake
+		Cleveland Airport Vicinity (CLE)
+		Downtown Cleveland
+		Southeast Cleveland
+		Beachwood
+		Independence
+
+	lima
+		Delphos
+		Lima
+		Bluffton
+
+	akron - canton
+		Macedonia - Twinsburg -Stow
+		Akron South
+		Kent - University
+		Aurora - Streetsboro
+		Akron & Cuyahoga Falls
+		Canton
+		Fairlawn
+
+	lancaster
+		Lancaster
+		Hebron
+		Logan
+		Circleville
+		Heath
+
+	sidney
+		Troy
+		Vandalia
+		Piqua
+		Sidney
+		Tipp City
+
+	jeffersonville
+		Jeffersonville
+		Washington Court House
+		Wilmington
+
+	middletown
+		Oxford
+		Brookville
+		Hamilton
+		Middletown
+		Franklin
+
+	sandusky
+		Sandusky - Huron Area
+		Sandusky-Milan-Norwalk
+
+	delaware
+		Delaware
+		Mount Gilead
+		Sunbury
+		Hilliard
+		Marion
+		Marysville
+
+	wauseon
+		Wauseon
+		Swanton
+		Napoleon
+		Defiance
+
+	athens
+		Logan
+		Nelsonville
+		Athens
+
+	newark
+		Newark
+		Hebron
+		Heath
+
+	hilliard
+		Hilliard
+		Delaware
+		Sunbury
+		Marysville
+
+	clyde
+		Clyde
+		Fremont
+		Tiffin
+		Port Clinton
+
+	gallipolis
+		Gallipolis
+
+	napoleon
+		Wauseon
+		Swanton
+		Napoleon
+		Defiance
+
+	ashtabula
+		Austinburg
+		Ashtabula
+
+	toledo
+		Maumee
+		Holland
+		Downtown Toledo
+		Perrysburg - Northwood
+		Toledo North
+		Oregon - Perrysburg East- Millbury
+
+	bellville
+		Bellville
+		Ashland
+		Mount Gilead
+		Mansfield
+
+	piqua
+		Sidney
+		Greenville
+		Troy
+		Piqua
+		Vandalia
+		Tipp City
+
+	marietta - parkersburg
+		Parkersburg - Mineral Wells
+		Marietta
+
+	tipp city
+		Sidney
+		Troy
+		Brookville
+		Tipp City
+		Vandalia
+		Piqua
+
+	portsmouth
+		Portsmouth
+
+	chillicothe
+		Circleville
+		Chillicothe
+
+	bluffton
+		Lima
+		Bluffton
+
+	richfield
+		Seville
+		Lakewood
+		Medina
+		Richfield
+
+	columbus
+		Ohio State University Area
+		Columbus West
+		Dublin
+		Columbus South
+		Columbus East
+		Grove City
+		Worthington - Polaris - Westerville
+		Downtown Columbus
+		Columbus North
+		Columbus Airport (CMH) - Easton
+
+	circleville
+		Lancaster
+		Circleville
+		Chillicothe
+
+	lakewood
+		Medina
+		Lakewood
+		Richfield
+
+	dayton
+		Dayton North
+		Dayton South
+		Huber Heights
+		Fairborn - Patterson
+		Northwest Dayton
+		Downtown Dayton - Dayton South
+
+	niles
+		Niles
+		Lisbon
+
+	fremont
+		Clyde
+		Tiffin
+		Fremont
+		Port Clinton
+
+	sunbury
+		Hilliard
+		Delaware
+		Mount Gilead
+		Sunbury
+
+	medina
+		Richfield
+		Lakewood
+		Wooster
+		Medina
+		Seville
+
+	montpelier
+		Angola
+		Bryan
+		Fremont
+		Montpelier
+		Hillsdale
+
+	washington court house
+		Jeffersonville
+		Washington Court House
+		Wilmington
+
+	hamilton
+		Oxford
+		Hamilton
+		Middletown
+		Harrison
+		Franklin
+
+	mount orab
+		Mount Orab
+
+	marysville
+		Hilliard
+		Delaware
+		Marion
+		Marysville
+		Bellefontaine
+
+	defiance
+		Wauseon
+		Bryan
+		Napoleon
+		Defiance
+
+	oxford
+		New Paris
+		Middletown
+		Richmond
+		Hamilton
+		Harrison
+		Oxford
+
+	seville
+		Richfield
+		Wooster
+		Medina
+		Seville
+
+	vandalia
+		Sidney
+		Troy
+		Piqua
+		Franklin
+		Tipp City
+		Vandalia
+		Brookville
+
+	mount gilead
+		Mount Gilead
+		Delaware
+		Sunbury
+		Marion
+		Bellville
+		Mansfield
+
+	zanesville
+		Zanesville
+
+	bryan
+		Bryan
+		Montpelier
+		Defiance
+
+	swanton
+		Swanton
+		Sylvania
+		Bowling Green
+		Wauseon
+		Adrian
+		Napoleon
+
+	new philadelphia
+		New Philadelphia
+
+	nelsonville
+		Logan
+		Nelsonville
+		Athens
+
+	steubenville
+		Steubenville
+		Wheeling
+		Weirton
+
+	bowling green
+		Sylvania
+		Bowling Green
+		Swanton
+
+	port clinton
+		Port Clinton
+		Fremont
+		Clyde
+
+	austinburg
+		Ashtabula
+		Austinburg
+
+	heath
+		Newark
+		Hebron
+		Lancaster
+		Heath
+
+	tiffin
+		Tiffin
+		Fremont
+		Clyde
+
+	youngstown
+		New Castle
+		Mercer
+		West Middlesex
+		Youngstown South
+		Youngstown North
+
+	van wert
+		Celina
+		Delphos
+		Van Wert
+		Decatur
+
+	franklin
+		Vandalia
+		Brookville
+		Hamilton
+		Franklin
+		Middletown
+
+	bellefontaine
+		Marysville
+		Bellefontaine
+
+	ashland
+		Ashland
+		Bellville
+		Mansfield
+		Wooster
+
+	mansfield
+		Bellville
+		Ashland
+		Mount Gilead
+		Mansfield
+
+	millersburg
+		Millersburg
+		Wooster
+
+	hebron
+		Hebron
+		Newark
+		Lancaster
+		Heath
+
+	amherst
+		Amherst
+		Vermilion
+
+
+alabama
+	foley
+		Foley
+		Fairhope
+
+	muscle shoals
+		Muscle Shoals
+		Sheffield
+		Russellville
+		Florence
+
+	atmore
+		Atmore
+
+	fort payne
+		Fort Payne
+
+	guntersville
+		Arab
+		Albertville
+		Guntersville
+
+	auburn
+		Opelika
+		Auburn
+
+	tuscaloosa
+		Tuscaloosa
+		Vance
+
+	oxford
+		Oxford
+		Lincoln
+		Anniston
+		Talladega
+
+	troy
+		Troy
+
+	birmingham
+		Hoover
+		Oxmoor - Homewood
+		Pelham
+		Irondale
+		Birmingham Airport (BHM)
+		Central Birmingham
+		Inverness Area
+
+	jasper
+		Jasper
+
+	montgomery
+		Montgomery
+
+	clanton
+		Clanton
+
+	scottsboro
+		Scottsboro
+
+	attalla
+		Attalla
+		Albertville
+		Gadsden
+
+	satsuma
+		Satsuma
+		Saraland
+		Eight Mile
+
+	russellville
+		Muscle Shoals
+		Sheffield
+		Russellville
+		Florence
+
+	eufaula
+		Eufaula
+
+	fultondale
+		Bessemer
+		Leeds
+		Trussville
+		Fultondale
+		Gardendale
+
+	ozark
+		Dothan
+		Ozark
+		Enterprise
+
+	prattville
+		Hope Hull
+		Millbrook
+		Prattville
+
+	anniston
+		Oxford
+		Lincoln
+		Anniston
+
+	athens
+		Athens
+		Ardmore
+
+	cullman
+		Cullman
+
+	fairhope
+		Fairhope
+		Foley
+
+	spanish fort
+		Spanish Fort - Daphne
+
+	hope hull
+		Hope Hull
+		Millbrook
+		Prattville
+
+	gulf shores
+		Orange Beach
+		Gulf Shores
+
+	evergreen
+		Evergreen
+
+	columbus
+		Phenix City
+
+	selma
+		Selma
+
+	opp
+		Andalusia
+		Opp
+
+	trussville
+		Gardendale
+		Leeds
+		Trussville
+		Fultondale
+		Moody
+
+	bessemer
+		Alabaster
+		Bessemer
+		Gardendale
+		Fultondale
+
+	centre
+		Centre
+
+	huntsville
+		Huntsville
+		Huntsville Airport (HSV)
+		Huntsville West
+		Decatur
+		Huntsville South
+
+	sheffield
+		Muscle Shoals
+		Sheffield
+		Russellville
+		Florence
+
+	alabaster
+		Alabaster
+		Bessemer
+
+	florence
+		Muscle Shoals
+		Sheffield
+		Russellville
+		Florence
+
+	arab
+		Arab
+		Albertville
+		Guntersville
+
+	greenville
+		Greenville
+
+	shorter
+		Shorter
+
+	hamilton
+		Hamilton
+
+	talladega
+		Childersburg
+		Oxford
+		Lincoln
+		Sylacauga
+		Talladega
+
+	eight mile
+		Satsuma
+		Saraland
+		Eight Mile
+
+	daphne
+		Spanish Fort - Daphne
+
+	andalusia
+		Andalusia
+		Opp
+
+	dothan
+		Ozark
+		Dothan
+
+	moody
+		Leeds
+		Trussville
+		Moody
+
+	childersburg
+		Childersburg
+		Sylacauga
+		Talladega
+
+	lincoln
+		Oxford
+		Lincoln
+		Anniston
+		Talladega
+
+	alexander city
+		Alexander City
+
+	demopolis
+		Demopolis
+
+	mobile
+		Mobile Bay Vicinity
+		Chickasaw
+		Mobile West - Tillmans Corner
+
+	gadsden
+		Attalla
+		Gadsden
+
+	saraland
+		Satsuma
+		Saraland
+		Eight Mile
+
+	sylacauga
+		Childersburg
+		Sylacauga
+		Talladega
+
+	gardendale
+		Bessemer
+		Gardendale
+		Fultondale
+		Trussville
+
+	enterprise
+		Ozark
+		Enterprise
+
+	leeds
+		Leeds
+		Trussville
+		Fultondale
+		Moody
+
+	millbrook
+		Hope Hull
+		Millbrook
+		Prattville
+
+	albertville
+		Attalla
+		Arab
+		Albertville
+		Guntersville
+
+
+new mexico
+	portales
+		Portales
+		Clovis
+
+	lordsburg
+		Lordsburg
+
+	roswell
+		Roswell
+
+	deming
+		Deming
+
+	bloomfield
+		Bloomfield
+
+	grants
+		Grants
+
+	santa rosa
+		Santa Rosa
+
+	los alamos
+		Espanola
+		Los Alamos
+
+	carlsbad
+		Carlsbad
+
+	tucumcari
+		Tucumcari
+
+	farmington
+		Farmington
+
+	alamogordo
+		Alamogordo
+
+	hobbs
+		Hobbs
+
+	clovis
+		Portales
+		Clovis
+
+	espanola
+		Espanola
+		Los Alamos
+
+	fort sumner
+		Fort Sumner
+
+	raton
+		Trinidad
+		Raton
+
+	ruidoso
+		Ruidoso
+
+	albuquerque
+		Bernalillo
+		Albuquerque West
+		Albuquerque Airport (ABQ)
+		Downtown Albuquerque
+		Albuquerque East
+		Rio Rancho
+		Midtown - Uptown
+		Santa Ana Pueblo
+		Albuquerque North
+
+	clayton
+		Clayton
+
+	las cruces
+		Las Cruces
+
+	socorro
+		Socorro
+
+	santa fe
+		Cerillos Road
+		Santa Fe South
+		Santa Fe Plaza and Vicinity
+
+	silver city
+		Silver City
+
+	las vegas
+		Las Vegas
+
+	belen
+		Belen
+
+	taos
+		Taos
+
+	truth or consequences
+		Truth Or Consequences
+
+	gallup
+		Gallup
+
+

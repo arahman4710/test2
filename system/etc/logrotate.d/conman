@@ -1,0 +1,21 @@
+##
+# ConMan Logrotate Configuration
+##
+
+/var/log/conman/* {
+  compress
+  missingok
+  nocopytruncate
+  nocreate
+  nodelaycompress
+  nomail
+  notifempty
+  olddir /var/log/conman.old/
+  rotate 4
+  sharedscripts
+  size=5M
+  weekly
+  postrotate
+    /usr/bin/killall -HUP conmand
+  endscript
+}

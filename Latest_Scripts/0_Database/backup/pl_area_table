@@ -1,0 +1,332 @@
+ uid |                name                
+-----+------------------------------------
+   7 | Tuscaloosa, AL
+   8 | Globe, AZ
+   9 | Safford, AZ
+  10 | Auburn, AL
+  11 | Birmingham, AL
+  12 | Huntsville, AL
+  13 | Gulf Shores, AL
+  14 | Mobile, AL
+  15 | Columbus, GA
+  16 | Anchorage, AK
+  17 | Phoenix, AZ
+  18 | Sierra Vista - Bisbee, AZ
+  19 | Prescott - Camp Verde, AZ
+  20 | Flagstaff - Sedona, AZ
+  21 | Lake Havasu, AZ
+  22 | Tucson, AZ
+  23 | Grand Canyon - Williams, AZ
+  24 | Fayetteville, AR
+  25 | Little Rock, AR
+  26 | Texarkana
+  27 | Ventura County, CA
+  28 | Oakland, CA - Eastbay
+  29 | Orange County, CA
+  30 | San Jose, CA
+  31 | Napa - Sonoma, CA
+  32 | Los Angeles - San Gabriel Valley
+  33 | Central Coast, CA
+  34 | San Francisco, CA
+  35 | Los Angeles - Central L.A.
+  36 | Santa Barbara County, CA
+  37 | Los Angeles - San Fernando Valley
+  38 | San Diego, CA
+  39 | Long Beach, CA
+  40 | Palm Springs, CA
+  41 | Stockton - Modesto, CA
+  42 | Chico, CA
+  43 | Inland Empire, CA
+  44 | Fresno, CA
+  45 | Marin County, CA
+  46 | Sacramento, CA
+  47 | Los Banos, CA
+  48 | Healdsburg, CA
+  49 | Lake Tahoe
+  50 | Yosemite Area, CA
+  51 | Monterey - Salinas, CA
+  52 | Aspen, CO
+  53 | Denver, CO
+  54 | Eagle County - Summit County
+  55 | Boulder, CO
+  56 | Pueblo, CO
+  57 | Colorado Springs, CO
+  58 | Steamboat Springs, CO
+  59 | Fort Collins, CO
+  60 | Hartford, CT
+  61 | Danbury - Southbury, CT
+  62 | New Haven, CT
+  63 | Trumbull - Milford, CT
+  64 | Niantic - Norwich - Mystic, CT
+  65 | Lower Fairfield County, CT
+  66 | Delaware Beaches
+  67 | Wilmington, DE
+  68 | Washington D.C.
+  69 | Orlando, FL
+  70 | Jacksonville, FL
+  71 | Disney South
+  72 | Boca Raton - Deerfield Beach, FL
+  73 | Fort Myers - Naples, FL
+  74 | Tampa, FL
+  75 | Cocoa Beach - Merritt Island, FL
+  76 | St. Petersburg - Clearwater, FL
+  77 | Fort Lauderdale, FL
+  78 | Daytona Beach, FL
+  79 | Lake Mary, FL
+  80 | Gainesville, FL
+  81 | Pensacola, FL
+  82 | Miami, FL
+  83 | Ocala, FL
+  84 | The Florida Keys
+  85 | Palm Beach, FL
+  86 | Lake City - Jasper, FL
+  87 | Melbourne, FL
+  88 | Panama City, FL
+  89 | Port Charlotte, FL
+  90 | Saint Augustine, FL
+  91 | Sarasota, FL
+  92 | Tallahassee, FL
+  93 | Fulton - Gwinnett, GA
+  94 | Atlanta, GA
+  95 | Augusta, GA
+  96 | Jekyll Island, GA
+  97 | Macon, GA
+  98 | Chattanooga, TN
+  99 | Lagrange - Pine Mountain, GA
+ 100 | Peachtree City & Newnan, GA
+ 101 | Savannah, GA
+ 102 | Hawaii, HI
+ 103 | Oahu, HI
+ 104 | Maui, HI
+ 105 | Kauai, HI
+ 106 | Molokai, HI
+ 107 | Boise, ID
+ 108 | Chicago Suburbs
+ 109 | Chicago, IL
+ 110 | Bourbonnais - Manteno, IL
+ 111 | Chicago South
+ 112 | Collinsville, IL
+ 113 | Chicago North Shore
+ 114 | Moline, IL
+ 115 | Peoria, IL
+ 116 | Bloomington, IL
+ 117 | Springfield, IL
+ 118 | Champaign, IL
+ 119 | Indianapolis, IN
+ 120 | Louisville, KY
+ 121 | Evansville, IN
+ 122 | Fort Wayne, IN
+ 123 | South Bend, IN
+ 124 | Lafayette, IN
+ 125 | Des Moines, IA
+ 126 | Davenport, IA
+ 127 | Omaha, NE
+ 128 | Waterloo, IA
+ 129 | Iowa City, IA
+ 130 | Cedar Rapids, IA
+ 131 | Sioux City, IA
+ 132 | Kansas City, MO
+ 133 | Wichita, KS
+ 134 | Cincinnati, OH
+ 135 | Lexington, KY
+ 136 | Baton Rouge, LA
+ 137 | Shreveport, LA
+ 138 | New Orleans Northshore
+ 139 | Lafayette, LA
+ 140 | New Orleans, LA
+ 141 | Lake Charles, LA
+ 142 | Leesville, LA
+ 143 | Monroe, LA
+ 144 | Freeport, ME
+ 145 | Bangor - Bar Harbor, ME
+ 146 | Portland, ME
+ 147 | Portsmouth, NH - Kittery, ME
+ 148 | Maryland Northeast Suburbs
+ 149 | Annapolis, MD
+ 150 | Baltimore South, MD
+ 151 | Baltimore, MD
+ 152 | Maryland - DC Suburbs
+ 153 | California - Lexington Park, MD
+ 154 | Baltimore North, MD
+ 155 | Salisbury, MD
+ 156 | Frederick, MD
+ 157 | Ocean City, MD
+ 158 | Boston, MA
+ 159 | Springfield, MA
+ 160 | Salem, NH - Andover, MA
+ 161 | Milford - Foxboro, MA
+ 162 | Worcester - Auburn, MA
+ 163 | Boston Metro-West
+ 164 | Boston North Shore
+ 165 | Boston Metro - South
+ 166 | Cape Cod, MA
+ 167 | Leominster - Boxborough, MA
+ 168 | The Berkshires, MA
+ 169 | Westborough - Marlborough, MA
+ 170 | Massachusetts Southeast Suburbs
+ 171 | Providence, RI
+ 172 | Detroit, MI
+ 173 | Ann Arbor - Ypsilanti, MI
+ 174 | Detroit Suburbs, MI
+ 175 | Saginaw Valley, MI
+ 176 | Gaylord - Mackinaw City, MI
+ 177 | Flint, MI
+ 178 | Grand Rapids, MI
+ 179 | Detroit Northwest, MI
+ 180 | Lansing, MI
+ 181 | Kalamazoo, MI
+ 182 | Traverse City, MI
+ 183 | Minneapolis - St. Paul, MN
+ 184 | Duluth, MN
+ 185 | Fargo, ND
+ 186 | Rochester, MN
+ 187 | Biloxi - Gulfport, MS
+ 188 | Jackson, MS
+ 189 | Branson, MO
+ 190 | St. Louis, MO
+ 191 | Joplin, MO
+ 192 | Lake Ozark - Osage Beach, MO
+ 193 | Springfield, MO
+ 194 | Yellowstone Park - Bozeman, MT
+ 195 | Lincoln, NE
+ 196 | Las Vegas, NV
+ 197 | Reno, NV
+ 198 | Concord - Nashua, NH
+ 199 | Conway, NH
+ 200 | Killington - Okemo, VT
+ 201 | Atlantic City - Cape May, NJ
+ 202 | Mahwah, NJ
+ 203 | Somerset - Brunswick - Edison, NJ
+ 204 | Philadelphia, PA
+ 205 | Newark, NJ - Meadowlands
+ 206 | Parsippany - Morristown NJ
+ 207 | Trenton - Princeton, NJ
+ 208 | Tinton Falls, NJ
+ 209 | Saddle Brook - Teaneck, NJ
+ 210 | Wayne - Fairfield - Totowa, NJ
+ 211 | Toms River, NJ
+ 212 | Budd Lake, NJ - Mt. Arlington
+ 213 | Albuquerque, NM
+ 214 | Ruidoso, NM
+ 215 | Santa Fe, NM
+ 216 | Albany, NY
+ 217 | Westchester County, NY
+ 218 | New York Airports Area
+ 219 | Syracuse, NY
+ 220 | Long Island - Nassau County, NY
+ 221 | Long Island - Suffolk County, NY
+ 222 | Buffalo - Niagara Falls, NY
+ 223 | New York City
+ 224 | Poughkeepsie - Fishkill, NY
+ 225 | Rochester, NY
+ 226 | Lake George - Saratoga Springs, NY
+ 227 | Ithaca, NY
+ 228 | Nanuet, NY
+ 229 | Utica - Rome, NY
+ 230 | Asheville, NC
+ 231 | Atlantic Beach, NC
+ 232 | Raleigh - Durham, NC
+ 233 | Charlotte, NC
+ 234 | Hickory - Statesville, NC
+ 235 | Cornelius, NC
+ 236 | Fayetteville, NC
+ 237 | Greensboro, NC
+ 238 | Kill Devil Hills, NC
+ 239 | Wilmington, NC
+ 240 | Winston Salem, NC
+ 241 | Akron - Canton, OH
+ 242 | Cleveland, OH
+ 243 | Columbus, OH
+ 244 | Dayton, OH
+ 245 | Youngstown, OH
+ 246 | Toledo, OH
+ 247 | Marietta, OH - Parkersburg, WV
+ 248 | Sandusky, OH
+ 249 | Oklahoma City, OK
+ 250 | Tulsa, OK
+ 251 | Rogue Valley, OR
+ 252 | Portland, OR
+ 253 | Eugene, OR
+ 254 | Allentown, PA
+ 255 | Altoona - Duncansville, PA
+ 256 | Scranton, PA - Poconos
+ 257 | Breezewood - Bedford, PA
+ 258 | Philadelphia, PA Suburbs
+ 259 | Pittsburgh, PA
+ 260 | Harrisburg - York, PA
+ 261 | Pittsburgh Suburbs - South
+ 262 | Gettysburg, PA
+ 263 | State College, PA
+ 264 | Williamsport, PA
+ 265 | New Stanton, PA
+ 266 | Lancaster - Reading, PA
+ 267 | Uniontown, PA
+ 268 | Newport, RI
+ 269 | Hilton Head Island, SC
+ 270 | Columbia, SC
+ 271 | Charleston, SC
+ 272 | Myrtle Beach, SC
+ 273 | Greenville - Spartanburg, SC
+ 274 | Florence, SC
+ 275 | The Black Hills, SD
+ 276 | Knoxville, TN
+ 277 | Nashville, TN
+ 278 | Clarksville, TN
+ 279 | Memphis, TN
+ 280 | Pigeon Forge - Gatlinburg, TN
+ 281 | Johnson City, TN
+ 282 | Dallas, TX
+ 283 | McAllen, TX
+ 284 | Amarillo, TX
+ 285 | Austin, TX
+ 286 | Beaumont, TX
+ 287 | Killeen - Temple, TX
+ 288 | San Antonio, TX
+ 289 | South Padre Island, TX
+ 290 | College Station, TX
+ 291 | Fort Worth, TX
+ 292 | Houston, TX
+ 293 | Corpus Christi, TX
+ 294 | Sherman - Denison, TX
+ 295 | El Paso, TX
+ 296 | Fredericksburg - Kerrville, TX
+ 297 | Galveston, TX
+ 298 | Weatherford - Greater Granbury, TX
+ 299 | Longview - Marshall, TX
+ 300 | Lubbock, TX
+ 301 | Midland - Odessa, TX
+ 302 | New Braunfels - San Marcos, TX
+ 303 | Rockwall - Terrell, TX
+ 304 | Waco, TX
+ 305 | Provo, UT
+ 306 | Salt Lake City, UT
+ 307 | Cedar City, UT
+ 308 | Park City, UT
+ 309 | Hurricane, UT
+ 310 | Layton - Ogden, UT
+ 311 | St. George, UT
+ 312 | Burlington - Stowe, VT
+ 313 | Northern Virginia
+ 314 | Virginia Beach, VA
+ 315 | Richmond, VA
+ 316 | Roanoke, VA
+ 317 | Woodbridge - Dumfries, VA
+ 318 | Fredericksburg, VA
+ 319 | Newport News - Hampton, VA
+ 320 | Williamsburg, VA
+ 321 | Spokane, WA
+ 322 | Tacoma, WA
+ 323 | Seattle, WA
+ 324 | Wenatchee - Yakima, WA
+ 325 | Richland - Kennewick, WA
+ 326 | Greenbay - Appleton, WI
+ 327 | Milwaukee, WI
+ 328 | Eau Claire, WI
+ 329 | Lake Winnebago
+ 330 | Madison, WI
+ 331 | Wausau, WI
+ 332 | La Crosse Area, WI
+ 333 | Wisconsin Dells Area
+ 334 | Jackson Hole, WY
+(328 rows)
+
