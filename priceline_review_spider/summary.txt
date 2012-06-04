@@ -1,0 +1,2 @@
+priceline_review_spider
+	-scraps reviews from priceline and stores it into the db

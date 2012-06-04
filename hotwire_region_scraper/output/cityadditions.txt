@@ -1,0 +1,1380 @@
+Elma;47.012465;-123.379201
+Ocean Shores;46.989056;-124.159904
+Hoquiam;46.979856;-123.889709
+Abilene;38.932132;-97.21225
+Havre De Grace;39.550884;-76.103907
+Northeast Baltimore - Rosedale - Essex;39.326693;-76.469006
+Perryville;39.591024;-76.071476
+Bel Air;39.482093;-76.250643
+Edgewood - Bel Air South;39.456163;-76.308757
+Joppa;39.430878;-76.341356
+Aberdeen;39.513829;-76.179279
+Lebanon;36.899002;-82.0621
+Abingdon;36.711619;-81.956451
+Bristol, Virginia;36.618642;-82.153538
+Quincy Market - Financial District;42.361844;-71.057285
+Waltham - Newton;42.364615;-71.26262
+Back Bay - Copley Square;42.347898;-71.085549
+Plymouth;41.952195;-70.690713
+Charlestown - Bunker Hill;42.375528;-71.05764
+Brookline - Newton - Harvard;42.352041;-71.137275
+Wellesley;42.298293;-71.278838
+Watertown;42.365659;-71.179762
+Cambridge;42.375541;-71.113285
+Medford - Somerville;42.401441;-71.09425
+Attleboro - North Attleboro;41.930785;-71.355906
+Logan Intl Airport BOS - Saugus;42.397862;-71.019893
+Boston Common - Theatre District;42.352615;-71.067244
+Weymouth;42.203313;-70.949839
+Rockland - Brockton;42.103982;-71.000529
+Braintree - Randolph;42.199679;-71.03816
+Hull - Nantasket;42.2834750572;-70.8740686984
+Sharon - Walpole;42.123308;-71.224059
+Raynham - Middleboro - Taunton;41.908229;-71.027014
+Foxborough - Mansfield;42.061971;-71.254394
+Waterfront Area - Convention Center;42.345732;-71.045031
+Needham - Dedham;42.235976;-71.192936
+Somers Point;39.314277;-74.601547
+Downtown Atlantic City;39.366199;-74.438189
+West Atlantic City - Blackhorse Pike;39.408016;-74.560941
+Absecon - Whitehorse Pike - Galloway;39.43487;-74.496451
+Pleasantville;39.388529;-74.504385
+Brigantine;39.394888;-74.386142
+Traverse City;44.749507;-85.614724
+Acme;44.772471;-85.497432
+Burlington - Woburn - Lexington;42.486377;-71.20083
+Andover - Tewksbury;42.668418;-71.193979
+Framingham - Natick;42.302481;-71.435416
+West Loop;42.359213;-71.579237
+Concord;42.461799;-71.364505
+Lowell - Chelmsford;42.597469;-71.315652
+Buckhead;33.837594;-84.368432
+Perimeter;33.920182;-84.362133
+Hiram;33.8919;-84.762508
+Smyrna - Vinings;33.853995;-84.480784
+Alpharetta - Roswell;34.054299;-84.291988
+Austell - Six Flags;33.797022;-84.591104
+Chamblee - Doraville;33.887003;-84.290051
+Marietta;33.935991;-84.501402
+Acworth;34.081648;-84.663161
+Kennesaw - Woodstock;34.047151;-84.559305
+Canton;34.252525;-84.481714
+Dallas;33.945015;-84.837556
+Cartersville;34.217545;-84.781763
+Albany;44.629636;-123.058973
+Corvallis;44.573748;-123.26759
+Adair;41.500368;-94.643505
+Calhoun - Adairsville;34.473156;-84.928383
+Rome;34.245183;-85.177807
+Starkville;33.462976;-88.805148
+Hoffman Estates;42.064758;-88.172518
+Burr Ridge - Hinsdale - Willowbrook;41.751695;-87.940104
+St. Charles - Geneva;41.906124;-88.299661
+Buffalo Grove - Arlington Heights North - Deer Park;42.139238;-87.998053
+Bridgeview;41.736224;-87.808012
+Evanston - Skokie - Niles;42.036743;-87.760114
+Northbrook;42.116072;-87.856706
+Aurora;41.780958;-88.293448
+Oak Lawn - Midway Airport MDW;41.758601;-87.733882
+O\'Hare Intl Airport ORD North;42.007072;-87.903084
+Lombard - Oak Brook - Downers Grove;41.853828;-87.995165
+O\'Hare Intl Airport ORD South;41.933091;-87.90324
+Itasca;41.970629;-88.013905
+Carol Stream - Glendale Heights;41.911454;-88.10909
+Hanover Park;41.990281;-88.139887
+Hillside - Westchester;41.86116;-87.895522
+Arlington Heights - Elk Grove Village;42.05601;-88.003223
+Schaumburg;42.050164;-88.052827
+Lisle - Naperville;41.800997;-88.138822
+Las Colinas and Irving;32.8605;-96.946316
+The Colony;33.074687;-96.890171
+Lewisville;33.025885;-96.99376
+Richardson - Plano East - Allen;33.040167;-96.694167
+Love Field DAL - Market Center;32.841433;-96.866311
+DFW North and Grapevine;32.924595;-97.040541
+Dallas North - Galleria;32.929076;-96.860743
+Park Central - Park Cities;32.897189;-96.770391
+Plano West - Frisco;33.063938;-96.806887
+Adel;31.136689;-83.429816
+Victorville - Hesperia;34.488989;-117.335958
+Adelanto;34.579212;-117.410209
+Alexandria and Old Town;38.809662;-77.093367
+Temple Hills - Andrews AFB;38.814411;-76.903275
+Falls Church - Jefferson;38.87485;-77.169779
+National Harbor - Oxon Hill;38.79622;-76.999914
+Rockville - Gaithersburg;39.113144;-77.184514
+Crystal City - Reagan National Airport DCA;38.856084;-77.051663
+Baltimore Washington Intl Airport BWI North & East;39.20328;-76.669792
+Chantilly - Dulles Intl Airport IAD South;38.91902;-77.424354
+Reston - Sterling - Dulles Intl Airport IAD North;38.998669;-77.420859
+Dupont Circle - Embassy Row;38.913889;-77.044873
+The White House - Capitol Hill;38.897601;-77.024278
+College Park - Beltsville;39.009166;-76.913143
+New York Ave NE - National Arboretum;38.9154;-76.9805
+Bethesda - Silver Spring;38.998059;-77.086074
+Georgetown;38.913535;-77.067871
+Kennedy Center - GW University;38.900619;-77.050376
+South of the Mall;38.882115;-77.014849
+Landover - Capitol Heights;38.925754;-76.871688
+Laurel;39.092554;-76.845816
+Arlington;38.878946;-77.109811
+Adrian;41.895016;-84.045938
+Clifton Park;42.86366;-73.77564
+West Coxsackie;42.3700200763;-73.8177
+Central Albany;42.652006;-73.770485
+Albany Intl Airport ALB;42.748293;-73.785857
+State University of NY - Albany;42.699586;-73.828123
+Albany South - Glenmont;42.614886;-73.777851
+Troy - Rensselaer;42.664231;-73.70593
+Castleton-on-Hudson;42.5641;-73.6823
+Schenectady;42.789336;-73.940483
+Halsey;44.388823;-123.041
+Salem;44.944223;-123.015163
+Albemarle;35.356272;-80.1879
+Albert Lea;43.666992;-93.34706
+Midtown East;40.755692;-73.969871
+Midtown Central;40.763085;-73.980594
+Times Square - Theatre District;40.758733;-73.985961
+Copiague;40.679938;-73.414423
+Long Island City - Elmhurst;40.742742;-73.921773
+Bronx;40.832236;-73.889797
+Rye Brook - Port Chester - New Rochelle;40.959378;-73.71641
+Central Park;40.77789847;-73.96556
+Edgewater;40.820344;-73.979008
+Yonkers;40.958363;-73.867354
+Empire State Building;40.745476;-73.981945
+Garden City - Uniondale;40.743243;-73.594283
+Queens Village - Bellerose;40.7244771612;-73.7291820431
+Bayside;40.75793;-73.765092
+Glen Cove;40.876317;-73.629462
+Lynbrook - Rockville Centre - Freeport;40.657125;-73.612757
+John F. Kennedy Intl Airport JFK - Jamaica;40.687786;-73.801624
+LaGuardia Airport LGA - Flushing;40.755309;-73.846414
+Melville - Plainview;40.795397;-73.449486
+Fort Bragg;39.425467;-123.807475
+Mendocino - Little River;39.273535;-123.787291
+Albuquerque Intl Airport ABQ;35.055818;-106.627258
+Midtown Albuquerque;35.108647;-106.625055
+Uptown Albuquerque;35.092858;-106.575141
+Downtown Albuquerque - Old Town;35.095204;-106.657489
+Albuquerque West;35.092864;-106.724909
+Albuquerque North;35.15636;-106.591535
+Albuquerque East;35.077158;-106.5198
+Rio Rancho - Corrales;35.232875;-106.644191
+Santa Ana Pueblo;35.329701;-106.545079
+Los Lunas;34.813702;-106.7599
+Downtown - Pike Place;47.607841;-122.332402
+Downtown Seattle Center - Space Needle;47.619022;-122.348914
+Downtown Bellevue;47.62186;-122.193486
+The University District;47.661754;-122.300737
+Lake Union South;47.627658;-122.333943
+Redmond;47.660297;-122.132435
+Lynnwood - Edmonds;47.802768;-122.327927
+Mukilteo;47.915897;-122.295473
+Bothell - Woodinville - Kirkland;47.751124;-122.181681
+Northwest Seattle - Northgate;47.708673;-122.339984
+Everett;47.948073;-122.21099
+Houston Galleria;29.738688;-95.458173
+Cyfair;29.90424;-95.617227
+East Houston - Cloverleaf;29.777316;-95.243448
+Medical Center - Astrodome;29.699124;-95.402983
+Houston West - Energy Corridor;29.771881;-95.605224
+Houston Hobby Airport HOU;29.648256;-95.245758
+Aldine - Bush Ictl Airport IAH;29.9785884898;-95.3395999888
+Downtown Houston;29.757264;-95.364124
+Houston North;29.855699;-95.399197
+Washington Ave;29.77737;-95.419613
+NW Houston - Brookhollow;29.822737;-95.479555
+Willowbrook - Cypress Station;29.9705003527;-95.5174
+Chickasha;35.034226;-97.941313
+Alexander City;32.935546;-85.973286
+Alexandria;31.311136;-92.479427
+Pineville;31.345388;-92.421306
+Springfield;38.778353;-77.179917
+New Orleans Intl Airport MSY;30.010707;-90.23974
+Downtown New Orleans;29.951984;-90.072647
+French Quarter;29.958171;-90.064344
+Convention Center and Arts District;29.944851;-90.067155
+Garden District;29.931179;-90.083746
+New Orleans Midtown;29.969659;-90.101397
+Harvey - Gretna;29.898265;-90.055421
+Bridge City - Westwego - Marrero;29.899619;-90.141146
+Metairie;30.003759;-90.162058
+New Orleans East;30.027195;-89.994318
+Avondale;29.911217;-90.196971
+Woodstock;42.313894;-88.443969
+McHenry;42.333875;-88.270588
+Elgin - Algonquin;42.110942;-88.312745
+Crystal Lake;42.227839;-88.311301
+Barrington - Lake Zurich;42.178465;-88.120557
+La Puente - Baldwin Park;34.053845;-117.962303
+Hollywood;34.089484;-118.307061
+Whittier;33.957642;-118.038561
+Glendora - Azusa;34.123831;-117.890259
+Beverly Hills - West Hollywood;34.075274;-118.390438
+LA Intl Airport LAX;33.928445;-118.379747
+Downtown Los Angeles;34.049427;-118.251868
+Glendale - Burbank - Universal City;34.163717;-118.303221
+Downey - Commerce - Norwalk;33.958217;-118.120666
+Pasadena;34.142146;-118.122407
+El Monte - Rosemead - Monterey Park;34.058021;-118.080208
+Huntington Park - South Gate;33.971276;-118.207726
+Arcadia - Monrovia;34.14331;-118.007758
+Mid-Wilshire - Westlake - USC;34.049254;-118.286894
+Alice;27.754592;-98.058918
+Newport Beach - Huntington Beach;33.642188;-117.942887
+San Clemente;33.418618;-117.611001
+Costa Mesa - Orange County Airport - Irvine;33.681653;-117.88101
+Irvine Spectrum - Laguna Hills;33.644281;-117.69682
+Laguna Beach - Dana Point;33.495405;-117.733192
+San Juan Capistrano - Capistrano Beach;33.50703;-117.657191
+Salamanca;42.159564;-78.726104
+Cuba;42.219972;-78.27557
+Olean;42.085905;-78.457789
+Alma;31.532862;-82.46386
+El Cajon - Santee;32.801966;-116.941819
+Ramona;33.012308;-116.823493
+Alpine;32.838945;-116.780042
+Secaucus - Meadowlands;40.821547;-74.101521
+Chelsea - Madison Square Garden;40.752472;-73.995847
+North Bergen County - Rockland County;41.081785;-74.053643
+Hoboken - Jersey City;40.750185;-74.039873
+Newark Intl Airport EWR;40.699341;-74.199471
+Fort Lee - Hackensack;40.887883;-74.034909
+Tenafly;40.918793;-73.959738
+Tarrytown - White Plains;41.060681;-73.799593
+Museum Campus - McCormick Place - Soldier Field;41.860206;-87.623087
+Mokena - Frankfort;41.526234;-87.845922
+Lansing - Calumet City;41.594455;-87.563187
+South Chicago - Hyde Park;41.817059;-87.603192
+West Loop - Medical District - UIC;41.874255;-87.648303
+Hammond;41.594975;-87.474807
+Alsip;41.658328;-87.734234
+South Holland - Calumet Park;41.6082;-87.648489
+Tinley Park - Matteson;41.548456;-87.788891
+East Los Angeles County;34.078987;-117.785753
+Chino - Chino Hills;33.985158;-117.708971
+Ontario Intl Airport ONT West;34.057275;-117.628876
+Rancho Cucamonga - Upland;34.111311;-117.607559
+Ontario Intl Airport ONT East;34.069371;-117.57298
+Fontana;34.110543;-117.461618
+Jackson Hole;43.485774;-110.777523
+Teton Village;43.554772;-110.829968
+Alta - Targhee;43.764847;-111.005846
+Driggs;43.724969;-111.105919
+Victor, ID;43.579386;-111.107226
+Effingham;39.122289;-88.565222
+Altamont;39.063302;-88.7462
+Altavista;37.127792;-79.271839
+Granite City - Pontoon Beach;38.750581;-90.095276
+Edwardsville - Glen Carbon;38.773029;-89.998655
+Lambert Intl Airport STL;38.73177;-90.338031
+Alton;38.907007;-90.154505
+Reynosa;26.07828;-98.28534
+McAllen - Miller Intl Airport MFE;26.2084460367;-98.2109286463
+West Des Moines - Clive;41.585384;-93.764027
+Indianola;41.377764;-93.558482
+Newton;41.692112;-93.048771
+Northwest Des Moines - Urbandale;41.635097;-93.732323
+Downtown Des Moines;41.592973;-93.630444
+Altoona;41.657424;-93.47509
+Des Moines North;41.64495;-93.599407
+Ankeny;41.722025;-93.592769
+Colfax;41.681142;-93.244619
+Des Moines Intl Airport DSM;41.531486;-93.663733
+Johnstown;40.297132;-78.883008
+Eau Claire;44.8295789469;-91.5214586171
+Chippewa Falls;44.901766;-91.405906
+Alturas;41.488556;-120.54143
+Altus;34.653743;-99.324208
+Burleson;32.546965;-97.321533
+Cleburne;32.348815;-97.399451
+Mansfield;32.57611;-97.126173
+Alvarado;32.4143;-97.2124
+Clear Lake - NASA Space Center - Kemah;29.558269;-95.097941
+Pearland;29.564631;-95.330075
+Texas City;29.393291;-94.985121
+Alvin;29.416911;-95.238215
+League City - Dickinson;29.499695;-95.077138
+San Jose East;37.341991;-121.849317
+Los Gatos;37.22534;-121.976707
+San Jose South;37.256061;-121.804453
+S. SFO Intl Airport - Burlingame;37.598278;-122.373579
+Milpitas;37.427337;-121.904923
+Santa Clara;37.354896;-121.966229
+Sunnyvale - Cupertino;37.363462;-122.020562
+Mountain View;37.392858;-122.075497
+San Jose;37.3527531356;-121.907967495
+Newark - Fremont;37.519087;-121.991147
+Campbell;37.277901;-121.946084
+Palo Alto - Menlo Park;37.435674;-122.146745
+Downtown Jacksonville;30.320574;-81.656426
+Jacksonville Intl Airport JAX;30.478723;-81.656068
+Jacksonville Beach - Ponte Vedra;30.276757;-81.39829
+Amelia Island;30.624901;-81.449542
+Yulee;30.647751;-81.627477
+Kingsland;30.784595;-81.656569
+Jacksonville Zoo - Airport South;30.431891;-81.657197
+Blount Island - Mill Cove;30.351274;-81.545603
+Amelia Court House;37.351281;-77.969501
+Martinez;37.996413;-122.123149
+Sonoma;38.28646;-122.458917
+Richmond - Pinole;37.945327;-122.329364
+Napa;38.294941;-122.293519
+Fairfield - Suisun City;38.253163;-122.066516
+Vallejo - American Canyon;38.141392;-122.229562
+Benicia;38.052729;-122.149487
+Americus;32.080341;-84.233137
+Ames;42.020246;-93.611123
+Story City;42.179301;-93.571214
+Boone;42.036702;-93.8799
+Perry;41.8352;-94.0762
+Haverhill;42.776333;-71.108577
+Hampton - Seabrook;42.927534;-70.842729
+Springfield - Wilbraham;42.120637;-72.542404
+Westfield;42.13525;-72.74016
+Enfield;41.988381;-72.594801
+West Springfield - Holyoke;42.133303;-72.628506
+Holyoke - Northampton;42.2854;-72.6294
+Amherst - Hadley;42.370705;-72.536289
+Chicopee;42.177152;-72.582636
+Greenfield;42.586361;-72.604532
+Niagara Falls, New York;43.085883;-79.057519
+Niagara Falls, Ontario;43.099316;-79.076436
+Niagara Falls, Ontario - West;43.08251;-79.126525
+Niagara-on-the-Lake;43.214296;-79.110067
+Buffalo Intl Airport BUF;42.950641;-78.694583
+Downtown Buffalo;42.891377;-78.87281
+Amherst;42.985124;-78.823776
+Fort Erie, Ontario;42.906898;-78.942924
+East Niagara Falls, New York;43.089365;-78.954087
+Lockport;43.162722;-78.695789
+Hamburg - West Seneca - Lackawanna;42.791455;-78.823803
+Westlake;41.470108;-81.930114
+North Ridgeville;41.3729;-81.9959
+Hopkins Intl Airport CLE;41.423772;-81.848112
+Elyria;41.393339;-82.11775
+Vermilion;41.407067;-82.359752
+Covington;30.444989;-90.086756
+Hammond - Amite;30.573669;-90.502888
+Oak Harbor;48.302314;-122.639776
+Mount Vernon - Burlington;48.455485;-122.332117
+Anacortes;48.486857;-122.600138
+Long Beach;33.785589;-118.167974
+Seal Beach;33.74987;-118.087476
+Anaheim - Disneyland North;33.810719;-117.905642
+Orange;33.805458;-117.831361
+Anaheim - Disneyland South;33.787243;-117.89568
+Fullerton - Brea;33.882492;-117.878127
+Yorba Linda - Anaheim Hills;33.865579;-117.763008
+Garden Grove - Cypress - Anaheim West;33.79788;-117.995937
+Huntington Beach North;33.727856;-118.001528
+Buena Park - La Mirada - Cerritos;33.864587;-118.024568
+Diamond Bar - Rowland Heights - Hacienda Heights;34.001781;-117.879352
+Knott\'s Berry Farm;33.84636;-117.99807
+North Cincinnati - West Chester - Sharonville;39.308889;-84.417001
+Forest Park - Fairfield;39.302168;-84.502187
+Cincinnati West;39.188637;-84.65064
+Richwood;38.9201;-84.630792
+Cincinnati Intl Airport CVG - Florence;39.035959;-84.636151
+Downtown Cincinnati;39.099543;-84.517013
+Blue Ash;39.264739;-84.374984
+Cincinnati East;39.088422;-84.285612
+Milford;39.170865;-84.276637
+Central Cincinnati;39.195704;-84.4223
+Covington Riverfront;39.090561;-84.501223
+Ft. Mitchell - Ft. Wright, KY;39.049929;-84.558709
+Kings Island Resort - Mason - NE Cincinnati;39.343659;-84.278746
+Anderson;34.567474;-82.681624
+Clemson;34.68779;-82.831574
+Easley;34.822561;-82.575003
+Seneca;34.685151;-82.970905
+Simpsonville;34.712403;-82.253908
+Lavonia;34.44176;-83.113064
+Greenville South;34.79716;-82.364233
+El Dorado;37.820604;-96.87406
+Wichita Mid-Continent Airport ICT;37.682189;-97.411041
+East Wichita;37.70566;-97.230116
+Central Wichita;37.678088;-97.324164
+South Wichita;37.607903;-97.326063
+Andover;37.695509;-97.141179
+North Wichita - Park City;37.780698;-97.324314
+Valley Center;37.835977;-97.343688
+Nashua - Merrimack;42.773567;-71.476202
+Peabody - Danvers - Wakefield;42.540063;-70.992197
+Andrews;32.317521;-102.5505
+Taos;36.38468;-105.58446
+Angola - Fremont;41.687782;-84.995015
+Dundee;41.958797;-83.670111
+Detroit Intl Airport DTW;42.234012;-83.338913
+Livonia;42.387743;-83.381708
+Novi - Farmington Hills;42.480714;-83.440637
+Plymouth - Canton;42.337404;-83.448994
+Ann Arbor West - University of Michigan;42.262346;-83.755691
+Ann Arbor East - University of Michigan;42.275644;-83.704727
+Ypsilanti;42.231899;-83.619248
+Milan;42.096992;-83.67642
+Belleville;42.208831;-83.484584
+Chelsea;42.304885;-84.022617
+Brighton;42.538006;-83.786055
+St. Pete Beach;27.723361;-82.742678
+Bradenton - Ellenton;27.489113;-82.520689
+Sarasota - Bradenton Intl Airport SRQ;27.401791;-82.551166
+Downtown Nashville - Vanderbilt University - Metrocenter;36.166592;-86.79202
+Opryland;36.218029;-86.694348
+Mount Juliet;36.185066;-86.520349
+Nashville North;36.222683;-86.768969
+Franklin - Cool Springs;35.939154;-86.811545
+Nashville West;36.1383;-86.8787
+Nashville Intl Airport BNA;36.145928;-86.691776
+Nashville South - Antioch;36.063456;-86.683877
+La Vergne - Smyrna;35.97661;-86.551008
+Nashville East;36.159272;-86.624214
+Brentwood;36.033491;-86.79137
+Fountain Hills - Fort McDowell;33.598427;-111.738348
+Corpus Christi - North Padre Island;27.607343;-97.220904
+Bayfront - Marina;27.802025;-97.40046
+Corpus Christi Intl Airport CRP;27.798975;-97.46777
+South Corpus Christi;27.722009;-97.388334
+Port Aransas;27.822104;-97.069237
+Aransas Pass;27.86425;-97.220869
+Rockport;28.045815;-97.043013
+DFW South;32.838604;-97.055358
+Forest Hill;32.661714;-97.257237
+Arlington - Grand Prairie;32.752996;-97.05767
+South Arlington;32.676551;-97.077706
+Lorton;38.705804;-77.227453
+Fairfax;38.861259;-77.298765
+Tysons Corner;38.925171;-77.216949
+Marysville;48.065181;-122.183967
+Stamford - Old Greenwich;41.044921;-73.540568
+Armonk - Mount Kisco;41.170496;-73.717059
+Lafayette;30.225296;-92.0599
+Opelousas;30.544777;-92.065503
+Breaux Bridge;30.296248;-91.878054
+Westport - Maryland Heights;38.697259;-90.446684
+Chesterfield;38.658161;-90.568989
+St. Louis West;38.76259;-90.45745
+Ferguson;38.7666;-90.277
+Villa Ridge;38.482682;-90.8243
+Fairview Heights - O\'Fallon - Collinsville;38.608785;-90.002076
+St. Charles - St. Peters;38.796025;-90.552201
+Downtown St. Louis;38.634799;-90.193413
+Forest Park - Clayton;38.63838;-90.304217
+St. Louis South;38.485229;-90.351558
+Fenton;38.538184;-90.46827
+Kirkwood;38.558585;-90.411361
+Pevely;38.2873;-90.4033
+Waterloo;38.3547;-90.1562
+Lafayette Square;38.617391;-90.216713
+Eureka;38.505924;-90.655063
+Stevens Point;44.52915;-89.553038
+Waupaca;44.3528048861;-89.0894806409
+Wisconsin Rapids;44.364794;-89.817255
+Wautoma;44.083362;-89.291154
+Riverside;33.94784;-117.411094
+Redlands;34.062947;-117.190164
+Big Bear;34.240414;-116.906086
+Highland;34.1286;-117.199
+San Bernardino - Colton - Rialto;34.07596;-117.29644
+Moreno Valley;33.935681;-117.236766
+Beaumont and Banning;33.93122;-116.942118
+Atascadero;35.484723;-120.667008
+Pismo Beach - Shell Beach;35.147874;-120.646329
+Morro Bay;35.368244;-120.850296
+San Luis Obispo;35.269921;-120.668917
+Santa Maria;34.937214;-120.43168
+Torrance - Carson - Gardena;33.843492;-118.306825
+San Pedro;33.729025;-118.285303
+Lynwood;33.9232;-118.213
+Greater Downtown Denver;39.744969;-104.994001
+Lakewood North;39.727727;-105.126262
+Boulder;40.02134;-105.256518
+Denver Northeast - Henderson;39.867238;-104.908777
+Golden;39.73715;-105.190579
+Stapleton - Northeast Denver;39.778464;-104.879133
+Denver Intl Airport DEN;39.794494;-104.774943
+Westminster - Broomfield;39.890484;-105.080397
+Louisville;39.956578;-105.161229
+Denver North - Thornton;39.886227;-104.991381
+Lakeside - Mountain View;39.779495;-105.037968
+Wheat Ridge;39.7803302978;-105.115
+Denver Central - North Washington;39.793575;-104.987219
+Central Jersey;40.319761;-74.493839
+Tinton Falls - Eatontown - Red Bank;40.306319;-74.071702
+Neptune;40.202832;-74.06241
+Long Branch - West Long Branch;40.294735;-74.002894
+Wall - Spring Lake;40.144158;-74.046106
+Middletown;40.389967;-74.101577
+Freehold;40.263385;-74.294809
+Hazlet - Keyport;40.422859;-74.185261
+South Amboy;40.467;-74.2843
+Seaside Heights;39.943009;-74.074808
+Toms River;39.989174;-74.184605
+Staten Island;40.605594;-74.170811
+Dubuque;42.495433;-90.696254
+Ashburn;31.693625;-83.641362
+Germantown;39.194911;-77.256028
+Manassas;38.788183;-77.481442
+Leesburg;39.092819;-77.521881
+Asheboro;35.701691;-79.811951
+Candler;35.538098;-82.728233
+Black Mountain;35.621012;-82.314759
+Central Asheville;35.595744;-82.540422
+Asheville West;35.549728;-82.61227
+Asheville Regional Airport AVL;35.440967;-82.533608
+Huntington;38.410968;-82.360766
+Ashland;38.425343;-82.661554
+Woonsocket;42.000369;-71.500396
+Worcester - Auburn;42.248068;-71.816947
+Northborough - Westborough;42.284123;-71.646775
+Milford - Franklin;42.112108;-71.458731
+Campton;43.804208;-71.669529
+Medford;42.347983;-122.878439
+Yreka;41.727576;-122.634853
+Grants Pass;42.44554;-123.303519
+Bridgeville;40.354326;-80.116103
+Pittsburgh North - Cranberry;40.674399;-80.09795
+West Mifflin - Bethel Park;40.341101;-79.991451
+Pittsburgh North - Harmarville - O\'Hara;40.516133;-79.852541
+Pittsburgh Intl Airport PIT;40.473745;-80.211234
+Downtown Pittsburgh;40.438323;-79.997235
+Greentree - Parkway Center;40.42104;-80.057429
+Pittsburgh West - Robinson;40.447169;-80.108267
+Oakland;40.446428;-79.947666
+Gibsonia;40.610934;-79.942569
+Orange - East Orange;40.762479;-74.217955
+Bridgewater - Somerset;40.558428;-74.584705
+Piscataway - New Brunswick;40.502149;-74.455147
+Edison - Woodbridge;40.560953;-74.313845
+Plainfield - New Providence - Kenilworth;40.666807;-74.36501
+Weston - Plantation - Davie;26.121605;-80.292049
+Fort Lauderdale Beach;26.138228;-80.104622
+South Beach - Oceanfront Collins;25.79285;-80.12771
+Miami Lakes - Hialeah North;25.894132;-80.324134
+South Beach - Ocean Drive;25.776149;-80.130576
+Central South Beach;25.78339;-80.13775
+Las Olas - Downtown - Port Everglades;26.117459;-80.134662
+Downtown Miami;25.77094;-80.191478
+Miami Intl Airport MIA;25.79976;-80.296452
+Fort Lauderdale - Hollywood Intl Airport FLL;26.036869;-80.16302
+Golden Glades - Miami Shores;25.907322;-80.186625
+Miami Beach North - Bal Harbor - Sunny Isles;25.914711;-80.123687
+Hollywood Beach;26.007748;-80.120362
+Bay Harbor Islands - North Bay Village;25.866552;-80.135899
+Miami Beach;25.826043;-80.121522
+Miramar - Pembroke Pines;25.991413;-80.306421
+Wilkes-Barre;41.246217;-75.857409
+Scranton;41.414863;-75.663986
+Pittston;41.316009;-75.778972
+Archbald;41.500101;-75.56378
+White Haven;41.0711;-75.7356
+Lakeville;41.409052;-75.279119
+Silverthorne - Frisco;39.609389;-106.080603
+Vail;39.620394;-106.377829
+Beaver Creek;39.616426;-106.52194
+East Vail;39.631192;-106.294986
+Eagle;39.656253;-106.827286
+Copper Mountain;39.501837;-106.149803
+Fishers - NE Indianapolis;39.916773;-86.04791
+Martinsville;39.418486;-86.426871
+Downtown Indianapolis;39.768993;-86.159162
+Indianapolis Intl Airport IND East;39.720483;-86.260497
+Keystone - Carmel;39.955977;-86.135908
+Avon;39.757605;-86.383539
+Indianapolis Intl Airport IND West - Plainfield;39.684851;-86.338998
+Brownsburg;39.853493;-86.396899
+West Indianapolis - Speedway;39.792895;-86.267807
+West of Downtown Indianapolis;39.781762;-86.196805
+NW Indianapolis/Pyramids at College Park;39.911519;-86.252283
+South Indianapolis;39.666427;-86.097523
+East Indianapolis - Lawrence;39.808523;-86.021123
+Norcross;33.935563;-84.215295
+Southlake - Morrow;33.58117;-84.364637
+Duluth;34.000407;-84.134667
+Hartsfield Intl Airport ATL;33.641682;-84.464958
+Downtown Atlanta;33.751813;-84.391056
+Decatur and Emory;33.755011;-84.268804
+Northlake;33.839696;-84.251981
+North Atlanta;33.837068;-84.336139
+Midtown;33.787315;-84.388802
+Atlanta Southeast;33.667;-84.3748
+Lithonia;33.704755;-84.131309
+Stone Mountain - Snellville;33.837687;-84.07547
+Tempe - ASU;33.403828;-111.941429
+Chandler - South Tempe - Ahwatukee;33.30579;-111.912342
+Scottsdale South;33.463463;-111.923762
+Scottsdale Old Town;33.49536;-111.923372
+Scottsdale;33.526645;-111.926552
+Sky Harbor Intl Airport PHX;33.449896;-112.004303
+Metro Center - Phoenix North - Deer Valley;33.631375;-112.113604
+Buckeye;33.435295;-112.50215
+Goodyear - Litchfield Park;33.46431;-112.361916
+Phoenix West;33.465424;-112.20762
+Surprise - Sun City;33.616972;-112.312252
+Downtown Phoenix;33.466976;-112.083511
+Central Phoenix;33.512926;-112.041351
+Glendale - Peoria;33.624396;-112.234104
+Luling;29.926568;-90.37039
+Shawnee - Merriam;39.01259;-94.678917
+Independence-Sports Complex;39.048381;-94.40804
+Kansas Speedway;39.122215;-94.805519
+Kansas City Intl Airport MCI - Platte City;39.299336;-94.684362
+Country Club Plaza;39.046101;-94.588473
+Downtown Kansas City and Crown Center;39.087072;-94.587779
+North Kansas City - Worlds of Fun;39.173822;-94.500582
+Kansas City Northeast;39.130389;-94.500873
+SeaWorld - I-drive South;28.417738;-81.462883
+Universal Orlando - I-drive North;28.472523;-81.462417
+Apopka - NW Orlando;28.683302;-81.505019
+Orlando West - Winter Garden - Ocoee;28.552418;-81.531206
+Lake Mary - Heathrow;28.767311;-81.362644
+Orlando Intl Airport MCO;28.457481;-81.331313
+Orlando East - University of Central Florida;28.583926;-81.210427
+Downtown Orlando;28.554311;-81.381874
+Orlando Airport West - Florida Mall;28.466441;-81.401929
+Altamonte Springs - Winter Park;28.643635;-81.375134
+Bangor - Orono;44.825732;-68.765744
+Blowing Rock;36.126964;-81.670386
+Hemet;33.748441;-116.985236
+Gurnee - Waukegan - Libertyville;42.351933;-87.923561
+Vernon Hills - Lincolnshire - Mundelein;42.215047;-87.94257
+Barstow;34.881239;-117.044294
+Bartlesville;36.73489;-95.939835
+Hampshire;42.1367;-88.5113
+Oswego;41.706057;-88.324474
+Bolingbrook - Romeoville;41.688553;-88.081454
+Attitash - North Conway;44.089218;-71.151571
+Downtown Memphis;35.136541;-90.055965
+Memphis Southeast;35.056215;-89.821296
+Medical Center - University;35.134218;-89.982071
+Collierville;35.037082;-89.696574
+Graceland - Memphis Intl Airport MEM;35.072507;-89.981479
+East Memphis;35.100614;-89.874376
+Sycamore View;35.16647;-89.862022
+Wolfchase;35.193306;-89.792666
+Lakeland;35.229284;-89.739215
+Millington;35.336143;-89.915123
+Mt. Pocono - Tannersville;41.074085;-75.318608
+Stroudsburg;41.010314;-75.167359
+Denton;33.213434;-97.149299
+Alliance Area - Roanoke;32.996779;-97.264415
+Winter Haven - Auburndale;28.036991;-81.747059
+Lake Wales;27.941642;-81.611611
+Bartow;27.896067;-81.834589
+Coos Bay;43.385568;-124.226215
+Morristown - Parsippany;40.821795;-74.424811
+Branchburg;40.580755;-74.68591
+Basking Ridge;40.690405;-74.563247
+Chatham - Brewster - Eastham;41.773059;-69.983961
+Hyannis - Yarmouth - Dennis Port;41.665962;-70.22785
+Bastrop;30.091153;-97.279349
+Sycamore;41.984428;-88.697713
+Joliet;41.531001;-88.151708
+Yorkville;41.65447;-88.442891
+Downtown Rochester;43.156048;-77.593281
+Batavia;43.002864;-78.184884
+West Rochester - Rochester Intl Airport ROC;43.153179;-77.670116
+South Rochester;43.094459;-77.604407
+Rochester North - Irondequoit;43.198138;-77.578727
+Victor - Fairport;43.014899;-77.437376
+Webster;43.209666;-77.459698
+Batesville;35.765884;-91.639802
+Sardis;34.437402;-89.8937
+Brunswick - Bath;43.902673;-69.912736
+Bath;42.336884;-77.317676
+Denham Springs;30.464599;-90.950901
+South Baton Rouge;30.41475;-91.049721
+Downtown Baton Rouge - Louisiana State University;30.433637;-91.152266
+Baton Rouge Airport;30.533602;-91.169399
+Port Allen;30.444659;-91.223557
+Kalamazoo;42.264899;-85.610536
+Battle Creek;42.289996;-85.184766
+Marshall;42.282282;-84.976462
+West Lafayette;40.45497;-86.910318
+Battle Mountain;40.6428;-116.933
+Tarboro;35.899394;-77.54927
+Rocky Mount - Battleboro;36.002411;-77.823727
+Salina;38.826237;-97.619511
+McPherson;38.371549;-97.642894
+Junction City;39.024297;-96.833091
+Concordia;39.566269;-97.659093
+Beloit;39.460803;-98.091399
+Hutchinson;38.049804;-97.934069
+Nisswa;46.518793;-94.287307
+Baxter - Brainerd;46.343773;-94.235769
+Hilton Head Island;32.186372;-80.725208
+Beaufort;32.42089;-80.697015
+Bluffton;32.27125;-80.877882
+Ridgeland;32.479443;-80.977122
+Yemassee Area - Point South;32.664583;-80.865209
+Hardeeville;32.284078;-81.071599
+Oregon City - Milwaukie - Gladstone;45.380404;-122.602572
+Lake Oswego - Tigard;45.4186;-122.764426
+Beaverton;45.49781;-122.806323
+Hillsboro;45.531919;-122.918579
+Downtown Portland;45.514797;-122.679754
+Portland Intl Airport PDX Entrance - Cascade Station;45.577225;-122.57185
+Convention Center - Rose Garden;45.529579;-122.656785
+Portland Intl Airport PDX Perimeter;45.559894;-122.557266
+Portland East;45.514006;-122.571031
+South Waterfront;45.496087;-122.670707
+Northwest Portland - Nob Hill;45.532751;-122.699184
+Portland Meadows - Jantzen Beach, OR - SW Vancouver, WA;45.61407;-122.680239
+SW Portland;45.451199;-122.724513
+Clackamas;45.418099;-122.56753
+Gresham - Troutdale;45.527573;-122.437624
+Vancouver;45.663509;-122.594122
+Port Arthur - Nederland;29.925624;-93.969803
+Beaumont;30.082794;-94.157831
+Vidor;30.126854;-94.006607
+Kent - Southeast Seatac;47.398312;-122.251005
+Seattle Tacoma Intl Airport SEA;47.447329;-122.293853
+Bellevue Eastgate - Factoria - Crossroads;47.578058;-122.144574
+Issaquah;47.543691;-122.049937
+Southcenter - Tukwila - Renton;47.471473;-122.222924
+Columbus;43.348265;-89.028804
+Beaver Dam;43.456266;-88.825423
+Beaver Falls;40.784408;-80.330271
+Monaca;40.681391;-80.290373
+Beaver;38.273189;-112.645448
+Dayton South - Miamisburg;39.635736;-84.1999
+Dayton Intl Airport DAY;39.85915;-84.195746
+Fairborn - Beavercreek;39.7647;-84.043
+Downtown Dayton;39.749079;-84.209139
+Xenia;39.685602;-83.934682
+Woodburn;45.146516;-122.864047
+Wilsonville;45.320548;-122.76874
+Newberg;45.299514;-122.960797
+Becker;45.395483;-93.872166
+Monticello;45.290403;-93.796194
+Ghent;37.6168;-81.1149
+Oak Hill;37.985411;-81.143115
+Beckley;37.795031;-81.202856
+Mount Hope - Bradley;37.872175;-81.188529
+Downtown Cleveland;41.500892;-81.688412
+Richfield;41.268183;-81.627345
+Lakewood;41.489157;-81.771668
+Streetsboro;41.250226;-81.355032
+Willoughby - Wickliffe - Mentor;41.648494;-81.391027
+Beachwood - Mayfield Heights;41.504198;-81.463794
+Independence;41.401875;-81.649645
+Southeast Cleveland;41.405192;-81.493071
+University Circle;41.506344;-81.61614
+Macedonia - Hudson - Twinsburg;41.293523;-81.494999
+Magnificent Mile Area - Streeterville;41.890335;-87.627688
+North Michigan Avenue - Water Tower - Gold Coast;41.899155;-87.624523
+Chicago Loop;41.881775;-87.628653
+Lake View - Lincoln Park - Wrigleyville;41.929329;-87.643515
+Bedford;38.860561;-86.505232
+Hopkins Airport South - Middleburg Heights - Strongsville;41.34155;-81.820105
+Downtown Fort Worth;32.742712;-97.334658
+Hurst - North Richland Hills;32.831455;-97.213784
+North Fort Worth;32.843163;-97.308768
+Downtown and Inner Harbor;39.286871;-76.613325
+North East;39.614949;-75.947273
+Baltimore NW;39.353017;-76.689424
+Pikesville - Owings Mills;39.386543;-76.757448
+Towson;39.403153;-76.585764
+University Center;39.349833;-76.636444
+Timonium;39.469977;-76.644925
+Baltimore East;39.280395;-76.5462
+Spearfish;44.486678;-103.844144
+Belle Fourche;44.662698;-103.853409
+Onley;37.693949;-75.718689
+Exmore;37.531021;-75.825612
+Lake Buena Vista - Downtown Disney;28.382237;-81.536752
+Disney Main Gate - Celebration;28.321539;-81.596011
+Kissimmee;28.307633;-81.430633
+New Stanton;40.218896;-79.607619
+Belle Vernon;40.146788;-79.807328
+Bentleyville;40.128844;-80.006953
+St. Petersburg;27.800745;-82.661666
+Treasure Island;27.772277;-82.772681
+Tarpon Springs - Palm Harbor;28.125359;-82.747137
+Westshore - Tampa Intl Airport TPA;27.958929;-82.538277
+St. Petersburg - Clearwater Intl Airport PIE;27.886877;-82.696765
+Clearwater Beach;27.969636;-82.825546
+West Clearwater - Dunedin;27.979413;-82.796753
+Clearwater;27.971287;-82.739154
+Madeira Beach - Indian Rocks Beach;27.827018;-82.821216
+North Clearwater - Oldsmar;28.024401;-82.697496
+Bellefontaine;40.370827;-83.755721
+State College;40.811188;-77.855141
+Lamar;41.024929;-77.524655
+Milesburg;40.955561;-77.774027
+Downtown - SoHo - Financial District;40.71816;-74.002556
+Brooklyn;40.662858;-73.953501
+Shea Stadium;40.76098;-73.8244
+Mascoutah;38.540361;-89.803236
+Troy;38.734118;-89.902953
+Harker Heights;31.072257;-97.655456
+Temple;31.092442;-97.380058
+Belton;31.0457;-97.4611
+Salado;30.95248;-97.527898
+Baltimore Washington Intl Airport BWI South & West;39.171273;-76.72802
+Columbia - Jessup - Elkridge;39.195192;-76.813334
+Daly City - Cow Palace;37.704847;-122.446654
+Oakland - Alameda;37.751759;-122.234465
+Novato;38.095837;-122.55388
+N. SFO Intl Airport - Oyster Point;37.658155;-122.396959
+Union Square East;37.7867008792;-122.405
+Union Square West - Nob Hill;37.7880438349;-122.411
+Embarcadero;37.793896;-122.397871
+Mill Valley - Sausalito - Tiburon;37.882217;-122.497693
+Fisherman\'s Wharf;37.80644;-122.417511
+Marina - Cow Hollow - Pacific Heights;37.795715;-122.43536
+Japantown - Civic Center North;37.7861554815;-122.422
+Civic Center South - Hayes Valley;37.777006;-122.415164
+Sunset - Zoo;37.738079;-122.501134
+San Rafael;37.969521;-122.520065
+Berkeley - Emeryville;37.860528;-122.281022
+Aiken;33.571743;-81.741018
+Augusta;33.453597;-81.997362
+Belvedere - North Augusta, SC;33.540149;-81.95392
+Augusta North;33.51699;-82.038227
+Augusta West;33.476461;-82.089022
+Vacaville;38.369112;-121.963869
+Walnut Creek - Concord - Lafayette;37.951551;-122.049193
+Antioch;38.000553;-121.791682
+North Adams - Clarksburg - Williamstown;42.70634;-73.152845
+Bennington;42.877133;-73.20695
+Old City - Penn\'s Landing;39.950077;-75.144031
+Center City East;39.952251;-75.160936
+Center City West / University City;39.952421;-75.17304
+City Line;40.005492;-75.215534
+Voorhees - Echelon;39.847655;-74.969792
+Plymouth Meeting - Ft. Washington;40.125542;-75.258155
+Montgomeryville - Lansdale;40.232569;-75.252928
+Cookstown - Wrightstown;40.038915;-74.60001
+Brooklawn - Runnemede - Blackwood;39.85356;-75.084701
+Berlin;39.795352;-74.923
+Princeton - Lawrenceville;40.334203;-74.643216
+Philadelphia Intl Airport PHL - Stadium;39.888645;-75.232353
+Bensalem - NE Philadelphia;40.115868;-74.988742
+Langhorne - Levittown;40.150027;-74.857283
+Mount Holly - Westampton;40.03298;-74.817922
+Cinnaminson;39.994757;-74.99734
+Warminster;40.200525;-75.083809
+Lawncrest - Crescentville;40.032497;-75.100054
+Horsham - Willow Grove;40.173255;-75.139022
+Bordentown;40.135209;-74.703135
+Mt. Laurel;39.930174;-74.959904
+Cherry Hill;39.921173;-75.02143
+Loyola University;42.005863;-87.663066
+Benson;31.965554;-110.31083
+Lillington;35.3973;-78.8114
+Dunn;35.304895;-78.612757
+Washington - Meadowlands;40.209998;-80.227974
+Benton Harbor - Saint Joseph;42.06571;-86.477765
+Sawyer;41.885979;-86.607674
+Dowagiac;41.980622;-86.1326
+South Haven;42.400275;-86.263273
+Niles;41.826712;-86.251667
+New Buffalo;41.784168;-86.742026
+Little Rock South;34.67534;-92.351039
+Little Rock National Airport LIT;34.72472;-92.212284
+Benton;34.562226;-92.610049
+Bryant;34.613124;-92.49164
+Siloam Springs;36.177461;-94.55455
+Bentonville - Rogers;36.338616;-94.168916
+Springdale;36.171491;-94.170077
+Fayetteville;36.084335;-94.173562
+Bentonville West;36.303092;-94.305664
+Lowell;36.255302;-94.1306
+Richmond;37.753253;-84.30225
+Mount Vernon;37.356872;-84.339801
+Berea;37.582174;-84.304343
+Brunswick - Medina;41.18073;-81.805464
+Beresford;43.0835;-96.7797
+Dearborn;42.307535;-83.222529
+Rochester - Rochester Hills;42.665478;-83.144599
+Utica;42.616753;-83.00277
+Detroit Downtown;42.354346;-83.049717
+Roseville;42.529895;-82.89678
+Waterford;42.653348;-83.406147
+Auburn Hills - Lake Orion;42.701734;-83.253309
+Windsor, Ontario;42.28323;-83.021625
+Southfield;42.474564;-83.248538
+Birmingham - Troy - Madison Heights;42.56835;-83.186971
+Warren - Sterling Heights;42.525705;-83.038998
+Jiminy Peak;42.556264;-73.295194
+Great Barrington;42.203743;-73.359128
+Pittsfield;42.439054;-73.25829
+Lenox - Lee;42.346332;-73.268879
+Downtown Hartford;41.76127;-72.668869
+Waterbury - Naugatuck - Wolcott;41.552523;-73.024482
+Windsor - Bradley Intl Airport BDL;41.893001;-72.645805
+Wethersfield - Rocky Hill - Cromwell;41.646858;-72.676978
+Farmington - Plainville;41.694531;-72.819911
+Southington - Bristol;41.631071;-72.896151
+Meriden - Berlin;41.538433;-72.773162
+Hammonton;39.640246;-74.790011
+West Chester;39.947329;-75.585173
+Concordville - Glen Mills;39.8831;-75.527497
+Limerick - Royersford;40.207154;-75.538686
+Philadelphia Airport South - Chester;39.857901;-75.358591
+King of Prussia - Valley Forge;40.081745;-75.417764
+Malvern - Exton;40.043705;-75.598907
+Media;39.916659;-75.407668
+Lincolnton;35.470777;-81.240078
+Mount Holly - Belmont;35.257314;-81.033734
+Shelby;35.283953;-81.525098
+Charlotte/Douglas Intl Airport CLT;35.237625;-80.906101
+Gastonia;35.274978;-81.175829
+Kings Mountain;35.225394;-81.332226
+Fultondale;33.603419;-86.80465
+Gardendale;33.650936;-86.817481
+Birmingham Intl Airport BHM - Trussville;33.575619;-86.678607
+Central Birmingham;33.482583;-86.817793
+Colonnade - Inverness;33.418071;-86.713077
+Riverchase - Vestavia Hills - Pelham;33.383183;-86.794405
+Bessemer;33.364234;-86.974945
+Fairfield;33.478226;-86.916364
+Alabaster;33.23539;-86.812646
+Ocean City South;38.353685;-75.078284
+Bethany Beach;38.536133;-75.058098
+Ocean City North - Fenwick Island;38.427249;-75.060114
+Rehoboth Beach;38.718505;-75.105837
+Delmar;38.445799;-75.561478
+Seaford;38.647507;-75.605535
+Salisbury;38.385167;-75.568215
+Cape May - Wildwood;38.950868;-74.86512
+Bethany;40.261413;-94.035599
+Moore;35.337524;-97.487318
+Will Rogers World Airport OKC;35.431428;-97.591857
+Central Oklahoma City;35.44275;-97.475749
+North Oklahoma City - Nichols Hills;35.527648;-97.53692
+Yukon;35.478163;-97.736342
+Northwest Oklahoma City - Edmond;35.615037;-97.484114
+Hawthorne;33.928524;-118.354235
+Lawndale;33.892689;-118.352953
+Northridge - Van Nuys;34.21235;-118.491628
+Woodland Hills - Canoga Park;34.183676;-118.5865
+Sylmar - Mission Hills;34.29537;-118.466806
+Redondo Beach - Manhattan Beach;33.864808;-118.395463
+Century City - Westwood;34.059094;-118.437191
+Studio City;34.153655;-118.399802
+Culver City;33.997955;-118.406449
+Santa Monica - Venice - Marina Del Rey;34.008358;-118.468357
+Sherman Oaks;34.163977;-118.469743
+North Hollywood;34.191725;-118.388108
+Inglewood;33.956003;-118.356921
+Marathon;24.731061;-81.034021
+Big Rapids;43.682018;-85.479254
+Bozeman;45.695249;-111.048484
+Big Sky;45.277097;-111.327301
+Gardiner;45.049701;-110.740722
+Belgrade - Bozeman Airport;45.769624;-111.185232
+Livingston;45.654693;-110.565592
+West Yellowstone;44.664257;-111.106413
+Big Spring;32.250562;-101.476269
+Biscoe;35.360766;-79.769714
+Bishop;37.366699;-118.39638
+Kingsville;27.510354;-97.858298
+Bishopville;34.2106038474;-80.2604669883
+Blackfoot;43.194887;-112.350406
+Blanding;37.612802;-109.478797
+Savannah Historic District;32.078068;-81.092711
+Savannah Midtown;31.999397;-81.124415
+Tybee Island;32.009936;-80.852142
+Rincon;32.272641;-81.222563
+Savannah North - Savannah Intl Airport SAV;32.130357;-81.17915
+Cape Coral - North Ft. Myers;26.61571;-81.923262
+Fort Myers;26.608129;-81.843859
+Bonita Springs - North Naples;26.330914;-81.79982
+Naples;26.172274;-81.798698
+Fort Myers Beach;26.43295;-81.914446
+South Fort Myers - SW Florida Intl Airport RSW;26.496181;-81.796263
+Naples I-75;26.195478;-81.730924
+SW Fort Myers - Gateway;26.487172;-81.957919
+Naples South;26.090233;-81.708279
+Lehigh Acres;26.604972;-81.632879
+Sanibel and Captiva Islands;26.463757;-82.114011
+Mission Valley - Hotel Circle;32.762334;-117.158841
+Old Town;32.751205;-117.192279
+Kearny Mesa - Stadium;32.8115;-117.129311
+SeaWorld - Mission Bay - Shelter Island;32.764354;-117.228298
+Downtown - Harbor Island;32.724904;-117.178089
+Gaslamp Quarter - Convention Center;32.710169;-117.159771
+National City - Chula Vista North;32.659898;-117.091756
+Chula Vista - San Ysidro;32.58797;-117.065265
+La Mesa;32.764597;-117.023899
+Coronado;32.668165;-117.162249
+Otay Mesa;32.561651;-116.951038
+Potosi;37.9292;-90.7775
+Farmington;37.792962;-90.437788
+Bonne Terre;37.9224;-90.5378
+Overland Park;38.913213;-94.679179
+Lenexa;38.961386;-94.729914
+Olathe;38.878974;-94.802431
+Lansing - Leavenworth;39.28534;-94.913017
+Bonner Springs;39.079;-94.8887
+De Soto;38.962102;-94.979799
+Hope Mills;34.982798;-78.953207
+Roanoke;37.2941;-79.972193
+Daleville;37.399364;-79.903658
+Boonville;38.953541;-92.752404
+Rosenberg;29.538391;-95.796852
+SW Houston - Sugar Land;29.66503;-95.55454
+Borger;35.660079;-101.398608
+Flemington;40.492253;-74.861559
+Clinton;40.633593;-74.916372
+Carrollton;33.575466;-85.064313
+Bremen;33.705861;-85.146104
+Gig Harbor;47.32212;-122.584823
+Port Orchard;47.525616;-122.633509
+Bremerton - Silverdale;47.610347;-122.6901
+Poulsbo;47.736608;-122.636124
+Brenham;30.154733;-96.394758
+Brevard;35.257105;-82.715679
+Bridgeport;33.216283;-97.75782
+Decatur;33.228926;-97.585322
+Pacifica;37.613205;-122.492927
+San Bruno - SFO West;37.634485;-122.416885
+Southbury;41.493865;-73.195755
+Hamden - North Haven;41.39745;-72.873581
+Torrington;41.816881;-73.126453
+Downtown Tulsa;36.15222;-95.997119
+Glenpool;35.974966;-96.004234
+Sand Springs - Oakhurst;36.112453;-96.070823
+South Tulsa - Southern Hills;36.063865;-95.946463
+Tulsa Intl Airport TUL;36.16565;-95.877008
+Broken Arrow - Woodland Hills;36.067256;-95.840457
+Tulsa East - Catoosa;36.162866;-95.778745
+Central Tulsa;36.121531;-95.883472
+Brookings;44.309713;-96.773167
+Bloomington Central - Mall of America;44.851736;-93.292509
+Bloomington West;44.862911;-93.339343
+Ramsey - Anoka;45.239282;-93.420705
+Downtown St. Paul;44.951937;-93.099211
+White Bear Lake - Maplewood - Vadnais Heights;45.060253;-93.030978
+Elk River and Rogers;45.249003;-93.557112
+Bloomington East - Mall of America Area - MSP Airport;44.857312;-93.239769
+Downtown Minneapolis;44.971524;-93.267043
+New Brighton - Mounds View;45.089247;-93.196044
+Blaine;45.177989;-93.233401
+University of Minnesota;44.983816;-93.224826
+Roseville - Arden Hills - Fridley;45.035331;-93.164443
+West Minneapolis;44.9679;-93.390658
+Maple Grove;45.091602;-93.431601
+Brooklyn Center - Coon Rapids;45.148134;-93.285209
+St. Paul West;44.95317;-93.163868
+Brownwood;31.7177;-98.9748
+Brunswick - Glynco Jetport BQK;31.212252;-81.495872
+Jekyll Island;31.071327;-81.417646
+St. Simons Island;31.177022;-81.37778
+South of Brunswick - Fancy Bluff;31.139711;-81.577547
+Darien;31.386679;-81.436964
+Freeport;43.833188;-70.12208
+Seville;41.013557;-81.853342
+Akron;41.079609;-81.529872
+Brush;40.264062;-103.621
+Fort Morgan;40.257048;-103.792745
+North Austin;30.323293;-97.689042
+Hutto;30.541665;-97.55087
+Arboretum - Mopac;30.390676;-97.732139
+Round Rock;30.495874;-97.68053
+Northwest Austin;30.443435;-97.7797
+Cedar Park;30.519532;-97.818968
+College Station - Bryan;30.646179;-96.328627
+Little Rock West - Medical Center;34.742329;-92.373675
+Solvang;34.598098;-120.138651
+Lompoc;34.664863;-120.453414
+Buellton;34.616125;-120.193241
+Goleta;34.437187;-119.813004
+Indian Head;38.6011;-77.1498
+Woodbridge - Dumfries;38.628886;-77.290426
+Lake Worth;32.807669;-97.414937
+Cedar Hill;32.603205;-96.931308
+South Fort Worth;32.666388;-97.372566
+West Fort Worth;32.748568;-97.458979
+Heyburn;42.559303;-113.785567
+Half Moon Bay;37.468281;-122.440776
+San Mateo Area - Redwood City;37.536553;-122.272541
+Burlington;40.811569;-91.146341
+West Greensboro;36.057972;-79.898401
+Burlington - Graham;36.067121;-79.398399
+Whitsett - Sedalia;36.06603;-79.598972
+Hillsborough;36.067006;-79.103414
+Reidsville;36.338032;-79.667071
+Central Greensboro;36.059168;-79.793168
+Yanceyville;36.419349;-79.351601
+Siler City;35.722213;-79.46348
+Chapel Hill;35.919965;-79.018457
+Plattsburgh;44.698702;-73.476206
+Stowe;44.476495;-72.718406
+Middlebury;44.008171;-73.159643
+Lake Placid;44.282002;-73.984794
+Montpelier - Barre;44.220284;-72.549743
+Sedro-Woolley;48.507418;-122.230457
+Whitewater;42.835059;-88.742611
+General Mitchell Intl Airport MKE;42.920163;-87.932011
+New Berlin;42.955906;-88.112728
+East Troy;42.78859;-88.406816
+Mukwonago;42.850851;-88.319759
+Delavan;42.624704;-88.625312
+Racine;42.718418;-87.863518
+Kenosha - Pleasant Prairie;42.564692;-87.904773
+Schererville;41.488136;-87.463062
+Wildwood;28.865526;-82.061304
+Brooksville;28.538551;-82.353664
+Bushnell;28.668642;-82.148099
+Butler;38.256761;-94.342306
+Butte;45.9913;-112.516628
+Pine Brook;40.8543;-74.3289
+Fairfield - Wayne - Haskell;40.9437;-74.2628
+Calera;33.119708;-86.744538
+Durant;33.975919;-96.402107
+El Centro - Calexico;32.747875;-115.532359
+Dalton;34.742613;-84.996457
+Solomons;38.335826;-76.462819
+Lexington Park - California;38.28539;-76.489284
+Healdsburg - Windsor;38.578028;-122.840973
+Santa Rosa - Rohnert Park - Petaluma;38.378525;-122.713514
+Calistoga - St. Helena;38.520527;-122.486806
+Monee;41.426459;-87.746717
+Kuttawa;37.067072;-88.13085
+Calvert City;37.009746;-88.331262
+Ventura;34.260866;-119.250929
+Simi Valley;34.278148;-118.746117
+Thousand Oaks;34.162171;-118.829543
+Camarillo;34.219361;-119.058426
+Oxnard;34.187641;-119.185245
+Paso Robles;35.632653;-120.688818
+Cambria;35.564594;-121.093951
+San Simeon;35.611757;-121.143821
+Easton;38.767478;-76.06931
+Zanesville;39.9504485692;-81.9753265529
+Camden;33.573083;-92.845703
+Osage Beach - Lake Ozark;38.131806;-92.663672
+Camdenton;38.007091;-92.741113
+Folsom;38.649833;-121.172314
+Cameron Park;38.658194;-120.970755
+Placerville;38.724427;-120.806211
+Cameron;39.75295;-94.233824
+Camilla;31.224268;-84.19686
+Pelham;31.127572;-84.1586
+Downtown - Riverfront;34.74601;-92.26748
+North Little Rock;34.793101;-92.220028
+Maumelle;34.865491;-92.399945
+Hershey - Palmyra - Hummelstown;40.289943;-76.650966
+Carlisle;40.200867;-77.184575
+Harrisburg West;40.242313;-76.950516
+Central Harrisburg;40.275615;-76.852443
+Etters;40.1526;-76.8184
+Waldorf;38.626582;-76.921302
+Cottonwood;34.726228;-112.015611
+Camp Verde;34.568813;-111.866189
+Campbellsville;37.350221;-85.347172
+Matamoras - Port Jervis;41.361971;-74.695537
+Valencia - Six Flags Area - Santa Clarita;34.409551;-118.530803
+Chatsworth;34.25251;-118.601695
+Calabasas;34.148315;-118.671678
+Canon City;38.447636;-105.214484
+Florence;38.3894;-105.115
+Weirton;40.402509;-80.556526
+Steubenville;40.368301;-80.627435
+Monroeville - Forest Hills;40.437159;-79.789971
+Wheeling - Triadelphia;40.046468;-80.640554
+Cumming;34.195077;-84.13537
+Jasper;34.466826;-84.451753
+Ciudad Juarez, Mexico;31.713077;-106.421086
+El Paso East - El Paso Intl Airport ELP;31.7695;-106.362
+El Paso West;31.820953;-106.541064
+Anthony;31.999673;-106.593693
+Temecula;33.496477;-117.145741
+Lake Elsinore - Canyon Lake - Sun City;33.686361;-117.252993
+Perris;33.789601;-117.215244
+Murrieta;33.565509;-117.204619
+Hayward - Union City;37.654266;-122.086863
+Amarillo;35.190574;-101.847915
+Canyon;34.9705;-101.918
+Melbourne;28.148167;-80.679892
+Melbourne Beaches;28.147623;-80.589612
+Cocoa Beach - Cape Canaveral;28.366115;-80.607703
+Merritt Island;28.354996;-80.694467
+Cocoa;28.37957;-80.78093
+Kennedy Space Center - Titusville;28.575629;-80.831764
+Sandwich;41.762482;-70.498407
+Jackson - Cape Girardeau;37.340571;-89.609272
+Avalon;39.077199;-74.738877
+Tillamook;45.466053;-123.843696
+Baltimore South - Glen Burnie;39.196823;-76.611039
+Grasonville;38.962844;-76.216916
+Annapolis;38.994115;-76.498042
+Ben Lomond;37.089802;-122.095
+Watsonville;36.917866;-121.779966
+Santa Cruz - Scotts Valley;36.992516;-122.01321
+Kailua - Kona;19.604297;-155.973808
+Waikoloa - Kohala Coast;19.942213;-155.826592
+Glenwood Springs;39.548476;-107.336248
+Carbondale;39.415802;-107.2212
+Marion;37.738852;-88.968343
+La Jolla;32.870951;-117.241318
+San Diego North - Poway - Rancho Bernardo;32.962916;-117.075924
+Oceanside;33.199231;-117.359649
+Vista - Escondido;33.149059;-117.138423
+Mira Mesa;32.900197;-117.189707
+Encinitas;33.051519;-117.285774
+Del Mar - Rancho Santa Fe;32.967745;-117.22893
+Carlsbad;33.120437;-117.301688
+North Scottsdale;33.589098;-111.920746
+Carefree;33.811517;-111.913611
+Rawhide at Wild Horse Pass;33.269814;-111.987236
+Rayne;30.254102;-92.2697
+Doral - Miami Airport West;25.812695;-80.359019
+Kendall;25.666853;-80.367186
+Key Biscayne;25.690612;-80.164671
+Coral Gables - Coconut Grove;25.738007;-80.262869
+Hauppauge - Commack - Smithtown;40.819826;-73.217222
+Gettysburg;39.807736;-77.225402
+Harrisburg West - Grantville;40.346963;-76.718544
+Fallbrook;33.358946;-117.202987
+Okawville;38.436;-89.5324
+Carlyle;38.6279;-89.3728
+Monterey;36.599196;-121.873041
+Carmel;36.549137;-121.919104
+Carmel Valley;36.510748;-121.784263
+Pacific Grove;36.623313;-121.926532
+Marina;36.687072;-121.796168
+Salinas;36.675859;-121.64487
+Noblesville;40.037517;-86.000925
+Downtown Sacramento;38.580844;-121.487064
+South Natomas - Arco Arena;38.634423;-121.513031
+West Sacramento;38.58148;-121.542511
+Arden - Cal Expo;38.601213;-121.429432
+North Highlands - Citrus Heights;38.669892;-121.360038
+Rancho Cordova;38.584357;-121.298648
+Sacramento East;38.551061;-121.406421
+Roseville - Rocklin - Lincoln;38.804857;-121.297617
+Newark;39.669807;-75.710398
+Mendenhall;39.853871;-75.639356
+Wilmington - Brandywine - Claymont;39.796266;-75.520555
+Penns Grove;39.686962;-75.483652
+Swedesboro;39.75513;-75.349477
+New Castle;39.677473;-75.579111
+Wilmington East;34.238124;-77.869932
+Wrightsville Beach;34.221169;-77.785674
+Central Wilmington;34.224448;-77.936127
+Southport;33.944623;-78.036857
+Leland;34.223844;-78.027508
+Carolina Beach;34.041692;-77.8962
+Santa Barbara;34.427355;-119.699463
+Carpinteria;34.397129;-119.515586
+Carroll;42.066408;-94.863547
+Madison;38.765273;-85.389107
+Bay City;43.59529;-83.917178
+Saginaw - Birch Run;43.383084;-83.899841
+West Omaha;41.252969;-96.113215
+Central Omaha;41.243569;-96.031484
+Downtown Omaha;41.250127;-95.940692
+Omaha - Eppley Airfield OMA - Carter Lake;41.283689;-95.910417
+Council Bluffs;41.250328;-95.87885
+Bellevue;41.149409;-95.944561
+Joplin;37.042594;-94.50717
+Carthage;37.160514;-94.32037
+Fountain;38.674622;-104.712
+South Colorado Springs - World Arena;38.819319;-104.811916
+North Colorado Springs;38.913103;-104.805259
+Colorado Springs Airport COS;38.821923;-104.74058
+Manitou Springs;38.857776;-104.904399
+Monument;39.09514;-104.865
+Casey;39.31094;-87.988758
+Casper;42.845487;-106.299466
+Sanford;28.798429;-81.2934
+Castaic;34.48945;-118.618336
+Lakewood South;39.653863;-105.078925
+Cherry Creek;39.698289;-104.939289
+Tech Center South - Park Meadows;39.553374;-104.878858
+Denver Tech Center;39.606129;-104.883373
+Castle Rock;39.39123;-104.861763
+Parker;39.537411;-104.772366
+Littleton - Ken Caryl - Highlands Ranch;39.575307;-105.065368
+Livermore;37.690605;-121.764974
+Pleasanton - San Ramon - Dublin;37.715508;-121.920325
+Sandusky - Huron;41.417424;-82.671684
+Port Clinton;41.51526;-82.841384
+Desert Hot Springs;33.954754;-116.492053
+Indio;33.720289;-116.235567
+La Quinta - Indian Wells;33.710703;-116.303645
+Palm Springs & Cathedral City;33.81149;-116.508141
+Rancho Mirage - Palm Desert;33.7651;-116.3807
+Claypool Hill - Pounding Mill;37.072033;-81.744084
+Escape Away Day Spa;40.153923;-75.00801
+Central City;37.285442;-87.114405
+Charles City;43.052903;-92.6727
+Martinsburg;39.449981;-77.958498
+Charles Town;39.298255;-77.849945
+Hackettstown;40.840633;-74.83306
+Mt. Olive;40.899358;-74.69062
+Montgomery;41.5081;-74.213
+Newburgh - Stewart Intl Airport SWF;41.501988;-74.051704
+Chester - Goshen;41.380368;-74.305651
+Richmond West - Glen Allen;37.626712;-77.502628
+Downtown - Central Richmond;37.557179;-77.457196
+Mechanicsville;37.615925;-77.354305
+Midlothian;37.469805;-77.594201
+South Richmond - Chester - Hopewell;37.365404;-77.404988
+Richmond Intl Airport RIC;37.513787;-77.350687
+Petersburg - Colonial Heights;37.222476;-77.400239
+Lisbon;40.765372;-80.7313
+Newell;40.61652;-80.602906
+Harrison;39.257288;-84.802864
+Lawrenceburg;39.103702;-84.856767
+Childersburg;33.276917;-86.358577
+Sylacauga;33.178513;-86.280101
+Childress;34.429853;-100.216785
+Chilhowie;36.797;-81.6811
+Peoria;40.726783;-89.620613
+Chillicothe;40.9014;-89.4947
+Chinle;36.155105;-109.563097
+Corona - Norco;33.891522;-117.558307
+Prescott Valley;34.598677;-112.33243
+Prescott;34.547456;-112.446506
+Chino Valley;34.739275;-112.45389
+Elkton;39.622193;-75.812387
+Blacksburg - Christiansburg;37.17424;-80.407114
+Radford;37.121083;-80.541094
+Dublin - Pulaski;37.066471;-80.712633
+Rocky Mount;37.015669;-79.878224
+Pocatello;42.887237;-112.440682
+Irwin;40.318056;-79.68762
+Delmont;40.405188;-79.579492
+Lexington;35.810141;-80.259994
+Baldwinsville;43.151743;-76.3449
+Syracuse Hancock Intl Airport SYR;43.08913;-76.103743
+Central Syracuse;43.046227;-76.143703
+Cicero;43.178759;-76.110524
+Brewerton;43.231968;-76.130238
+Liverpool - Onondaga Lake;43.099525;-76.220125
+Circleville;39.60012;-82.967057
+Eastland - Ranger - Cisco;32.3925;-98.857536
+Elk Grove - Sacramento South;38.431402;-121.411396
+Crystal River;28.871792;-82.585537
+Inverness - Citrus Hills - Beverly Hills;28.899904;-82.433929
+West of Disney;28.305984;-81.661352
+Clanton;32.825885;-86.598424
+Piedmont - Triad Intl Airport GSO;36.075114;-79.9585
+Downtown - Coliseum;36.131174;-80.258785
+Winston-Salem South - Clemmons;36.060301;-80.322172
+Greenville;34.853668;-82.354404
+Toccoa;34.5716;-83.3133
+Travelers Rest;34.968731;-82.434994
+Howey-in-the-Hills;28.722146;-81.775951
+Clermont;28.592161;-81.762621
+Downtown Cleveland;41.500892;-81.688412
+Hopkins Intl Airport CLE;41.423772;-81.848112
+Beachwood - Mayfield Heights;41.504198;-81.463794
+University Circle;41.506344;-81.61614
+Independence;41.401875;-81.649645
+Lakewood;41.489157;-81.771668
+Southeast Cleveland;41.405192;-81.493071
+Richfield;41.268183;-81.627345
+Macedonia - Hudson - Twinsburg;41.293523;-81.494999
+Hopkins Airport South - Middleburg Heights - Strongsville;41.34155;-81.820105
+Westlake;41.470108;-81.930114
+Willoughby - Wickliffe - Mentor;41.648494;-81.391027
+Concord;41.664502;-81.244954
+North Ridgeville;41.3729;-81.9959
+Streetsboro;41.250226;-81.355032

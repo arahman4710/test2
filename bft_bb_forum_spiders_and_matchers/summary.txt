@@ -1,0 +1,5 @@
+matcher_for_bb_bft
+	-matches content scraped from forums to hotels in internal db
+
+bbhw, bftpl, bbpl
+	-scraps respective forum and saves content of the forums to be matched

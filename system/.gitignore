@@ -1,0 +1,11 @@
+redmine-config/locales/
+etc/ssh/*key*
+etc/passwd
+etc/passwd-
+etc/shadow
+etc/pki/
+etc/sudoers
+redmine-config/config/locales/
+selinux/
+.svn
+
