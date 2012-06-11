@@ -1,6 +1,0 @@
-NOTE:
-please provide a valid email address and password to the smtp config in config/environments/development.rb before running the application
-
-If you are trying to understand the google maps interaction, please look at public/javascripts/application.js, for the javascript file and /app/views/hotels/index.html.erb for the html page.
-You will be able to see the server side functions being called from the js and will be able to locate the relevant functions in the /app folder
-

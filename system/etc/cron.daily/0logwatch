@@ -1,8 +1,0 @@
-#!/bin/bash
-
-DailyReport=`grep -e "^[[:space:]]*DailyReport[[:space:]]*=[[:space:]]*" /usr/share/logwatch/default.conf/logwatch.conf | head -n1 | sed -e "s|^\s*DailyReport\s*=\s*||"`
-
-if [ "$DailyReport" != "No" ] && [ "$DailyReport" != "no" ]
-then
-    logwatch
-fi

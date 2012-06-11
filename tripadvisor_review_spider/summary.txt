@@ -1,2 +1,0 @@
-Tripadvisor_revier_spider
-	-scraps reviews from tripadvisor.com and stores it into db

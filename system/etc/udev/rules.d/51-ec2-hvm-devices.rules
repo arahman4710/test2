@@ -1,1 +1,0 @@
-KERNEL=="xvd*", PROGRAM="/sbin/ec2udev %k", SYMLINK+="%c"

@@ -1,9 +1,0 @@
-#
-LABEL=/     /           ext4    defaults,noatime  1   1
-tmpfs       /dev/shm    tmpfs   defaults        0   0
-devpts      /dev/pts    devpts  gid=5,mode=620  0   0
-sysfs       /sys        sysfs   defaults        0   0
-proc        /proc       proc    defaults        0   0
-/dev/sda3	none	swap	sw,comment=cloudconfig	0	0
-/dev/sdb    /work       ext3    defaults   0 0 
-

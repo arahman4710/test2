@@ -1,1 +1,0 @@
-please provide a valid email address and password to the smtp config in config/environments/development.rb before running the application

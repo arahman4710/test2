@@ -1,9 +1,0 @@
-2011-04-11 13:18:17-0700 [scrapy] INFO: Scrapy 0.13.0.2580 started (bot: hotelnames)
-2011-04-11 13:18:17-0700 [scrapy] DEBUG: Enabled extensions: TelnetConsole, SpiderContext, WebService, CoreStats, MemoryUsage, CloseSpider
-2011-04-11 13:18:17-0700 [scrapy] DEBUG: Enabled scheduler middlewares: DuplicatesFilterMiddleware
-2011-04-11 13:18:17-0700 [scrapy] DEBUG: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, RedirectMiddleware, CookiesMiddleware, HttpCompressionMiddleware, DownloaderStats
-2011-04-11 13:18:17-0700 [scrapy] DEBUG: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
-2011-04-11 13:18:17-0700 [scrapy] DEBUG: Enabled item pipelines: 
-2011-04-11 13:18:17-0700 [scrapy] ERROR: Unable to find spider: hotelnames
-2011-04-11 13:18:17-0700 [scrapy] DEBUG: Telnet console listening on 0.0.0.0:6023
-2011-04-11 13:18:17-0700 [scrapy] DEBUG: Web service listening on 0.0.0.0:6080

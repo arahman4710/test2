@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if [ "$2" = "up" ] || [ "$2" = "down" ]; then
-	/sbin/service sendmail reload || :
-fi

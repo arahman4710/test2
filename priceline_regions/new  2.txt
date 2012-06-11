@@ -1,6 +1,0 @@
-I-26 West - Irmo
-Columbia I-26 West & Irmo
-
-1. incorporate states vin jonathons code
-2. get a list of state - city -regions
-3. incorporate states into matching
