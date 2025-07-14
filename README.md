@@ -32,7 +32,7 @@ There are a **lot** of resume builders out there, and it felt overwhelming to fi
 
 ---
 
-## 🥇 Rezi.ai
+## 🥇 [Rezi.ai](https://www.rezi.ai/)
 
 **Rezi.ai** is an AI-powered platform designed to help job seekers create optimized resumes tailored for ATS. It simplifies the resume-building process with user-friendly templates and tools to ensure your resume is well-structured and relevant to specific job requirements.
 
@@ -51,7 +51,7 @@ It also offers content suggestions and formatting assistance to enhance your res
 
 ---
 
-## 🥈 Teal (TealHQ.com)
+## 🥈 [Teal](tealhq.com) (TealHQ.com)
 
 **Teal** is a platform that helps job seekers manage their career growth and job search. It offers tools for tracking applications, organizing tasks, and optimizing resumes.
 
@@ -68,7 +68,7 @@ It also includes personalized career advice, job tracking boards, and developmen
 
 ---
 
-## 🥉 Canyon
+## 🥉 [Canyon](https://www.usecanyon.com/)
 
 **Canyon** is a job platform tool that offers resume building, application tracking, **AI mock interviews**, and job market insights. It focuses on user-friendly design and personalized recommendations.
 
